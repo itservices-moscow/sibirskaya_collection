@@ -1,0 +1,57 @@
+.keys {
+  background-color: var(--main-beige);
+  padding: 0 55px;
+  &__cards {
+    color: var(--main-black);
+    grid-template-columns: repeat(3, minmax(0, 430px));
+    justify-content: space-between;
+    margin: 50px auto;
+    grid-gap: 30px;
+  }
+  &__item {
+      max-width: 430px;
+      min-width: 250px;
+      background: url('/img/line-card-vert.png') no-repeat right center;
+      background-size: 1px 90%;  // заменить картинку
+    }
+
+  &__top {
+      align-items: center;
+      margin-top: 162px;
+    }
+      h1 {
+        text-align: center;
+        color: var(--dark-bronze);
+      }
+}
+
+.keys-card {
+  height: 100%;
+  position: relative;
+  &__line {
+    margin: 0 auto 30px auto;
+    padding: 0 30px 0 0;
+  }
+  &__link {
+    position: absolute;
+    vertical-align: middle;
+    bottom: 0;
+    img {
+      /* height: 10px; */
+    }
+
+    @include hover {
+      /*color: white; */
+      }
+  }
+  h2 {
+    margin: 20px 0;
+    margin-right: 30px;
+  }
+  p {
+    margin: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+

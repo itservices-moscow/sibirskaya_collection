@@ -1,0 +1,75 @@
+.department {
+  background-color: var(--main-beige);
+  padding: 0 55px;
+  padding-top: 80px;
+  padding-bottom: 150px;
+}
+
+
+.dep-container{
+  position: relative;
+  min-height: 500px;
+  // background-color: green;
+  z-index: 0;
+}
+
+.dep-card {
+  position: absolute;
+  padding: 60px 30px 80px 130px;
+  top: 0;
+  left: 0;
+  min-height: 200px;
+  max-height: 420px;
+  width: 60%;
+  z-index: 10;
+  background-color: var(--color-black);
+  background-image: url('/img/line-cmilk-card-vert.png');
+  background-repeat: no-repeat;
+  background-position: 80px 110px;
+
+
+  &_back {
+    top: 120px;
+    left: 35%;
+    background-color: var(--main-bronze);
+    background-image: none;
+    z-index: 8;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__pic {
+    height: 300px;
+    margin-left: 55%;
+    margin-bottom: -5px;
+    margin-top: 60px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    // position: absolute;
+    // bottom: 0;
+    color: var(--main-white);
+    font-size: 22px;
+    line-height: 27px;
+
+    img {
+      margin-left: 15px;
+    }
+
+    @include hover {
+      /*color: white; */
+    }
+  }
+
+}
+.dep-card h1 {
+      color: var(--main-white);
+      margin-top: 60px;
+    }
+
+.dep-card p {
+      color: var(--main-white);
+      font-size: 22px;
+      line-height: 27px;
+    }

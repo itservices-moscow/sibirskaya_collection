@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="container flex header__container">
+    <a href="#" class="logo">
+      <img src="img/sk-logo.png" alt=""/>
+    </a>
+    <div class="buffer">&nbsp;</div>
+    <nav class="nav flex" title="Главное меню">
+      <ul class="list-reset nav__list flex">
+        <li class="nav__item"><a href="#" class="nav__link">Производство</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Продукт</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Новинки</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Стартапам</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        <li class="nav__item"><a href="#" class="nav__link" id="searchicon"><img src="img/icon-search-white.png"></a></li>
+      </ul>
+    </nav>
+    <button class="btn-reset nav__button btn-secondary">КУПИТЬ</button>
+    <div class="lang">
+      <a href="#" class="underline">RU</a>&nbsp;<a href="#">EN</a>
+    </div>
+
+
+    <div class="topsearch" id="topsearch">
+      <input type="text" name="top-search" placeholder="Поиск"/>
+      <button class="btn-reset" data-graph-path="">НАЙТИ</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('searchicon').addEventListener('click', () => {
+        document.getElementById('topsearch').classList.toggle('active');
+      })
+  </script>
+
+</header>

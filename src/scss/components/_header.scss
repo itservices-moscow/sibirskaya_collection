@@ -1,0 +1,105 @@
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 15;
+
+  &__container {
+    background-color: var(--color-black);
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 55px;
+  }
+    a {
+      font-size: 18px;
+      color: var(--medium-gray);
+      font-family: var(--font-family);
+      transition: 0.3s ease;
+    }
+}
+
+.nav {
+  &__list {
+    align-items: center;
+    // margin-right: 10px;
+    margin-left: 10px;
+    gap: 30px;
+
+  }
+
+  &__button {
+    width: 170px;
+    height: 49px;
+  }
+
+  &__link {
+
+    @include hover {
+      color: var(--main-bronze);
+    }
+
+    &:active {
+      text-decoration: underline;
+    }
+
+  }
+}
+
+.buffer {
+  // width: 60px;
+  width: 20px;
+}
+
+.lang {
+  width:60px;
+  height: auto;
+  margin-left: 20px;
+  color: var(--main-white);
+  @include flex-all-sb;
+}
+
+.logo {
+  width: 49px;
+}
+
+
+.topsearch {
+  position: fixed;
+  width: 480px;
+  height: 80px;
+  top: 100px;
+  right: 0;
+  background-color: var(--color-black);
+  vertical-align: bottom;
+  padding-bottom: 15px;
+  border: 1px dotted white;
+  transition: right 1s;
+
+}
+
+.topsearch.active {
+  right: 480px;
+  transition: right 1s;
+}
+
+.topsearch input {
+  border: 0;
+  width: 290px;
+  margin-top: auto;
+  background-color: transparent;
+  color: var(--main-white);
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.topsearch button {
+  margin-left: 30px;
+  margin-top: auto;
+  width: 150px;
+  height: 49px;
+  color: var(--medium-gray);
+  border: 1px solid var(--medium-gray);
+  border-radius: 60px;
+}
+
+

@@ -1,0 +1,18 @@
+.cookie-alert {
+  width: 248px;
+  height: 248px;
+  border-radius: 50%;
+  text-align: center;
+  opacity: 0.9;
+  background-color: var(--coffee-milk);
+  position: fixed;
+  bottom: 10%;
+  left: 10%;
+  padding: 40px;
+}
+
+.cookie-alert button {
+  width: 100px;
+  height: 49px;
+
+}

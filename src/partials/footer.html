@@ -1,0 +1,80 @@
+<footer class="footer">
+  <div class="container flex footer__container footer__t">
+    <nav class="navfooter" title="Нижнее меню">
+    <div class="navf">
+      <div class="accordion">Производство</div>
+      <div class="panel">
+          <ul class="list-reset navf-sub">
+            <li class="navf-sub__item"><a href="#" class="navf-sub__link">Контроль качества</a></li>
+            <li class="navf-sub__item"><a href="#" class="navf-sub__link">Собственные лаборатории</a></li>
+            <li class="navf-sub__item"><a href="#" class="navf-sub__link">Разработка новых продуктов</a></li>
+            <li class="navf-sub__item"><a href="#" class="navf-sub__link">Карьера</a></li>
+          </ul>
+      </div>
+      <div class="empty"><a href="#">Продукт</a></div>
+      <div class="accordion">Новинки</div>
+      <div class="panel">
+          <ul class="list-reset navf-sub">
+            <li class="navf-sub__item"><a href="#" class="navf-sub__link">Контроль качества</a></li>
+            <li class="navf-sub__item"><a href="#" class="navf-sub__link">Собственные лаборатории</a></li>
+          </ul>
+
+      </div>
+      <div class="empty"><a href="#">Стартапы</a></div>
+      <div class="empty"><a href="#">Контакты</a></div>
+    </div>
+    <!-- tod: перенести в js-->
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+    </nav>
+    <!--
+      <ul class="list-reset  navf__list">
+        <li class="navf__item"><a href="#" class="navf__link">Производство <img src="img/arrow-2-default.png"/></a></li>
+        <li class="navf__item"><a href="#" class="navf__link">Продукт</a></li>
+        <li class="navf__item"><a href="#" class="navf__link">Новинки <img src="img/arrow-2-default.png" /></a></li>
+        <li class="navf__item"><a href="#" class="navf__link">Стартапы</a></li>
+        <li class="navf__item"><a href="#" class="navf__link">Контакты</a></li>
+      </ul>
+    -->
+
+    <div class="footer_center">
+      <img class="f-logo" src="img/sk-logo-w-text.png" alt="" />
+      <a href="#" class="youtube-link">
+        <img src="img/youtube-logo.png" alt="" />
+      </a>
+    </div>
+    <div class="info">
+      <p>ЦЕНТРАЛЬНЫЙ ОФИС<br />
+        <span class="phone">+7 (495) 726-55-38</span><br />
+        <span class="email">info@shmpk.ru</span>
+      </p>
+      <p>ПРОИЗВОДСТВО<br />
+        <span class="phone">+7 (495) 933-80-71</span><br />
+        <span class="email"></span>info@shmpk.ru</span>
+      </p>
+      <p>ОТДЕЛ КАЧЕСТВА<br />
+        <span class="phone">8-800-250-18-80<br/></span>Звонок по РФ бесплатный<br />
+        <span class="email">shmpk-kachestvo@shmpk.ru</span>
+      </p>
+    </div>
+  </div>
+  <div class="container flex footer__container footer__b">
+    <a href="#">&copy; 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
+    <a href="#">Политика конфиденциальности</a>
+    <a href="#">Правила пользования сайтом</a>
+    <a href="#">Пользовательское соглашение</a>
+  </div>
+</footer>
