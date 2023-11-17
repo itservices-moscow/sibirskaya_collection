@@ -1,6 +1,6 @@
 .highlights {
   background-color: var(--color-black);
-  background-image: url('/img/mainpic-3d.png');
+  background-image: url($rootpath + 'img/mainpic-3d.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -38,7 +38,7 @@
   }
 
   &__item {
-    background: url('/img/line-bg-308.png') no-repeat;
+    background: url($rootpath + 'img/line-bg-308.png') no-repeat;
     padding-bottom: 68px;
   }
   &__item  h1 {
@@ -54,7 +54,7 @@
   }
 
   &__item_top {
-    background: url('/img/line-bg-421.png') no-repeat;
+    background: url($rootpath + 'img/line-bg-421.png') no-repeat;
   }
 
   &__link {

@@ -23,7 +23,7 @@
   width: 60%;
   z-index: 10;
   background-color: var(--color-black);
-  background-image: url('/img/line-cmilk-card-vert.png');
+  background-image: url($rootpath + 'img/line-cmilk-card-vert.png');
   background-repeat: no-repeat;
   background-position: 80px 110px;
 

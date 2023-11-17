@@ -46,4 +46,87 @@ a.link-more-left:hover .arr * {
   transition-timing-function: ease-in-out;
 }
 
+// new
+// The Arrow
 
+// Animated Arrow Button
+
+
+$text-arrow-space: 6px;
+$shaft-width: 1px;
+$newshaft-width: 54px;
+$shaft-thickness: 1px;
+$arrow-head-width: 16px;
+$arrow-head-thickness: $shaft-thickness;
+
+.the-arrow {
+  width: $shaft-width;
+  transition: all 0.2s;
+
+  &.-left {
+      top: 5px;
+      position: absolute;
+      >.shaft {
+        width: $shaft-width;
+        transition-delay: 0.2s;
+
+        &:before,
+        &:after {
+          width: $arrow-head-width;
+          transition-delay: 0.3s;
+          transition: all 0.5s;
+        }
+
+        &:before {
+          transform: rotate(40deg);
+        }
+
+        &:after {
+          transform: rotate(-40deg);
+        }
+      }
+    }
+
+    >.shaft {
+      display: block;
+      height: $shaft-thickness;
+      background-color: var(--main-bronze);
+      position: relative;
+      transition: all 0.2s;
+      transition-delay: 0;
+      will-change: transform;
+
+      &:before,
+      &:after {
+        background-color: var(--main-bronze);
+        content: '';
+        display: block;
+        height: $arrow-head-thickness;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.2s;
+        transition-delay: 0;
+      }
+
+      &:before {
+        transform-origin: top right;
+      }
+
+      &:after {
+        transform-origin: bottom right;
+      }
+    }
+
+
+}
+
+
+.animated-arrow {
+  display: inline-block;
+  color: var(--main-bronze);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+
+}

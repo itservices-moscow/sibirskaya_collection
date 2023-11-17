@@ -9,7 +9,8 @@
       color: var(--light-gray);
       font-family: var(--font-family);
     }
-    .info {
+
+    .footer_info {
       text-align: right;
     }
       p {
@@ -19,6 +20,10 @@
         display: block;
         margin: 0;
         margin-bottom: 30px;
+      }
+      .phone,
+      .email {
+        color: var(--main-bronze);
       }
   &__t {
     min-height: 300px;
@@ -49,73 +54,84 @@
 
 
 /* Style the buttons that are used to open and close the accordion panel */
-.navf .accordion {
-  cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  padding: 10px 0;
-  color: var(--main-white);
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}
+.navf {
 
-.navf .empty {
-  padding: 10px 0;
-  text-transform: uppercase;
-  color: var(--main-white);
-  width: 100%;
-  text-align: left;
-  transition: 0.4s;
-}
+  &__item {
+    margin-bottom: 32px;
+    text-align: left;
+    color: var(--main-white);
+  }
+
+  &__item .accordion {
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 22px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  &__item .accordion.active {
+    color: var(--main-black);
+  }
+
+  &__item .accordion:hover {
+    color: var(--main-bronze);
+  }
+
+  &__item .empty {
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+    a {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    a:hover {
+      color: var(--main-bronze);
+      transition: 0.3s;
+    }
 
 
-.navf .empty a:hover {
-  color: var(--main-bronze);
-  transition: 0.4s;
-}
-
-.navf .accordion.active {
-  color: var(--main-black);
-}
-.navf .accordion:hover {
-  color: var(--main-bronze);
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.navf .panel {
+  /* Style the accordion panel. Note: hidden by default */
+  &__item .panel {
     padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+  }
+
+  &__item .accordion:after {
+    content: '\02c5';
+    font-size: 18px;
+    float: right;
+    margin-left: 12px;
+    transform: scalex(2.5);
+  }
+
+  &__item .active:after {
+    padding-top: 2px;
+    content: "\005e";
+  }
+
 }
 
-.navf .accordion:after {
-  content: '﹀';
-  /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  float: right;
-  margin-left: 5px;
-}
-
-.navf .active:after {
-  content: "︿";
-  /* Unicode character for "minus" sign (-) */
-}
 
 .navf-sub {
+  margin-top: 10px;
   &__item {
     margin-bottom: 5px;
-    // color: var(--main-bronze);
-    transition: 0.4s;
+    transition: 0.3s;
   }
 
   &__link {
     color: var(--main-white);
     font-size: 16px;
     line-height: 19px;
-    transition: 0.4s;
+    transition: 0.3s;
     @include hover {
       color: var(--main-bronze);
     }
@@ -130,8 +146,4 @@
   display: block;
   margin: 15px;
   margin-top: 80px;
-}
-
-.phone, .email {
-  color: var(--main-bronze);
 }
