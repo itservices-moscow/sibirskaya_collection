@@ -3,8 +3,8 @@
 :root {
   // base
   --font-family: "AvenirNextCyrLight";
-  --headers-caps-bl-family: "IntroDemoCondBlackCAPS";
-  --headers-family: "MullerRegular"; // IntroDemoCondLightCAPS
+  --headers-caps-bl-family: "IntroDemoCondBlackCAPS"; // IntroDemoCondLightCAPS
+
   --content-width: 1024px;
   --container-offset: 0;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));

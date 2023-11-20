@@ -6,10 +6,16 @@
 
 // подключения компонентов страницы
 @import "./components/header";
+@import "./components/topmenu";
+// @import "./components/topmenu_manuf";
 @import "./components/footer";
 @import "./components/buttons";
 @import "./components/arrows";
 
+@import "./components/uikit";
+@import "./components/cookie-alert";
+
+// главная страница
 @import "./components/main";
 @import "./components/main-intro";
 @import "./components/main-highlights";
@@ -17,7 +23,8 @@
 @import "./components/main-extra";
 @import "./components/main-department";
 
-@import "./components/uikit";
-@import "./components/cookie-alert";
+
+
+
 
 

@@ -1,0 +1,255 @@
+nav.topmenu {
+  position: fixed;
+  left: 0;
+  top: 77px;
+  z-index: 10;
+  height: 432px;
+  width: 100%;
+  background-color: #fff;// var(--coffee-milk);
+  opacity: 0;
+  transition: 0.2s;
+  &__brands{
+    visibility: hidden;
+  }
+  &__manuf {
+    visibility: hidden;
+  }
+  &_show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+
+
+.topmenu-container {
+  display: flex;
+  margin: 40px 56px 48px 56px;
+  &__item {
+    width: 25%;
+    &-manuf {
+        width: 40%;
+      }
+    &-manuf2 {
+      width: 5%;
+    }
+    &-manuf3 {
+      width: 60%;
+    }
+  }
+}
+
+.topmenu-container nav {
+  height: 100%;
+}
+
+.nav-top-l1 {
+  &__item {
+    height: 78px;
+    border-bottom: 1px solid var(--light-gray);
+    position: relative;
+    &:hover {
+        background-color: var(--main-beige);
+
+      }
+
+  }
+    .active {
+        background-color: var(--main-beige);
+        width: 100%;
+      }
+    .active :after {
+      content: url("data:image/svg+xml,%3Csvg width='24' height='26' viewBox='0 0 24 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 25L18 13L6 1' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      height: 24px;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      transition: all 0.2s;
+      transition-delay: 0;
+    }
+
+  &__link {
+    display:block;
+    height: 100%;
+    color: var(--main-black);
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 78px;
+    transition: 0.3s;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    @include hover {
+      color: var(--dark-bronze);
+    }
+
+  }
+
+}
+
+
+.nav-top-l2 {
+  border-left: 1px solid var(--coffee-milk);
+  padding-left: 32px;
+  margin-left: 32px;
+
+  &__item {
+    height: 38px;
+    position: relative;
+    &:hover {
+      color: var(--main-bronze);
+      transition: 0.3s;
+    }
+
+    &-more {
+      margin-top: 12px;
+    }
+  }
+
+  &__link {
+    color: var(--main-black);
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 38px;
+    transition: 0.3s;
+    vertical-align: middle;
+    margin-right: 34px;
+
+    @include hover {
+      color: var(--dark-bronze);
+      &:after {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='14' viewBox='0 0 12 14' fill='none'%3E%3Cpath d='M3.375 13L9.375 7L3.375 1' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+    .active {
+      color: var(--main-bronze);
+    }
+
+    &:after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='14' viewBox='0 0 12 14' fill='none'%3E%3Cpath d='M3.375 13L9.375 7L3.375 1' stroke='%23B8B8B8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      height: 24px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 0.2s;
+      transition-delay: 0;
+    }
+  }
+}
+
+
+.nav-top-l3 {
+  border-left: 1px solid var(--coffee-milk);
+  padding-left: 32px;
+  margin-left: 32px;
+  // visibility: hidden;
+  // opacity: 0;
+  &__item {
+    height: 33px;
+    position: relative;
+
+    &:hover {
+      color: var(--main-bronze);
+      transition: 0.3s;
+    }
+
+    &-more {
+      margin-top: 12px;
+    }
+  }
+
+  &__link {
+    color: var(--main-black);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 33px;
+    transition: 0.3s;
+    vertical-align: middle;
+    margin-right: 34px;
+
+    @include hover {
+      color: var(--dark-bronze);
+
+      &:after {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='14' viewBox='0 0 12 14' fill='none'%3E%3Cpath d='M3.375 13L9.375 7L3.375 1' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+
+    .active {
+      color: var(--main-bronze);
+    }
+
+    &:after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='14' viewBox='0 0 12 14' fill='none'%3E%3Cpath d='M3.375 13L9.375 7L3.375 1' stroke='%23B8B8B8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      height: 24px;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      transition: all 0.2s;
+      transition-delay: 0;
+    }
+  }
+}
+
+
+.nav-top-l4 {
+  border-left: 1px solid var(--coffee-milk);
+  padding-left: 32px;
+  margin-left: 32px;
+  // visibility: hidden;
+  // opacity: 0;
+
+  &__item {
+    height: 33px;
+    position: relative;
+
+    &:hover {
+      color: var(--main-bronze);
+      transition: 0.3s;
+    }
+
+    &-more {
+      margin-top: 12px;
+    }
+  }
+
+  &__link {
+    color: var(--main-black);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 33px;
+    vertical-align: middle;
+    margin-right: 34px;
+    transition: 0.3s;
+
+    @include hover {
+      color: var(--dark-bronze);
+    }
+
+    .active {
+      color: var(--main-bronze);
+    }
+
+  }
+}
+
+
+.piclink {
+  display: inline-block;
+  max-width: 308px;
+  margin-left: 32px;
+  &__link {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--main-black);
+    &:hover {
+        color: var(--main-bronze);
+        transition: 0.3s;
+      }
+
+  }
+  &__pic {
+    max-width: 308px;
+    margin-bottom: 16px;
+  }
+}
