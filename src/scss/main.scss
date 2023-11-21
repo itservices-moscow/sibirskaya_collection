@@ -11,6 +11,7 @@
 @import "./components/footer";
 @import "./components/buttons";
 @import "./components/arrows";
+@import "./components/forms";
 
 @import "./components/uikit";
 @import "./components/cookie-alert";
@@ -23,6 +24,15 @@
 @import "./components/main-extra";
 @import "./components/main-department";
 
+// каталог
+@import "./components/catalog";
+@import "./components/catalog-filters";
+
+// контакты
+@import "./components/contacts";
+
+// другие статические страницы
+@import "./components/quality";
 
 
 

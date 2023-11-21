@@ -1,0 +1,35 @@
+
+fieldset {
+  border: 0;
+}
+
+label {
+  padding: 4px;
+  line-height: 22px;
+}
+
+input[type="checkbox"] {
+  outline: 1px solid var(--main-beige);
+  width: 22px;
+  height: 22px;
+}
+
+
+
+input[type="checkbox"]:checked {
+  background-color: var(--main-beige);
+  color: var(--main-white);
+  outline: 1px solid var(--main-beige);
+}
+
+input[type="submit"] {
+  // background: #0de281;
+}
+
+input[type="text"] {
+  background: #0de281;
+}
+
+textarea {
+
+}

@@ -1,0 +1,88 @@
+
+
+.filter {
+  &__title {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--dark-bronze);
+  }
+
+  &__buffer {
+    height: 32px;
+  }
+
+}
+
+.btn-filter {
+
+  &__item {
+    margin-bottom: 6px;
+    text-align: left;
+    color: var(--main-white);
+  }
+
+  &__item .accordion {
+    cursor: pointer;
+    height: 49px;
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    padding: 12px 24px;
+    text-align: left;
+    color: var(--main-black);
+    background-color: transparent;
+    border: 1px solid var(--coffee-milk);
+    border-radius: 50px;
+    transition: 0.3s ease;
+      @include hover {
+        color: var(--main-white);
+        background-color: var(--main-bronze);
+        cursor: pointer;
+      }
+    transition: 0.4s;
+  }
+
+  &__item .accordion.active {
+    color: var(--main-white);
+    background-color: var(--main-bronze);
+  }
+
+  &__item .accordion:hover {
+    color: var(--main-white);
+  }
+
+  &__item .accordion:hover:after {
+    color: var(--main-white);
+  }
+
+  &__item .empty {
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+
+
+  /* Style the accordion panel. Note: hidden by default */
+  &__item .panel {
+    // padding: 20px;
+    color: var(--main-black);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  &__item .accordion:after {
+    content: '\02c5';
+    font-size: 18px;
+    color: var(--main-bronze);
+    float: right;
+    margin-left: 12px;
+    transform: scalex(2.5);
+  }
+
+  &__item .active:after {
+    padding-top: 2px;
+    color: var(--main-white);
+    content: "\005e";
+  }
+
+}

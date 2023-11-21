@@ -53,7 +53,7 @@
 }
 
 
-/* Style the buttons that are used to open and close the accordion panel */
+/* Меню футера с раскрывающимися пунктами */
 .navf {
 
   &__item {
@@ -96,7 +96,7 @@
     }
 
 
-  /* Style the accordion panel. Note: hidden by default */
+  /* Модменю футера. Hidden by default. */
   &__item .panel {
     padding: 0;
     max-height: 0;

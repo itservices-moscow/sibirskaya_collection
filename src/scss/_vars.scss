@@ -8,6 +8,8 @@
   --content-width: 1024px;
   --container-offset: 0;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --header-height: 88px;
+  --offset-main: 0px;
 
   // colors
   --main-black:#3C3B35;
@@ -21,5 +23,6 @@
   --medium-gray: #B8B8B8;
   --err-red: #FF3A2E;
 
-  --offset-main: 0px;
+  --bg-goods: #FAFAFA;
+
 }

@@ -46,4 +46,40 @@
       cursor: default;
     }
   }
+
+  &-filter {
+    height: 49px;
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    padding: 12px 24px;
+    margin: 5px 0;
+    text-align: left;
+    color: var(--main-black);
+    background-color: transparent;
+    border: 1px solid var(--coffee-milk);
+    border-radius: 50px;
+    transition: 0.3s ease;
+
+    @include hover {
+      // color: var(--main-white);
+      // background-color: var(--main-bronze);
+      cursor: pointer;
+    }
+
+    // &:disabled {
+    //   background-color: transparent;
+    //   color: var(--main-black);
+    //   border: 1px solid var(--medium-gray);
+    //   cursor: default;
+    // }
+
+  }
+
+  &-filter.selected {
+    color: var(--main-white);
+    background-color: var(--main-bronze);
+    border: 1px solid var(--main-bronze);
+  }
+
 }

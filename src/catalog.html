@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container" id="site-container">
+    @include('partials/header.html')
+    @include('partials/topmenu_brands.html')
+    @include('partials/topmenu_manuf.html')
+    <main class="catalog">
+      <!-- <section class="buffer"></section> -->
+      <section class="back">
+        <div class="container">
+          <span class="icon-back"><a href="#" onclick="history.back();"><img src="img/back.png" /></a></span>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="container catalog__container grid">
+          <div class="catalog__left">
+            @include('partials/catalog_filters.html')
+          </div>
+          <div class="catalog__content">
+            @include('partials/catalog_content.html')
+          </div>
+        </div>
+      </section>
+
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
