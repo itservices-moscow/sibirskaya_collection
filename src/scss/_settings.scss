@@ -30,7 +30,7 @@ body {
 }
 
 .main {
-  margin-top: 77px; // 88
+  margin-top: var(--header-height);
 }
 
 .text-normal {
@@ -184,4 +184,8 @@ h3 {
 
 .underline {
   text-decoration: underline;
+}
+
+.w-100 {
+  width: 100%!important;
 }

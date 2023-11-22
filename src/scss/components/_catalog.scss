@@ -17,7 +17,7 @@ section.catalog {
 
 .catalog {
   &__container {
-    grid-template-columns: 280px calc(100% - 308px);
+    grid-template-columns: 280px calc(100% - 344px);
     gap: 0 64px;
     min-width: 1000px;
 
@@ -87,6 +87,9 @@ section.catalog {
     line-height: 28px;
     margin-top: 5px;
     text-transform: uppercase;
+  }
+  &__btnmore {
+    padding: 56px 0 20px 0;
   }
 }
 

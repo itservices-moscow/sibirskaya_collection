@@ -11,6 +11,7 @@
     <main class="main">
       @include('partials/main_intro.html')
       @include('partials/main_highlights.html')
+
       @include('partials/main_keys.html')
       @include('partials/main_extra.html')
       @include('partials/main_department.html')
@@ -20,6 +21,20 @@
     </main>
     @include('partials/footer.html')
   </div>
+    <script>
+      window.addEventListener('scroll', function () {
+        const scrollPosition = document.documentElement.scrollTop
+        if (scrollPosition > 900 && document.querySelector(".intro").style.visibility === "" || document.querySelector(".intro").style.visibility === "visible") {
+          document.querySelector(".intro").style.visibility = "hidden"
+        }
+        if (scrollPosition < 900 && document.querySelector(".intro").style.visibility === "hidden") {
+          document.querySelector(".intro").style.visibility = "visible"
+        }
+
+      });
+    </script>
+
+
 </body>
 
 </html>

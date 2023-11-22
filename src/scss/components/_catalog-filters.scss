@@ -63,7 +63,7 @@
 
   /* Style the accordion panel. Note: hidden by default */
   &__item .panel {
-    // padding: 20px;
+    margin: 0 32px ;
     color: var(--main-black);
     max-height: 0;
     overflow: hidden;
@@ -86,3 +86,7 @@
   }
 
 }
+
+
+
+
