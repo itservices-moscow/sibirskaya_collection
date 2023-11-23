@@ -41,6 +41,28 @@
     }
 }
 
+.mobile {
+  @include big-desktop {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+
+}
+
+.desktop {
+  @include small-desktop {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+
+
 .nav {
   @include small-desktop {
     margin-right: 30px;

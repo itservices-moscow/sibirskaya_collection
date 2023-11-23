@@ -8,7 +8,6 @@ const showTopmenu = (content, link) => {
   });
 
   document.addEventListener("click", (e) => {
-    console.log("document click");
     let target = e.target;
     let its_menu = target == menuContent || menuContent.contains(target);
     let its_link = target == menuLink;

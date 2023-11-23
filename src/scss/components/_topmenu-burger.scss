@@ -1,0 +1,24 @@
+.burger {
+  @include burger
+}
+
+.burger {
+  color: var(--main-beige);
+  &__line {
+    background-color: var(--main-beige);
+  }
+
+}
+
+
+.topmenu-burger {
+  position: absolute;
+  top: 50px;
+  background-color: cornsilk;
+  width: 200px;
+  height: 300px;
+}
+
+.menu--active {
+
+}
