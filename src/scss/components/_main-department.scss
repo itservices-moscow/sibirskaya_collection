@@ -3,13 +3,34 @@
   padding: 0 55px;
   padding-top: 80px;
   padding-bottom: 150px;
+  @include mobile {
+    padding: 40px 24px;
+  }
 }
 
+h1 {
+  @include mobile {
+    font-size: 29px;
+    line-height: 36px;
+  }
+}
+
+.head-h0 {
+  @include mobile {
+  font-size: 42px;
+  line-height: 46px;
+}
+}
+p{
+    @include mobile {
+        font-size: 18px;
+        line-height: 24px;
+      }
+}
 
 .dep-container{
   position: relative;
   min-height: 500px;
-  // background-color: green;
   z-index: 0;
 }
 
@@ -26,6 +47,15 @@
   background-image: url($rootpath + 'img/line-cmilk-card-vert.png');
   background-repeat: no-repeat;
   background-position: 80px 110px;
+  @include mobile {
+    position: relative;
+    padding: 32px 32px 40px 56px;
+    width: 100%;
+    // padding: 32px;
+    background-position: 32px 72px;
+    background-size: 1px 70%;
+
+  }
 
 
   &_back {
@@ -36,6 +66,14 @@
     z-index: 8;
     position: relative;
     overflow: hidden;
+    @include mobile {
+      top: 0;
+      left: 0;
+      position: relative;
+      width:fit-content;
+      margin-left: 65px;
+      height: 230px;
+    }
   }
 
   &__pic {
@@ -43,6 +81,12 @@
     margin-left: 55%;
     margin-bottom: -5px;
     margin-top: 60px;
+    @include mobile {
+        margin: 0;
+        height: 200px;
+        margin-left: 30px;
+        margin-top: 30px;
+      }
   }
 
   &__link {
@@ -52,9 +96,13 @@
     color: var(--main-white);
     font-size: 22px;
     line-height: 27px;
-
+    @include mobile {
+        font-size: 14px;
+        line-height: 17px;
+    }
     img {
       margin-left: 15px;
+      margin-bottom: -2px;
     }
 
     @include hover {
@@ -66,10 +114,17 @@
 .dep-card h1 {
       color: var(--main-white);
       margin-top: 60px;
+      @include mobile {
+        margin-top: 30px;
+      }
     }
 
 .dep-card p {
       color: var(--main-white);
       font-size: 22px;
       line-height: 27px;
+      @include mobile {
+        font-size: 18px;
+          line-height: 24px;
+        }
     }

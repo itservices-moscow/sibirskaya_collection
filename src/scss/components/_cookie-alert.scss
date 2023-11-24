@@ -9,10 +9,15 @@
   bottom: 10%;
   left: 10%;
   padding: 40px;
+  @include mobile {
+
+  }
 }
 
 .cookie-alert button {
   width: 100px;
   height: 49px;
+  @include mobile {
 
+  }
 }

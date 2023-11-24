@@ -6,9 +6,10 @@
 <body class="page__body">
   <div class="site-container" id="site-container">
     @include('partials/header.html')
+    @include('partials/topmenu_mobile.html')
     @include('partials/topmenu_brands.html')
     @include('partials/topmenu_manuf.html')
-    @include('partials/topmenu_burger.html')
+
     <main class="main">
       @include('partials/main_intro.html')
       @include('partials/main_highlights.html')
@@ -22,18 +23,8 @@
     </main>
     @include('partials/footer.html')
   </div>
-    <script>
-      window.addEventListener('scroll', function () {
-        const scrollPosition = document.documentElement.scrollTop
-        if (scrollPosition > 900 && document.querySelector(".intro").style.visibility === "" || document.querySelector(".intro").style.visibility === "visible") {
-          document.querySelector(".intro").style.visibility = "hidden"
-        }
-        if (scrollPosition < 900 && document.querySelector(".intro").style.visibility === "hidden") {
-          document.querySelector(".intro").style.visibility = "visible"
-        }
+  @include('partials/footer_scripts.html')
 
-      });
-    </script>
 
 
 </body>

@@ -1,10 +1,13 @@
 <header class="header">
   <div class="container header__container grid">
+
     <div class="header-grid">
       <a href="#" class="logo">
         <img src="img/sk-logo.png" alt=""/>
       </a>
     </div>
+
+    <!-- средняя секция на десктопе -->
     <div class="header-grid desktop">
       <nav class="nav" title="Главное меню">
         <ul class="list-reset nav__list flex" id="nav__list">
@@ -29,29 +32,36 @@
       </nav>
     </div>
 
-    <div class="header-grid">
+    <!-- средняя секция на мобильных и маленьких экранах <1280 -->
+    <div class="header-grid mobile">
       <div class="flex">
-        <div class="desktop"><button class="btn-reset nav__button btn-secondary">КУПИТЬ</button></div>
         <div class="lang">
           <a href="#" class="active">RU</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">EN</a>
         </div>
       </div>
     </div>
+
+    <!-- правая секция на десктопе -->
+    <div class="header-grid desktop">
+      <div class="flex">
+        <div><button class="btn-reset nav__button btn-secondary">КУПИТЬ</button></div>
+        <div class="lang">
+          <a href="#" class="active">RU</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">EN</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- правая секция на мобильных и маленьких экранах <1280 -->
     <div class="header-grid mobile">
+      <div class="flex">
         <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
           <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
         </button>
+      </div>
     </div>
 
   </div>
-<!--
-  <div class="topsearch" id="topsearch">
-    <input type="text" name="top-search" placeholder="Поиск" />
-    <button class="btn-reset" data-graph-path="">НАЙТИ</button>
-  </div>
-
-
--->
-
-
 </header>

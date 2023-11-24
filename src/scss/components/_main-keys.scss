@@ -1,18 +1,29 @@
 .keys {
   background-color: var(--main-beige);
   padding: 0 55px;
+  @include mobile {
+    padding: 0 24px;
+  }
+
   &__cards {
     color: var(--main-black);
     grid-template-columns: repeat(3, minmax(0, 430px));
     justify-content: space-between;
     margin: 50px auto;
     grid-gap: 30px;
+    @include mobile {
+      grid-template-columns: 100%;
+    }
   }
   &__item {
       max-width: 430px;
       min-width: 250px;
       background: url($rootpath + 'img/line-card-vert.png') no-repeat right center;
-      background-size: 1px 90%;  // заменить картинку
+      background-size: 1px 90%;
+      padding-left: 16px;
+      @include mobile {
+          background: url($rootpath + 'img/line-card-vert.png') no-repeat left 24px;
+        }
     }
 
   &__top {
@@ -31,6 +42,10 @@
   &__line {
     margin: 0 auto 30px auto;
     padding: 0 30px 0 0;
+    @include mobile {
+      padding: 0 0 0 16px;
+    }
+
   }
   &__link {
     position: absolute;

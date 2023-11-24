@@ -6,9 +6,15 @@
   background-position: center 100px;
   color: var(--light-gray);
   padding: 0 55px;
+  @include mobile {
+      padding: 0 24px;
+  }
 
   &__cards{
-    grid-template-columns: repeat(3, minmax(0, 430px));
+    grid-template-columns: repeat(3, minmax(150px, 430px));
+    @include mobile {
+      grid-template-columns: 100%;
+    }
     justify-content: space-between;
     // grid-gap: 30px;
   }
@@ -33,7 +39,9 @@
   }
   &__empty {
     height: 110px;
-
+    @include mobile {
+        height: 0;
+    }
 
   }
 

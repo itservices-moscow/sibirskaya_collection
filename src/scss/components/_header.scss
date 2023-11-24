@@ -8,11 +8,8 @@
   &__container {
     background-color: var(--color-black);
     height: var(--header-height);
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 0; //55px
     display: grid;
-
+    padding: 20px 55px;
 
     @include big-desktop {
         grid-template-columns: 120px calc(100% - 510px) 340px;
@@ -24,15 +21,18 @@
         gap: 0 30px;
     }
     @include small-desktop {
-      grid-template-columns: 110px calc(100% - 380px) 260px; // тут уже будет бургер
-
-      gap: 0 10px;
+      grid-template-columns: 110px calc(100% - 220px) 110px; // тут уже меню бургер
+      gap: 0;
+      padding: 24px;
     }
     @include mobile {
-
+      grid-template-columns: 110px calc(100% - 220px) 110px; // тут уже меню бургер
+      gap: 0;
+      padding: 24px;
     }
 
   }
+
     a {
       font-size: 18px;
       color: var(--medium-gray);
@@ -61,7 +61,15 @@
   }
 }
 
+.header-grid > div {
+  @include small-desktop {
+      justify-content: center;
+  }
 
+  @include mobile {
+      justify-content: center;
+  }
+}
 
 .nav {
   @include small-desktop {
@@ -69,8 +77,10 @@
   }
 
   &__list {
-    justify-content: flex-end;
+    justify-content: center;
     gap: 30px;
+    line-height: 46px;
+    // margin: 24px;
 
     @include small-desktop {
         gap: 25px;
@@ -80,6 +90,7 @@
   &__button {
     width: 160px;
     height: 49px;
+    margin: auto;
     display: block;
   }
 
@@ -94,26 +105,35 @@
   }
 }
 
-.buffer {
-  // width: 60px;
-  width: 20px;
-}
-
 .lang {
   display: block;
   width: 60px;
   margin-left: 20px;
-  line-height: 49px;
+  line-height: 46px;
   color: var(--main-white);
   .active {
     text-decoration: underline;
+  }
+
+  @include small-desktop {
+
+  }
+  @include mobile {
+
   }
 }
 
 .logo img {
   width: 49px;
   min-width: 30px;
-  margin-left: 55px;
+
+  @include small-desktop {
+
+  }
+
+  @include mobile {
+
+  }
 }
 
 

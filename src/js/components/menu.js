@@ -21,3 +21,5 @@ const showTopmenu = (content, link) => {
 
 showTopmenu("topmenu-brands", "link-brands");
 showTopmenu("topmenu-manuf", "link-manuf");
+
+// функции для меню есть в footer_scripts // todo: перенести

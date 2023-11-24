@@ -1,11 +1,11 @@
-nav.topmenu {
+.topmenu {
   position: fixed;
   left: 0;
   top: 77px;
   z-index: 10;
   height: 432px;
   width: 100%;
-  background-color: #fff;// var(--coffee-milk);
+  background-color: var(--main-white);
   opacity: 0;
   transition: 0.2s;
   &__brands{
@@ -15,12 +15,21 @@ nav.topmenu {
     visibility: hidden;
   }
   &_show {
-    visibility: visible;
-    opacity: 1;
+    visibility: visible!important;
+    opacity: 1!important;
   }
 
 }
 
+.nav-top-l4-0, .nav-top-l3-0, .nav-top-l4-1,
+.nav-top-l3-1, .nav-top-l4-2,
+.nav-top-l3-2 {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  opacity: 0;
+  transition: 0.3s;
+}
 
 .topmenu-container {
   display: flex;
@@ -40,7 +49,7 @@ nav.topmenu {
 }
 
 .topmenu-container nav {
-  height: 100%;
+  height: 312px;
 }
 
 .nav-top-l1 {
