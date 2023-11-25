@@ -11,7 +11,7 @@
   padding: 40px;
   @include mobile {
     border-radius: 0;
-    min-width: 320px;
+    min-width: 280px;
     width: calc(100vw - 62px);
     height: 120px;
     padding: 16px;
@@ -27,7 +27,7 @@
       font-size: 16px;
       line-height: 19px;
       margin: 0;
-      width: calc(100% - 110px);
+      width: calc(100vw - 90px);
     }
   }
 }
@@ -37,6 +37,5 @@
   height: 49px;
   @include mobile {
     margin-top: 30px;
-
   }
 }
