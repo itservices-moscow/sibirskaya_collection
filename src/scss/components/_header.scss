@@ -1,5 +1,5 @@
 .header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   left: 0;
   top: 0;
@@ -21,12 +21,12 @@
         gap: 0 30px;
     }
     @include small-desktop {
-      grid-template-columns: 110px calc(100% - 220px) 110px; // тут уже меню бургер
+      grid-template-columns: 110px calc(100vw - 220px) 110px; // тут уже меню бургер
       gap: 0;
       padding: 24px;
     }
     @include mobile {
-      grid-template-columns: 110px calc(100% - 220px) 110px; // тут уже меню бургер
+      grid-template-columns: repeat(3, 1fr); // тут уже меню бургер
       gap: 0;
       padding: 24px;
     }

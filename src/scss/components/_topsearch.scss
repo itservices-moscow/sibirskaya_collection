@@ -89,9 +89,14 @@
 }
 
 .searchbox-mob > .searchinput-mob {
+  width: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.menu--active * .searchbox-mob>.searchinput-mob {
   width: 100%;
   padding: 0 8px;
-  border-bottom: 1px solid var(--medium-gray);
 }
 
 .searchbutton-mob {
