@@ -28,14 +28,41 @@
   }
 }
 
+.icon-close {
+  background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L29.2843 29.2843' stroke='%23A3784E' stroke-linecap='round'/%3E%3Cpath d='M1 29.2842L29.2843 0.999909' stroke='%23A3784E' stroke-linecap='round'/%3E%3C/svg%3E%0A") no-repeat center center;
+  width: 30px;
+  height: 30px;
+}
 
 .topmenu-mobile {
   position: absolute;
-  z-index: 20;
-  top: 50px;
-  background-color: cornsilk;
-  width: 200px;
-  height: 300px;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  background-color: var(--main-white);
+  max-width: 753px;
+  max-height: 812px;
+  height: 100%;
+  width: 0;
+  transition: 0.8s ease-in;
+  &__head {
+    height: 84px;
+    padding: 0 25px;
+    background-color: var(--color-black);
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__buffer {
+    width: 30px;
+  }
+  &__search {
+    width: 325px;
+    align-items: center;
+    justify-content: end;
+  }
+
+
+
 
   @include desktop {
     display: none;
@@ -51,5 +78,79 @@
 }
 
 .menu--active {
- background-color: yellow;
+  width: 100%;
 }
+
+.nav-mob {
+  display: block;
+  max-width: 327px;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 32px;
+  align-items: center;
+  opacity: 0;
+  transition: 0.8s;
+  &__list{
+    flex-direction: column;
+  }
+
+  &__link {
+    color: var(--main-black);
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 78px;
+    transition: 0.3s;
+    margin-left: 24px;
+    margin-right: 24px;
+    @include hover {
+      color: var(--dark-bronze);
+    }
+
+  }
+  &__item {
+    height: 78px;
+    border-bottom: 1px solid var(--light-gray);
+    position: relative;
+  }
+    .sub :after {
+      content: url("data:image/svg+xml,%3Csvg width='24' height='26' viewBox='0 0 24 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 25L18 13L6 1' stroke='%233C3B35' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      height: 24px;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+}
+
+.nav-mob > button {
+  text-transform: uppercase;
+  margin-top: 80px;
+  width: 100%;
+}
+
+.menu--active * .nav-mob {
+  opacity: 1;
+
+}
+
+
+.topmenu-mob {
+
+  // opacity: 0;
+  // transition: 0.2s;
+
+  &__brands {
+    visibility: hidden;
+  }
+
+  &__manuf {
+    visibility: hidden;
+  }
+
+  &_show {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+}
+

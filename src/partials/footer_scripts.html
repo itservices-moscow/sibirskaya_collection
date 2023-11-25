@@ -49,25 +49,22 @@
 
 
 // ПОИСК В ХЕДЕРЕ
-  const searchposX = document.getElementById('searchAnchor').getBoundingClientRect().x
+  const searchposX = document.getElementById('searchanchor').getBoundingClientRect().x
   // console.log('searchposX', searchposX)
-  document.getElementById('searchBox').style.right = 'calc(100% - ' + (Math.ceil(searchposX) + 30) + 'px)';
+  document.getElementById('searchbox').style.right = 'calc(100% - ' + (Math.ceil(searchposX) + 30) + 'px)';
 
   window.addEventListener("resize", (event) => {
-    const searchposX = document.getElementById('searchAnchor').getBoundingClientRect().x
-    // console.log('searchposX', searchposX)
-    document.getElementById('searchBox').style.right = 'calc(100% - ' + (Math.ceil(searchposX) + 30) + 'px)';
+    const searchposX = document.getElementById('searchanchor').getBoundingClientRect().x
+    document.getElementById('searchbox').style.right = 'calc(100% - ' + (Math.ceil(searchposX) + 30) + 'px)';
   });
 
   document.getElementById('searchicon').addEventListener('click', (e) => {
-    // const x = e.target.getBoundingClientRect().x
-    // const size = document.getElementById('nav__list').getBoundingClientRect()
-    // document.getElementById('topsearch').style.width = (Math.ceil(size.width) - 40) + 'px';
-    document.getElementById('searchBox').classList.toggle('active')
+    document.getElementById('searchbox').classList.toggle('active')
   })
     // document.getElementById('searchicon').addEventListener('click', (e) => {
     //   e.stopPropagation();
     // })
+// ПОИСК В МОБИЛЬНОМ МЕНЮ
 
 
 

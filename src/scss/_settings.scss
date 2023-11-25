@@ -29,6 +29,10 @@ body {
   font-size: 22px;
 }
 
+section {
+  min-width: 360px;
+}
+
 .main {
   margin-top: var(--header-height);
 }
