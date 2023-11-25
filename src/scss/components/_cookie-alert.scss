@@ -12,7 +12,7 @@
   @include mobile {
     border-radius: 0;
     min-width: 320px;
-    width: calc(100% - 62px);
+    width: calc(100vw - 62px);
     height: 120px;
     padding: 16px;
     left: 0;
