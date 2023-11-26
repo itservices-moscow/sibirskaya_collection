@@ -38,7 +38,7 @@
 // Меню и пункты меню
 
 .topmenu-mobile {
-  position: absolute;
+  position: fixed;
   z-index: 200;
   top: 0;
   right: 0;
@@ -150,3 +150,8 @@
   }
 }
 
+
+
+.nav-mob-l1 .piclink {
+  width: 120px;
+}

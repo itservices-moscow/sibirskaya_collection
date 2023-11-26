@@ -19,11 +19,11 @@ import { enableScroll } from "../functions/enable-scroll";
     if (menu?.classList.contains("menu--active")) {
       burger?.setAttribute("aria-expanded", "true");
       burger?.setAttribute("aria-label", "Закрыть меню");
-      disableScroll();
+      //disableScroll();
     } else {
       burger?.setAttribute("aria-expanded", "false");
       burger?.setAttribute("aria-label", "Открыть меню");
-      enableScroll();
+      //enableScroll();
     }
   });
 
@@ -32,7 +32,7 @@ import { enableScroll } from "../functions/enable-scroll";
     burger?.setAttribute("aria-label", "Открыть меню");
     burger.classList.remove("burger--active");
     menu.classList.remove("menu--active");
-    enableScroll();
+    //enableScroll();
   });
 
   closeBtn?.addEventListener("click", () => {
@@ -41,7 +41,7 @@ import { enableScroll } from "../functions/enable-scroll";
     burger.classList.remove("burger--active");
     menu.classList.remove("menu--active");
     setTimeout(hideFix, "1000");
-    enableScroll();
+    //enableScroll();
   });
 
   function hideFix() {
@@ -55,7 +55,7 @@ import { enableScroll } from "../functions/enable-scroll";
       burger?.setAttribute("aria-label", "Открыть меню");
       burger.classList.remove("burger--active");
       menu.classList.remove("menu--active");
-      enableScroll();
+      //enableScroll();
     });
   });
 })();
