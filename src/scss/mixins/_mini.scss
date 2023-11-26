@@ -22,6 +22,7 @@ $browser-context: 16; // Default
   );
 }
 
+
 @mixin footerToBottom {
   display: grid;
   grid-template-columns: 100%;
@@ -57,3 +58,5 @@ $browser-context: 16; // Default
     content: "";
     display: block;
 }
+
+

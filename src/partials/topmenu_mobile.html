@@ -19,8 +19,8 @@
     <nav title="Главное меню">
       <div class="nav-mob nav-mob-l0">
         <ul class="list-reset nav-mob__list">
-          <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-manuf-mob">Производство</a></li>
-          <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-brands-mob">Продукт</a></li>
+          <li class="nav-mob__item sub"  onclick="toggleMobMenuPanel('.nav-mob-manuf');" ><a href="#"  class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a></li>
+          <li class="nav-mob__item sub"  onclick="toggleMobMenuPanel('.nav-mob-brands');" ><a href="#"  class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a></li>
           <li class="nav-mob__item"><a href="#" class="nav-mob__link">Новинки</a></li>
           <li class="nav-mob__item"><a href="#" class="nav-mob__link">Стартапам</a></li>
           <li class="nav-mob__item"><a href="contacts.html" class="nav-mob__link">Контакты</a></li>
@@ -28,18 +28,31 @@
         <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
       </div>
 
-      <div class="nav-mob nav-mob-l1 hidden">
+      <div class="nav-mob nav-mob-l1 nav-mob-brands closed" >
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');">
+          <img src="img/back-sm.png" />
+          <span>продукт</span>
+        </div>
         <ul class="list-reset nav-mob__list">
-          <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-manuf-mob">Производство</a></li>
-          <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-brands-mob">Продукт</a></li>
-          <li class="nav-mob__item"><a href="#" class="nav-mob__link">Новинки</a></li>
-          <li class="nav-mob__item"><a href="#" class="nav-mob__link">Стартапам</a></li>
-          <li class="nav-mob__item"><a href="contacts.html" class="nav-mob__link">Контакты</a></li>
+          <li class="nav-top-l1__brands">
+            <a href="#" class="nav-top-l1__link">бренды</a>
+            <ul class="list-reset nav-mob-l2__list flex">
+              <li class="nav-mob-l2__item"><a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');">Sибирская коллекция</a></li>
+              <li class="nav-mob-l2__item"><a href="#" class="nav-mob-l2__link" onClick="">SK SELECTIVE</a></li>
+              <li class="nav-mob-l2__item"><a href="#" class="nav-mob-l2__link">SK SELECTIVE KIDS</a></li>
+              <li class="nav-mob-l2__item link-more"><a  href="catalog.html" class="nav-mob-l2__link ">СМОТРЕТЬ ВСЕ</a></li>
+            </ul>
+          </li>
+          <li class="nav-mob-l1__item"><a href="#" class="nav-mob-l1__link">детское питание</a></li>
+          <li class="nav-mob-l1__item"><a href="#" class="nav-mob-l1__link">horeca</a></li>
+          <li class="nav-mob-l1__item"><a href="#" class="nav-mob-l1__link">stm</a></li>
         </ul>
       </div>
-      <div class="nav-mob nav-mob-l1 hidden">
-          <div class="nav-mob__back">
+
+      <div class="nav-mob nav-mob-l1 nav-mob-manuf closed">
+          <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
             <img src="img/back-sm.png"/>
+            <span>производство</span>
           </div>
           <ul class="list-reset nav-mob__list">
             <li class="nav-mob__item"><a href="quality.html" class="nav-mob__link">контроль качества</a></li>
@@ -47,44 +60,70 @@
             <li class="nav-mob__item"><a href="#" class="nav-mob__link">Разработка новых продуктов</a></li>
             <li class="nav-mob__item"><a href="#" class="nav-mob__link">карьера</a></li>
           </ul>
-          <div class="piclink">
-            <a href="#"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
-            <a href="#" class="piclink__link">отдел разработки</a>
+          <div class="pic-container flex">
+            <div class="piclink">
+              <a href="#"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
+              <a href="#" class="piclink__link">отдел разработки</a>
+            </div>
+            <div class="piclink">
+              <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
+              <a href="#" class="piclink__link">карьера</a>
+            </div>
           </div>
-          <div class="piclink">
-            <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
-            <a href="#" class="piclink__link">карьера у нас</a>
-          </div>
-
       </div>
 
 
+      <div class="nav-mob nav-mob-l3 nav-mob-sk closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');">
+          <img src="img/back-sm.png" />
+          <span>Бренды:<br/>Sибирская коллекция</span>
+        </div>
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link"
+              onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link"
+              onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">блины</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">vegan</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">пицца</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">kids</a></li>
+          <li class="nav-mob-l3__item link-more"><a href="catalog.html" class="nav-mob-l3__link ">СМОТРЕТЬ ВСЕ</a></li>
+        </ul>
+      </div>
 
+      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">
+          <img src="img/back-sm.png" />
+          <span>пельмени<br />Sибирская коллекция</span>
+        </div>
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с говядиной</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с телятиной</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с индейкой</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с курицей</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">4 вида мяса</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">халяль</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">эксклюзив</a></li>
+          <li class="nav-mob-l4__item link-more"><a href="catalog.html" class="nav-mob-l4__link ">СМОТРЕТЬ ВСЕ</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-mob nav-mob-l4 nav-mob-vareniki closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">
+          <img src="img/back-sm.png" />
+          <span>вареники<br />Sибирская коллекция</span>
+        </div>
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с картошкой</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с вишней</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с творогом</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">эксклюзив</a></li>
+          <li class="nav-mob-l4__item link-more"><a href="catalog.html" class="nav-mob-l4__link ">СМОТРЕТЬ ВСЕ</a></li>
+        </ul>
+      </div>
 
     </nav>
   </div>
-
-
-
-  <!--
-
-
-    <div class="topmenu-mob-container">
-      <div class="topmenu-mob-container__item">
-        <nav class="nav-top-mob-l1" title="">
-          <ul class="list-reset nav-top-mob-l1__list">
-            <li class="nav-top-mob-l1__item active"><a href="#" class="nav-top-mob-l1__link">бренды</a></li>
-            <li class="nav-top-mob-l1__item"><a href="#" class="nav-top-mob-l1__link">детское питание</a></li>
-            <li class="nav-top-mob-l1__item"><a href="#" class="nav-top-mob-l1__link">horeca</a></li>
-            <li class="nav-top-mob-l1__item"><a href="#" class="nav-top-mob-l1__link">stm</a></li>
-          </ul>
-        </nav>
-      </div>
-
-    </div>
-
-    -->
-
-
 
 </div>

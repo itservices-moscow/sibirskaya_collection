@@ -36,8 +36,6 @@
   const showTopMenuPanel = (toshow, tohide) => {
     const menuBlock = document.querySelector(toshow);
     const siblings = getSiblings(menuBlock);
-    console.log('top show', toshow, tohide)
-    console.log(menuBlock)
     menuBlock.classList.toggle("topmenu_show");
     siblings.forEach((element) => {
       element.classList.remove("topmenu_show");
@@ -48,6 +46,13 @@
       });
     }
   };
+
+// МОБИЛЬНОЕ МЕНЮ
+  function toggleMobMenuPanel(panelClass) {
+    console.log(document.querySelector(panelClass))
+    document.querySelector(panelClass).classList.toggle('closed');
+  }
+
 
 // МЕНЮ ФУТЕРА
   function accordionInit (classname) {
@@ -67,9 +72,6 @@
   }
 
   accordionInit('accordion');
-
-
-
 
 
 // ПОИСК В ХЕДЕРЕ
