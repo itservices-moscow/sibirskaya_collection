@@ -44,6 +44,25 @@
     }
   };
 
+// МЕНЮ ФУТЕРА
+  function accordionInit (classname) {
+    var acc = document.getElementsByClassName(classname);
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  }
+
+  accordionInit('accordion');
+
 
 
 
@@ -64,8 +83,9 @@
     // document.getElementById('searchicon').addEventListener('click', (e) => {
     //   e.stopPropagation();
     // })
-// ПОИСК В МОБИЛЬНОМ МЕНЮ
 
+// ПОИСК В МОБИЛЬНОМ МЕНЮ
+  //
 
 
 

@@ -1,3 +1,4 @@
+// Бургер в хедере
 .burger {
   width: 44px;
   height: 44px;
@@ -34,6 +35,8 @@
   height: 30px;
 }
 
+// Меню и пункты меню
+
 .topmenu-mobile {
   position: absolute;
   z-index: 200;
@@ -61,9 +64,6 @@
     justify-content: end;
   }
 
-
-
-
   @include desktop {
     display: none;
   }
@@ -80,9 +80,10 @@
 .menu--active {
   width: 100%;
 }
-
+.hidden {
+  display: none;
+}
 .nav-mob {
-  display: block;
   max-width: 327px;
   padding: 0;
   margin-right: auto;
@@ -124,21 +125,17 @@
 
 .nav-mob > button {
   text-transform: uppercase;
+  padding: 0 25px;
   margin-top: 80px;
   width: 100%;
 }
 
 .menu--active * .nav-mob {
   opacity: 1;
-
 }
 
 
 .topmenu-mob {
-
-  // opacity: 0;
-  // transition: 0.2s;
-
   &__brands {
     visibility: hidden;
   }
@@ -151,6 +148,5 @@
     visibility: visible !important;
     opacity: 1 !important;
   }
-
 }
 

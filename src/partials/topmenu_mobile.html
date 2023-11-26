@@ -1,5 +1,5 @@
 <div class="topmenu-mobile mobile" data-menu>
-  <div class="topmenu-mobile__head flex">
+  <div class="topmenu-mobile__head flex hidden" data-menu-search>
     <div class="topmenu-mobile__buffer"></div>
     <div class="topmenu-mobile__search">
       <div class="searchbox-mob flex" id="searchbox-mob">
@@ -15,17 +15,28 @@
 
   </div>
 
-  <div class="topmenu-mobile__content">
-    <nav class="nav-mob" title="Главное меню">
-      <ul class="list-reset nav-mob__list flex" id="nav-mob__list">
-        <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-manuf-mob">Производство</a></li>
-        <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-brands-mob">Продукт</a></li>
-        <li class="nav-mob__item"><a href="#" class="nav-mob__link">Новинки</a></li>
-        <li class="nav-mob__item"><a href="#" class="nav-mob__link">Стартапам</a></li>
-        <li class="nav-mob__item"><a href="contacts.html" class="nav-mob__link">Контакты</a></li>
+  <div class="topmenu-mobile__content hidden" data-menu-content>
+    <nav title="Главное меню">
+      <div class="nav-mob nav-mob-l0">
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-manuf-mob">Производство</a></li>
+          <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-brands-mob">Продукт</a></li>
+          <li class="nav-mob__item"><a href="#" class="nav-mob__link">Новинки</a></li>
+          <li class="nav-mob__item"><a href="#" class="nav-mob__link">Стартапам</a></li>
+          <li class="nav-mob__item"><a href="contacts.html" class="nav-mob__link">Контакты</a></li>
+        </ul>
+        <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
+      </div>
 
-      </ul>
-      <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
+      <div class="nav-mob nav-mob-l1 hidden">
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-manuf-mob">Производство</a></li>
+          <li class="nav-mob__item sub"><a href="#" class="nav-mob__link" id="link-brands-mob">Продукт</a></li>
+          <li class="nav-mob__item"><a href="#" class="nav-mob__link">Новинки</a></li>
+          <li class="nav-mob__item"><a href="#" class="nav-mob__link">Стартапам</a></li>
+          <li class="nav-mob__item"><a href="contacts.html" class="nav-mob__link">Контакты</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
 
@@ -34,8 +45,6 @@
   <!--
 
 
-
-  <nav class="topmenu-mob topmenu-mob__brands" id="topmenu-mob-brands">
     <div class="topmenu-mob-container">
       <div class="topmenu-mob-container__item">
         <nav class="nav-top-mob-l1" title="">
@@ -49,7 +58,6 @@
       </div>
 
     </div>
-  </nav>
 
     -->
 

@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container flex footer__container footer__t">
-    <nav class="navfooter" title="Нижнее меню">
+    <nav class="footer_nav" title="Нижнее меню">
     <div class="navf">
       <div class="navf__item">
         <div class="accordion">Производство</div>
@@ -32,22 +32,6 @@
         <div class="empty"><a href="#">Контакты</a></div>
       </div>
     </div>
-    <!-- tod: перенести в js-->
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
     </nav>
 
     <div class="footer_center">

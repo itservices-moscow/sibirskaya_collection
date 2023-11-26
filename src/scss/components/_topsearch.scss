@@ -89,14 +89,9 @@
 }
 
 .searchbox-mob > .searchinput-mob {
-  width: 0;
-  padding: 0;
-  border-bottom: 1px solid var(--medium-gray);
-}
-
-.menu--active * .searchbox-mob>.searchinput-mob {
   width: 100%;
-  padding: 0 8px;
+    padding: 0 8px;
+  border-bottom: 1px solid var(--medium-gray);
 }
 
 .searchbutton-mob {
@@ -104,8 +99,7 @@
   background-color: var(--color-black);
   border: 0;
   float: right;
-  width: 0;
-  opacity: 0;
+  width: 40px;
   height: 40px;
   margin: -2px 0 0 -45px;
   cursor: pointer;
@@ -115,10 +109,6 @@
   }
 }
 
-.menu--active * .searchbutton-mob {
-  width: 40px;
-  opacity: 1;
-}
 
 .searchinput-mob {
   border: none;
