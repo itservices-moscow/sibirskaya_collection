@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
 }
 
+// $rootpath: '../';  // !!! пути к файлам в билде  '../' - в разработке
 $rootpath: '../';
 
 *,
@@ -24,7 +25,8 @@ $rootpath: '../';
 }
 
 body {
-  background-color: var(--main-beige);
+  //background-color: var(--main-beige);
+  background-color: var(--color-black);
   font-family: var(--font-family, Roboto, sans-serif);
   font-size: 22px;
 }
@@ -35,6 +37,7 @@ section {
 
 .main {
   margin-top: var(--header-height);
+  background-color: var(--color-black);
 }
 
 .text-normal {
