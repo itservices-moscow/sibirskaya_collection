@@ -8,11 +8,33 @@
   padding-top: 100px;
   height: 700px;
   width: 100vw;
+  @include mobile {
+    padding-top: 40px;
+  }
+}
+.intro-logo {
+  //margin-bottom: 10px;
+  @include mobile {
+    // margin-bottom: 14px;
+  }
+}
+.intro-desc {
+  margin: 30px;
+  margin-bottom: 50px;
+  color: var(--main-white);
+  font-size: 22px;
+  line-height: 27px;
+  // @include mobile {
+
+  // }
 }
 .intro-empty {
   height: 1000px;
   opacity: 0.5;
   //background-color: green;
+  @include mobile {
+    height: 700px;
+  }
 
 }
 .intro-buffer {
@@ -20,7 +42,7 @@
 }
 
 .intro-vid {
-  background-color: black;
+  // background-color: black;
   // opacity: 0.8;
   z-index: 5;
   text-align: center;
@@ -68,12 +90,4 @@
   //   }
   // }
 }
-
-.intro-desc {
-  margin: 30px;
-  color: var(--main-white);
-  font-size: 22px;
-  line-height: 27px;
-}
-
 

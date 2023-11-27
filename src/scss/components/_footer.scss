@@ -6,8 +6,7 @@
     padding: 0 55px;
     @include mobile {
       flex-direction: column;
-      //padding: 0 24px;
-      padding: 0;
+      padding: 0 24px;
       align-items: center;
     }
   }
@@ -38,7 +37,7 @@
     min-height: 300px;
     padding-top: 80px;
     @include mobile {
-      padding-top: 40px;
+      padding-top: 60px;
     }
   }
 
@@ -46,6 +45,7 @@
     gap: 30px;
     padding: 50px 55px 40px 55px;
     @include mobile {
+      gap: 10px;
       padding: 30px 24px 50px 24px;
       text-align: center;
     }
@@ -68,6 +68,7 @@
   width: 270px;
   @include mobile {
     width: 230px;
+    margin-bottom: 64px;
   }
 
 }
@@ -169,8 +170,6 @@
   margin: 15px;
   margin-top: 80px;
   @include mobile {
-    transform: scale(0.8);
-    margin: 40px;
-    margin-bottom: 55px;
+    margin: 55px;
   }
 }

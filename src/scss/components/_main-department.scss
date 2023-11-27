@@ -4,7 +4,7 @@
   padding-top: 80px;
   padding-bottom: 150px;
   @include mobile {
-    padding: 40px 24px 80px 24px;
+    padding: 40px 0 80px 24px;
   }
 }
 
@@ -21,7 +21,7 @@ h1 {
   line-height: 46px;
 }
 }
-p{
+p {
     @include mobile {
         font-size: 18px;
         line-height: 24px;
@@ -49,10 +49,9 @@ p{
   background-position: 80px 110px;
   @include mobile {
     position: relative;
-    padding: 32px 32px 40px 56px;
+    padding: 24px 64px;
     width: 100vw;
-    // padding: 32px;
-    background-position: 32px 72px;
+    background-position: 32px 62px;
     background-size: 1px 70%;
 
   }
@@ -70,8 +69,9 @@ p{
       top: 0;
       left: 0;
       position: relative;
-      width:fit-content;
-      margin-left: 65px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: 0;
       height: 230px;
     }
   }
@@ -104,10 +104,6 @@ p{
       margin-left: 15px;
       margin-bottom: -2px;
     }
-
-    @include hover {
-      /*color: white; */
-    }
   }
 
 }
@@ -115,7 +111,7 @@ p{
       color: var(--main-white);
       margin-top: 60px;
       @include mobile {
-        margin-top: 30px;
+        margin-top: 24px;
       }
     }
 
@@ -125,6 +121,7 @@ p{
       line-height: 27px;
       @include mobile {
         font-size: 18px;
-          line-height: 24px;
+        line-height: 24px;
+        width: 70%;
         }
     }

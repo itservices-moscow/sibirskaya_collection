@@ -18,7 +18,7 @@ $rootpath: '../';
 
 .page__body {
   margin: 0;
-  min-width: 360px;
+  min-width: 350px;
   min-height: 100%;
   font-size: 16px;
 }
@@ -30,7 +30,7 @@ body {
 }
 
 section {
-  min-width: 360px;
+  min-width: 350px;
 }
 
 .main {
@@ -52,6 +52,17 @@ section {
   line-height: 22px;
 }
 
+.mobile {
+  @include desktop {
+    display: none!important;
+  }
+}
+
+.desktop {
+  @include mobile {
+    display: none!important;
+  }
+}
 
 img {
   height: auto;

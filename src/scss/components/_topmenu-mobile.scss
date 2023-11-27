@@ -1,14 +1,14 @@
 // Бургер в хедере
 .burger {
-  width: 44px;
+  width: 54px;
   height: 44px;
   position: relative;
 
   &__line {
     position: absolute;
     background-color: var(--main-bronze);
-    height: 2px;
-    width: 32px;
+    height: 1px;
+    width: 44px;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     &:first-child {
@@ -20,9 +20,9 @@
     }
   }
 
-  @include small-desktop {
-    margin-left: auto;
-  }
+  // @include small-desktop {
+  //   margin-left: auto;
+  // }
 
   @include mobile {
     margin-left: auto;
@@ -32,6 +32,7 @@
 .icon-close {
   background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L29.2843 29.2843' stroke='%23A3784E' stroke-linecap='round'/%3E%3Cpath d='M1 29.2842L29.2843 0.999909' stroke='%23A3784E' stroke-linecap='round'/%3E%3C/svg%3E%0A") no-repeat center center;
   width: 30px;
+  min-width: 30px;
   height: 30px;
 }
 
@@ -60,6 +61,7 @@
   }
   &__search {
     width: 325px;
+    min-width: 300px;
     align-items: center;
     justify-content: end;
   }
@@ -68,9 +70,9 @@
     display: none;
   }
 
-  @include small-desktop {
-    display: block;
-  }
+  // @include small-desktop {
+  //   display: block;
+  // }
 
   @include mobile {
     display: block;
@@ -165,7 +167,6 @@
 
 .menu--active * .nav-mob {
   opacity: 1;
-  // width: 360px;
   transition: 0.2px;
 }
 

@@ -1,41 +1,62 @@
 .cookie-alert {
-  width: 248px;
-  height: 248px;
-  border-radius: 50%;
   text-align: center;
   opacity: 0.9;
-  background-color: var(--coffee-milk);
   position: fixed;
   bottom: 10%;
   left: 10%;
+  @include mobile {
+    width: 100%;
+    left: 0;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+.cookie-alert > div {
+  width: 248px;
+  height: 248px;
+  border-radius: 50%;
+  background-color: var(--coffee-milk);
   padding: 40px;
   @include mobile {
-    border-radius: 0;
-    min-width: 280px;
-    width: calc(100vw - 62px);
-    height: 120px;
+    height: fit-content;
     padding: 16px;
-    left: 0;
-    bottom: 15%;
-    margin: 20px;
+    border-radius: 0;
+    width: 100%;
+    max-width: 500px;
+    min-width: 270px;
+    margin: 0 20px 40px 20px;
     display: flex;
-    text-align: left;
-
+    justify-content: center;
+    align-items: center;
   }
-  p {
-    @include mobile {
-      font-size: 16px;
-      line-height: 19px;
-      margin: 0;
-      width: calc(100vw - 90px);
-    }
+
+}
+
+.cookie-alert > div p {
+  text-align: center;
+  @include mobile {
+    text-align: left;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0;
+    width: calc(100% - 120px);
   }
 }
 
-.cookie-alert button {
+.cookie-alert > div button {
   width: 100px;
   height: 49px;
   @include mobile {
-    margin-top: 30px;
+    margin-left: 14px;
   }
+}
+
+
+.cookie-alert * a {
+  color: var(--main-black);
+  font-weight: 600;
+  text-decoration: underline;
 }

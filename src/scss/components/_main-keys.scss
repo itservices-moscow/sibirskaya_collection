@@ -1,26 +1,25 @@
 .keys {
   background-color: var(--main-beige);
-  padding: 0 55px;
+  padding: 140px 55px;
   @include mobile {
-    padding: 0 24px;
+    padding: 90px 24px 96px 24px;
   }
 
   &__cards {
     color: var(--main-black);
-    grid-template-columns: repeat(3, minmax(0, 430px));
+    grid-template-columns: repeat(3, 1fr); //minmax(0, 430px)
     justify-content: space-between;
-    margin: 50px auto;
-    grid-gap: 30px;
+    grid-gap: 32px 0;
     @include mobile {
       grid-template-columns: 100%;
+      grid-gap: 24px;
     }
   }
   &__item {
       max-width: 430px;
       min-width: 250px;
-      background: url($rootpath + 'img/line-card-vert.png') no-repeat right center;
-      background-size: 1px 90%;
-      padding-left: 16px;
+      background: url($rootpath + 'img/line-card-vert.png') no-repeat right 32px;
+      background-clip: padding-box;
       @include mobile {
           background: url($rootpath + 'img/line-card-vert.png') no-repeat left 24px;
         }
@@ -28,7 +27,9 @@
 
   &__top {
       align-items: center;
-      margin-top: 162px;
+      @include mobile {
+        margin-bottom: 38px;
+      }
     }
       h1 {
         text-align: center;
@@ -37,13 +38,23 @@
 }
 
 .keys-card {
+  // border: 1px dashed green;
+  background: url($rootpath + 'img/line-card.png') no-repeat;
+  margin-right: 32px;
   height: 100%;
   position: relative;
-  &__line {
-    margin: 0 auto 30px auto;
-    padding: 0 30px 0 0;
+  @include mobile {
+      margin-right: 0;
+      background-position-x: 24px;
+      padding: 24px 16px 0 16px;
+    }
+  &__icon {
+    margin-top: 54px;
+    //margin: 0 auto 30px auto;
+    //padding: 0 30px 0 0;
     @include mobile {
-      padding: 0 0 0 16px;
+      margin-top: 0;
+      //padding: 0 0 0 16px;
     }
 
   }
@@ -65,8 +76,9 @@
   }
   p {
     margin: 0;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    // margin-bottom: 30px;
   }
 }
 

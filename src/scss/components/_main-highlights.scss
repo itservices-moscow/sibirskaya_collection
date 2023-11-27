@@ -3,7 +3,7 @@
   background-image: url($rootpath + 'img/mainpic-3d.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center 100px;
+  background-position: center center;
   color: var(--light-gray);
   padding: 0 55px;
   @include mobile {
@@ -12,44 +12,90 @@
 
   &__cards{
     grid-template-columns: repeat(3, minmax(150px, 430px));
+    grid-template-rows: auto auto auto;
+    grid-gap: 40px;
+    // justify-content: space-between;
     @include mobile {
       grid-template-columns: 100%;
     }
-    justify-content: space-between;
-    // grid-gap: 30px;
+
+  }
+  &__item {
+    // background-color: yellow;
   }
 
+  &__item-1 {
+    grid-column: 1, 1fr;
+    .hl-card {
+      text-align: right;
+      @include mobile {
+        text-align: left;
+      }
+    }
+      div {
+        background-position: 100% 0%;
+        @include mobile {
+          background-position: 0% 0%;
+        }
+      }
+
+  }
+  &__item-2 {
+    grid-column: 3;
+    grid-row: 2;
+    @include mobile {
+      grid-column: 1;
+      grid-row: auto;
+    }
+    .hl-card {
+      text-align: left;
+
+      @include mobile {
+        text-align: right;
+      }
+    }
+      div {
+        background-position: 0% 0%;
+        @include mobile {
+          background-position: 100% 0%;
+        }
+      }
+    }
+
+
+  &__item-3 {
+    grid-column: 1;
+    grid-row: 3;
+    @include mobile {
+      grid-column: 1;
+      grid-row: auto;
+    }
+
+    .hl-card {
+      text-align: right;
+
+      @include mobile {
+        text-align: left;
+      }
+    }
+      div {
+        background-position: 100% 0%;
+        @include mobile {
+          background-position: 0% 0%;
+        }
+      }
+  }
 }
 
 .hl-card {
-  color: var(--light-gray);
-
-  &_align_right {
-    text-align: right;
-  }
-  &_align_right  div {
-      background-position: 100% 0%;
-  }
-
-  &_align_left {
-    text-align: left;
-  }
-  &_align_left div {
-      background-position: 0% 0%;
-  }
-  &__empty {
-    height: 110px;
-    @include mobile {
-        height: 0;
-    }
-
-  }
+  color: var(--main-white);
 
   &__item {
     background: url($rootpath + 'img/line-bg-308.png') no-repeat;
     padding-bottom: 68px;
   }
   &__item  h1 {
+    color: var(--main-white)!important;
     margin: 0;
     padding: 0;
     padding-top: 32px;
@@ -58,6 +104,10 @@
     margin: 20px 0 0 0;
     padding: 0;
     font-size: 22px;
+    @include mobile {
+      font-size: 18px;
+    }
+
     // line-height: 27px;
   }
 
