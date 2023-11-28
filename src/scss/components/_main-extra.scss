@@ -2,14 +2,15 @@
   background-image: url($rootpath + 'img/hands-making-bread.jpg');
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background-position: top ;
+  background-size: 120%;
   padding: 0;
   margin: 0;
   height: 330px;
   @include mobile {
     height: 200px;
-    background-size: 170%;
+    background-size: 300%;
+    background-position: center;
   }
 
 }

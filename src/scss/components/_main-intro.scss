@@ -29,10 +29,10 @@
   // }
 }
 .intro-empty {
-  height: 1px;
-  margin-top:1000px;
+  height: 5px;
+  margin-top: 1000px;
   opacity: 0.5;
-  // background-color: green;
+  background-color: green;
   @include mobile {
     margin-top: 700px;
   }
@@ -61,8 +61,8 @@
 }
 
 .anchor-aos-vid {
-  // top: 50px;
-  // position: absolute;
+  //top: 50px;
+  //position: absolute;
   width: 40px;
   //background-color: red;
   z-index: 20;
@@ -75,12 +75,12 @@
 
 [data-aos="vid-animation"] {
   //opacity: 0;
-  transform: scale(0.4);
+  transform: scale(0.4, 0.4);
   transition-property: transform, translate;
 
   &.aos-animate {
-    transform: scale(1);
-    transform: translateY(-200px);
+    transform: scale(1, 1);
+    transform: translateY(-100px);
   }
 
   // @media screen and (min-width: 768px) {

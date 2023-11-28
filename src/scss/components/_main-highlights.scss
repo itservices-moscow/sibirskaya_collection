@@ -1,14 +1,18 @@
 .highlights {
   background-color: var(--color-black);
   background-image: url($rootpath + 'img/mainpic-3d.png');
-  // background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   color: var(--light-gray);
   z-index: 10;
   padding: 0 55px;
+
+  padding-top: 300px;
   @include mobile {
-      padding: 0 24px;
+    // background-image: none;
+    background-size: 70%;
+    padding: 0 24px;
+    padding-top: 400px;
   }
 
   &__cards{
@@ -20,9 +24,6 @@
       grid-template-columns: 100%;
     }
 
-  }
-  &__item {
-    // background-color: yellow;
   }
 
   &__item-1 {
