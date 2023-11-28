@@ -29,6 +29,8 @@ body {
   background-color: var(--color-black);
   font-family: var(--font-family, Roboto, sans-serif);
   font-size: 22px;
+  // perspective: 5px;
+  // transform-style: preserve-3d;
 }
 
 section {

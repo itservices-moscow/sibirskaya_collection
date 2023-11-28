@@ -1,16 +1,51 @@
 .extra {
-  background-image: url($rootpath + 'img/hands-making-bread.jpg');
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: top ;
-  background-size: 120%;
+  position: relative;
   padding: 0;
   margin: 0;
-  height: 330px;
+  height: 280px;
+  z-index: 3;
+
+  background-image: url($rootpath + 'img/hands-making-bread.jpg');
+  background-color: transparent;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: top 20px center;
+  background-size: cover;
+  // transform-style: preserve-3d;
   @include mobile {
     height: 200px;
-    background-size: 300%;
+    background-size: 200%;
     background-position: center;
   }
+
+}
+
+.extra-bg {
+  z-index: 0;
+  height: 800px;
+  width: 100%;
+  top: 3500px;
+  left: 0;
+  position: absolute;
+  // background-image: url($rootpath + 'img/hands-making-bread.jpg');
+  // background-color: transparent;
+  // background-repeat: no-repeat;
+  // background-position: top;
+  // background-size: cover;
+  // transform-style: preserve-3d;
+  // perspective: 3px;
+  // transform: translateZ(-1px) ; // scale(2.2)
+
+}
+//transform: translateZ(-10px) scale(2.5);
+
+.indicator {
+  position: absolute;
+  z-index: 100;
+  width: 40px;
+  height: 20px;
+  top: 150px;
+  right: 40px;
+  background-color: yellowgreen;
 
 }

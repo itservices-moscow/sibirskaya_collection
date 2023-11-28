@@ -31,8 +31,9 @@
 .intro-empty {
   height: 5px;
   margin-top: 1000px;
-  opacity: 0.5;
-  //background-color: green;
+  // opacity: 0.5;
+  // background-color: green;
+  background-color: transparent;
   @include mobile {
     margin-top: 700px;
   }
@@ -43,8 +44,6 @@
 }
 
 .intro-vid {
-  // background-color: black;
-  // opacity: 0.8;
   z-index: 5;
   text-align: center;
   margin: 0;
