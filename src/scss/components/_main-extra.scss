@@ -1,10 +1,27 @@
 .extra {
   background-image: url($rootpath + 'img/hands-making-bread.jpg');
-  // background-attachment: fixed;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  // padding: 0;
-  // margin: 0;
-  height: 430px;
+  background-size: 170%;
+  padding: 0;
+  margin: 0;
+  height: 330px;
+  @include mobile {
+    height: 200px;
+  }
+
+}
+.extra-bg {
+  // position: absolute;
+  // z-index: 0;
+  // width: 100vw;
+  // height: 630px;
+  // //top: 300px;
+  // background-image: url($rootpath + 'img/hands-making-bread.jpg');
+
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+
 }

@@ -1,6 +1,7 @@
 .keys {
   background-color: var(--main-beige);
   padding: 140px 55px;
+  z-index: 10;
   @include mobile {
     padding: 90px 24px 96px 24px;
   }
