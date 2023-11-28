@@ -13,7 +13,7 @@
     let base = Number(localStorage.getItem("extraPosY"))
     // console.log('extra', base, scrollPosition)
     if (scrollPosition > (base - 600) && scrollPosition < (base + 600)) {
-      let posY = 'top ' + (Math.ceil(scrollPosition) - base + 100) * 0.8 + 'px center';
+      let posY = 'top ' + (Math.ceil(scrollPosition) - base + 20) * 0.8 + 'px center';
       document.querySelector('.extra').style.backgroundPosition = posY;
     }
 

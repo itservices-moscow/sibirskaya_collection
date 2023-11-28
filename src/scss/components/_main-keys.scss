@@ -41,7 +41,7 @@
 .keys-card {
   // border: 1px dashed green;
   background: url($rootpath + 'img/line-card.png') no-repeat;
-  margin-right: 32px;
+  margin: 0 32px;
   height: 100%;
   position: relative;
   @include mobile {
