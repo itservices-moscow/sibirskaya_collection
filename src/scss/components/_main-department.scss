@@ -61,7 +61,7 @@ p {
     padding: 24px 64px;
     width: 100%;
     background-position: 32px 62px;
-    background-size: 1px 70%;
+    background-size: 1px 75%;
 
   }
 
@@ -108,11 +108,11 @@ p {
 
   &__link {
     text-transform: uppercase;
-    // position: absolute;
-    // bottom: 0;
     color: var(--main-white);
     font-size: 22px;
     line-height: 27px;
+    display: block;
+    margin-bottom: 24px;
     @include mobile {
         font-size: 14px;
         line-height: 17px;
