@@ -16,7 +16,7 @@
     let test = scrollPosition > (base - 1600) // && scrollPosition < (base + 1200)
     let test2 = scrollPosition > (base + 100) // && scrollPosition < (base + 800) // scrollPosition > (base - 800) && scrollPosition < (base + 800)
     let posY = 'top ' + (Math.ceil(scrollPosition) - base + 0) * 1 + 'px center';
-    console.log('base, scrollX', base, scrollPosition, test2)
+    // console.log('base, scrollX', base, scrollPosition, test2)
     //var w = window.innerWidth;
     if (window.innerWidth > 1280) {
         if (test) {
@@ -26,7 +26,7 @@
 
     } else {
       if (test2) {
-        console.log(Math.ceil(scrollPosition) - base - 1400)
+        // console.log(Math.ceil(scrollPosition) - base - 1400)
         posY = 'top ' + Math.ceil((scrollPosition - base - 1400 ) * 0.9)  + 'px center';
         document.querySelector('.extra').style.backgroundPosition = posY;
       }
