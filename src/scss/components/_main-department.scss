@@ -3,9 +3,11 @@
   padding: 0 55px;
   padding-top: 80px;
   padding-bottom: 150px;
+  min-height: 750px;
   z-index: 10;
   @include mobile {
     padding: 40px 24px 80px 24px;
+    min-height: 480px;
   }
 }
 
@@ -31,7 +33,7 @@ p {
 
 .dep-container{
   position: relative;
-  min-height: 500px;
+
   z-index: 0;
 }
 
@@ -59,34 +61,42 @@ p {
 
 
   &_back {
-    top: 120px;
-    left: 35%;
+    position: absolute;
+    top: 140px;
+    left: 40%;
+
+    width: 55%;
+    height: 480px;
+
+    margin: 0;
+    padding: 0;
     background-color: var(--main-bronze);
-    background-image: none;
-    z-index: 8;
-    position: relative;
+    background-image: url($rootpath + 'img/pic-main-b.png');
+    background-repeat: no-repeat;
+    background-position: right 75px bottom;
+    background-size: 293px 406px;
+    z-index: 5;
     overflow: hidden;
     @include mobile {
-      top: 0;
-      left: 0;
       position: relative;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: 0;
+      top: 0;
+      left: calc(100% - 300px);
+      background-size: 50%;
+      background-position: right 35px bottom;
+      margin-right: 24px;
       height: 230px;
+      width: 300px;
     }
   }
 
   &__pic {
     height: 300px;
-    margin-left: 55%;
-    margin-bottom: -5px;
-    margin-top: 60px;
+    // position: absolute;
+    bottom: 0;
+    margin: 0;
+    vertical-align: bottom;
     @include mobile {
-        margin: 0;
         height: 200px;
-        margin-left: 30px;
-        margin-top: 30px;
       }
   }
 
