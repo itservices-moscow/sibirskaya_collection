@@ -119,7 +119,7 @@
     }
 
 
-  /* Модменю футера. Hidden by default. */
+  /* Подменю футера. Hidden by default. */
   &__item .panel {
     padding: 0;
     max-height: 0;
@@ -168,6 +168,8 @@
 .youtube-link {
   display: block;
   margin: 15px;
+  width: 111px;
+  height: auto;
   margin-top: 80px;
   @include mobile {
     margin: 55px;
