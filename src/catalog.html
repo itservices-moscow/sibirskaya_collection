@@ -9,15 +9,32 @@
     @include('partials/topmenu_mobile.html')
     @include('partials/topmenu_brands.html')
     @include('partials/topmenu_manuf.html')
+
+    <div class="filter mobile" id="filters-menu-mobile">
+      <div class="filter__head flex mobile">
+        <div class="">Фильтры</div>
+        <button class="btn-reset icon-close" aria-label="Закрыть фильтры"
+          onclick="document.getElementById('filters-menu-mobile').classList.toggle('active');"></button>
+      </div>
+      <div class="filter__mobcontent mobile">
+        <a href="#" class="clearall"><span>СБРОСИТЬ ВСЕ</span></a>
+        @include('partials/catalog_filters.html')
+      </div>
+    </div>
     <main class="catalog">
       <section class="back">
         <div class="container">
-          <span class="icon-back"><a href="#" onclick="history.back();"><img src="img/back.png" /></a></span>
+          <span class="icon-back"><a href="#" onclick="history.back();"><img src="img/svg/back-big.svg" /></a></span>
+        </div>
+      </section>
+      <section class="mobile">
+        <div class="container icon-filter">
+          <span class="icon-filter"><img src="img/svg/icon-filter-outline.svg" onclick="document.getElementById('filters-menu-mobile').classList.toggle('active');"/></span>
         </div>
       </section>
       <section class="catalog">
         <div class="container catalog__container grid">
-          <div class="catalog__left desktop">
+          <div class="catalog__left filter desktop">
             @include('partials/catalog_filters.html')
           </div>
           <div class="catalog__content">

@@ -3,17 +3,34 @@ main.catalog {
   margin-top: var(--header-height);
 }
 
-.icon-back {
-  width: 80px;
-  height: 65px;
+span.icon-filter {
+ cursor: pointer;
+}
+
+div.icon-filter {
+  text-align: right;
+  margin: 0 24px;
+}
+
+
+.icon-back * img {
+  width: 92px; // !!!
+  height: 69px;
+  @include mobile {
+    width: 59px;
+    height: 45px;
+  }
 }
 
 section.buffer {
   height: var(--header-height);
 }
 section.back  {
-  margin: 32px 55px 40px 55px; // !!!
-  padding-top: 32px;
+  margin: 32px 55px 10px 55px;
+  padding-top: 24px;
+  @include mobile {
+    margin: 32px 24px 10px 24px;
+  }
 }
 section.catalog {
   padding-bottom: 40px;
@@ -46,6 +63,13 @@ section.catalog {
       gap: 32px 16px;
       @include mobile {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .goods-more {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px 16px;
+      @include mobile {
+        grid-template-columns: 100% 1fr;
       }
     }
 
@@ -124,6 +148,9 @@ section.catalog {
   }
   &__btnmore {
     padding: 56px 0 20px 0;
+    @include mobile {
+      padding-top: 40px;
+    }
   }
   &__scrollup {
     display: block;

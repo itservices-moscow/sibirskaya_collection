@@ -1,6 +1,41 @@
 
 
+.filter.active {
+    width: 100%;
+    left: 0!important;
+}
+
 .filter {
+  background-color: var(--main-white);
+  @include mobile {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    transition: 0.6s ease-in;
+  }
+
+  &__mobcontent {
+    margin: 0 24px;
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+  }
+  &__head {
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    background-color: var(--color-black);
+    color: var(--main-white);
+    padding: 10px 24px;
+
+  }
+    .icon-close {
+      min-width: 20px;
+      width: 20px;
+      height: 20px;
+    }
   &__title {
     font-size: 18px;
     line-height: 22px;
@@ -12,7 +47,14 @@
   }
 }
 
+.clearall {
+  display: block;
+  text-align: right;
+  color: var(--main-bronze);
+  text-decoration: underline;
+  margin: 16px 5px;
 
+}
 
 .btn-filter {
 
