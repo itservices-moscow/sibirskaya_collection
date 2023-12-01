@@ -3,6 +3,11 @@ main.catalog {
   margin-top: var(--header-height);
 }
 
+.icon-back {
+  width: 80px;
+  height: 65px;
+}
+
 section.buffer {
   height: var(--header-height);
 }
@@ -11,15 +16,25 @@ section.back  {
   padding-top: 32px;
 }
 section.catalog {
-  margin: 40px 55px 0 55px;
   padding-bottom: 40px;
+  @include mobile {
+
+  }
 }
 
 .catalog {
   &__container {
+    margin: 40px 55px 0 55px;
     grid-template-columns: 280px calc(100% - 344px);
     gap: 0 64px;
     min-width: 1000px;
+    @include mobile {
+      margin: 40px 24px 0 24px;
+      grid-template-columns: 100% 1fr;
+      gap: 0;
+      min-width: 300px;
+    }
+
 
   }
   &__left {
@@ -28,7 +43,10 @@ section.catalog {
   &__content {
     .goods {
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px 32px;
+      gap: 32px 16px;
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
   }
@@ -39,6 +57,10 @@ section.catalog {
     width: 308px;
     max-height: 414px;
     min-height: 200px;
+    @include mobile {
+      width: 100%;
+      max-height: none;
+    }
   }
   &__pic {
     width: 100%;
@@ -68,6 +90,12 @@ section.catalog {
       margin: 0;
       padding: 8px 10px;
       font-size: 14px;
+      @include mobile {
+          width: 100%;
+        }
+    }
+    @include mobile {
+      flex-direction: column;
     }
   }
   &__genre {
@@ -87,9 +115,22 @@ section.catalog {
     line-height: 28px;
     margin-top: 5px;
     text-transform: uppercase;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -webkit-hyphenate-character: "\2010";
+    -webkit-hyphenate-limit-after: 1;
+    -webkit-hyphenate-limit-before: 3;
+    -moz-hyphens: auto;
   }
   &__btnmore {
     padding: 56px 0 20px 0;
+  }
+  &__scrollup {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 76px auto 0;
+    cursor: pointer;
   }
 }
 

@@ -7,48 +7,105 @@
 
 <div class="filter__title">Категория</div>
 <button class="btn-filter">Выбрать все</button>
-
+<!-- внутренняя секция 1 уровень категории -->
 <div class="btn-filter__item">
-  <button class="accordion">Section 1</button>
+  <button class="accordion active">Пельмени</button>
   <div class="panel">
-        <br/>
-        <div>
-          <label class="label-check">Выбрать все
-            <input type="checkbox" id="p1" name="p1" value="All">
-            <span class="checkmark"></span>
-          </label>
+      <!-- внутренняя секция 2 уровень чекбоксы accordion panel -->
+      <!-- внутренняя секция должна быть развернута по умолчанию-->
+      <div>
+        <button class="btn-reset filter2nd__btn">Премиум</button>
+        <div class="filter2nd__panel">
+          <br/>
+          <div>
+            <label class="label-check">Выбрать все
+              <input type="checkbox" id="p1" name="p1" value="All">
+              <span class="checkmark"></span>
+            </label>
 
+          </div>
+          <div>
+            <label class="label-check">С телятиной
+              <input type="checkbox" id="" name="" value="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+            <label class="label-check">С индейкой
+              <input type="checkbox" id="" name="" value="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+            <label class="label-check">С курицей
+              <input type="checkbox" id="" name="" value="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+              <label class="label-check">4 вида мяса
+                <input type="checkbox" id="" name="" value="">
+                <span class="checkmark"></span>
+              </label>
+          </div>
+          <div>
+            <label class="label-check">Халяль
+              <input type="checkbox" id="" name="" value="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+            <label class="label-check">Эксклюзив
+              <input type="checkbox" id="" name="" value="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
         </div>
-        <div>
-          <label class="label-check">С говядиной
-            <input type="checkbox" id="" name="" value="">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div>
-          <label class="label-check">С говядиной
-            <input type="checkbox" id="" name="" value="">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div>
-          <label class="label-check">С говядиной
-            <input type="checkbox" id="" name="" value="">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div>
+      </div>
+      <!-- внутренняя секция 2 уровень чекбоксы -->
+      <div>
+        <button class="btn-reset accordion active">Классика</button>
+        <div class="panel">
+          <br />
+          <div>
+            <label class="label-check">Выбрать все
+              <input type="checkbox" id="p1" name="p1" value="All">
+              <span class="checkmark"></span>
+            </label>
+
+          </div>
+          <div>
+            <label class="label-check">С говядиной
+              <input type="checkbox" id="" name="" value="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+            <label class="label-check">С индейкой
+              <input type="checkbox" id="" name="" value="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+            <label class="label-check">С курицей
+              <input type="checkbox" id="" name="" value="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
             <label class="label-check">4 вида мяса
               <input type="checkbox" id="" name="" value="">
               <span class="checkmark"></span>
             </label>
           </div>
-
+        </div>
+      </div>
+      <!-- end -->
   </div>
 </div>
 
 <div class="btn-filter__item">
-  <button class="accordion">Section 2</button>
+  <button class="accordion">Вареники</button>
   <div class="panel">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -57,7 +114,7 @@
 </div>
 
 <div class="btn-filter__item">
-  <button class="accordion">Section 3</button>
+  <button class="accordion">Блины</button>
   <div class="panel">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -65,5 +122,32 @@
   </div>
 </div>
 
+<div class="btn-filter__item">
+  <button class="accordion">Котлеты</button>
+  <div class="panel">
+    <p><!-- filters --></p>
+  </div>
+</div>
+
+
+<div class="btn-filter__item">
+  <button class="accordion">Vegan</button>
+  <div class="panel">
+    <p><!-- filters --></p>
+  </div>
+</div>
+
+<div class="btn-filter__item">
+  <button class="accordion">Пицца</button>
+  <div class="panel">
+    <p><!-- filters --></p>
+  </div>
+</div>
+<div class="btn-filter__item">
+  <button class="accordion">Халяль</button>
+  <div class="panel">
+    <p><!-- filters --></p>
+  </div>
+</div>
 
 

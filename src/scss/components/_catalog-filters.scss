@@ -10,8 +10,9 @@
   &__buffer {
     height: 32px;
   }
-
 }
+
+
 
 .btn-filter {
 
@@ -21,7 +22,7 @@
     color: var(--main-white);
   }
 
-  &__item .accordion {
+  &__item > .accordion {
     cursor: pointer;
     height: 49px;
     width: 100%;
@@ -42,16 +43,16 @@
     transition: 0.4s;
   }
 
-  &__item .accordion.active {
+  &__item > .accordion.active {
     color: var(--main-white);
     background-color: var(--main-bronze);
   }
 
-  &__item .accordion:hover {
+  &__item > .accordion:hover {
     color: var(--main-white);
   }
 
-  &__item .accordion:hover:after {
+  &__item > .accordion:hover:after {
     color: var(--main-white);
   }
 
@@ -62,15 +63,16 @@
 
 
   /* Style the accordion panel. Note: hidden by default */
-  &__item .panel {
+  &__item > .panel {
     margin: 0 32px ;
     color: var(--main-black);
     max-height: 0;
+
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
 
-  &__item .accordion:after {
+  &__item > .accordion:after {
     content: '\02c5';
     font-size: 18px;
     color: var(--main-bronze);
@@ -79,7 +81,7 @@
     transform: scalex(2.5);
   }
 
-  &__item .active:after {
+  &__item > .active:after {
     padding-top: 2px;
     color: var(--main-white);
     content: "\005e";
@@ -89,4 +91,30 @@
 
 
 
+.filter2nd {
+  &__btn {
+    border: 0;
+    border-radius: 0;
+    color: var(--main-bronze);
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 16px 0 5px 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+    border-bottom: 1px solid var(--main-bronze);
+    &:after {
+        padding-top: 2px;
+        padding-left: 12px;
+        float: right;
+        content: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9.125L7 3.125L13 9.125' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+  }
 
+
+
+  &__panel {
+
+  }
+}

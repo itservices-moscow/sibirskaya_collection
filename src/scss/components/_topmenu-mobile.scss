@@ -100,6 +100,10 @@
   align-items: center;
   opacity: 0;
   transition: 0.8s;
+
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+
   &__list{
     flex-direction: column;
     margin-top: 32px;
@@ -214,7 +218,7 @@
 .link-more a {
   color: var(--main-bronze);
   &:after {
-      content: url($rootpath + '/img/arrow-hl-right-small.png');
+      content: url("data:image/svg+xml,%3Csvg width='26' height='15' viewBox='0 0 26 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528' stroke='%23886A44' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"); //  url($rootpath + '/img/arrow-hl-right-small.png');
       height: 14px;
       top: 5px;
       margin-left: 16px;
@@ -223,13 +227,14 @@
 }
 
 
-
 .nav-mob-l1, .nav-mob-l2, .nav-mob-l3, .nav-mob-l4 {
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
   background-color: var(--main-white);
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
 
 }
 .nav-mob-l1 {
@@ -268,9 +273,6 @@
   justify-content: space-between;
 }
 
-.nav-mob-brands {
-
-}
 
 .nav-mob-l2 {
   //z-index: 600;

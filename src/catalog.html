@@ -6,11 +6,10 @@
 <body class="page__body">
   <div class="site-container" id="site-container">
     @include('partials/header.html')
+    @include('partials/topmenu_mobile.html')
     @include('partials/topmenu_brands.html')
     @include('partials/topmenu_manuf.html')
-    @include('partials/topmenu_mobile.html')
     <main class="catalog">
-      <!-- <section class="buffer"></section> -->
       <section class="back">
         <div class="container">
           <span class="icon-back"><a href="#" onclick="history.back();"><img src="img/back.png" /></a></span>
@@ -18,7 +17,7 @@
       </section>
       <section class="catalog">
         <div class="container catalog__container grid">
-          <div class="catalog__left">
+          <div class="catalog__left desktop">
             @include('partials/catalog_filters.html')
           </div>
           <div class="catalog__content">
@@ -33,7 +32,8 @@
 
     </main>
     @include('partials/footer.html')
-  </div>
+    </div>
+    @include('partials/footer_scripts.html')
 </body>
 
 </html>
