@@ -13,25 +13,11 @@ div.icon-filter {
 }
 
 
-.icon-back * img {
-  width: 92px; // !!!
-  height: 69px;
-  @include mobile {
-    width: 59px;
-    height: 45px;
-  }
-}
 
 section.buffer {
   height: var(--header-height);
 }
-section.back  {
-  margin: 32px 55px 10px 55px;
-  padding-top: 24px;
-  @include mobile {
-    margin: 32px 24px 10px 24px;
-  }
-}
+
 section.catalog {
   padding-bottom: 40px;
   @include mobile {

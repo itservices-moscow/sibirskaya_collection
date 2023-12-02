@@ -6,9 +6,6 @@
 <body class="page__body">
   <div class="site-container" id="site-container">
     @include('partials/header.html')
-    @include('partials/topmenu_mobile.html')
-    @include('partials/topmenu_brands.html')
-    @include('partials/topmenu_manuf.html')
 
     <div class="filter mobile" id="filters-menu-mobile">
       <div class="filter__head flex mobile">
@@ -22,11 +19,7 @@
       </div>
     </div>
     <main class="catalog">
-      <section class="back">
-        <div class="container">
-          <span class="icon-back"><a href="#" onclick="history.back();"><img src="img/svg/back-big.svg" /></a></span>
-        </div>
-      </section>
+      @include('partials/arrowback.html')
       <section class="mobile">
         <div class="container icon-filter">
           <span class="icon-filter"><img src="img/svg/icon-filter-outline.svg" onclick="document.getElementById('filters-menu-mobile').classList.toggle('active');"/></span>
@@ -50,7 +43,7 @@
     </main>
     @include('partials/footer.html')
     </div>
-    @include('partials/footer_scripts.html')
+@include('partials/footer_scripts.html')
 </body>
 
 </html>
