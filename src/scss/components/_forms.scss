@@ -28,6 +28,13 @@ input[type="submit"] {
 }
 
 input[type="text"] {
+  background: var(--main-white);
+  border: 0;
+  border-bottom: 1px solid var(--main-bronze);
+}
+
+input[type="text"].searchinput-mob,
+input[type="text"].searchinput {
   background: var(--color-black);
   border-bottom: 1px solid white;
 }

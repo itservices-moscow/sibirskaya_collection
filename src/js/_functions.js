@@ -2,8 +2,8 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck());
+// import { mobileCheck } from "./functions/mobile-check";
+// console.log(mobileCheck());
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -76,11 +76,39 @@ const rellax = new Rellax(".rellax");
 //   console.log(e.detail.dir);
 // });
 
-// import { validateForms } from './functions/validate-forms';
+import { validateForms } from "./functions/validate-forms";
 // const rules1 = [...];
+const rules1 = [
+  {
+    ruleSelector: ".input-name",
+    rules: [
+      {
+        rule: "minLength",
+        value: 3,
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните имя!",
+      },
+    ],
+  },
+  {
+    ruleSelector: ".input-tel",
+    tel: true,
+    telError: "Введите корректный телефон",
+    rules: [
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните телефон!",
+      },
+    ],
+  },
+];
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
+const afterForm = () => {
+  console.log("Произошла отправка, тут можно писать любые действия");
+};
 
-// validateForms('.form-1', rules1, afterForm);
+validateForms(".contactform", rules1, afterForm);

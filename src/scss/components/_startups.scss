@@ -1,0 +1,44 @@
+.startups > section {
+  margin: 25px 55px 0 55px;
+  @include mobile {
+        margin: 0 24px 0 24px;
+      }
+}
+
+section.st-head {
+  color: var(--main-white);
+  background-color: var(--color-black);
+  h1 {
+    color: var(--main-bronze);
+  }
+  div {
+    color: var(--main-white);
+  }
+}
+
+
+
+section.st-idea {
+  color: var(--main-white);
+  background-color: var(--color-black);
+  h1 {
+      color: var(--main-white);
+    }
+  &__item {
+    h1 {
+        color: var(--main-bronze);
+      }
+  }
+
+
+  div {
+    color: var(--main-white);
+  }
+}
+
+section.st-keys {
+  img {
+    width: 81px;
+  }
+
+}
