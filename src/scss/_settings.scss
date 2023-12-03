@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
 }
 
-// $rootpath: '../';  // !!! пути к файлам в билде  '../' - в разработке
+// $rootpath: '../';  // !!! пути к файлам в билде
 $rootpath: '../';
 
 *,
@@ -35,7 +35,7 @@ body {
 }
 
 .page__body.new, .page__body.startups {
-  // background-color: var(--main-beige);
+  background-color: var(--main-beige);
 }
 
 section {

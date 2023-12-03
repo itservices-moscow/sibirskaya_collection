@@ -167,11 +167,11 @@
 
 .youtube-link {
   display: block;
-  margin: 15px;
+  margin: 15px auto;
   width: 111px;
   height: auto;
   margin-top: 80px;
   @include mobile {
-    margin: 55px;
+    margin: 55px auto;
   }
 }

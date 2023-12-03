@@ -1,0 +1,141 @@
+.card {
+  background-color: var(--main-beige);
+  padding: 0 55px;
+  display: block;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  min-height: 750px;
+  position: relative;
+  z-index: 4;
+
+  @include mobile {
+    padding: 40px 24px 80px 24px;
+    min-height: 480px;
+  }
+}
+
+.card .container {
+  z-index: 5;
+}
+
+
+.card-container {
+  position: relative;
+  z-index: 0;
+}
+
+.card-card {
+  position: absolute;
+  padding: 60px 30px 80px 130px;
+  top: 0;
+  left: 0;
+  min-height: 200px;
+  max-height: 420px;
+  width: 60%;
+  z-index: 10;
+  background-color: var(--color-black);
+  background-image: url($rootpath + 'img/line-cmilk-card-vert.png');
+  background-repeat: no-repeat;
+  background-position: 80px 110px;
+
+  @include mobile {
+    position: relative;
+    padding: 32px 44px 24px 64px;
+    width: 100%;
+    background-position: 32px 62px;
+    background-size: 1px 75%;
+
+  }
+
+
+  &__line {
+    background-image: url($rootpath + 'img/line-cmilk-card.png');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: 120% 1px;
+    height: 2px;
+
+  }
+
+  &_back {
+    position: absolute;
+    top: 140px;
+    left: 40%;
+
+    width: 55%;
+    height: 480px;
+
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    overflow: hidden;
+
+    @include mobile {
+      position: relative;
+      top: 0;
+      left: calc(100% - 300px);
+      margin-right: 24px;
+      height: 230px;
+      width: 300px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__pic {
+    height: 300px;
+    // position: absolute;
+    bottom: 0;
+    margin: 0;
+    vertical-align: bottom;
+
+    @include mobile {
+      height: 200px;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: var(--main-white);
+    font-size: 22px;
+    line-height: 27px;
+    display: block;
+    margin-bottom: 24px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    img {
+      margin-left: 15px;
+      margin-bottom: -2px;
+    }
+  }
+
+}
+
+.card-card h1 {
+  color: var(--main-white);
+  margin-top: 60px;
+
+  @include mobile {
+    margin-top: 24px;
+  }
+}
+
+.card-card p {
+  color: var(--main-white);
+  font-size: 22px;
+  line-height: 27px;
+  width: 50%;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 24px;
+    width: 70%;
+  }
+}
