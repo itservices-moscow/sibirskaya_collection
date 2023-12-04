@@ -9,7 +9,7 @@
   z-index: 4;
 
   @include mobile {
-    padding: 40px 24px 80px 24px;
+    padding: 40px 24px 80px 24px!important;
     min-height: 480px;
   }
 }
@@ -26,41 +26,61 @@
 
 .card-card {
   position: absolute;
-  padding: 60px 30px 80px 130px;
+  padding: 80px 80px 77px 112px;
   top: 0;
   left: 0;
   min-height: 200px;
   max-height: 420px;
-  width: 60%;
+  width: 55%;
   z-index: 10;
   background-color: var(--color-black);
   background-image: url($rootpath + 'img/line-cmilk-card-vert.png');
   background-repeat: no-repeat;
-  background-position: 80px 110px;
+  background-position: 80px 112px;
+  background-size: 2px calc(100% - 192px);
 
   @include mobile {
     position: relative;
     padding: 32px 44px 24px 64px;
     width: 100%;
     background-position: 32px 62px;
-    background-size: 1px 75%;
+    background-size: 2px calc(100% - 80px);
 
   }
+  &_reversed {
+    top: 0;
+    left: auto;
+    right: 0;
+    text-align: right;
+    background-position: calc(100% - 80px) 112px;
+    padding: 80px 112px 77px 80px;
+    @include mobile {
+      top: 0;
+      left: auto;
+      background-position: calc(100% - 32px) 62px;
+      padding: 32px 64px 24px 44px;
+    }
 
+  }
+  &_back-reversed {
+    top: 140px;
+    left: 0!important;
+    right: auto;
+    @include mobile {
+      top: 0;
+      left: auto;
+      right: 0;
+    }
+  }
 
   &__line {
-    background-image: url($rootpath + 'img/line-cmilk-card.png');
-    background-repeat: repeat-x;
-    background-position: top left;
-    background-size: 120% 1px;
-    height: 2px;
-
+    border-top: 1px solid var(--coffee-milk);
   }
 
-  &_back {
+  &__back {
     position: absolute;
     top: 140px;
-    left: 40%;
+    left: 45%;
 
     width: 55%;
     height: 480px;
@@ -73,10 +93,12 @@
     @include mobile {
       position: relative;
       top: 0;
-      left: calc(100% - 300px);
+      left: auto;
+      right: 0;
       margin-right: 24px;
-      height: 230px;
-      width: 300px;
+      height: auto;
+      width: 100%;
+      max-width: 500px;
     }
 
     img {
@@ -120,7 +142,8 @@
 
 .card-card h1 {
   color: var(--main-white);
-  margin-top: 60px;
+  margin-top: 50px;
+  margin-bottom: 6px;
 
   @include mobile {
     margin-top: 24px;
@@ -131,11 +154,11 @@
   color: var(--main-white);
   font-size: 22px;
   line-height: 27px;
-  width: 50%;
+  width: 75%;
 
   @include mobile {
     font-size: 18px;
     line-height: 24px;
-    width: 70%;
+    width: 90%;
   }
 }

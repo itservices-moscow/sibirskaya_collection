@@ -34,11 +34,15 @@
 
 // контакты
 @import "./components/contacts";
-// новинки
+
+// новинки + лендинг
 @import "./components/new";
+@import "./components/new-new";
 @import "./components/new-cards";
 @import "./components/new-more";
-@import "./components/new-new";
+@import "./components/new-keys";
+@import "./components/new-jomo";
+@import "./components/new-line";
 
 // стартапы
 @import "./components/startups";

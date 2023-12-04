@@ -98,6 +98,10 @@ a, p, span, div, button {
   font-family: var(--font-family);
 }
 
+p {
+  margin: 12px 0;
+}
+
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
@@ -224,6 +228,14 @@ h3 {
 .w-100 {
   width: 100%!important;
 }
- .buffer-top {
+.buffer-top {
   height: var(--header-height);
  }
+
+.bg-beige {
+  background-color: var(--main-beige)!important;
+ }
+.bronze {
+  color: var(--main-bronze);
+  font-family: inherit;
+}

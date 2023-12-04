@@ -1,0 +1,30 @@
+.line {
+
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+    margin: 40px 0 160px;
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+
+  }
+  h1 {
+    text-align: center;
+    margin-top: 130px;
+  }
+
+  &__item {
+    background-color: var(--dark-gray);
+    flex-direction: column;
+    padding: 48px 40px;
+    @include mobile {
+      padding: 24px 17px;
+    }
+  }
+
+  .item-link * {
+    color: var(--main-white);
+  }
+}

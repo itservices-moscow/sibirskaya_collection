@@ -1,9 +1,8 @@
 
 .new-pizza > section {
-  padding: 25px 55px 0 55px;
-
+  padding: 25px 55px;
   @include mobile {
-    padding: 0 24px 0 24px;
+    padding: 24px 24px;
   }
 }
 
@@ -28,57 +27,22 @@ p {
   }
 }
 
-section.jomo .container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 67%;
-  margin: 40px auto;
-  padding: 60px 0;
-  gap: 75px;
-  border-top: 1px solid var(--main-bronze);
-  @include mobile {
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  img {
-    width: 135px;
-    height: 122px;
-    @include mobile {
-      width: 70px;
-      height: 63px;
-    }
-  }
-}
-
 
 
 section.new-header {
   color: var(--main-black);
   background-color: var(--main-beige);
-
   h1 {
     color: var(--main-black);
+    text-align: center;
+    margin-bottom: 40px;
   }
 }
 section.new-header.black {
   color: var(--main-white);
   background-color: var(--color-black);
-
   h1 {
     color: var(--main-white);
   }
 
-  // &__item {
-  //   h1 {
-  //     color: var(--main-bronze);
-  //   }
-  // }
-}
-
-.bronze {
-  color: var(--main-bronze);
-  font-family: inherit;
 }

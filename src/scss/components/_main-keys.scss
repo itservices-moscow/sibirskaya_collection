@@ -25,7 +25,14 @@
       @include mobile {
           background: url($rootpath + 'img/line-card-vert.png') no-repeat left 24px;
         }
+
     }
+  &__item_noline {
+        background: none;
+        @include mobile {
+          background: url($rootpath + 'img/line-card-vert.png') no-repeat left 24px;
+        }
+      }
 
   &__top {
       align-items: center;
@@ -43,14 +50,13 @@
 }
 
 .keys-card {
-  // border: 1px dashed green;
   z-index: 15;
   background: url($rootpath + 'img/line-card.png') no-repeat;
   margin: 0 32px;
   height: 100%;
   position: relative;
   @include mobile {
-      margin-right: 0;
+      margin: 0;
       background-position-x: 24px;
       padding: 24px 16px 0 16px;
     }
@@ -60,31 +66,36 @@
     height: auto;
     @include mobile {
       margin-top: 0;
-      //padding: 0 0 0 16px;
     }
 
   }
   &__link {
     position: absolute;
-    vertical-align: middle;
     bottom: 0;
-    img {
-      /* height: 10px; */
-    }
 
-    @include hover {
-      /*color: white; */
-      }
+    display: inline-block;
+    margin-top: 24px;
+    vertical-align: middle;
+    @include mobile {
+      position: relative;
+
+    }
   }
   h2 {
     margin: 20px 0;
-    margin-right: 30px;
+    margin-right: 24px;
   }
   p {
     margin: 0;
     margin-bottom: 40px;
     font-size: 18px;
-    // margin-bottom: 30px;
+    @include mobile {
+      margin-bottom: 0;
+    }
   }
 }
 
+.h-auto {
+  height: auto;
+  width: 100%;
+}
