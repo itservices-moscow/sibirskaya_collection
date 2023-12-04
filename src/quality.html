@@ -6,11 +6,12 @@
 <body class="page__body">
   <div class="site-container" id="site-container">
     @include('partials/header.html')
-    <main class="quality">
 
-      <div class="container">
-      <h1>контроль качества</h1>
-      <section class="tab" id="t01">
+    <main class="quality">
+      @include('partials/buffer_top.html')
+      @include('partials/arrowback.html')
+      <h1  class="heading">контроль качества</h1>
+      <section class="quality" id="quality01">
         <div>
           <h2>Сертификация FSSC 22000</h2>
           <p>Система менеджмента безопастности пищевой продукции производственной площадки, внедрена с 2015 года</p>
