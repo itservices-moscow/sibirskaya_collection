@@ -1,6 +1,11 @@
+import JustValidate from "just-validate";
+import Inputmask from "inputmask";
+
 export const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
+
+  console.log(form, telSelector);
 
   if (!form) {
     console.error("Нет такого селектора!");
@@ -13,8 +18,8 @@ export const validateForms = (selector, rules, afterSend) => {
   }
 
   if (telSelector) {
-    const inputMask = new Inputmask("+7(999)999-99-99");
-    inputMask.mask(telSelector);
+    // const inputMask = new Inputmask("+7(999)999-99-99");
+    // inputMask.mask(telSelector);
 
     for (let item of rules) {
       if (item.tel) {
@@ -33,11 +38,12 @@ export const validateForms = (selector, rules, afterSend) => {
   const validation = new JustValidate(selector);
 
   for (let item of rules) {
+    console.log("rule > ", item.rules);
     validation.addField(item.ruleSelector, item.rules);
   }
 
   validation.onSuccess((ev) => {
-    console.log(ev);
+    console.log("верно заполнено", ev);
     // let formData = new FormData(ev.target);
 
     // let xhr = new XMLHttpRequest();

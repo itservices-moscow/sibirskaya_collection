@@ -1,4 +1,6 @@
 // inputMask
+import { validateForms } from "../functions/validate-forms";
+
 import JustValidate from "just-validate";
 import Inputmask from "inputmask";
 
@@ -7,11 +9,9 @@ let im = new Inputmask("+7(999)999-99-99");
 im.mask(inputs);
 console.log("im", inputs, im);
 
-import { validateForms } from "./functions/validate-forms";
-
 const rules3 = [
   {
-    ruleSelector: ".contact-name",
+    ruleSelector: ".contact-fio",
     rules: [
       {
         rule: "minLength",
