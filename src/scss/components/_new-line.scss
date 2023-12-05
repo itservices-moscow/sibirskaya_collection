@@ -23,7 +23,16 @@
       padding: 24px 17px;
     }
   }
+  .item-link {
+    float: left;
+    white-space: nowrap;
+  }
+  .item-link .text  {
+    @include mobile {
+      padding-right: 7px;
+    }
 
+  }
   .item-link * {
     color: var(--main-white);
   }
