@@ -1,0 +1,31 @@
+.graph-modal {
+
+  &__container {
+
+    transform: translateY(-150%);
+    text-align: center;
+    width: 630px;
+    height: 265px;
+    padding: 24px;
+    border-radius: 0;
+    @include mobile {
+      width: calc(100% - 48px);
+      max-width: 400px;
+      margin: 24px;
+    }
+  }
+  &__close {
+    top: 24px;
+    right: 24px;
+    width: 15px;
+    height: 15px;
+  }
+  &__content button {
+    margin-top: 24px;
+    width: 308px;
+    @include mobile {
+        width: 100%;
+    }
+  }
+}
+

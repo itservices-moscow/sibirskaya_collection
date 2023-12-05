@@ -65,8 +65,8 @@ import Rellax from "rellax";
 const rellax = new Rellax(".rellax");
 
 // Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
+import SmoothScroll from "smooth-scroll";
+const scroll = new SmoothScroll('a[href*="#"]');
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
@@ -75,40 +75,3 @@ const rellax = new Rellax(".rellax");
 //   console.log(e.detail);
 //   console.log(e.detail.dir);
 // });
-
-import { validateForms } from "./functions/validate-forms";
-// const rules1 = [...];
-const rules1 = [
-  {
-    ruleSelector: ".input-name",
-    rules: [
-      {
-        rule: "minLength",
-        value: 3,
-      },
-      {
-        rule: "required",
-        value: true,
-        errorMessage: "Заполните имя!",
-      },
-    ],
-  },
-  {
-    ruleSelector: ".input-tel",
-    tel: true,
-    telError: "Введите корректный телефон",
-    rules: [
-      {
-        rule: "required",
-        value: true,
-        errorMessage: "Заполните телефон!",
-      },
-    ],
-  },
-];
-
-const afterForm = () => {
-  console.log("Произошла отправка, тут можно писать любые действия");
-};
-
-validateForms(".contactform", rules1, afterForm);

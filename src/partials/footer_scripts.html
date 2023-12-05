@@ -6,45 +6,41 @@
 
   window.addEventListener('scroll', function () {
     let scrollPosition = document.documentElement.scrollTop
-    let extraPosY = Math.round(document.querySelector('.extra').getBoundingClientRect().top)
-
-    // let extraBgPosY = Math.round(document.querySelector('.extra-bg').getBoundingClientRect().top)
-    //console.log('[extra-bg]', extraPosY, scrollPosition, window.pageYOffset)
-    // document.querySelector('.indicator').style.top = Math.ceil(scrollPosition)+ 130 + 'px';
-
-
-    if (window.innerWidth > 1000) {
-         if (extraPosY < 600 && extraPosY > -300) {
-           // document.querySelector('.indicator').style.backgroundColor = 'orange';
-           // document.querySelector('.extra-bg').style.top = Math.ceil(scrollPosition) + 'px'; top 20px center
-           posY = 'top ' + (extraPosY - 620) * 0.7 + 'px center';
-           document.querySelector('.extra').style.backgroundPosition = posY;
-         } else {
-          //document.querySelector('.indicator').style.backgroundColor = 'green';
-         }
-    } else {
-        if (extraPosY < 600 && extraPosY > -300) {
-        // document.querySelector('.indicator').style.backgroundColor = 'orange';
-        posY = 'top ' + (extraPosY - 700) * 0.4 + 'px center';
-        document.querySelector('.extra').style.backgroundPosition = posY;
+    if (document.querySelector('.extra')) {
+      let extraPosY = Math.round(document.querySelector('.extra').getBoundingClientRect().top)
+      if (window.innerWidth > 1000) {
+          if (extraPosY < 600 && extraPosY > -300) {
+            // document.querySelector('.indicator').style.backgroundColor = 'orange';
+            // document.querySelector('.extra-bg').style.top = Math.ceil(scrollPosition) + 'px'; top 20px center
+            posY = 'top ' + (extraPosY - 620) * 0.7 + 'px center';
+            document.querySelector('.extra').style.backgroundPosition = posY;
+          } else {
+            //document.querySelector('.indicator').style.backgroundColor = 'green';
+          }
       } else {
-        //document.querySelector('.indicator').style.backgroundColor = 'green';
+          if (extraPosY < 600 && extraPosY > -300) {
+          // document.querySelector('.indicator').style.backgroundColor = 'orange';
+          posY = 'top ' + (extraPosY - 700) * 0.4 + 'px center';
+          document.querySelector('.extra').style.backgroundPosition = posY;
+        } else {
+          //document.querySelector('.indicator').style.backgroundColor = 'green';
+        }
       }
+
     }
-    // let base = Number(localStorage.getItem("extraPosY"))
-    // let test = scrollPosition > (base - 1600) // && scrollPosition < (base + 1200)
   })
 
   // СКРЫТЬ ПЕРВУЮ СЕКЦИЮ ГЛАВНОЙ, КОГДА РАЗВЕРНЕТСЯ ВИДЕО
   window.addEventListener('scroll', function () {
     const scrollPosition = document.documentElement.scrollTop
-    if (scrollPosition > 800 && document.querySelector(".intro").style.visibility === "" || document.querySelector(".intro").style.visibility === "visible") {
-      document.querySelector(".intro").style.visibility = "hidden"
-    }
-    if (scrollPosition < 800 && document.querySelector(".intro").style.visibility === "hidden") {
-      document.querySelector(".intro").style.visibility = "visible"
-    }
-
+    if (document.querySelector('.intro')) {
+      if (scrollPosition > 800 && document.querySelector(".intro").style.visibility === "" || document.querySelector(".intro").style.visibility === "visible") {
+        document.querySelector(".intro").style.visibility = "hidden"
+      }
+      if (scrollPosition < 800 && document.querySelector(".intro").style.visibility === "hidden") {
+        document.querySelector(".intro").style.visibility = "visible"
+      }
+  }
   });
 
 // СКРИПТ ДЛЯ ВЕРХНЕГО МЕНЮ

@@ -22,6 +22,7 @@
           <div class="contact flex">
             <h3>Центральный офис</h3>
             <p>РФ, 109004, г. Москва, ул. Александра Солженицына, 17с1
+              <span class="phone">+7 (495) 726-55-38</span>
               <span class="time">10:00-19:00 (MSK)</span>
               <a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a>
             </p>
@@ -29,8 +30,8 @@
           <div class="contact flex">
             <h3>Есть вопросы по качеству продукции?</h3>
             <p>
-              <span class="phone">8-800-250-18-80</span>
-              круглосуточно, звонок по РФ бесплатный
+              <span class="phone" style="margin-top: 0;">8-800-250-18-80</span>
+              <span class="time">круглосуточно, звонок по РФ бесплатный</span>
               <a href="mailto:shmpk-kachestvo@shmpk.ru" class="email">shmpk-kachestvo@shmpk.ru</a>
             </p>
           </div>
@@ -43,37 +44,131 @@
 
 
             <form action="#" class="form contactform">
+              <input type="hidden" name="form_origin" value="Из контактной формы" />
               <label for="name" class="form__label">
-                <input type="text" name="name" class="input-reset form__input" placeholder="Имя">
-              </label><br/>
+                <input type="text" name="contact-fio" class="input-reset form__input contact-fio" value="" placeholder="Имя" data-validate-field="fio">
+              </label>
               <label class="form__label">
-                <input type="email" name="email" class="input-reset form__input" placeholder="Почта">
-              </label><br />
+                <input type="email" name="contact-email" class="input-reset form__input contact-email" value="" placeholder="Почта"  data-validate-field="email">
+              </label>
               <label class="form__label">
-                <input type="text" name="phone" class="input-reset form__input" placeholder="Имя">
-              </label><br />
-              <select>
+                <input type="tel" name="contact-tel" class="input-reset form__input contact-tel" value="" placeholder="Телефон"  data-validate-field="tel">
+              </label>
+              <label class="form__label">
+                <input type="text" name="contact-message" class="input-reset form__input contact-message" value="" placeholder="Сообщение" data-validate-field="message">
+              </label>
+              <select name="idea" id="idea" class="custom-select">
+                <option value="">Хочу предложить идею</option>
+                <option value="val1">Один</option>
+                <option value="val2">Два </option>
+                <option value="val3">Три</option>
+              </select>
 
-              </select><br />
-              <label class="form__label">
-                <input type="text" name="phone" class="input-reset form__input" placeholder="Имя">
-              </label><br />
-
-              <div class="upload-files">
+<!--
+              <div class="form__upload">
                 <p>Перетащите файлы или выберите с вашего устройства, чтобы загрузить их</p>
                 <p>jpg, pdf, doc | до 10 Мб</p>
-              </div><br />
-              <input type="checkbox" name="agreement" id="agreement"><label for="agreement">Я даю свое согласие на обработку моих данных и соглашаюсь с положениями</label>
-              <br /><button class="btn-reset btn-primary form__btn">Отправить</button>
+                <div>
+
+              </div> -->
+              <div class="form__agreement">
+                  <label class="label-check">Я даю свое согласие на обработку моих данных <a href="#" class="linkin">Политики конфиденциальности</a> и соглашаюсь с положениями
+                    <input type="checkbox"  name="agreement" id="agreement" value="yes">
+                    <span class="checkmark"></span>
+                  </label>
+              </div>
+              <button type="submit" class="btn-primary form__submit-btn">Отправить</button>
+              <!--
+              <button type="submit" class="btn-primary form__submit-btn" data-graph-path="">Отправить</button> -->
+
+              </div>
+
+
             </form>
-            <button class="btn-reset " data-graph-path="">hello</button>
+
+
+                <script>
+                  var dropzone = new Dropzone('#demo-upload', {
+                    previewTemplate: document.querySelector('#preview-template').innerHTML,
+                    parallelUploads: 2,
+                    thumbnailHeight: 120,
+                    thumbnailWidth: 120,
+                    maxFilesize: 3,
+                    filesizeBase: 1000,
+                    thumbnail: function (file, dataUrl) {
+                      if (file.previewElement) {
+                        file.previewElement.classList.remove("dz-file-preview");
+                        var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
+                        for (var i = 0; i < images.length; i++) {
+                          var thumbnailElement = images[i];
+                          thumbnailElement.alt = file.name;
+                          thumbnailElement.src = dataUrl;
+                        }
+                        setTimeout(function () { file.previewElement.classList.add("dz-image-preview"); }, 1);
+                      }
+                    }
+
+                  });
+
+
+                  // Now fake the file upload, since GitHub does not handle file uploads
+                  // and returns a 404
+
+                  var minSteps = 6,
+                    maxSteps = 60,
+                    timeBetweenSteps = 100,
+                    bytesPerStep = 100000;
+
+                  dropzone.uploadFiles = function (files) {
+                    var self = this;
+
+                    for (var i = 0; i < files.length; i++) {
+
+                      var file = files[i];
+                      totalSteps = Math.round(Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep)));
+
+                      for (var step = 0; step < totalSteps; step++) {
+                        var duration = timeBetweenSteps * (step + 1);
+                        setTimeout(function (file, totalSteps, step) {
+                          return function () {
+                            file.upload = {
+                              progress: 100 * (step + 1) / totalSteps,
+                              total: file.size,
+                              bytesSent: (step + 1) * file.size / totalSteps
+                            };
+
+                            self.emit('uploadprogress', file, file.upload.progress, file.upload.bytesSent);
+                            if (file.upload.progress == 100) {
+                              file.status = Dropzone.SUCCESS;
+                              self.emit("success", file, 'success', null);
+                              self.emit("complete", file);
+                              self.processQueue();
+                              //document.getElementsByClassName("dz-success-mark").style.opacity = "1";
+                            }
+                          };
+                        }(file, totalSteps, step), duration);
+                      }
+                    }
+                  }
+                </script>
+
+                <DIV id="dropzone">
+                  <FORM class="dropzone needsclick" id="demo-upload" action="/upload">
+                    <DIV class="dz-message needsclick">
+                      Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<BR>
+                      <br/><SPAN class="note needsclick">jpg, pdf, doc | до 10 Мб</SPAN>
+                    </DIV>
+                  </FORM>
+                </DIV>
+
+
             <div class="graph-modal">
               <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="">
                 <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
                 <div class="graph-modal__content">
                   <h3>СПАСИБО!</h3>
-                  <p>Мы приняли ваш запрос и уже взяли в работу. Скоро свяжемся с вами.</p>
-                  <button class="btn-reset btn-primary ">на главную</button>
+                  <p>Мы приняли ваш запрос и уже взяли в работу.<br/> Скоро свяжемся с вами.</p>
+                  <button class="btn-reset btn-primary">на главную</button>
 
                 </div>
 

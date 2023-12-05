@@ -12,6 +12,7 @@
     @include mobile {
       margin: 40px 24px 20px 24px;
       grid-template-columns: 100%;
+      grid-auto-flow: dense;
       gap: 20px;
       min-width: 300px;
     }
@@ -19,10 +20,14 @@
 
   &__contacts {
     max-width: 500px;
+    @include mobile {
+      order: 2;
+    }
   }
   &__form {
     background-color: var(--main-white);
     max-width: 500px;
+    grid-column: 1;
     .container {
       padding: 32px;
     }
@@ -34,11 +39,37 @@ div.contact {
   padding: 32px 24px;
   gap: 38px;
   align-items: top;
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+  }
   h3 {
     margin: 0;
+    width: 50%;
+    @include mobile {
+        width: 100%;
+      }
   }
   p {
     margin: 0;
+    width: 40%;
+    @include mobile {
+        width: 100%;
+      }
+  }
+  .phone {
+    color: var(--main-bronze);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .time {
+    font-size: 14px;
+    display: block;
+  }
+  .email {
+    display: block;
+    margin-top: 24px;
   }
 }
 
