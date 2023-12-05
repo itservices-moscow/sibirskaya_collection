@@ -19,9 +19,27 @@
     background-color: var(--dark-gray);
     flex-direction: column;
     padding: 48px 40px;
+    transition: 0.4s;
     @include mobile {
       padding: 24px 17px;
     }
+    @include hover {
+      animation: itemmove 0.5s ;
+      background-color: #535250;
+      cursor: pointer!important;
+    }
+
+  }
+  @keyframes itemmove {
+      0% {
+        scale: 100%;
+      }
+      50% {
+        scale: 102%;
+      }
+      100% {
+        scale: 100%;
+      }
   }
   .item-link {
     float: left;
@@ -35,5 +53,6 @@
   }
   .item-link * {
     color: var(--main-white);
+    transition: 0.4s;
   }
 }
