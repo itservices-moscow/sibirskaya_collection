@@ -12,7 +12,6 @@
     @include mobile {
       margin: 40px 24px 20px 24px;
       grid-template-columns: 100%;
-      grid-auto-flow: dense;
       gap: 20px;
       min-width: 300px;
     }
@@ -27,7 +26,6 @@
   &__form {
     background-color: var(--main-white);
     max-width: 500px;
-    grid-column: 1;
     .container {
       padding: 32px;
     }

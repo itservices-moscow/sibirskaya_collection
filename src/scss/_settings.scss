@@ -153,7 +153,7 @@ p {
   appearance: none;
   border: none;
   border-radius: 0;
-  background-color: #fff;
+  background-color: transparent;
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
@@ -219,6 +219,10 @@ p {
     line-height: 81px;
     letter-spacing: 0em;
     text-transform: uppercase;
+    @include mobile {
+      font-size: 42px;
+      line-height: 46px;
+    }
 }
 
 h1 {

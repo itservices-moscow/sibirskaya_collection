@@ -32,7 +32,7 @@ input[type="submit"] {
 
 .form input[type="text"] {
   height: 49px;
-  background: var(--main-white);
+  // background: var(--main-white);
   color: var(--main-black);
   border: 0;
   padding: 12px 16px;
@@ -61,7 +61,7 @@ input[type="submit"] {
 
 input[type="tel"] {
   height: 49px;
-  background: var(--main-white);
+  //background: var(--main-white);
   color: var(--main-black);
   border: 0;
   padding: 12px 16px;
@@ -92,7 +92,7 @@ input[type="tel"] {
 
 input[type="email"] {
   height: 49px;
-  background: var(--main-white);
+  // background: var(--main-white);
   color: var(--main-black);
   border: 0;
   padding: 12px 16px;
@@ -158,8 +158,6 @@ textarea {
 
   }
 }
-
-
 
 
 
@@ -333,7 +331,7 @@ option {
 }
 
 .dz-message {
-  padding: 40px;
+  padding: 24px 40px;
 
 }
 .dz-message .note {

@@ -11,10 +11,10 @@
     color: var(--main-black);
     grid-template-columns: repeat(3, 1fr); //minmax(0, 430px)
     justify-content: space-between;
-    grid-gap: 32px 0;
+    // gap: 32px 0;
     @include mobile {
       grid-template-columns: 100%;
-      grid-gap: 24px;
+      // gap: 24px;
     }
   }
   &__item {

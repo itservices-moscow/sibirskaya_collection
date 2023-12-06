@@ -9,7 +9,6 @@
 
   padding-top: 300px;
   @include mobile {
-    // background-image: none;
     background-size: 70%;
     padding: 0 24px;
     padding-top: 400px;
@@ -18,7 +17,6 @@
   &__cards{
     grid-template-columns: repeat(3, minmax(150px, 430px));
     grid-template-rows: auto auto auto;
-    grid-gap: 40px;
     // justify-content: space-between;
     @include mobile {
       grid-template-columns: 100%;
@@ -109,8 +107,6 @@
     @include mobile {
       font-size: 18px;
     }
-
-    // line-height: 27px;
   }
 
   &__item_top {

@@ -1,8 +1,6 @@
 .graph-modal {
 
   &__container {
-
-    transform: translateY(-150%);
     text-align: center;
     width: 630px;
     height: 265px;
@@ -12,6 +10,7 @@
       width: calc(100% - 48px);
       max-width: 400px;
       margin: 24px;
+      transform: translateY(-190%);
     }
   }
   &__close {
