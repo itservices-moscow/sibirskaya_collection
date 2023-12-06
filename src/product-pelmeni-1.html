@@ -7,22 +7,18 @@
   <div class="site-container" id="site-container">
     @include('partials/header.html')
 
-    <div class="filter mobile" id="filters-menu-mobile">
-      <div class="filter__head flex mobile">
-        <div class="">Фильтры</div>
-        <button class="btn-reset icon-close" aria-label="Закрыть фильтры"
-          onclick="document.getElementById('filters-menu-mobile').classList.toggle('active');"></button>
-      </div>
-      <div class="filter__mobcontent mobile">
-        <a href="#" class="clearall"><span>СБРОСИТЬ ВСЕ</span></a>
-        @include('partials/catalog_filters.html')
-      </div>
-    </div>
+
         <main class="product-type1">
           @include('partials/arrowback.html')
           <section class="product">
             <div class="container product__container grid">
-              <div class="product__left filter desktop">
+              <div class="product__left_relative desktop">
+                  <div class="product-name">пельмени</div>
+              </div>
+              <div class="product__submenu">
+                @include('partials/product_submenu_pelmeni.html')
+              </div>
+              <div class="product__left desktop">
                 @include('partials/product_t1_menu.html')
               </div>
               <div class="product__content">

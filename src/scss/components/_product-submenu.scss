@@ -1,0 +1,93 @@
+.submenu {
+  &__container {
+
+  }
+  &__list {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.subitem {
+  position: relative;
+  // display: inline-block;
+  margin-right: 40px;
+  //background-color: aqua;
+  &__flex {
+    align-items: center;
+  }
+  &__name {
+    display: block;
+    white-space: nowrap;
+    font-size: 22px;
+    margin: 0;
+    color: var(--medium-gray);
+    text-transform: uppercase;
+  }
+  &__number {
+    display: none;
+    top: 0;
+    left: 28px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    font-family: "IntroDemoCondLightCAPS";
+  }
+  &__note {
+    display: none;
+  }
+  &__back {
+    width: 30px;
+    margin-top: 20px;
+    display: none;
+  }
+  &__forward {
+    width: 30px;
+    margin-top: 20px;
+    display: none;
+  }
+  // &::before {
+  //   content: '~';
+  //   width: 39px;
+
+  // }
+
+  // &::after {
+  //   content: '~';
+  //   width: 39px;
+  // }
+}
+
+.subitem_active {
+  .subitem {
+    &__name {
+      color: var(--main-black);
+      font-size: 42px;
+      margin: 28px 24px 8px 24px;
+
+    }
+
+    &__number {
+      position: absolute;
+      display: inline;
+    }
+
+    &__note {
+      color: var(--main-bronze);
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      font-size: 14px;
+      display: block;
+    }
+
+    &__back {
+      display: inline-block;
+    }
+
+    &__forward {
+      display: inline-block;
+    }
+
+  }
+}
