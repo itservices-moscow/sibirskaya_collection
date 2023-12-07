@@ -18,15 +18,16 @@
 
     @include mobile {
       margin: 40px 24px 0 24px;
-      grid-template-columns: 100% 1fr;
+      grid-template-columns: 100%;
       gap: 0;
       min-width: 300px;
     }
-
-
   }
 
   &__left {
+    @include mobile {
+     overflow: hidden;
+    }
 
   }
 
@@ -34,30 +35,12 @@
     height: 176px;
     position: relative;
     overflow: visible;
-    //background-color: aquamarine;
+
   }
   &__content {
-    // .goods {
-    //   grid-template-columns: repeat(3, 1fr);
-    //   gap: 32px 16px;
-
-    //   @include mobile {
-    //     grid-template-columns: repeat(2, 1fr);
-    //   }
-    // }
-
-    // .goods-more {
-    //   grid-template-columns: repeat(3, 1fr);
-    //   gap: 32px 16px;
-
-    //   @include mobile {
-    //     grid-template-columns: 100% 1fr;
-    //   }
-    // }
 
   }
 }
-
 
 .product-name {
   position: absolute;
@@ -76,14 +59,30 @@
 
 }
 
+.product-name-mobile {
+  text-align: center;
+  margin: 24px;
+  padding-top: 32px;
+}
+
 .product-content {
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
+  @include mobile {
+    grid-template-columns: 100%;
+    @include mobile {
+      margin-bottom: 96px;
+    }
+  }
   &__img {
     padding: 40px;
     img {
-      //width: 100%;
-      width: 400px;
+      width: 100%;
+      //width: 400px;
+    }
+    @include mobile {
+      grid-row: 1;
+      margin-top: 64px;
     }
 
   }
