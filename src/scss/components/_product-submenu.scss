@@ -10,9 +10,7 @@
 
 .subitem {
   position: relative;
-  // display: inline-block;
   margin-right: 40px;
-  //background-color: aqua;
   &__flex {
     align-items: center;
   }
@@ -38,12 +36,12 @@
   }
   &__back {
     width: 30px;
-    margin-top: 20px;
+    margin-top: 48px;
     display: none;
   }
   &__forward {
     width: 30px;
-    margin-top: 20px;
+    margin-top: 48px;
     display: none;
   }
   // &::before {

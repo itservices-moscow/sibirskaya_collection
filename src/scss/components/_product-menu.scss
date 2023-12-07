@@ -1,0 +1,37 @@
+.prodmenu {
+  width: 308px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1px;
+
+  li {
+    height: 75px;
+  }
+
+  &__link {
+    padding: 28px 28px;
+    display: block;
+    width: 100%;
+    color: var(--main-bronze);
+    background-color: var(--main-beige);
+    border-bottom: 1px solid var(--main-bronze);
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--main-white);
+      background-color: var(--main-bronze);
+    }
+
+    &:active {
+      color: var(--main-white);
+      background-color: var(--main-bronze);
+    }
+  }
+
+  .active {
+    color: var(--main-white);
+    background-color: var(--main-bronze);
+  }
+}
