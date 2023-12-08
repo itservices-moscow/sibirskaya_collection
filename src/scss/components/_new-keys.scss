@@ -8,3 +8,12 @@ section.new-keys {
 }
 
 // стили карточек - стандартные из _main-keys.scss
+.new-keys * .keys__cards {
+  gap: 24px 0;
+}
+.new-keys * .keys__item {
+  @include mobile {
+    //margin-bottom: 24px;
+  }
+
+}

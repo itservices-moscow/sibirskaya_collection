@@ -27,6 +27,19 @@
         <option value="val3">Три</option>
       </select>
 
+      <!-- dropzone start -->
+      <!-- скрипт для dropzone подключается только на страницах, где есть этот блок -->
+      @include('../partials/dropzone_script.html')
+      <div id="dropzone" class="dropzone">
+       <!-- <form class="dropzone needsclick" id="demo-upload" action="/upload"> -->
+          <div class="dz-message needsclick">
+            Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<br />
+            <br /><span class="note needsclick">jpg, pdf, doc | до 10 Мб</span>
+          </div>
+       <!-- </form> -->
+      </div>
+      <!-- dropzone end -->
+
       <div class="form__agreement">
         <label class="label-check">Я даю свое согласие на обработку моих данных <a href="#" class="linkin">Политики
             конфиденциальности</a> и соглашаюсь с положениями
@@ -36,23 +49,13 @@
       </div>
       <button type="submit" class="btn-primary form__submit-btn">Отправить</button>
     </form>
+
     <!-- демонстрация модального окна после отправки формы. удалить -->
-    <button type="submit" class="btn-reset" data-graph-path="">click me - test modal</button>
+    <button type="submit" class="btn-reset" data-graph-path=""> &rAarr; test modal</button>
 
 
 
-<!-- dropzone start -->
-<!-- скрипт для dropzone подключается только на страницах, где есть этот блок -->
-@include('../partials/dropzone_script.html')
-<div id="dropzone">
-  <form class="dropzone needsclick" id="demo-upload" action="/upload">
-    <div class="dz-message needsclick">
-      Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<br />
-      <br /><span class="note needsclick">jpg, pdf, doc | до 10 Мб</span>
-    </div>
-  </form>
-</div>
-<!-- dropzone end -->
+
 
 </div>
 
@@ -63,7 +66,7 @@
     <div class="graph-modal__content">
       <h3>СПАСИБО!</h3>
       <p>Мы приняли ваш запрос и уже взяли в работу.<br /> Скоро свяжемся с вами.</p>
-      <button class="btn-reset btn-primary">на главную</button>
+      <button class="btn-reset btn-primary" onClick="location.href = '/';">на главную</button>
     </div>
   </div>
 </div>

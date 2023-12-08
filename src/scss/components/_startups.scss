@@ -77,7 +77,10 @@ section.back-black {
   color: var(--main-white);
   background-color: var(--color-black);
   position: relative;
-  height: 1800px;
+  height: 1600px;
+  @include mobile {
+    height: 1750px;
+  }
   > h1 {
       color: var(--main-white);
       text-align: center;
@@ -89,16 +92,18 @@ section.back-black {
     left: 10vw;
   }
   &_2 {
-    top: 830px;
-    left: 50vw;
+    top: 660px;
+    left: 52vw;
     @include mobile {
+      top: 780px;
       left: -100px;
     }
   }
   &_3 {
-    top: 1300px;
+    top: 1000px;
     left: 20vw;
     @include mobile {
+        top: 1200px;
         left: 10vw;
       }
   }
@@ -132,6 +137,7 @@ section.back-black {
         margin: 0 8px 300px 44px;
       }
     &_2 {
+      margin: -170px 0 300px 44px;
       @include mobile {
         margin: 0 44px 300px 8px;
       }
@@ -158,6 +164,7 @@ section.back-black {
       }
     }
     &_2 {
+      margin-left: 110px;
       @include mobile {
         max-width: 240px;
         margin-left: 90px;
