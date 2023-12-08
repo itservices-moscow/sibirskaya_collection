@@ -121,7 +121,17 @@ $arrow-head-thickness: $shaft-thickness;
 
 }
 
+.arr-left {
+  img {
+    margin-right: 24px;
+  }
+}
+.arr-right {
+  img {
+      margin-left: 24px;
+    }
 
+}
 .animated-arrow {
   display: inline-block;
   color: var(--main-bronze);

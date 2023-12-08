@@ -1,0 +1,44 @@
+.brandmenu {
+  gap: 1px;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+  }
+
+  li {
+    height: 75px;
+  }
+
+  &__link {
+    padding: 28px 28px;
+    display: block;
+    width: 100%;
+    color: var(--main-bronze);
+    background-color: var(--main-beige);
+    border-bottom: 1px solid var(--main-bronze);
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--main-white);
+      background-color: var(--main-bronze);
+    }
+
+    &:active {
+      color: var(--main-white);
+      background-color: var(--main-bronze);
+    }
+  }
+
+  .active {
+    color: var(--main-white);
+    background-color: var(--main-bronze);
+  }
+}
