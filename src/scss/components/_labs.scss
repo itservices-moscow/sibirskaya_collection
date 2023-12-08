@@ -1,3 +1,6 @@
 section.labs {
-
+  margin: 40px 55px 20px 55px;
+  @include mobile {
+      margin: 40px 24px 20px 24px;
+    }
 }
