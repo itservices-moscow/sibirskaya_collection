@@ -1,0 +1,83 @@
+<div id="map" class="map__container">
+
+
+</div>
+
+
+<script type="text/javascript">
+
+// [55.743801, 37.661500] - Солженицына
+// [55.906663, 38.136960] - Лосино-петровский
+
+  let center = [55.824720, 37.873702]; // начальный центр карты при загрузке
+
+  function init() {
+    let map = new ymaps.Map('map', {
+      center: center,
+      zoom: 9
+    });
+
+    let placemark1 = new ymaps.Placemark([55.743801, 37.661500], {
+      balloonContentHeader: '<h3 class="baloon__header">ЦЕНТРАЛЬНЫЙ<br>ОФИС</h3>',
+      balloonContentBody: ` <div class="baloon__address">РФ, 109004, г. Москва, ул. Александра Солженицына, 17с1</div>
+                            <span class="baloon__phone">+7 (495) 726-55-38</span>
+          `,
+      balloonContentFooter: `<a href="mailto:info@shmpk.ru" class="baloon__email">info@shmpk.ru</a>
+          `,
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/svg/pin-default.svg',
+      iconImageSize: [38, 38],
+      iconImageOffset: [0, 0]
+    });
+
+    let placemark2 = new ymaps.Placemark([55.906663, 38.136960], {
+      		balloonContentHeader: '<h3 class="baloon__header">ПРОИЗВОДСТВЕННАЯ<br>ПЛОЩАДКА</h3>',
+          balloonContentBody: ` <div class="baloon__address">РФ, 141140, МО, г. Лосино-Петровский, рабочий поселок Свердловский, ул. Центральная 1к1</div>
+          `,
+          balloonContentFooter: `<span class="baloon__phone">+7 (495) 933-80-71</span><br/><span class="baloon__time">10:00-19:00 (MSK)</span>
+          `,
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/svg/pin-default.svg',
+      iconImageSize: [38, 38],
+      iconImageOffset: [0, 0]
+    });
+
+    // отключение элементов управления (не рекомендуется)
+     map.controls.remove('geolocationControl'); // удаляем геолокацию
+     map.controls.remove('searchControl'); // удаляем поиск
+     map.controls.remove('trafficControl'); // удаляем контроль трафика
+     map.controls.remove('typeSelector'); // удаляем тип
+     map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+     map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+     // map.controls.remove('rulerControl'); // удаляем контрол правил
+    // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+    map.geoObjects.add(placemark1);
+    map.geoObjects.add(placemark2);
+  }
+
+  ymaps.ready(init);
+
+</script>
+
+<!--
+<ymaps
+  class="ymaps-2-1-79-balloon ymaps-2-1-79-balloon_layout_panel ymaps-2-1-79-i-custom-scroll ymaps-2-1-79-islets_balloon_layout_panel">
+  <ymaps class="ymaps-2-1-79-balloon__close">
+    <ymaps class="ymaps-2-1-79-balloon__close-button"></ymaps>
+  </ymaps>
+  <ymaps class="ymaps-2-1-79-balloon__content">
+    <ymaps id="id_170215716747522776433" class="" style="overflow-y: hidden; height: 90px; display: block;">
+      <ymaps>
+        <ymaps class="ymaps-2-1-79-balloon-content__header">
+          <h3 class="baloon__header">ПРОИЗВОДСТВЕННАЯ<br>ПЛОЩАДКА</h3>
+        </ymaps>body
+        <ymaps class="ymaps-2-1-79-balloon-content__footer">Подвал</ymaps>
+      </ymaps>
+    </ymaps>
+  </ymaps>
+</ymaps>
+
+-->
