@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container" id="site-container">
+    @include('partials/header.html')
+    <main class="brands-sk">
+      @include('partials/arrowback.html')
+      <section class="brands">
+        <div class="container brands__container grid">
+          <div class="brands__left">
+            @include('partials/brands_left_menu.html')
+          </div>
+          <div class="brands__content">
+            @include('partials/brands_prod_sk.html')
+
+          </div>
+          <a id="details"></a>
+        </div>
+      </section>
+      <section class="brands-details">
+        <div class="container brands-details__container grid">
+          <div class="brands-details__view360">
+            @include('partials/brands_sk_360.html')
+          </div>
+          <div class="brands-details__menu">
+            @include('partials/brands_sk_menu2.html')
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+  @include('partials/footer_scripts.html')
+</body>
+
+</html>

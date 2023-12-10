@@ -1,6 +1,5 @@
-.brands-sk-sel {}
-
-.brands-sk-sel .back {
+// .brands-sk-sel .back
+.back {
   position: absolute;
   top: 60px;
   left: 0;
@@ -16,9 +15,10 @@
     min-width: 1000px;
 
     @include mobile {
+      padding-top: 100px;
       margin: 90px 24px 0 24px;
       grid-template-columns: 100%;
-      gap: 80px;
+      gap: 48px;
       min-width: 300px;
     }
   }
@@ -27,17 +27,6 @@
     @include mobile {
       overflow: hidden;
     }
-  }
-
-  &__content {
-
-
-  }
-}
-
-.brands-content {
-  &__submenu {
-
   }
 }
 
@@ -100,17 +89,39 @@
       color: var(--medium-gray);
       font-size: 18px;
       line-height: normal;
+      padding-bottom: 32px;
       @include mobile {
+        padding-bottom: 0;
         max-width: 163px;
         font-size: 14px;
         line-height: 17px;
       }
     }
-    button {
-      margin-top: 48px;
+
+    &_horeca p {
       @include mobile {
-        margin-top: 16px;
+          padding-bottom: 0;
+          max-width: 223px;
+        }
+    }
+
+    &_kids p {
+      @include mobile {
+        padding-bottom: 0;
+        max-width: 223px;
+      }
+    }
+
+    button {
+      width: 100%;
+      max-width: 268px;
+      text-transform: uppercase;
+      margin-top: 16px;
+      @include mobile {
         max-width: 198px;
+        margin-top: 8px;
+        padding-left: 14px;
+        padding-right: 14px;
       }
     }
 
@@ -120,7 +131,6 @@
     @include mobile {
       margin-top: 0;
       margin-left: 190px;
-
     }
     img {
       z-index: 5;
@@ -131,6 +141,31 @@
           filter: drop-shadow(-20px 12px 40px rgba(242, 243, 246, 0.5));
         }
     }
+
+    // модификаторы для разных брендов
+    &_horeca img {
+      width: 387px;
+      margin-top: 50px;
+      filter: drop-shadow(10px 20px 60px rgba(242, 243, 246, 0.4));
+      @include mobile {
+          width: 171px;
+          margin-top: -50px;
+          filter: drop-shadow(-20px 12px 40px rgba(242, 243, 246, 0.4));
+        }
+    }
+
+    &_kids img {
+      width: 387px;
+      margin-top: 50px;
+      filter: drop-shadow(10px 20px 60px rgba(242, 243, 246, 0.4));
+
+      @include mobile {
+        width: 171px;
+        margin-top: -50px;
+        filter: drop-shadow(-20px 12px 40px rgba(242, 243, 246, 0.4));
+      }
+    }
+
 
   }
 
@@ -168,4 +203,29 @@
     }
 
   }
+}
+
+
+
+.sk-img-header {
+  width: 308px;
+  height: 85px;
+  @include mobile {
+    width: 199px;
+    height: 55px;
+  }
+}
+
+.smth {
+  margin: 300px 55px 160px 55px;
+  height: 200px;
+  text-align: center;
+  justify-content: space-between;
+  div {
+    width: 195px;
+    height: 195px;
+    padding-top: 90px;
+    background-color: var(--medium-gray);
+  }
+
 }

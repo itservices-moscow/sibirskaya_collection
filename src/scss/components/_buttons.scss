@@ -31,13 +31,19 @@
     background-color: transparent;
     border: 1px solid var(--main-bronze);
     border-radius: 60px;
+    font-size: 14px;
     transition: 0.3s ease;
 
     @include hover {
       color: var(--main-white);
       background-color: var(--main-bronze);
       cursor: pointer;
+      svg path {
+        stroke: #fff;
+      }
     }
+
+
 
     &:disabled {
       background-color: transparent;

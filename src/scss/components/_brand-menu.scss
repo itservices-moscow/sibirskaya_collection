@@ -1,5 +1,5 @@
 .brandmenu {
-  gap: 1px;
+  gap: 1px; // !!!
   @include mobile {
     display: flex;
     flex-direction: column;
@@ -13,11 +13,11 @@
   }
 
   li {
-    height: 75px;
+    height: 75px; // !!!
   }
 
   &__link {
-    padding: 28px 28px;
+    padding: 22px; // !!!
     display: block;
     width: 100%;
     color: var(--main-bronze);
@@ -42,3 +42,69 @@
     background-color: var(--main-bronze);
   }
 }
+
+
+
+// стили для мобильного аккордеона
+
+
+
+//   &__item>.accordion {
+//     cursor: pointer;
+//     height: 49px;
+//     width: 100%;
+//     display: block;
+//     color: var(--main-black);
+//     background-color: transparent;
+//     transition: 0.3s ease;
+
+//     @include hover {
+//       color: var(--main-white);
+//       background-color: var(--main-bronze);
+//     }
+//   }
+
+//   &__item>.accordion.active {
+//     color: var(--main-white);
+//     background-color: var(--main-bronze);
+//   }
+
+//   &__item>.accordion:hover {
+//     color: var(--main-white);
+//   }
+
+//   &__item>.accordion:hover:after {
+//     color: var(--main-white);
+//   }
+
+//   &__item .empty {
+//     text-transform: uppercase;
+//     transition: 0.3s;
+//   }
+
+
+//   /* Style the accordion panel. Note: hidden by default */
+//   &__item>.panel {
+//     margin: 0 32px;
+//     color: var(--main-black);
+//     max-height: 0;
+
+//     overflow: hidden;
+//     transition: max-height 0.2s ease-out;
+//   }
+
+//   &__item>.accordion:after {
+//     content: '\02c5';
+//     font-size: 18px;
+//     color: var(--main-bronze);
+//     float: right;
+//     margin-left: 12px;
+//     transform: scalex(2.5);
+//   }
+
+//   &__item>.active:after {
+//     padding-top: 2px;
+//     color: var(--main-white);
+//     content: "\005e";
+//   }
+
