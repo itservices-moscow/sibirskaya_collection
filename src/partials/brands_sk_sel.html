@@ -1,8 +1,18 @@
 <div class="brands-content grid">
     <div class="brands-content__submenu">
       <div class="brands-nav flex">
-        <span class="arr-left"><a href=""><img src="img/svg/arr-left.svg"/>SK selective kids</a></span>
-        <span class="arr-right"><a href="">Sибирская <br class="mobile">коллекция</a><img src="img/svg/arr-right.svg" /></span>
+        <span class="arr-left-on">
+          <a href="#">
+            @include('../partials/arrowleft.html')
+            SK selective <br class="mobile" />kids
+          </a>
+        </span>
+
+        <span class="arr-right-on">
+          <a href="#">Sибирская <br class="mobile"/>коллекция
+          @include('../partials/arrowright.html')
+          </a>
+        </span>
       </div>
     </div>
   <div class="brands-content__info">
@@ -12,7 +22,7 @@
         <div class="brands-info__text">
           <h1>SK Selective</h1>
           <p>Для тех, кто заботится о своем питании и осознано подходит к выбору продуктов</p>
-          <button class="btn-reset btn-primary">категории</button>
+          <button class="btn-reset btn-primary" onclick="location.href='#details';">категории</button>
         </div>
         <div class="brands-info__pic">
           <img src="img/brands-sksel-pic.png"/>

@@ -97,9 +97,17 @@ div.contact {
 
 [class*="balloon__close-button"] {
   opacity: 1;
+  margin: 14px 17px 0 0;
+}
+
+[class*="balloon__content"] {
+  padding: 25px!important;
+  border-radius: 10px;
+  // margin-right: 10px;
 }
 
 [class*="balloon_layout_panel"] {
+
   @include desktop {
     max-width: 200px;
   }

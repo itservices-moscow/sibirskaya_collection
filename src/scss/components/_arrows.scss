@@ -132,11 +132,69 @@ $arrow-head-thickness: $shaft-thickness;
     }
 
 }
-.animated-arrow {
-  display: inline-block;
-  color: var(--main-bronze);
-  text-decoration: none;
-  position: relative;
-  transition: all 0.2s;
 
+.arr-left-on {
+  text-align: right;
+}
+.arr-left-on, .arr-right-on {
+  z-index: 10;
+  vertical-align: middle;
+}
+
+.arr-left-on svg.icon path {
+  transition: 0.2s;
+}
+
+.arr-left-on:hover svg.icon path {
+  transition: 0.3s;
+  d: path(" m0.2153,14.50535l-7.42364,-6.87472m-0.1,-0.1l7.52364,-7.02528m-7.51771,7.01993l32.05181,0");
+}
+
+.arr-right-on svg.icon path {
+  transition: 0.2s;
+}
+
+.arr-right-on:hover svg.icon path {
+  transition: 0.3s;
+  d: path("m25.7154,14.47366l7.3846,-6.97472m0,0l-7.3846,-7.02528m7.41129,7.05197l-32.12669,-0.02669");
+}
+
+
+.icon-back-white svg.icon path {
+  stroke: #fff;
+}
+
+.icon-back svg.icon path {
+  // stroke: #C0B3A8;
+  transition: 0.2s;
+}
+
+.icon-back:hover svg.icon path {
+  transition: 0.3s;
+}
+
+.icon-back:hover svg.icon path.cir {
+  stroke: #886A44;
+}
+
+.icon-back-white:hover svg.icon path.cir {
+  stroke: #fff;
+}
+
+.icon-back svg path.arr,
+.icon-back-white svg path.arr {
+  transition: 0.2s transform;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.icon-back:hover svg path.arr {
+  transition: 0.3s;
+  stroke: #886A44;
+  transform: translate(-7px, 0);
+}
+.icon-back-white:hover svg path.arr {
+  transition: 0.3s;
+  stroke: #fff;
+  transform: translate(-7px, 0);
 }

@@ -1,6 +1,4 @@
-.brands-sk-sel {
-  margin-top: calc(88px + 64px);
-}
+.brands-sk-sel {}
 
 .brands-sk-sel .back {
   position: absolute;
@@ -11,16 +9,16 @@
 
 .brands {
   &__container {
-    padding-top: 60px;
+    padding-top: 210px;
     margin: 0 55px 160px 55px;
     grid-template-columns: 308px calc(100% - 472px);
     gap: 0 145px;
     min-width: 1000px;
 
     @include mobile {
-      margin: 40px 24px 0 24px;
+      margin: 90px 24px 0 24px;
       grid-template-columns: 100%;
-      gap: 60px;
+      gap: 80px;
       min-width: 300px;
     }
   }
@@ -46,6 +44,7 @@
 .brands-nav {
   margin-top: -30px;
   justify-content: space-between;
+  text-transform: uppercase;
   @include mobile {
     max-width: calc(100vw - 48px);
   }
@@ -53,6 +52,9 @@
 
 .brands-info {
   position: relative;
+  @include mobile {
+    margin-top: 30px;
+  }
   &__bg {
     position: absolute;
     top: 0;
@@ -149,6 +151,7 @@
 
     }
   }
+
   &__view360 {
     @include mobile {
         order: 2;
@@ -164,57 +167,5 @@
       max-width: 700px;
     }
 
-  }
-}
-
-.view360 {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  height: 567px;
-  background-color: #F2EFEC;
-  @include mobile {
-    height: 458px;
-  }
-  &__content {
-    position: relative;
-    text-align: center;
-    // содержит изображение товара - когда будет готов спрайт 360, изменить отступы и макс. размеры
-    @include mobile {
-    }
-    div {
-      text-align: center;
-      width: 100%;
-    }
-    img {
-      width: 360px;
-      margin-top: 67px;
-      @include mobile {
-        width: 213px;
-        margin-top: 67px;
-
-      }
-    }
-  }
-  &__nav {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    height: 100px;
-    bottom: 0;
-    left: 0;
-    padding: 16px 32px;
-    @include mobile {
-      height: 100%;
-      flex-direction: column;
-    }
-  }
-
-  &__preloader {
-    position: absolute;
-    width: 100%;
-    height: 490px;
   }
 }

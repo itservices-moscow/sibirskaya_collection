@@ -1,5 +1,6 @@
-.icon-back * img {
-  width: 92px; // !!!
+.icon-back * svg,
+.icon-back-white * svg {
+  width: 92px;
   height: 69px;
 
   @include mobile {
@@ -9,10 +10,18 @@
 }
 
 section.back {
-  margin: 32px 55px 10px 55px;
-  padding-top: 24px;
-
+  padding: 56px 55px 10px 55px;
   @include mobile {
-    margin: 32px 24px 10px 24px;
+    padding: 52px 24px 10px 24px;
   }
+}
+
+
+// bg: black, arrow:white
+section.back-black {
+  background-color: var(--color-black);
+  margin: 56px 55px 10px 55px;
+    @include mobile {
+      padding: 32px 24px 10px 24px;
+    }
 }
