@@ -24,11 +24,20 @@
     img {
       width: 360px;
       margin-top: 67px;
-
       @include mobile {
         width: 213px;
         margin-top: 67px;
+      }
+    }
+    &_sk {
+    img {
+        width: 275px;
+        margin-top: 37px;
 
+        @include mobile {
+          width: 155px;
+          margin-top: 67px;
+        }
       }
     }
   }
@@ -61,7 +70,7 @@
     visibility: hidden;
 
     .container {
-      margin-top: 50%;
+      padding-top: 45%;
     }
   }
 }

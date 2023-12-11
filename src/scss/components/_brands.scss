@@ -98,6 +98,11 @@
       }
     }
 
+    &_sk button {
+      position: relative;
+      z-index: 30;
+    }
+
     &_horeca p {
       @include mobile {
           padding-bottom: 0;
@@ -143,6 +148,20 @@
     }
 
     // модификаторы для разных брендов
+
+
+    &_sk img {
+      position: relative;
+      width: 289px;
+      margin-top: -130px;
+      filter: drop-shadow(10px 20px 60px rgba(242, 243, 246, 0.4));
+
+      @include mobile {
+        width: 118px;
+        margin-top: -90px;
+        filter: drop-shadow(-20px 12px 40px rgba(242, 243, 246, 0.4));
+      }
+    }
     &_horeca img {
       width: 387px;
       margin-top: 50px;
@@ -193,7 +212,7 @@
       }
 
   }
-  &__menu {
+  &__menu_sk {
     @include mobile {
       order: 1;
     }
@@ -202,6 +221,32 @@
       max-width: 700px;
     }
 
+  }
+
+    // блок с внутренним скроллом
+  &__menu_sk {
+    height: 567px;
+    @include mobile { // !!! здесь должно разворачиваться в список-аккордеон!
+      height: 458px;
+    }
+    overflow: auto;
+    padding-right: 1px;
+  }
+
+  &__menu_sk::-webkit-scrollbar {
+    width: 3px;
+    background-color: var(--light-gray);
+  }
+
+  &__menu_sk::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--main-bronze);
+  }
+
+  &__menu_sk::-webkit-scrollbar-track {
+    //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: var(--light-gray);
   }
 }
 

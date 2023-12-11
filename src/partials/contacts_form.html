@@ -16,10 +16,7 @@
         <input type="tel" name="contact-tel" class="input-reset form__input contact-tel" value="" placeholder="Телефон"
           data-validate-field="tel">
       </label>
-      <label class="form__label">
-        <input type="text" name="contact-message" class="input-reset form__input contact-message" value=""
-          placeholder="Сообщение" data-validate-field="message">
-      </label>
+
       <select name="idea" id="idea" class="custom-select">
         <option value="">Хочу предложить идею</option>
         <option value="val1">Один</option>
@@ -27,16 +24,23 @@
         <option value="val3">Три</option>
       </select>
 
+      <label class="form__label">
+        <input type="text" name="contact-message" class="input-reset form__input contact-message" value=""
+          placeholder="Сообщение" data-validate-field="message">
+      </label>
+
       <!-- dropzone start -->
+      <!--     class="dropzone"  -->
       <!-- скрипт для dropzone подключается только на страницах, где есть этот блок -->
       @include('../partials/dropzone_script.html')
       <div id="dropzone" class="dropzone">
-       <!-- <form class="dropzone needsclick" id="demo-upload" action="/upload"> -->
-          <div class="dz-message needsclick">
-            Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<br />
-            <br /><span class="note needsclick">jpg, pdf, doc | до 10 Мб</span>
-          </div>
-       <!-- </form> -->
+        <!--   <form class="dropzone needsclick" id="demo-upload" action="/upload"> -->
+        <div class="dz-message needsclick">
+          Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<br />
+          <br /><span class="note needsclick">jpg, pdf, doc | до 10 Мб</span>
+        </div>
+
+        <!-- </form> -->
       </div>
       <!-- dropzone end -->
 
@@ -52,10 +56,6 @@
 
     <!-- демонстрация модального окна после отправки формы. удалить -->
     <button type="submit" class="btn-reset" data-graph-path=""> &rAarr; test modal</button>
-
-
-
-
 
 </div>
 

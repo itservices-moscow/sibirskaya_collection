@@ -295,6 +295,7 @@ option {
     display: block;
   }
   &__agreement {
+    margin-top: 16px;
     .label-check {
       font-size: 16px;
     }
@@ -307,17 +308,16 @@ option {
     margin-right: auto;
   }
   // &__upload {
-  //   width: 100%;
-  //   height: 250px;
-
   // }
-
 }
 
+#agreement {
+  // padding-top: 5px;
+}
 
 // DROPZONE
 #dropzone {
-  margin: 27px;
+  // margin: 27px;
 }
 .dropzone {
   border-radius: 1px;
@@ -325,8 +325,8 @@ option {
   background: rgba(192, 179, 168, 0.10);
   border-image: none;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  //margin-left: 24px;
+  //margin-right: 24px;
   text-align: center;
 }
 
@@ -336,4 +336,49 @@ option {
 }
 .dz-message .note {
   color: var(--main-bronze);
+}
+
+.dz-preview {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  border: 1px solid var(--main-bronze);
+  padding: 5px;
+  margin: 5px 6px;
+}
+.dz-processing {
+  //display: none;
+}
+.dz-error {
+
+}
+.dz-details {
+  font-size: 12px;
+  padding-top: 5px;
+}
+.dz-complete {
+
+}
+.dz-image-preview {
+
+}
+
+.dz-error-mark {
+  display: none;
+}
+.dz-success-mark {
+  display: none;
+}
+// иконка для удаления превью - <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#A3784E" /></svg>
+// !!! настроить после подключения загрузки
+.dz-error-message {
+  display: none;
+}
+
+
+
+// validation
+
+.just-validate-error-label {
+  color: var(--err-red);
 }

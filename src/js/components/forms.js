@@ -1,13 +1,10 @@
-// inputMask
-import { validateForms } from "../functions/validate-forms";
-
 import JustValidate from "just-validate";
 import Inputmask from "inputmask";
 
 let inputs = document.querySelectorAll('input[type="tel"]');
 let im = new Inputmask("+7(999)999-99-99");
 im.mask(inputs);
-console.log("im", inputs, im);
+// console.log("im", inputs, im);
 
 const rules3 = [
   {
@@ -21,6 +18,21 @@ const rules3 = [
         rule: "required",
         value: true,
         errorMessage: "Заполните имя!",
+      },
+    ],
+  },
+  {
+    ruleSelector: ".contact-email",
+    rules: [
+      {
+        rule: "email",
+        value: true,
+        errorMessage: "Введите корректный email",
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните email",
       },
     ],
   },
@@ -53,37 +65,53 @@ const rules3 = [
 //   tel: { required: true },
 // });
 
-// ===========================
+export const validateForms = (selector, rules, afterSend) => {
+  const form = document?.querySelector(selector);
+  const telSelector = form?.querySelector('input[type="tel"]');
 
-// const rules1 = [...];
-// const rules1 = [
-//   {
-//     ruleSelector: ".input-name",
-//     rules: [
-//       {
-//         rule: "minLength",
-//         value: 3,
-//       },
-//       {
-//         rule: "required",
-//         value: true,
-//         errorMessage: "Заполните имя!",
-//       },
-//     ],
-//   },
-//   {
-//     ruleSelector: ".input-tel",
-//     tel: true,
-//     telError: "Введите корректный телефон",
-//     rules: [
-//       {
-//         rule: "required",
-//         value: true,
-//         errorMessage: "Заполните телефон!",
-//       },
-//     ],
-//   },
-// ];
+  console.log(form, telSelector);
+
+  if (!form) {
+    console.error("Нет такого селектора!");
+    return false;
+  }
+  if (!rules) {
+    console.error("Вы не передали правила валидации!");
+    return false;
+  }
+
+  if (telSelector) {
+    // const inputMask = new Inputmask("+7(999)999-99-99");
+    // inputMask.mask(telSelector);
+
+    for (let item of rules) {
+      if (item.tel) {
+        item.rules.push({
+          rule: "function",
+          validator: function () {
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
+          },
+          errorMessage: item.telError,
+        });
+      }
+    }
+  }
+
+  const validation = new JustValidate(selector);
+
+  for (let item of rules) {
+    console.log("rule > ", item.rules);
+    validation.addField(item.ruleSelector, item.rules);
+  }
+
+  validation.onSuccess((ev) => {
+    console.log("верно заполнено", ev);
+    // send
+
+    ev.target.reset();
+  });
+};
 
 const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");

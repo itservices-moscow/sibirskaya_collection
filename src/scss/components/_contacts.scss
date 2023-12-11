@@ -1,6 +1,8 @@
 
 .contacts {
-
+  h1.heading {
+    margin: 60px 20px;
+  }
   &__container {
     margin: 40px 55px 20px 55px;
     margin-top: 40px;
@@ -28,6 +30,9 @@
     max-width: 500px;
     .container {
       padding: 32px;
+      h3 {
+        margin: 0;
+      }
     }
   }
 }
