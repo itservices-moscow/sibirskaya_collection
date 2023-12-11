@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  z-index: 30;
   &__container {
     background-color: var(--color-black);
     justify-content: space-between;
