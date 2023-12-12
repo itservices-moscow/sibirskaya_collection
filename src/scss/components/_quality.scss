@@ -4,3 +4,126 @@ section.quality {
     margin: 40px 24px 20px 24px;
   }
 }
+
+
+// ACCORDION STYLES
+
+.accordionQ {
+  --accordion-time: 0.3s;
+  border-top: 1px solid var(--coffee-milk);
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.accordionQ__control {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accordionQ__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  // padding: 0 20px;
+  height: 450px;
+  will-change: max-height;
+  transition: all var(--accordion-time) ease-out;
+  box-sizing: content-box;
+  .container {
+    gap: 32px;
+    justify-content: end;
+    height: 450px;
+  }
+  .container > img {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+  }
+  .container > p {
+    max-width: 400px;
+  }
+
+}
+
+.accordionQ__title {
+
+  h2 {
+    display: inline-block;
+    margin: 16px 0;
+    @include mobile {
+      font-size: 29px;
+      line-height: 39px;
+    }
+  }
+}
+
+.accordionQ__icon {
+  font-family: "IntroDemoCondLightCAPS";
+  display: inline-block;
+  width: 78px;
+  padding: 5px;
+  text-align: center;
+  transition: transform var(--accordion-time) ease-out;
+  @include mobile {
+    float: left;
+  }
+}
+
+.is-open .accordionQ__icon {
+  // transform: rotate(45deg);
+}
+
+.is-open .accordionQ__content {
+  opacity: 1;
+  //padding: 20px;
+}
+
+
+
+// ORIGINAL
+// .accordionQ {
+//   --accordion-time: 0.3s;
+// }
+
+// .content {
+//   max-width: 1000px;
+//   margin: 0 auto;
+// }
+
+// .accordionQ__control {
+//   width: 100%;
+//   background-color: transparent;
+//   cursor: pointer;
+// }
+
+// .accordionQ__content {
+//   max-height: 0;
+//   opacity: 0;
+//   overflow: hidden;
+//   padding: 0 20px;
+//   will-change: max-height;
+//   transition: all var(--accordion-time) ease-out;
+//   box-sizing: content-box;
+// }
+
+// .accordionQ__title {
+//   font-weight: bold;
+//   font-size: 1.17em;
+// }
+
+// .accordionQ__icon {
+//   transition: transform var(--accordion-time) ease-out;
+// }
+
+// .is-open .accordionQ__icon {
+//   transform: rotate(45deg);
+// }
+
+// .is-open .accordionQ__content {
+//   opacity: 1;
+//   padding: 20px;
+// }
