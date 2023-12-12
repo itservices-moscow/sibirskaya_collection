@@ -1,20 +1,19 @@
 
-a.link-more-right {
+.arr-right-on > a {
   vertical-align: middle;
 }
-a.link-more-right span {
+.arr-right-on > a span {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
   color: var(--main-bronze);
-  padding-right: 18px;
 }
 
-a.link-more-right .arr svg {
+.arr-right-on>a .arr svg {
   width: 23px;
 }
 
-a.link-more-right:hover .arr * {
+.arr-right-on>a:hover .arr * {
   -webkit-transform: translate(8px, 0);
   -ms-transform: translate(8px 0);
   transform: translate(8px 0);
@@ -22,23 +21,22 @@ a.link-more-right:hover .arr * {
   transition-timing-function: ease-in-out;
 }
 
-a.link-more-left {
+.arr-left-on > a {
   vertical-align: middle;
 }
 
-a.link-more-left span {
+.arr-left-on > a span {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
   color: var(--main-bronze);
-  padding-left: 18px;
 }
 
-a.link-more-left .arr svg {
+.arr-left-on > a .arr svg {
   width: 23px;
 }
 
-a.link-more-left:hover .arr * {
+.arr-left-on > a:hover .arr * {
   -webkit-transform: translate(-8px, 0);
   -ms-transform: translate(-8px, 0);
   transform: translate(-8px, 0);

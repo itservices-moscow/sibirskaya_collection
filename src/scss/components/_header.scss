@@ -13,7 +13,7 @@
 
     @include big-desktop {
         grid-template-columns: 120px calc(100% - 510px) 340px;
-        gap: 0 50px;
+        gap: 0 30px;
       }
 
     @include desktop {
