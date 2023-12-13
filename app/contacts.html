@@ -136,44 +136,22 @@
    // document.addEventListener("DOMContentLoaded", function (event) {
   //  });
 
+// ПОКАЗАТЬ СЛОЙ С ХЛЕБОМ НА ГЛАВНОЙ
   window.addEventListener('scroll', function () {
     let scrollPosition = document.documentElement.scrollTop
-
-
-
-
     if (document.querySelector('.extra-bg')) {
-    let extraPosY = Math.round(document.querySelector('.extra').getBoundingClientRect().top)
+      let extraPosY = Math.round(document.querySelector('.extra').getBoundingClientRect().top)
 
-    if (scrollPosition > 3200) {
-      //console.log('display extra', scrollPosition);
-      document.querySelector('.extra-bg').style.display = "block";
-    } else {
-      document.querySelector('.extra-bg').style.display = "none";
-    }
-    //   if (window.innerWidth > 1000) {
-    //       if (extraPosY < 600 && extraPosY > -300) {
-    //         // document.querySelector('.indicator').style.backgroundColor = 'orange';
-    //         // document.querySelector('.extra-bg').style.top = Math.ceil(scrollPosition) + 'px'; top 20px center
-    //         posY = 'top ' + (extraPosY - 620) * 0.7 + 'px center';
-    //         document.querySelector('.extra').style.backgroundPosition = posY;
-    //       } else {
-    //         //document.querySelector('.indicator').style.backgroundColor = 'green';
-    //       }
-    //   } else {
-    //       if (extraPosY < 600 && extraPosY > -300) {
-    //       // document.querySelector('.indicator').style.backgroundColor = 'orange';
-    //       posY = 'top ' + (extraPosY - 700) * 0.4 + 'px center';
-    //       document.querySelector('.extra').style.backgroundPosition = posY;
-    //     } else {
-    //       //document.querySelector('.indicator').style.backgroundColor = 'green';
-    //     }
-    //   }
-
+      if (scrollPosition > 3200) {
+        //console.log('display extra', scrollPosition);
+        document.querySelector('.extra-bg').style.display = "block";
+      } else {
+        document.querySelector('.extra-bg').style.display = "none";
+      }
     }
   })
 
-  // СКРЫТЬ ПЕРВУЮ СЕКЦИЮ ГЛАВНОЙ, КОГДА РАЗВЕРНЕТСЯ ВИДЕО
+// СКРЫТЬ ПЕРВУЮ СЕКЦИЮ ГЛАВНОЙ, КОГДА РАЗВЕРНЕТСЯ ВИДЕО
   window.addEventListener('scroll', function () {
     const scrollPosition = document.documentElement.scrollTop
     if (document.querySelector('.intro')) {
@@ -224,7 +202,7 @@
   }
 
 
-// МЕНЮ ФУТЕРА
+// МЕНЮ ФУТЕРА И ВСЕ ПРОСТЫЕ АККОРДЕОНЫ КРОМЕ ПРОИЗВОДСТВА
   function accordionInit (classname) {
     var acc = document.getElementsByClassName(classname);
     var i;
@@ -257,6 +235,6 @@
   document.getElementById('searchicon').addEventListener('click', (e) => {
     document.getElementById('searchbox').classList.toggle('active')
   })
-    // document.getElementById('searchicon').addEventListener('click', (e) => {
-    //   e.stopPropagation();
-    // })</script></body></html>
+  // document.getElementById('searchicon').addEventListener('click', (e) => {
+  //   e.stopPropagation();
+  // })</script></body></html>

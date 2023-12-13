@@ -1,7 +1,7 @@
 section.quality {
-  margin: 40px 55px 20px 55px;
+  margin: 40px 55px 120px 55px;
   @include mobile {
-    margin: 40px 24px 20px 24px;
+    margin: 40px 24px 60px 24px;
   }
 }
 
@@ -13,7 +13,7 @@ section.quality {
   border-top: 1px solid var(--coffee-milk);
 }
 
-.content {
+.quality .content {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -28,7 +28,6 @@ section.quality {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  // padding: 0 20px;
   height: 450px;
   will-change: max-height;
   transition: all var(--accordion-time) ease-out;
@@ -79,51 +78,5 @@ section.quality {
 
 .is-open .accordionQ__content {
   opacity: 1;
-  //padding: 20px;
+
 }
-
-
-
-// ORIGINAL
-// .accordionQ {
-//   --accordion-time: 0.3s;
-// }
-
-// .content {
-//   max-width: 1000px;
-//   margin: 0 auto;
-// }
-
-// .accordionQ__control {
-//   width: 100%;
-//   background-color: transparent;
-//   cursor: pointer;
-// }
-
-// .accordionQ__content {
-//   max-height: 0;
-//   opacity: 0;
-//   overflow: hidden;
-//   padding: 0 20px;
-//   will-change: max-height;
-//   transition: all var(--accordion-time) ease-out;
-//   box-sizing: content-box;
-// }
-
-// .accordionQ__title {
-//   font-weight: bold;
-//   font-size: 1.17em;
-// }
-
-// .accordionQ__icon {
-//   transition: transform var(--accordion-time) ease-out;
-// }
-
-// .is-open .accordionQ__icon {
-//   transform: rotate(45deg);
-// }
-
-// .is-open .accordionQ__content {
-//   opacity: 1;
-//   padding: 20px;
-// }
