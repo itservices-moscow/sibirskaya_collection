@@ -98,10 +98,17 @@ export const validateForms = (selector, rules, afterSend) => {
     }
   }
 
-  const validation = new JustValidate(selector);
+  const validation = new JustValidate(selector, {
+    errorLabelStyle: {
+      color: "#FF3A2E",
+    },
+    // submitHandler: function (form, values, ajax) {
+    //   console.log(form);
+    // },
+  });
 
   for (let item of rules) {
-    console.log("rule > ", item.rules);
+    // console.log("rule > ", item.rules);
     validation.addField(item.ruleSelector, item.rules);
   }
 

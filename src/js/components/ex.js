@@ -1,5 +1,3 @@
-console.log("ex");
-
 //onClick="this.classList.toggle('selected');"
 const addToggleClass = (selector, t_class) => {
   const elements = document.querySelectorAll(selector);

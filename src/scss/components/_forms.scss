@@ -3,10 +3,7 @@ fieldset {
   border: 0;
 }
 
-label {
-  padding: 4px;
-  line-height: 22px;
-}
+
 
 form.input {
   font-size: 14px;
@@ -32,13 +29,14 @@ input[type="submit"] {
 
 .form input[type="text"] {
   height: 49px;
-  // background: var(--main-white);
-  color: var(--main-black);
-  border: 0;
+  background-color: transparent;
+  color: var(--main-bronze);
+  font-size: 14px;
   padding: 12px 16px;
   height: 49px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  border: 0;
   border-bottom: 1px solid var(--medium-gray);
   &:hover {
     border-bottom: 1px solid var(--main-bronze);
@@ -51,23 +49,30 @@ input[type="submit"] {
     outline: none;
 
   }
+  &:focus ~ .close {
+    display: inline;
+  }
   &:active {
     border-bottom: 1px solid var(--main-bronze);
     outline: none;
     color: var(--main-bronze);
 
+  }
+  &:active~.close {
+    display: inline;
   }
 }
 
 input[type="tel"] {
   height: 49px;
-  //background: var(--main-white);
-  color: var(--main-black);
-  border: 0;
+  background-color: transparent;
+  color: var(--main-bronze);
+  font-size: 14px;
   padding: 12px 16px;
   height: 49px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  border: 0;
   border-bottom: 1px solid var(--medium-gray);
 
   &:hover {
@@ -79,26 +84,31 @@ input[type="tel"] {
     border-bottom: 1px solid var(--main-bronze);
     color: var(--main-bronze);
     outline: none;
-
   }
-
+  &:focus~.close {
+    display: inline;
+  }
   &:active {
     border-bottom: 1px solid var(--main-bronze);
     outline: none;
     color: var(--main-bronze);
 
+  }
+  &:active~.close {
+    display: inline;
   }
 }
 
 input[type="email"] {
   height: 49px;
-  // background: var(--main-white);
-  color: var(--main-black);
-  border: 0;
+  background-color: transparent;
+  color: var(--main-bronze);
+  font-size: 14px;
   padding: 12px 16px;
   height: 49px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  border: 0;
   border-bottom: 1px solid var(--medium-gray);
 
   &:hover {
@@ -112,12 +122,16 @@ input[type="email"] {
     outline: none;
 
   }
-
+  &:focus~.close {
+    display: inline;
+  }
   &:active {
     border-bottom: 1px solid var(--main-bronze);
     outline: none;
     color: var(--main-bronze);
-
+  }
+  &:active~.close {
+    display: inline;
   }
 }
 
@@ -127,23 +141,32 @@ input[type="text"].searchinput {
   border-bottom: 1px solid white;
 }
 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 textarea {
   height: 100px;
   background: var(--main-white);
   color: var(--main-black);
-  border: 0;
+  font-size: 14px;
+  border-radius: 5px;
   padding: 12px 16px;
-  height: 49px;
   width: 100%;
-  border-bottom: 1px solid var(--medium-gray);
+  border: 1px solid var(--medium-gray);
 
   &:hover {
-    border-bottom: 1px solid var(--main-bronze);
+    border: 1px solid var(--main-bronze);
     outline: none;
   }
 
   &:focus {
-    border-bottom: 1px solid var(--main-bronze);
+    border: 1px solid var(--main-bronze);
     background: #EEE8E2;
     color: var(--main-bronze);
     outline: none;
@@ -151,14 +174,13 @@ textarea {
   }
 
   &:active {
-    border-bottom: 1px solid var(--main-bronze);
+    border: 1px solid var(--main-bronze);
     background: #EEE8E2;
     outline: none;
     color: var(--main-bronze);
 
   }
 }
-
 
 
 
@@ -220,15 +242,16 @@ option {
 //   top: 55%;
 // }
 
-/* Customize the label (the container) */
+// CHECKBOX ЧЕКБОКСЫ
 .label-check {
   display: block;
   position: relative;
   padding-left: 35px;
+  padding-bottom: 5px;
   margin-bottom: 10px;
   cursor: pointer;
   font-size: 18px;
-  line-height: 16px;
+  line-height: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -292,15 +315,28 @@ option {
 
 .form {
   &__input {
+    display: inline;
+  }
+  &__label {
+    position: relative;
     display: block;
+    margin-bottom: 16px;
+    .close {
+        position: absolute;
+        display: none;
+        font-size: 26px;
+        cursor: pointer;
+        padding: 5px;
+        right: 12px;
+        top: 4px;
+        color: var(--main-bronze);
+      }
   }
   &__agreement {
     margin-top: 16px;
     .label-check {
-      font-size: 16px;
+      font-size: 14px;
     }
-
-
   }
   &__submit-btn {
     display: block;
@@ -313,6 +349,19 @@ option {
 
 #agreement {
   // padding-top: 5px;
+}
+
+
+// JUST VALIDATE
+.just-validate-error-label {
+  font-size: 14px;
+  color: var(--err-red)!important;
+  margin: 0;
+  padding: 0;
+}
+
+.just-validate-error-field {
+  color: var(--err-red)!important;
 }
 
 // DROPZONE
@@ -375,10 +424,3 @@ option {
   display: none;
 }
 
-
-
-// validation
-
-.just-validate-error-label {
-  color: var(--err-red);
-}
