@@ -12,13 +12,13 @@
     padding: 20px 55px;
 
     @include big-desktop {
-        grid-template-columns: 120px calc(100% - 510px) 340px;
-        gap: 0 30px;
-      }
+      grid-template-columns: 120px calc(100% - 510px) 340px;
+      gap: 0 30px;
+    }
 
     @include desktop {
-        grid-template-columns: 120px calc(100% - 510px) 340px;
-        gap: 0 30px;
+      grid-template-columns: 180px calc(100% - 510px) 280px;
+      gap: 0 30px;
     }
     // @include small-desktop {
     //   grid-template-columns: 110px calc(100vw - 220px) 110px; // меню бургер
@@ -30,35 +30,17 @@
       gap: 0;
       padding: 24px;
     }
-
   }
 
-    a {
-      font-size: 18px;
-      color: var(--medium-gray);
-      font-family: var(--font-family);
-      transition: 0.3s ease;
-    }
+  a {
+    font-size: 16px;
+    color: var(--medium-gray);
+    font-family: var(--font-family);
+    transition: 0.3s ease;
+  }
 }
-
-.mobile {
-  @include big-desktop {
-    display: none;
-  }
-  @include desktop {
-    display: none;
-  }
-
-}
-
-.desktop {
-  // @include small-desktop {
-  //   display: none;
-  // }
-
-  @include mobile {
-    display: none;
-  }
+.header-r {
+  justify-content: space-between;
 }
 
 .header-grid > div {
@@ -67,7 +49,7 @@
   // }
 
   @include mobile {
-      justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -83,8 +65,8 @@
     // margin: 24px;
 
     @include mobile {
-        gap: 25px;
-      }
+      gap: 25px;
+    }
   }
 
   &__button {
@@ -101,7 +83,6 @@
     &:active {
       text-decoration: underline;
     }
-
   }
 }
 
@@ -110,6 +91,7 @@
   width: 60px;
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 16px;
   line-height: 46px;
   color: var(--main-white);
   .active {
@@ -117,7 +99,6 @@
   }
 
   @include mobile {
-
   }
 }
 
@@ -125,10 +106,8 @@
   width: 49px;
   min-width: 30px;
   @include mobile {
-
   }
 }
-
 
 .topsearch {
   position: absolute;
@@ -142,7 +121,6 @@
   z-index: 5;
   border: 1px dotted white;
   transition: right 1s;
-
 }
 
 .h-last {
@@ -182,4 +160,3 @@
   min-height: 20px;
   z-index: 22px;
 }
-

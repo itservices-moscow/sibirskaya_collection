@@ -1,9 +1,6 @@
-
 fieldset {
   border: 0;
 }
-
-
 
 form.input {
   font-size: 14px;
@@ -15,16 +12,13 @@ input[type="checkbox"] {
   height: 22px;
 }
 
-
 input[type="checkbox"]:checked {
   background-color: var(--main-beige);
   color: var(--main-white);
   outline: 1px solid var(--main-beige);
 }
 
-
 input[type="submit"] {
-
 }
 
 .form input[type="text"] {
@@ -47,7 +41,6 @@ input[type="submit"] {
     border-bottom: 1px solid var(--main-bronze);
     color: var(--main-bronze);
     outline: none;
-
   }
   &:focus ~ .close {
     display: inline;
@@ -56,9 +49,8 @@ input[type="submit"] {
     border-bottom: 1px solid var(--main-bronze);
     outline: none;
     color: var(--main-bronze);
-
   }
-  &:active~.close {
+  &:active ~ .close {
     display: inline;
   }
 }
@@ -85,16 +77,15 @@ input[type="tel"] {
     color: var(--main-bronze);
     outline: none;
   }
-  &:focus~.close {
+  &:focus ~ .close {
     display: inline;
   }
   &:active {
     border-bottom: 1px solid var(--main-bronze);
     outline: none;
     color: var(--main-bronze);
-
   }
-  &:active~.close {
+  &:active ~ .close {
     display: inline;
   }
 }
@@ -120,9 +111,8 @@ input[type="email"] {
     border-bottom: 1px solid var(--main-bronze);
     color: var(--main-bronze);
     outline: none;
-
   }
-  &:focus~.close {
+  &:focus ~ .close {
     display: inline;
   }
   &:active {
@@ -130,17 +120,10 @@ input[type="email"] {
     outline: none;
     color: var(--main-bronze);
   }
-  &:active~.close {
+  &:active ~ .close {
     display: inline;
   }
 }
-
-input[type="text"].searchinput-mob,
-input[type="text"].searchinput {
-  background: var(--color-black);
-  border-bottom: 1px solid white;
-}
-
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -167,22 +150,18 @@ textarea {
 
   &:focus {
     border: 1px solid var(--main-bronze);
-    background: #EEE8E2;
+    background: #eee8e2;
     color: var(--main-bronze);
     outline: none;
-
   }
 
   &:active {
     border: 1px solid var(--main-bronze);
-    background: #EEE8E2;
+    background: #eee8e2;
     outline: none;
     color: var(--main-bronze);
-
   }
 }
-
-
 
 select {
   appearance: none;
@@ -194,18 +173,18 @@ select {
   margin: 20px 0;
   height: 49px;
   padding: 12px 16px;
-  background-color: rgba(192, 179, 168, 0.20);
+  background-color: rgba(192, 179, 168, 0.2);
   border: none;
   color: var(--main-black);
   cursor: pointer;
 }
 
 select:hover {
-  background: #EEE8E2;
+  background: #eee8e2;
 }
 
 select:active {
-  background: #EEE8E2;
+  background: #eee8e2;
 }
 
 option {
@@ -213,7 +192,6 @@ option {
   border-bottom: 1px solid gray;
   height: 49px;
   width: 100%;
-
 }
 .custom-select {
   position: relative;
@@ -278,12 +256,12 @@ option {
 }
 
 /* On mouse-over */
-.label-check:hover input~.checkmark {
+.label-check:hover input ~ .checkmark {
   // background-color: var(--coffee-milk);
 }
 
 /* When the checkbox is checked, add a bronze background */
-.label-check input:checked~.checkmark {
+.label-check input:checked ~ .checkmark {
   background-color: var(--main-bronze);
 }
 
@@ -295,7 +273,7 @@ option {
 }
 
 /* Show the checkmark when checked */
-.label-check input:checked~.checkmark:after {
+.label-check input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -312,7 +290,6 @@ option {
   transform: rotate(45deg);
 }
 
-
 .form {
   &__input {
     display: inline;
@@ -322,15 +299,15 @@ option {
     display: block;
     margin-bottom: 16px;
     .close {
-        position: absolute;
-        display: none;
-        font-size: 26px;
-        cursor: pointer;
-        padding: 5px;
-        right: 12px;
-        top: 4px;
-        color: var(--main-bronze);
-      }
+      position: absolute;
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      padding: 5px;
+      right: 12px;
+      top: 4px;
+      color: var(--main-bronze);
+    }
   }
   &__agreement {
     margin-top: 16px;
@@ -351,17 +328,16 @@ option {
   // padding-top: 5px;
 }
 
-
 // JUST VALIDATE
 .just-validate-error-label {
   font-size: 14px;
-  color: var(--err-red)!important;
+  color: var(--err-red) !important;
   margin: 0;
   padding: 0;
 }
 
 .just-validate-error-field {
-  color: var(--err-red)!important;
+  color: var(--err-red) !important;
 }
 
 // DROPZONE
@@ -371,7 +347,7 @@ option {
 .dropzone {
   border-radius: 1px;
   border: 1px dashed var(--coffee-milk);
-  background: rgba(192, 179, 168, 0.10);
+  background: rgba(192, 179, 168, 0.1);
   border-image: none;
   max-width: 500px;
   //margin-left: 24px;
@@ -381,7 +357,6 @@ option {
 
 .dz-message {
   padding: 24px 40px;
-
 }
 .dz-message .note {
   color: var(--main-bronze);
@@ -399,17 +374,14 @@ option {
   //display: none;
 }
 .dz-error {
-
 }
 .dz-details {
   font-size: 12px;
   padding-top: 5px;
 }
 .dz-complete {
-
 }
 .dz-image-preview {
-
 }
 
 .dz-error-mark {
@@ -423,4 +395,3 @@ option {
 .dz-error-message {
   display: none;
 }
-

@@ -4,7 +4,7 @@ html {
 }
 
 // $rootpath: '../';  // !!! пути к файлам в билде
-$rootpath: '../';
+$rootpath: "../";
 
 *,
 *::before,
@@ -34,11 +34,12 @@ body {
   }
 }
 
-.page__body.main{
+.page__body.main {
   background-color: var(--color-black);
 }
 
-.page__body.new, .page__body.startups {
+.page__body.new,
+.page__body.startups {
   background-color: var(--main-beige);
 }
 
@@ -50,8 +51,6 @@ section {
   margin-top: var(--header-height);
   background-color: var(--color-black);
 }
-
-
 
 .text-normal {
   font-size: 22px;
@@ -77,13 +76,13 @@ h1.heading {
 
 .mobile {
   @include desktop {
-    display: none!important;
+    display: none !important;
   }
 }
 
 .desktop {
   @include mobile {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -97,7 +96,11 @@ a {
   text-decoration: none;
 }
 
-a, p, span, div, button {
+a,
+p,
+span,
+div,
+button {
   font-family: "AvenirNextCyrLight", Roboto, sans-serif;
 }
 
@@ -135,7 +138,7 @@ p {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
 }
 
 .btn-reset {
@@ -150,7 +153,6 @@ p {
   margin: 0;
   padding: 0;
 }
-
 
 .input-reset {
   -webkit-appearance: none;
@@ -217,16 +219,16 @@ p {
 }
 
 .head-h0 {
-    font-family: "IntroDemoCondLightCAPS";
-    font-size: 65px;
-    font-weight: 300;
-    line-height: 81px;
-    letter-spacing: 0em;
-    text-transform: uppercase;
-    @include mobile {
-      font-size: 42px;
-      line-height: 46px;
-    }
+  font-family: "IntroDemoCondLightCAPS";
+  font-size: 65px;
+  font-weight: 300;
+  line-height: 81px;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 42px;
+    line-height: 46px;
+  }
 }
 
 h1 {
@@ -249,8 +251,6 @@ h1.heading {
   }
 }
 
-
-
 h2 {
   font-family: "IntroDemoCondLightCAPS";
   font-size: 29px;
@@ -258,7 +258,6 @@ h2 {
   line-height: 36px;
   text-transform: uppercase;
   @include mobile {
-
   }
 }
 
@@ -275,18 +274,17 @@ h3 {
 }
 
 .w-100 {
-  width: 100%!important;
+  width: 100% !important;
 }
 .buffer-top {
   height: var(--header-height);
- }
+}
 
 .bg-beige {
-  background-color: var(--main-beige)!important;
- }
+  background-color: var(--main-beige) !important;
+}
 .bronze {
   color: var(--main-bronze);
-  // font-family: inherit;
 }
 
 .nobr {

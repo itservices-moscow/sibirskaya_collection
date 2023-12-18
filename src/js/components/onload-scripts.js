@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // ПОИСК В ХЕДЕРЕ
   const searchposX = document.getElementById("searchanchor").getBoundingClientRect().x
   // console.log('searchposX', searchposX)
-  document.getElementById("searchbox").style.right = "calc(100% - " + (Math.ceil(searchposX) + 30) + "px)"
+  document.getElementById("searchbox").style.right = "calc(100% - " + (Math.ceil(searchposX) + 36) + "px)"
 
   window.addEventListener("resize", (event) => {
     const searchposX = document.getElementById("searchanchor").getBoundingClientRect().x
-    document.getElementById("searchbox").style.right = "calc(100% - " + (Math.ceil(searchposX) + 30) + "px)"
+    document.getElementById("searchbox").style.right = "calc(100% - " + (Math.ceil(searchposX) + 36) + "px)"
   })
 
   document.getElementById("searchicon").addEventListener("click", (e) => {
