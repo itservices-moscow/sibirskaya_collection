@@ -6,15 +6,13 @@
     </p>
     <button
       class="btn-secondary"
-      onClick="localStorage.setItem('cookiealert', 'ok'); document.getElementById('cookie-alert').style.display = 'none';"
-    >
+      onClick="localStorage.setItem('cookiealert', 'ok'); document.getElementById('cookie-alert').style.display = 'none';">
       OK
     </button>
   </div>
   <script type="text/javascript">
-    console.log(localStorage.getItem("cookiealert"));
     if (localStorage.getItem("cookiealert") == "ok") {
-      document.getElementById("cookie-alert").style.display = "none";
+      document.getElementById("cookie-alert").style.display = "none"
     }
   </script>
 </div>

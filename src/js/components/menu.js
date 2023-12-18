@@ -19,12 +19,14 @@ const showTopmenu = (content, link) => {
   })
 }
 
-const showBlockTopmenu = (menu, link) => {
+const showBlockTopmenu = (menu, link, hidemenu) => {
   const menuContent = document.getElementById(menu)
+  const menuHide = document.getElementById(hidemenu)
   const menuLink = document.getElementById(link)
   menuLink.addEventListener("mouseover", (e) => {
     e.preventDefault()
     menuContent.classList.add("topmenu_show")
+    menuHide.classList.remove("topmenu_show")
   })
 }
 
@@ -32,7 +34,7 @@ const hideBlockTopmenu = (menu, link) => {
   const menuContent = document.getElementById(menu),
     menuLink = document.getElementById(link)
   //скрыть блок меню, когда мышь уходит за его пределы
-  menuContent.addEventListener("mouseout", (e) => {
+  menuContent.addEventListener("mouseleave", (e) => {
     e.preventDefault()
     menuContent.classList.remove("topmenu_show")
   })
@@ -100,20 +102,29 @@ function accordionInit(classname) {
   }
 }
 
+// КОГДА СТРАНИЦА ЗАГРУЗИЛАСЬ:
 document.addEventListener("DOMContentLoaded", function (event) {
   // showTopmenu("topmenu-brands", "link-brands")
   // showTopmenu("topmenu-manuf", "link-manuf")
+
   // ИНИЦИАЛИЗАЦИЯ СОБЫТИЙ ДЛЯ МЕНЮ (hover, etc.)
 
-  showBlockTopmenu("topmenu-brands", "link-brands")
-  showBlockTopmenu("topmenu-manuf", "link-manuf")
+  showBlockTopmenu("topmenu-brands", "link-brands", "topmenu-manuf")
+  showBlockTopmenu("topmenu-manuf", "link-manuf", "topmenu-brands")
 
   hideBlockTopmenu("topmenu-brands", "link-brands")
   hideBlockTopmenu("topmenu-manuf", "link-manuf")
 
-  // МЕНЮ ФУТЕРА
-  accordionInit("accordion")
-
+  const menuManufHover = document?.querySelectorAll("[data-onhover-id]")
+  menuManufHover.forEach((element) => {
+    const id = element.getAttribute("data-onhover-id")
+    element.addEventListener("mouseover", function (ev) {
+      document.getElementById(id).style.backgroundColor = "#FAF5F0"
+    })
+    element.addEventListener("mouseout", function (ev) {
+      document.getElementById(id).style.backgroundColor = ""
+    })
+  })
   // СКРЫТЬ ДЕСКТОПНОЕ МЕНЮ ПО КЛИКУ НА БЭКДРОП
   const menuDesktopBackdrops = document?.querySelectorAll("[data-menu-hide]")
   menuDesktopBackdrops.forEach((element) => {
@@ -122,4 +133,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       document.getElementById(id).classList.remove("topmenu_show")
     })
   })
+
+  // МЕНЮ ФУТЕРА и все аккордеоны
+  accordionInit("accordion")
+
+  // закрывающая скобка document onload
 })

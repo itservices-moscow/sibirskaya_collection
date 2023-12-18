@@ -48,13 +48,13 @@
 }
 
 .topmenu-container {
-  display: grid;
+  // display: grid;
   display: flex;
   margin: 40px 56px 48px 56px;
   // grid-template-columns: repeat(4, 1fr);
   &__item {
     width: 25%;
-    border: 1px dashed orange;
+    // border: 1px dashed orange;
     &-manuf {
       width: 40%;
     }
@@ -80,7 +80,7 @@
     border-bottom: 1px solid var(--light-gray);
     position: relative;
     &:hover {
-      background-color: var(--main-beige);
+      background-color: var(--main-beige) !important;
     }
   }
   .active {
