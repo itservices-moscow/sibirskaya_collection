@@ -14,6 +14,7 @@
 }
 .intro-logo {
   //margin-bottom: 10px;
+  width: 352px;
   @include mobile {
     // margin-bottom: 14px;
   }
@@ -28,6 +29,9 @@
 
   // }
 }
+.intro-btn {
+  width: 222px;
+}
 .intro-empty {
   height: 5px;
   margin-top: 1000px;
@@ -37,7 +41,6 @@
   @include mobile {
     margin-top: 700px;
   }
-
 }
 .intro-buffer {
   height: 60px;
@@ -71,7 +74,6 @@
   background-color: var(--color-black);
 }
 
-
 [data-aos="vid-animation"] {
   //opacity: 0;
   transform: scale(0.4, 0.4);
@@ -90,4 +92,3 @@
   //   }
   // }
 }
-

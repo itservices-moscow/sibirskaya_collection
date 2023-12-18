@@ -18,48 +18,48 @@
     }
   }
   &__item {
-      max-width: 430px;
-      min-width: 250px;
-      background: url($rootpath + 'img/line-card-vert.png') no-repeat right 32px;
-      background-clip: padding-box;
-      @include mobile {
-          background: url($rootpath + 'img/line-card-vert.png') no-repeat left 24px;
-        }
-
+    max-width: 430px;
+    min-width: 250px;
+    background: url($rootpath + "img/line-card-vert.png") no-repeat right 32px;
+    background-clip: padding-box;
+    @include mobile {
+      background: url($rootpath + "img/line-card-vert.png") no-repeat left 24px;
     }
+  }
   &__item_noline {
-        background: none;
-        @include mobile {
-          background: url($rootpath + 'img/line-card-vert.png') no-repeat left 24px;
-        }
-      }
+    background: none;
+    @include mobile {
+      background: url($rootpath + "img/line-card-vert.png") no-repeat left 24px;
+    }
+  }
 
   &__top {
-      align-items: center;
-      @include mobile {
-        margin-bottom: 38px;
-      }
+    align-items: center;
+    @include mobile {
+      margin-bottom: 38px;
     }
-      h1 {
-        text-align: center;
-        color: var(--dark-bronze);
-      }
+  }
+  h1 {
+    text-align: center;
+    color: var(--dark-bronze);
+  }
 }
-.keys .container, .keys .container * {
+.keys .container,
+.keys .container * {
   z-index: 2;
 }
 
 .keys-card {
   z-index: 15;
-  background: url($rootpath + 'img/line-card.png') no-repeat;
+  background: url($rootpath + "img/line-card.png") no-repeat;
   margin: 0 32px;
   height: 100%;
   position: relative;
   @include mobile {
-      margin: 0;
-      background-position-x: 24px;
-      padding: 24px 16px 0 16px;
-    }
+    margin: 0;
+    background-position-x: 24px;
+    padding: 24px 16px 0 16px;
+  }
   &__icon {
     margin-top: 54px;
     width: 61px;
@@ -67,7 +67,6 @@
     @include mobile {
       margin-top: 0;
     }
-
   }
   &__link {
     position: absolute;
@@ -78,7 +77,6 @@
     vertical-align: middle;
     @include mobile {
       position: relative;
-
     }
   }
   h2 {

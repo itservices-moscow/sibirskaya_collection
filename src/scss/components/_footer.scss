@@ -12,29 +12,35 @@
       align-items: center;
     }
   }
-    a {
-      color: var(--light-gray);
-      font-family: var(--font-family);
-    }
+  a {
+    color: var(--medium-gray);
+    font-family: var(--font-family);
+  }
 
-    .footer_info {
-      text-align: right;
-      @include mobile {
-        text-align: center;
-      }
+  .footer_info {
+    text-align: right;
+    @include mobile {
+      text-align: center;
     }
-      p {
-        font-size: 18px;
-        line-height: 28px;
-        color: var(--light-gray);
-        display: block;
-        margin: 0;
-        margin-bottom: 30px;
-      }
-      .phone,
-      .email {
-        color: var(--main-bronze);
-      }
+  }
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--medium-gray);
+    display: block;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .phone,
+  .email {
+    color: var(--main-bronze);
+  }
+  .email {
+    font-size: 18px;
+  }
+  .rf {
+    font-size: 14px;
+  }
   &__t {
     min-height: 300px;
     padding-top: 80px;
@@ -52,18 +58,23 @@
       text-align: center;
     }
   }
-    a {
-      font-size: 16px;
-      color: var(--light-gray);
-      font-family: var(--font-family);
-    }
-
+  a {
+    font-size: 16px;
+    color: var(--medium-gray);
+    font-family: var(--font-family);
+  }
 }
 
 .footer_center {
   align-items: center;
   text-align: center;
-  padding-top: 34px;
+  padding-top: 40px;
+  height: 345px;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mobile {
+    height: auto;
+  }
 }
 
 .f-logo {
@@ -72,7 +83,6 @@
     width: 230px;
     margin-bottom: 64px;
   }
-
 }
 .footer_nav {
   align-self: start;
@@ -80,11 +90,10 @@
 
 /* Меню футера с раскрывающимися пунктами */
 .navf {
-
   &__item {
     margin-bottom: 32px;
     text-align: left;
-    color: var(--main-white);
+    color: var(--medium-gray);
   }
 
   &__item .accordion {
@@ -99,7 +108,7 @@
   }
 
   &__item .accordion.active {
-    color: var(--main-black);
+    color: var(--main-bronze);
   }
 
   &__item .accordion:hover {
@@ -110,16 +119,15 @@
     text-transform: uppercase;
     transition: 0.3s;
   }
-    a {
-      font-size: 20px;
-      line-height: 22px;
-    }
+  a {
+    font-size: 20px;
+    line-height: 22px;
+  }
 
-    a:hover {
-      color: var(--main-bronze);
-      transition: 0.3s;
-    }
-
+  a:hover {
+    color: var(--main-bronze);
+    transition: 0.3s;
+  }
 
   /* Подменю футера. Hidden by default. */
   &__item .panel {
@@ -134,15 +142,19 @@
     float: right;
     margin-left: 8px;
     margin-top: -3px;
+    transition: 0.3s;
   }
-
-  &__item .active:after {
+  &__item .accordion:hover:after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1 1.375L7 7.375L13 1.375' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+  &__item .accordion.active:after {
     padding-top: 2px;
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' viewBox='0 0 14 12' fill='none'%3E%3Cpath d='M1 8.625L7 2.625L13 8.625' stroke='%23B8B8B8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' viewBox='0 0 14 12' fill='none'%3E%3Cpath d='M1 8.625L7 2.625L13 8.625' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
-
+  &__item .accordion.active:hover:after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' viewBox='0 0 14 12' fill='none'%3E%3Cpath d='M1 8.625L7 2.625L13 8.625' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
 }
-
 
 .navf-sub {
   margin-top: 10px;
@@ -152,14 +164,13 @@
   }
 
   &__link {
-    color: var(--main-white);
+    color: var(--medium-gray);
     font-size: 16px;
     line-height: 19px;
     transition: 0.3s;
     @include hover {
       color: var(--main-bronze);
     }
-
     &:active {
       text-decoration: underline;
     }
@@ -168,10 +179,9 @@
 
 .youtube-link {
   display: block;
-  margin: 15px auto;
+  margin: 80px auto 9px auto;
   width: 111px;
   height: auto;
-  margin-top: 80px;
   @include mobile {
     margin: 55px auto;
   }

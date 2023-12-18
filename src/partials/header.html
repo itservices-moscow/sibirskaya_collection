@@ -1,9 +1,8 @@
 <header class="header">
   <div class="container header__container grid">
-
     <div class="header-grid">
       <a href="index.html" class="logo">
-        <img src="img/sk-logo.png" alt=""/>
+        <img src="img/svg/sk-logo.svg" alt="" />
       </a>
     </div>
 
@@ -11,19 +10,29 @@
     <div class="header-grid desktop">
       <nav class="nav" title="Главное меню">
         <ul class="list-reset nav__list flex" id="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link" id="link-manuf">Производство</a></li>
-          <li class="nav__item"><a href="#" class="nav__link" id="link-brands">Продукт</a></li>
-          <li class="nav__item"><a href="new.html" class="nav__link">Новинки</a></li>
-          <li class="nav__item"><a href="startups.html" class="nav__link">Стартапам</a></li>
-          <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-          <li class="nav__item" style="postiton: relative;">
+          <li class="nav__item">
+            <a href="#" class="nav__link" id="link-manuf">Производство</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link" id="link-brands">Продукт</a>
+          </li>
+          <li class="nav__item">
+            <a href="new.html" class="nav__link">Новинки</a>
+          </li>
+          <li class="nav__item">
+            <a href="startups.html" class="nav__link">Стартапам</a>
+          </li>
+          <li class="nav__item">
+            <a href="contacts.html" class="nav__link">Контакты</a>
+          </li>
+          <li class="nav__item" style="postiton: relative">
             <div id="searchanchor"></div>
             <div class="searchbox" id="searchbox">
-              <input class="searchinput" type="text" name="" placeholder="Поиск">
+              <input class="searchinput" type="text" name="" placeholder="Поиск" />
               <button class="btn-reset searchsearch" data-graph-path="">НАЙТИ</button>
               <button class="searchbutton" href="#">
                 <div id="searchicon">
-                  <img src="img/icon-search-white.png">
+                  <img src="img/icon-search-white.png" />
                 </div>
               </button>
             </div>
@@ -35,19 +44,17 @@
     <!-- средняя секция на мобильных и маленьких экранах <1280 -->
     <div class="header-grid mobile">
       <div class="flex">
-        <div class="lang">
-          <a href="#" class="active">RU</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">EN</a>
-        </div>
+        <div class="lang"><a href="#" class="active">RU</a>&nbsp;&nbsp;&nbsp;<a href="#">EN</a></div>
       </div>
     </div>
 
     <!-- правая секция на десктопе -->
     <div class="header-grid desktop">
       <div class="flex">
-        <div><button class="btn-reset nav__button btn-secondary">КУПИТЬ</button></div>
-        <div class="lang">
-          <a href="catalog.html" class="active">RU</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">EN</a>
+        <div>
+          <button class="btn-reset nav__button btn-secondary">КУПИТЬ</button>
         </div>
+        <div class="lang"><a href="catalog.html" class="active">RU</a>&nbsp;&nbsp;&nbsp;<a href="#">EN</a></div>
       </div>
     </div>
 
@@ -61,10 +68,8 @@
         </button>
       </div>
     </div>
-
   </div>
 </header>
 
-@include('../partials/topmenu_mobile.html')
-@include('../partials/topmenu_brands.html')
+@include('../partials/topmenu_mobile.html') @include('../partials/topmenu_brands.html')
 @include('../partials/topmenu_manuf.html')
