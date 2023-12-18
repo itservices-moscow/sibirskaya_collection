@@ -1,4 +1,4 @@
-<nav class="topmenu topmenu__brands" id="topmenu-brands">
+<nav class="topmenu topmenu_brands" id="topmenu-brands">
   <div class="topmenu-container">
     <div class="topmenu-container__item">
       <nav class="nav-top-l1" title="">
@@ -11,28 +11,51 @@
       </nav>
     </div>
     <div class="topmenu-container__item">
-        <nav class="nav-top-l2" title="">
-          <ul class="list-reset nav-top-l2__list">  <!-- showTopMenuPanel('.показать', '.скрыть_потомков') -->
-            <li class="nav-top-l2__item"><a href="#" class="nav-top-l2__link" onClick="showTopMenuPanel('.nav-top-l3-0', '.nav-top-l4')">Sибирская коллекция</a></li>
-            <li class="nav-top-l2__item"><a href="brands-sk-selective.html" class="nav-top-l2__link">SK SELECTIVE</a></li>
-            <!-- <li class="nav-top-l2__item"><a href="#" class="nav-top-l2__link" onClick="showTopMenuPanel('.nav-top-l3-1', '.nav-top-l4')">SK SELECTIVE</a></li> -->
-            <li class="nav-top-l2__item"><a href="brands-sk-selective-kids.html" class="nav-top-l2__link">SK SELECTIVE KIDS</a></li>
-            <li class="nav-top-l2__item nav-top-l2__item-more">
-                <span class="arr-right-on">
-                  <a href="brands-sk.html">
-                    <span class="text">СМОТРЕТЬ ВСЕ</span>
-                    @include('../partials/arrowright.html')
-                  </a>
-                </span>
-            </li>
-          </ul>
-        </nav>
+      <nav class="nav-top-l2" title="">
+        <ul class="list-reset nav-top-l2__list">
+          <!-- showTopMenuPanel('.показать', '.скрыть_потомков') -->
+          <li class="nav-top-l2__item">
+            <a
+              href="#"
+              class="nav-top-l2__link"
+              data-menuhover-show=".nav-top-l3-0"
+              data-menuhover-hide-children=".nav-top-l4"
+              onmouseover="showTopMenuPanel('.nav-top-l3-0', '.nav-top-l4')"
+              >Sибирская коллекция</a
+            >
+          </li>
+          <li class="nav-top-l2__item">
+            <a
+              href="brands-sk-selective.html"
+              class="nav-top-l2__link"
+              onmouseover="showTopMenuPanel('.none', '.nav-top-l3-0')">
+              SK SELECTIVE</a
+            >
+          </li>
+          <!-- <li class="nav-top-l2__item"><a href="#" class="nav-top-l2__link" onClick="showTopMenuPanel('.nav-top-l3-1', '.nav-top-l4')">SK SELECTIVE</a></li> -->
+          <li class="nav-top-l2__item">
+            <a href="brands-sk-selective-kids.html" class="nav-top-l2__link">SK SELECTIVE KIDS</a>
+          </li>
+          <li class="nav-top-l2__item nav-top-l2__item-more">
+            <span class="arr-right-on">
+              <a href="brands-sk.html">
+                <span class="text">СМОТРЕТЬ ВСЕ</span>
+                @include('../partials/arrowright.html')
+              </a>
+            </span>
+          </li>
+        </ul>
+      </nav>
     </div>
     <div class="topmenu-container__item">
       <nav class="nav-top-l3 nav-top-l3-0" title="">
         <ul class="list-reset nav-top-l3__list">
-          <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-0')">пельмени</a></li>
-          <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-1')">вареники</a></li>
+          <li class="nav-top-l3__item">
+            <a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-0')">пельмени</a>
+          </li>
+          <li class="nav-top-l3__item">
+            <a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-1')">вареники</a>
+          </li>
           <li class="nav-top-l3__item"><a href="product-bliny-1.html" class="nav-top-l3__link">блины</a></li>
           <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">котлеты</a></li>
           <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">vegan</a></li>
@@ -51,8 +74,12 @@
       </nav>
       <nav class="nav-top-l3 nav-top-l3-1" title="">
         <ul class="list-reset nav-top-l3__list">
-          <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-0')">пельмени</a></li>
-          <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-1')">вареники</a></li>
+          <li class="nav-top-l3__item">
+            <a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-0')">пельмени</a>
+          </li>
+          <li class="nav-top-l3__item">
+            <a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-1')">вареники</a>
+          </li>
           <li class="nav-top-l3__item"><a href="product-bliny-1.html" class="nav-top-l3__link">блины</a></li>
 
           <li class="nav-top-l3__item nav-top-l3__item-more">
@@ -106,4 +133,5 @@
       </nav>
     </div>
   </div>
+  <div class="topmenu-backdrop" data-menu-hide="topmenu-brands"></div>
 </nav>

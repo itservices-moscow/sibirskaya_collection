@@ -1,43 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
+  @include('partials/head.html')
 
-@include('partials/head.html')
+  <body class="page__body">
+    <div class="site-container" id="site-container">
+      @include('partials/header.html')
 
-<body class="page__body">
-  <div class="site-container" id="site-container">
-    @include('partials/header.html')
+      <!-- !!! с телятиной-->
 
-    <!-- !!! с телятиной-->
+      <main class="product-type1">
+        @include('partials/arrowback.html')
+        <section class="product">
+          <h1 class="product-name-mobile mobile">пельмени</h1>
+          <div class="container product__container grid">
+            <div class="product__left_relative desktop">
+              <div class="product-name">пельмени</div>
+            </div>
+            <div class="product__submenu">@include('partials/product_submenu_pelmeni2.html')</div>
+            <div class="product__left">@include('partials/product_t1_menu.html')</div>
+            <div class="product__content">@include('partials/product_t1_product2.html')</div>
 
-    <main class="product-type1">
-      @include('partials/arrowback.html')
-      <section class="product">
-        <h1 class="product-name-mobile mobile">пельмени</h1>
-        <div class="container product__container grid">
-          <div class="product__left_relative desktop">
-            <div class="product-name">пельмени</div>
+            <div></div>
           </div>
-          <div class="product__submenu">
-            @include('partials/product_submenu_pelmeni2.html')
-          </div>
-          <div class="product__left">
-            @include('partials/product_t1_menu.html')
-          </div>
-          <div class="product__content">
-            @include('partials/product_t1_product2.html')
-          </div>
+        </section>
+      </main>
 
-          <div>
-
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    @include('partials/footer.html')
-  </div>
-  @include('partials/footer_scripts.html')
-</body>
-
+      @include('partials/footer.html')
+    </div>
+  </body>
 </html>

@@ -9,7 +9,7 @@
 
   &__cards {
     color: var(--main-black);
-    grid-template-columns: repeat(3, 1fr); //minmax(0, 430px)
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     gap: 32px 0;
     @include mobile {
@@ -18,7 +18,7 @@
     }
   }
   &__item {
-    max-width: 430px;
+    // max-width: 430px;
     min-width: 250px;
     background: url($rootpath + "img/line-card-vert.png") no-repeat right 32px;
     background-clip: padding-box;
@@ -62,7 +62,7 @@
   }
   &__icon {
     margin-top: 54px;
-    width: 61px;
+    width: 69px;
     height: auto;
     @include mobile {
       margin-top: 0;
@@ -71,7 +71,6 @@
   &__link {
     position: absolute;
     bottom: 0;
-
     display: inline-block;
     margin-top: 24px;
     vertical-align: middle;
@@ -80,7 +79,7 @@
     }
   }
   h2 {
-    margin: 20px 0;
+    margin: 28px 0 16px 0;
     margin-right: 24px;
   }
   p {
