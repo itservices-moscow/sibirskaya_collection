@@ -132,6 +132,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     element.addEventListener("click", function (ev) {
       document.getElementById(id).classList.remove("topmenu_show")
     })
+    if (id === "all") {
+      element.addEventListener("click", function (ev) {
+        document.getElementById("topmenu-manuf").classList.remove("topmenu_show")
+        document.getElementById("topmenu-brands").classList.remove("topmenu_show")
+      })
+    }
+  })
+
+  // И ПРИ ХОВЕРЕ НА ДР. ПУНКТЫ
+  const menuDesktopHide = document?.querySelectorAll("[data-menu-hide-onhover]")
+  menuDesktopHide.forEach((element) => {
+    // const id = element.getAttribute("data-menu-hide-onhover")
+    element.addEventListener("mouseover", function (ev) {
+      document.getElementById("topmenu-manuf").classList.remove("topmenu_show")
+      document.getElementById("topmenu-brands").classList.remove("topmenu_show")
+    })
   })
 
   // МЕНЮ ФУТЕРА и все аккордеоны
