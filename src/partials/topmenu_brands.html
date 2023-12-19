@@ -1,4 +1,4 @@
-<nav class="topmenu topmenu_brands" id="topmenu-brands">
+<nav class="topmenu topmenu_brands" id="topmenu-brands" style="display: block; opacity: 1; visibility: visible">
   <div class="topmenu-container">
     <div class="topmenu-container__item">
       <nav class="nav-top-l1" title="">
@@ -13,15 +13,14 @@
     <div class="topmenu-container__item">
       <nav class="nav-top-l2" title="">
         <ul class="list-reset nav-top-l2__list">
-          <!-- showTopMenuPanel('.показать', '.скрыть_потомков') -->
           <li class="nav-top-l2__item">
-            <a href="#" class="nav-top-l2__link" data-menuhover-show=".nav-top-l3-0" data-menuhover-hide=".nav-top-l4"
-              >Sибирская коллекция</a
-            >
-            <!-- onClick="showTopMenuPanel('.nav-top-l3-0', '.nav-top-l4')" -->
+            <a href="#" class="nav-top-l2__link" data-show-submenu="nav-top-l3-0">Sибирская коллекция</a>
           </li>
-          <li class="nav-top-l2__item"><a href="brands-sk-selective.html" class="nav-top-l2__link">SK SELECTIVE</a></li>
-          <!-- <li class="nav-top-l2__item"><a href="#" class="nav-top-l2__link" onClick="showTopMenuPanel('.nav-top-l3-1', '.nav-top-l4')">SK SELECTIVE</a></li> -->
+          <li class="nav-top-l2__item">
+            <a href="brands-sk-selective.html" class="nav-top-l2__link" data-show-submenu="nav-top-l3-1"
+              >SK SELECTIVE</a
+            >
+          </li>
           <li class="nav-top-l2__item">
             <a href="brands-sk-selective-kids.html" class="nav-top-l2__link">SK SELECTIVE KIDS</a>
           </li>
@@ -36,14 +35,14 @@
         </ul>
       </nav>
     </div>
-    <div class="topmenu-container__item">
-      <nav class="nav-top-l3 nav-top-l3-0" title="">
+    <div class="topmenu-container__item" data-menuleave-hide="nav-top-l3">
+      <nav class="nav-top-l3" id="nav-top-l3-0" title="">
         <ul class="list-reset nav-top-l3__list">
           <li class="nav-top-l3__item">
-            <a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-0')">пельмени</a>
+            <a href="#" class="nav-top-l3__link" data-show-submenu="nav-top-l4-0">пельмени</a>
           </li>
           <li class="nav-top-l3__item">
-            <a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-1')">вареники</a>
+            <a href="#" class="nav-top-l3__link" data-show-submenu="nav-top-l4-1">вареники</a>
           </li>
           <li class="nav-top-l3__item"><a href="product-bliny-1.html" class="nav-top-l3__link">блины</a></li>
           <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">котлеты</a></li>
@@ -61,13 +60,14 @@
           </li>
         </ul>
       </nav>
-      <nav class="nav-top-l3 nav-top-l3-1" title="">
+      <nav class="nav-top-l3" id="nav-top-l3-1" title="">
         <ul class="list-reset nav-top-l3__list">
           <li class="nav-top-l3__item">
-            <a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-0')">пельмени</a>
+            <!-- ссылки - для примера -->
+            <a href="#" class="nav-top-l3__link" href="brands-sk-selective.html">пельмени</a>
           </li>
           <li class="nav-top-l3__item">
-            <a href="#" class="nav-top-l3__link" onClick="showTopMenuPanel('.nav-top-l4-1')">вареники</a>
+            <a href="#" class="nav-top-l3__link">вареники</a>
           </li>
           <li class="nav-top-l3__item"><a href="product-bliny-1.html" class="nav-top-l3__link">блины</a></li>
 
@@ -82,8 +82,8 @@
         </ul>
       </nav>
     </div>
-    <div class="topmenu-container__item">
-      <nav class="nav-top-l4 nav-top-l4-0" title="">
+    <div class="topmenu-container__item" data-menuleave-hide="nav-top-l4">
+      <nav class="nav-top-l4" id="nav-top-l4-0" title="">
         <ul class="list-reset nav-top-l4__list">
           <li class="nav-top-l4__item"><a href="product-pelmeni-1.html" class="nav-top-l4__link">с говядиной</a></li>
           <li class="nav-top-l4__item"><a href="product-pelmeni-2.html" class="nav-top-l4__link">с телятиной</a></li>
@@ -103,7 +103,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="nav-top-l4 nav-top-l4-1" title="">
+      <nav class="nav-top-l4" id="nav-top-l4-1" title="">
         <ul class="list-reset nav-top-l4__list">
           <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с картошкой</a></li>
           <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с вишней</a></li>

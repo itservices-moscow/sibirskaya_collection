@@ -70,6 +70,7 @@
 }
 
 .topmenu-container nav {
+  position: absolute;
   height: 312px;
   box-sizing: border-box;
 }
@@ -168,8 +169,8 @@
   padding-left: 32px;
   margin-left: 32px;
   width: 256px;
-  // visibility: hidden;
-  // opacity: 0;
+  visibility: hidden;
+  opacity: 0;
   &__item {
     height: 33px;
     position: relative;
@@ -221,8 +222,8 @@
   border-left: 1px solid var(--coffee-milk);
   padding-left: 32px;
   margin-left: 32px;
-  // visibility: hidden;
-  // opacity: 0;
+  visibility: hidden;
+  opacity: 0;
 
   &__item {
     height: 33px;

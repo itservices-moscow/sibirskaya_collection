@@ -57,21 +57,24 @@ let getSiblings = function (e) {
   return siblings
 }
 
-const showTopMenuPanel = (toshow, tohide) => {
-  const menuBlock = document?.querySelector(toshow)
-  if (menuBlock) {
-    const siblings = getSiblings(menuBlock)
-    menuBlock.classList.toggle("topmenu_show")
-    siblings.forEach((element) => {
-      element.classList.remove("topmenu_show")
-    })
-    if (tohide) {
-      document.querySelectorAll(tohide).forEach((element) => {
-        element.classList.remove("topmenu_show")
-      })
-    }
-  }
+const showTopMenuPanel = (toshow) => {
+  //const menuBlock = document?.querySelector(toshow)
+  //if (menuBlock) {
+  //   const siblings = getSiblings(menuBlock)
+  //   menuBlock.classList.toggle("topmenu_show")
+  //   siblings.forEach((element) => {
+  //     element.classList.remove("topmenu_show")
+  //   })
+  //   if (tohide) {
+  //     document.querySelectorAll(tohide).forEach((element) => {
+  //       element.classList.remove("topmenu_show")
+  //     })
+  //   }
+  //}
 }
+
+// nav-top-l3-0 nav-top-l3-1
+//
 
 // МОБИЛЬНОЕ МЕНЮ
 function toggleTopMenuPanel(panelClass) {
@@ -123,6 +126,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
     element.addEventListener("mouseout", function (ev) {
       document.getElementById(id).style.backgroundColor = ""
+    })
+  })
+
+  const menuBrandsHover = document?.querySelectorAll("[data-show-submenu]")
+  menuBrandsHover.forEach((element) => {
+    const id = element.getAttribute("data-show-submenu")
+    element.addEventListener("mouseover", (e) => {
+      console.log(id, document.getElementById(id))
+      document.getElementById(id).classList.add("topmenu_show")
+
+      const siblings = getSiblings(document.getElementById(id))
+      siblings.forEach((element) => {
+        element.classList.remove("topmenu_show")
+      })
+    })
+  })
+
+  // СКРЫТЬ ПОДМЕНЮ БРЕНДОВ
+  const menuBrandsHide = document?.querySelectorAll("[data-menuleave-hide]")
+  menuBrandsHide.forEach((element) => {
+    console.log("[hide]", element.children)
+    element.addEventListener("mouseout", function (ev) {
+      element.children.forEach((child) => {
+        // нужны уточнения
+        // child.classList.remove("topmenu_show")
+        // console.log(child)
+      })
     })
   })
   // СКРЫТЬ ДЕСКТОПНОЕ МЕНЮ ПО КЛИКУ НА БЭКДРОП
