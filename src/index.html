@@ -4,15 +4,18 @@
 
   <body class="page__body main">
     <div class="site-container" id="site-container">
-      @include('partials/header.html')
+      @include('partials/header.html') @include('partials/cookie_alert.html')
+      <!--    divider       -->
+      @include('partials/main_intro.html')
+      <!--    divider       -->
+      @include('partials/main_highlights.html')
+      <!--    divider       -->
+      @include('partials/main_keys.html')
+      <!--@include('partials/main_extra.html')        -->
 
-      <main class="main">
-        @include('partials/main_intro.html') @include('partials/main_highlights.html')
-        @include('partials/main_keys.html') @include('partials/main_extra.html')
-        @include('partials/main_department.html')
-        <!-- @include('partials/uikit.html') -->
-        @include('partials/cookie_alert.html')
-      </main>
+      @include('partials/main_department.html')
+      <!--    divider       -->
+
       @include('partials/footer.html')
     </div>
   </body>

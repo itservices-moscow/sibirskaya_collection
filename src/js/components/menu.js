@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // СКРЫТЬ ПОДМЕНЮ БРЕНДОВ
   const menuBrandsHide = document?.querySelectorAll("[data-menuleave-hide]")
   menuBrandsHide.forEach((element) => {
-    console.log("[hide]", element.children)
+    //console.log("[hide]", element.children)
     element.addEventListener("mouseout", function (ev) {
       element.children.forEach((child) => {
         // нужны уточнения
