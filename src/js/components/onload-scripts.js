@@ -17,6 +17,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // СКРЫТЬ ПЕРВУЮ СЕКЦИЮ ГЛАВНОЙ, КОГДА РАЗВЕРНЕТСЯ ВИДЕО
   window.addEventListener("scroll", function () {
     const scrollPosition = document.documentElement.scrollTop
+    let calc = scrollPosition
+    document.querySelector(".scrollval").innerHTML = scrollPosition
+    if (scrollPosition > 500 && scrollPosition < 1400) {
+      calc = Math.ceil(scrollPosition / 100)
+      // document.getElementById("video-container").style.width = calc + "px"
+      console.log(document.getElementById("video-container").style.width)
+      document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc
+    }
     if (document.querySelector(".intro")) {
       if (
         (scrollPosition > 800 && document.querySelector(".intro").style.visibility === "") ||

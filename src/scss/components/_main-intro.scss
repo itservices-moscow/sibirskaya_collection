@@ -35,8 +35,6 @@
 .intro-empty {
   height: 5px;
   margin-top: 1000px;
-  // opacity: 0.5;
-  // background-color: green;
   background-color: transparent;
   @include mobile {
     margin-top: 700px;
@@ -57,9 +55,82 @@
   height: 100vh;
 }
 
-.video-container {
-  position: relative;
+// @keyframes grow-progress {
+//   from {
+//     transform: scaleX(0);
+//   }
+//   to {
+//     transform: scaleX(1);
+//   }
+// }
+
+#progress {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  text-align: center;
   width: 100%;
+  height: 100%;
+  background: green;
+  opacity: 0.5;
+  margin-right: auto;
+  margin-left: auto;
+  transform-origin: 0 50%;
+  animation: videowide auto linear;
+  animation-timeline: scroll();
+  // animation-timeline: videowide;
+}
+
+@keyframes videowide {
+  0% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.2);
+    //transform: translateY(-100px);
+  }
+  50% {
+    transform: scale(0.4);
+
+    //transform: translateY(-100px);
+  }
+  80% {
+    transform: scale(0.8);
+
+    //transform: translateY(-100px);
+  }
+  100% {
+    transform: scale(1);
+    //transform: translateY(-100px);
+  }
+}
+
+// @scroll-timeline videowide {
+//   time-range: 1s;
+//   start: selector(#intro) start 1;
+//   end: selector(#intro) end 1;
+// }
+.scrollval {
+  display: none;
+  width: 200px;
+  height: 140px;
+  padding: 5px;
+  background-color: rgb(74, 153, 120);
+  font-size: 20px;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  z-index: 1000;
+}
+.video-container {
+  width: 100%;
+  height: 100%;
+}
+#my-video {
+}
+.my-video-dimensions {
+  // width: 100%;
+  // height: 100%;
 }
 
 .video-js .vjs-play-control {
@@ -114,33 +185,17 @@
   //opacity: 0;
   transform: scale(0.4, 0.4);
   transition-property: transform;
-  animation-name: videowide;
+  // animation-name: videowide;
   &.aos-animate {
-    //transform: scale(1, 1);
-    //transform: scale(0.6, 0.6);
-    //transform: translateY(-100px);
+    transform: scale(1, 1);
+    //   transform: scale(0.6, 0.6);
+    transform: translateY(-100px);
   }
-
-  @keyframes videowide {
-    0% {
-      transform: scale(0.4, 0.4);
-      transform: rotate(5deg);
-    }
-    50% {
-      transform: scale(0.6, 0.6);
-      //transform: translateY(-100px);
-    }
-    70% {
-      transform: scale(0.2, 0.2);
-      transform: rotate(45deg);
-      //transform: translateY(-100px);
-    }
-  }
-  // @media screen and (min-width: 768px) {
-  //   transform: translateX(100px);
-
-  //   &.aos-animate {
-  //     transform: translateX(0);
-  //   }
-  // }
 }
+// @media screen and (min-width: 768px) {
+//   transform: translateX(100px);
+
+//   &.aos-animate {
+//     transform: translateX(0);
+//   }
+// }

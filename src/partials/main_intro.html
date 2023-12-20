@@ -1,4 +1,4 @@
-<section class="intro">
+<section class="intro" id="intro">
   <div class="container">
     <img class="intro-logo" src="img/svg/sk-logo-main.svg" alt="" />
     <p class="intro-desc">
@@ -11,13 +11,51 @@
   </div>
 </section>
 <!-- <section class="intro-empty"></section> -->
-
+<div class="scrollval">123</div>
 <section class="intro-vid">
   <div class="intro-buffer"></div>
   <div class="intro-buffer"></div>
   <div class="intro-buffer"></div>
+
   <div class="intro-buffer"></div>
-  <!--
+  <div class="intro-buffer"></div>
+  <div class="intro-buffer"></div>
+
+  <div
+    class="video-container"
+    id="video-container"
+    data-aos="vid-animation"
+    data-aos-offset="200"
+    data-aos-easing="ease-in-sine"
+    data-aos-duration="500"
+    data-aos-anchor=".anchor-vid">
+    <video
+      id="my-video"
+      class="video-js"
+      controls
+      autoplay
+      preload="auto"
+      width="800"
+      height="400"
+      data-setup="{}"
+      poster="img/video1.png"
+      muted
+      playsinline>
+      <source src="video1.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="intro-buffer"></div>
+  <div class="intro-buffer"></div>
+
+  <script>
+    videojs(document.querySelector(".video-js"), {
+      language: "ru",
+    })
+  </script>
+</section>
+
+<!--
   <img
     class="i-video"
     src="img/video1.png"
@@ -28,16 +66,17 @@
     data-aos-duration="700"
     data-aos-anchor=".anchor-aos-vid" />
 -->
-  <!-- настройки анимации -->
-  <!-- data-aos-anchor-placement="center-top"-->
-  <!-- <div
+<!-- настройки анимации -->
+<!-- data-aos-anchor-placement="center-top"-->
+<!-- <div
     class="video-container"
     data-aos="vid-animation"
     data-aos-offset="200"
     data-aos-easing="ease-in-sine"
     data-aos-duration="500"
     data-aos-anchor=".anchor-vid"> -->
-  <div class="video-container">
+<!--
+  <div id="progress">
     <video
       id="my-video"
       class="video-js"
@@ -45,7 +84,7 @@
       autoplay
       preload="auto"
       width="800"
-      height="600"
+      height="400"
       data-setup="{}"
       poster="img/video1.png"
       muted
@@ -53,15 +92,7 @@
       <source src="video1.mp4" type="video/mp4" />
     </video>
   </div>
-  <!--
+  -->
+<!--
 </section>
 -->
-  <div class="intro-buffer"></div>
-  <div class="intro-buffer"></div>
-
-  <script>
-    videojs(document.querySelector(".video-js"), {
-      language: "ru",
-    })
-  </script>
-</section>
