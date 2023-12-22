@@ -76,18 +76,6 @@ const showTopMenuPanel = (toshow) => {
 // nav-top-l3-0 nav-top-l3-1
 //
 
-// МОБИЛЬНОЕ МЕНЮ
-function toggleTopMenuPanel(panelClass) {
-  console.log(document.querySelector(panelClass))
-  document.querySelector(panelClass).classList.toggle("topmenu_show")
-}
-
-// МОБИЛЬНОЕ МЕНЮ
-function toggleMobMenuPanel(panelClass) {
-  console.log(document.querySelector(panelClass))
-  document.querySelector(panelClass).classList.toggle("closed")
-}
-
 // МЕНЮ ФУТЕРА И ВСЕ ПРОСТЫЕ АККОРДЕОНЫ КРОМЕ ПРОИЗВОДСТВА
 function accordionInit(classname) {
   var acc = document.getElementsByClassName(classname)
@@ -133,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   menuBrandsHover.forEach((element) => {
     const id = element.getAttribute("data-show-submenu")
     element.addEventListener("mouseover", (e) => {
-      console.log(id, document.getElementById(id))
+      // console.log(id, document.getElementById(id))
       document.getElementById(id).classList.add("topmenu_show")
 
       const siblings = getSiblings(document.getElementById(id))
