@@ -2,6 +2,8 @@ input[type="text"].searchinput-mob,
 input[type="text"].searchinput {
   background: var(--color-black);
   border-bottom: 1px solid var(--medium-gray);
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 /* поиск в верхнем меню на десктопах */
@@ -30,7 +32,7 @@ input[type="text"].searchinput {
   width: 30px;
   min-width: 30px;
   height: 30px;
-  transition: 0.4s;
+  transition: 0.4s ease-out;
   cursor: pointer;
   img {
     width: 24px;
@@ -54,7 +56,7 @@ input[type="text"].searchinput {
   padding: 0;
   color: var(--medium-gray);
   font-size: 12px;
-  transition: 0.4s;
+  transition: 0.4s ease-out;
   line-height: 49px;
   width: 0px;
 }
@@ -68,7 +70,7 @@ input[type="text"].searchinput {
   background-color: var(--color-black);
   border: 1px solid var(--medium-gray);
   border-radius: 40px;
-  transition: 0.3s ease;
+  transition: 0.4s ease-out;
   visibility: hidden;
 
   @include hover {
@@ -126,7 +128,7 @@ input[type="text"].searchinput {
   height: 24px;
   margin: 5px 0 0 -33px;
   cursor: pointer;
-  transition: 0.2px;
+  transition: 0.4px ease-out;
   @media (max-width: 500px) {
     margin-right: 50px;
   }
