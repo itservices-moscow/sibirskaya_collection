@@ -3,43 +3,29 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 280px;
+  height: 600px;
   z-index: 10;
 
-  // background-image: url($rootpath + 'img/hands-making-bread.jpg');
-  //background-color: rgba($color: #7d7d11, $alpha: 0.5);
-  // background-size: 120%
-  // background-repeat: no-repeat;
-
-  // background-size: cover;
-
   @include mobile {
-    height: 200px;
-    background-size: 200%;
+    height: 300px;
+    //background-size: 200%;
     background-position: center;
   }
-
 }
 
 .extra-bg {
   display: none;
   z-index: 0;
-  height: 800px;
-  width: 100%;
-  // top: 3500px;
-  // left: 0;
-  // position: absolute;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
-  background-position: top -200px center;
+  background-position: top center;
   top: 0;
   left: 0;
-  background-image: url($rootpath + 'img/hands-making-bread.jpg');
+  background-image: url($rootpath + "img/hands-making-bread.jpg");
   background-color: transparent;
   background-repeat: no-repeat;
-  //background-position: top;
   background-size: cover;
-
-
 }
 //transform: translateZ(-10px) scale(2.5);
 
@@ -51,5 +37,4 @@
   top: 150px;
   right: 40px;
   // background-color: yellowgreen;
-
 }
