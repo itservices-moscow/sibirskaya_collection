@@ -16,7 +16,7 @@
   //margin-bottom: 10px;
   width: 352px;
   @include mobile {
-    // margin-bottom: 14px;
+    width: calc(96% - 48px);
   }
 }
 .intro-desc {
