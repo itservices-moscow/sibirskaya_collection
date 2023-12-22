@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let scrollPosition = document.documentElement.scrollTop
     if (document.querySelector(".extra-bg")) {
       let extraPosY = Math.round(document.querySelector(".extra").getBoundingClientRect().top)
-
-      if (scrollPosition > 3200) {
+      console.log("display extra", scrollPosition)
+      if (scrollPosition > 3200 && scrollPosition < 6600) {
         //console.log('display extra', scrollPosition);
         document.querySelector(".extra-bg").style.display = "block"
       } else {
