@@ -371,11 +371,12 @@ option {
   margin: 5px 6px;
 }
 .dz-processing {
-  //display: none;
+  display: none;
 }
 .dz-error {
 }
 .dz-details {
+  display: none;
   font-size: 12px;
   padding-top: 5px;
 }
@@ -390,7 +391,12 @@ option {
 .dz-success-mark {
   display: none;
 }
-// иконка для удаления превью - <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#A3784E" /></svg>
+// иконка для удаления превью -
+// <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <circle cx="11" cy="11" r="11" fill="#A3784E"/>
+// <path d="M7.91797 7.9165L14.0846 14.0832M14.0846 7.9165L7.91797 14.0832" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+// </svg>
+//url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='11' fill='%23A3784E'/%3E%3Cpath d='M7.91797 7.9165L14.0846 14.0832M14.0846 7.9165L7.91797 14.0832' stroke='white' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 // !!! настроить после подключения загрузки
 .dz-error-message {
   display: none;

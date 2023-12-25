@@ -1,4 +1,3 @@
-
 .contacts {
   h1.heading {
     margin: 60px 20px;
@@ -6,6 +5,7 @@
   &__container {
     margin: 40px 55px 20px 55px;
     margin-top: 40px;
+
     grid-template-columns: calc(60% - 115px) 40%;
     gap: 0 115px;
     max-width: 1090px;
@@ -30,7 +30,8 @@
     max-width: 500px;
     .container {
       padding: 32px;
-      h3 {
+      border-top: 1px solid var(--main-bronze);
+      h2 {
         margin: 0;
       }
     }
@@ -50,15 +51,15 @@ div.contact {
     margin: 0;
     width: 50%;
     @include mobile {
-        width: 100%;
-      }
+      width: 100%;
+    }
   }
   p {
     margin: 0;
     width: 40%;
     @include mobile {
-        width: 100%;
-      }
+      width: 100%;
+    }
   }
   .phone {
     color: var(--main-bronze);
@@ -87,17 +88,15 @@ div.contact {
   &__container {
     width: 100%;
     height: 360px;
-    background-color: #AAA;
+    background-color: #aaa;
   }
 
-
-// КАРТА: СТИЛИ КАРТЫ И БАЛУНОВ
+  // КАРТА: СТИЛИ КАРТЫ И БАЛУНОВ
 
   // отключает копирайт на яндекс-картах (не рекомендуется)
   [class*="copyrights-pane"] {
     display: none !important;
   }
-
 }
 
 [class*="balloon__close-button"] {
@@ -106,13 +105,12 @@ div.contact {
 }
 
 [class*="balloon__content"] {
-  padding: 25px!important;
+  padding: 25px !important;
   border-radius: 10px;
   // margin-right: 10px;
 }
 
 [class*="balloon_layout_panel"] {
-
   @include desktop {
     max-width: 200px;
   }
@@ -120,8 +118,8 @@ div.contact {
 
 .baloon {
   @include desktop {
-      max-width: 200px;
-    }
+    max-width: 200px;
+  }
   max-height: 400px;
   &__header {
     font-size: 22px;
@@ -131,12 +129,11 @@ div.contact {
 
   &__address {
     @include desktop {
-        max-width: 200px;
-      }
+      max-width: 200px;
+    }
     line-height: normal;
     font-size: 14px;
     margin-bottom: 16px;
-
   }
   &__phone {
     color: var(--main-bronze);

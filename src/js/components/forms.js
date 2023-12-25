@@ -6,6 +6,11 @@ let im = new Inputmask("+7(999)999-99-99")
 im.mask(inputs)
 // console.log("im", inputs, im);
 
+// инициализируем модальное окно для submit
+import GraphModal from "../vendor/graph-modal"
+const modal = new GraphModal()
+console.log(modal)
+
 const rules3 = [
   {
     ruleSelector: ".contact-fio",
@@ -22,55 +27,38 @@ const rules3 = [
       },
     ],
   },
-  {
-    ruleSelector: ".contact-email",
-    rules: [
-      {
-        rule: "email",
-        value: true,
-        errorMessage: "Введите корректный email",
-      },
-      {
-        rule: "required",
-        value: true,
-        errorMessage: "Заполните email",
-      },
-    ],
-  },
-  {
-    ruleSelector: ".contact-tel",
-    tel: true,
-    telError: "Введите корректный телефон",
-    rules: [
-      {
-        rule: "required",
-        value: true,
-        errorMessage: "Заполните телефон",
-      },
-    ],
-  },
+  // {
+  //   ruleSelector: ".contact-email",
+  //   rules: [
+  //     {
+  //       rule: "email",
+  //       value: true,
+  //       errorMessage: "Введите корректный email",
+  //     },
+  //     {
+  //       rule: "required",
+  //       value: true,
+  //       errorMessage: "Заполните email",
+  //     },
+  //   ],
+  // },
+  // {
+  //   ruleSelector: ".contact-tel",
+  //   tel: true,
+  //   telError: "Введите корректный телефон",
+  //   rules: [
+  //     {
+  //       rule: "required",
+  //       value: true,
+  //       errorMessage: "Заполните телефон",
+  //     },
+  //   ],
+  // },
 ]
-
-// function validateForms(selector, rules) {
-//   new JustValidate(selector, {
-//     rules: rules,
-//     submitHandler: function (form, values, ajax) {
-//       console.log(form);
-//     },
-//   });
-// }
-
-// validateForms(".contactform", {
-//   email: { required: true, email: true },
-//   fio: { required: true },
-//   tel: { required: true },
-// });
 
 export const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector)
   const telSelector = form?.querySelector('input[type="tel"]')
-
-  console.log(form, telSelector)
 
   if (!form) {
     console.error("Нет такого селектора!")
@@ -103,9 +91,9 @@ export const validateForms = (selector, rules, afterSend) => {
     errorLabelStyle: {
       color: "#FF3A2E",
     },
-    // submitHandler: function (form, values, ajax) {
-    //   console.log(form);
-    // },
+    submitHandler: function (form, values, ajax) {
+      console.log(form)
+    },
   })
 
   for (let item of rules) {
@@ -114,8 +102,25 @@ export const validateForms = (selector, rules, afterSend) => {
   }
 
   validation.onSuccess((ev) => {
-    console.log("верно заполнено", ev)
+    console.log("[Верно заполнено, отправляем форму]", ev)
     // send
+
+    let formData = new FormData(ev.target)
+    console.log(...formData)
+
+    // let xhr = new XMLHttpRequest()
+    // xhr.onreadystatechange = function () {
+    //   if (xhr.readyState === 4) {
+    //     if (xhr.status === 200) {
+    //       console.log("Отправлено")
+    //     }
+    //   }
+    // }
+    // xhr.open("POST", "mail.php", true)
+    // xhr.send(formData)
+
+    // открыть модальное окно - перенести в запрос
+    modal.open("m1")
 
     ev.target.reset()
   })
