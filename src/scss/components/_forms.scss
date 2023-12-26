@@ -350,9 +350,35 @@ option {
   background: rgba(192, 179, 168, 0.1);
   border-image: none;
   max-width: 500px;
-  //margin-left: 24px;
-  //margin-right: 24px;
   text-align: center;
+  margin: 32px 0;
+}
+
+.dz-started {
+  border: 0;
+  background: transparent;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 24px;
+  justify-content: flex-start;
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.dz-started::after {
+  content: url($rootpath + "img/svg/dz-file-upload.svg");
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -5px;
+  cursor: pointer;
+}
+
+.dz-started .dz-message {
+  display: none;
 }
 
 .dz-message {
@@ -367,11 +393,9 @@ option {
   height: 80px;
   display: inline-block;
   border: 1px solid var(--main-bronze);
-  padding: 5px;
-  margin: 5px 6px;
+  padding: 6px;
 }
 .dz-processing {
-  display: none;
 }
 .dz-error {
 }
@@ -390,6 +414,16 @@ option {
 }
 .dz-success-mark {
   display: none;
+}
+
+.dz-remove {
+  background-color: yellow;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
 }
 // иконка для удаления превью -
 // <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">

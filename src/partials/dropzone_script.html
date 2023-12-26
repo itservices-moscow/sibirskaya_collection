@@ -1,26 +1,56 @@
+<div id="preview-template">
+  <div class="dz-preview dz-file-preview hello">
+    <div class="dz-details">
+      <div class="dz-filename"><span data-dz-name></span></div>
+      <div class="dz-size" data-dz-size></div>
+      <img data-dz-thumbnail />
+    </div>
+    <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+    <div class="dz-success-mark"><span>ok</span></div>
+    <div class="dz-error-mark"><span>err</span></div>
+    <div class="dz-remove" data-dz-remove>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="11" r="11" fill="#A3784E" />
+        <path
+          d="M7.91797 7.9165L14.0846 14.0832M14.0846 7.9165L7.91797 14.0832"
+          stroke="white"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </div>
+    <div class="dz-error-message"><span data-dz-errormessage></span></div>
+  </div>
+</div>
+
 <script>
-  var dropzone = new Dropzone('#demo-upload', {
-    previewTemplate: document.querySelector('#preview-template').innerHTML,
+  var dropzone = new Dropzone("#demo-upload", {
+    previewTemplate: document.querySelector("#preview-template").innerHTML,
     parallelUploads: 2,
-    thumbnailHeight: 120,
-    thumbnailWidth: 120,
+    addRemoveLinks: true,
+    dictRemoveFile: "×",
+
+    thumbnailHeight: 80,
+    thumbnailWidth: 80,
     maxFilesize: 3,
     filesizeBase: 1000,
+    // previewTemplate: `              `,
     thumbnail: function (file, dataUrl) {
       if (file.previewElement) {
-        file.previewElement.classList.remove("dz-file-preview");
-        var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
+        console.log("preview", file.previewElement)
+        file.previewElement.classList.remove("dz-file-preview")
+        var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]")
         for (var i = 0; i < images.length; i++) {
-          var thumbnailElement = images[i];
-          thumbnailElement.alt = file.name;
-          thumbnailElement.src = dataUrl;
+          var thumbnailElement = images[i]
+          thumbnailElement.alt = file.name
+          thumbnailElement.src = dataUrl
         }
-        setTimeout(function () { file.previewElement.classList.add("dz-image-preview"); }, 1);
+        setTimeout(function () {
+          file.previewElement.classList.add("dz-image-preview")
+        }, 1)
       }
-    }
-
-  });
-
+    },
+  })
 
   // Now fake the file upload, since GitHub does not handle file uploads
   // and returns a 404
@@ -28,36 +58,38 @@
   var minSteps = 6,
     maxSteps = 60,
     timeBetweenSteps = 100,
-    bytesPerStep = 100000;
+    bytesPerStep = 100000
 
   dropzone.uploadFiles = function (files) {
-    var self = this;
+    var self = this
 
     for (var i = 0; i < files.length; i++) {
-
-      var file = files[i];
-      totalSteps = Math.round(Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep)));
+      var file = files[i]
+      totalSteps = Math.round(Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep)))
 
       for (var step = 0; step < totalSteps; step++) {
-        var duration = timeBetweenSteps * (step + 1);
-        setTimeout(function (file, totalSteps, step) {
-          return function () {
-            file.upload = {
-              progress: 100 * (step + 1) / totalSteps,
-              total: file.size,
-              bytesSent: (step + 1) * file.size / totalSteps
-            };
+        var duration = timeBetweenSteps * (step + 1)
+        setTimeout(
+          (function (file, totalSteps, step) {
+            return function () {
+              file.upload = {
+                progress: (100 * (step + 1)) / totalSteps,
+                total: file.size,
+                bytesSent: ((step + 1) * file.size) / totalSteps,
+              }
 
-            self.emit('uploadprogress', file, file.upload.progress, file.upload.bytesSent);
-            if (file.upload.progress == 100) {
-              file.status = Dropzone.SUCCESS;
-              self.emit("success", file, 'success', null);
-              self.emit("complete", file);
-              self.processQueue();
-              //document.getElementsByClassName("dz-success-mark").style.opacity = "1";
+              self.emit("uploadprogress", file, file.upload.progress, file.upload.bytesSent)
+              if (file.upload.progress == 100) {
+                file.status = Dropzone.SUCCESS
+                self.emit("success", file, "success", null)
+                self.emit("complete", file)
+                self.processQueue()
+                //document.getElementsByClassName("dz-success-mark").style.opacity = "1";
+              }
             }
-          };
-        }(file, totalSteps, step), duration);
+          })(file, totalSteps, step),
+          duration
+        )
       }
     }
   }
