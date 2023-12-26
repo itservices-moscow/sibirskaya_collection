@@ -1,5 +1,4 @@
 .graph-modal {
-
   &__container {
     text-align: center;
     width: 630px;
@@ -8,9 +7,9 @@
     border-radius: 0;
     @include mobile {
       width: calc(100% - 48px);
-      max-width: 400px;
+      max-width: 390px;
       margin: 24px;
-      transform: translateY(-190%);
+      // transform: translateY(-190%);
     }
   }
   &__close {
@@ -23,8 +22,16 @@
     margin-top: 24px;
     width: 308px;
     @include mobile {
-        width: 100%;
+      width: 100%;
     }
   }
 }
 
+.graph-modal.is-open {
+  @include mobile {
+    //bottom: 20vh;
+    top: auto;
+    padding-top: 200%;
+    padding-bottom: 30%;
+  }
+}

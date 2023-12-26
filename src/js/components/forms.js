@@ -1,15 +1,14 @@
 import JustValidate from "just-validate"
 import Inputmask from "inputmask"
 
+// инициализируем модальное окно для submit
+import GraphModal from "../vendor/graph-modal"
+const modal = new GraphModal()
+
 let inputs = document.querySelectorAll('input[type="tel"]')
 let im = new Inputmask("+7(999)999-99-99")
 im.mask(inputs)
 // console.log("im", inputs, im);
-
-// инициализируем модальное окно для submit
-import GraphModal from "../vendor/graph-modal"
-const modal = new GraphModal()
-console.log(modal)
 
 const rules3 = [
   {
@@ -79,9 +78,6 @@ export const validateForms = (selector, rules, afterSend) => {
   }
 
   if (telSelector) {
-    // const inputMask = new Inputmask("+7(999)999-99-99");
-    // inputMask.mask(telSelector);
-
     for (let item of rules) {
       if (item.tel) {
         item.rules.push({
