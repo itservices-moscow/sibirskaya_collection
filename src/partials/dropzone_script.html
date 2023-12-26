@@ -24,17 +24,15 @@
 </div>
 
 <script>
+  Dropzone.autoDiscover = false
   var dropzone = new Dropzone("#demo-upload", {
     previewTemplate: document.querySelector("#preview-template").innerHTML,
-    parallelUploads: 2,
-    addRemoveLinks: true,
-    dictRemoveFile: "×",
-
+    parallelUploads: 1,
     thumbnailHeight: 80,
     thumbnailWidth: 80,
     maxFilesize: 3,
     filesizeBase: 1000,
-    // previewTemplate: `              `,
+    // previewTemplate: ``,
     thumbnail: function (file, dataUrl) {
       if (file.previewElement) {
         console.log("preview", file.previewElement)

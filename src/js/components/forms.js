@@ -27,33 +27,42 @@ const rules3 = [
       },
     ],
   },
-  // {
-  //   ruleSelector: ".contact-email",
-  //   rules: [
-  //     {
-  //       rule: "email",
-  //       value: true,
-  //       errorMessage: "Введите корректный email",
-  //     },
-  //     {
-  //       rule: "required",
-  //       value: true,
-  //       errorMessage: "Заполните email",
-  //     },
-  //   ],
-  // },
-  // {
-  //   ruleSelector: ".contact-tel",
-  //   tel: true,
-  //   telError: "Введите корректный телефон",
-  //   rules: [
-  //     {
-  //       rule: "required",
-  //       value: true,
-  //       errorMessage: "Заполните телефон",
-  //     },
-  //   ],
-  // },
+  {
+    ruleSelector: ".contact-email",
+    rules: [
+      {
+        rule: "email",
+        value: true,
+        errorMessage: "Введите корректный email",
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните email",
+      },
+    ],
+  },
+  {
+    ruleSelector: "#agreement", // чекбокс
+    rules: [
+      {
+        rule: "required",
+        errorMessage: "Обязательно",
+      },
+    ],
+  },
+  {
+    ruleSelector: ".contact-tel",
+    tel: true,
+    telError: "Введите корректный телефон",
+    rules: [
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните телефон",
+      },
+    ],
+  },
 ]
 
 export const validateForms = (selector, rules, afterSend) => {

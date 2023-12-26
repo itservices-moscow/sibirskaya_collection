@@ -55,19 +55,18 @@
       <span class="close" onclick="this.previousElementSibling.value = ''"> &times; </span>
     </label>
 
-    <!-- dropzone start -->
-    <!--     class="dropzone"  -->
     <!-- скрипт для dropzone подключается только на страницах, где есть этот блок -->
-    @include('../partials/dropzone_script.html')
-    <div id="dropzone" class="dropzone">
-      <!--   <form class="dropzone needsclick" id="demo-upload" action="/upload"> -->
-      <div class="dz-message needsclick">
-        Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<br />
-        <br /><span class="note needsclick">jpg, pdf, doc | до 10 Мб</span>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <div id="dropzone">
+      <div class="dropzone needsclick" id="demo-upload" action="/upload">
+        <div class="dz-message needsclick">
+          Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<br />
+          <br /><span class="note needsclick">jpg, pdf, doc | до 10 Мб</span>
+        </div>
       </div>
-
-      <!-- </form> -->
     </div>
+    @include('../partials/dropzone_script.html')
+
     <!-- dropzone end -->
 
     <div class="form__agreement">

@@ -344,6 +344,9 @@ option {
 #dropzone {
   // margin: 27px;
 }
+#preview-template {
+  display: none;
+}
 .dropzone {
   border-radius: 1px;
   border: 1px dashed var(--coffee-milk);
@@ -351,6 +354,7 @@ option {
   border-image: none;
   max-width: 500px;
   text-align: center;
+  font-size: 14px;
   margin: 32px 0;
 }
 
@@ -359,7 +363,7 @@ option {
   background: transparent;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px 24px;
+  gap: 16px 16px;
   justify-content: flex-start;
   @include mobile {
     grid-template-columns: repeat(4, 1fr);
@@ -389,10 +393,12 @@ option {
 }
 
 .dz-preview {
+  position: relative;
   width: 80px;
   height: 80px;
   display: inline-block;
   border: 1px solid var(--main-bronze);
+  background: rgba(192, 179, 168, 0.1);
   padding: 6px;
 }
 .dz-processing {
@@ -400,9 +406,11 @@ option {
 .dz-error {
 }
 .dz-details {
-  display: none;
   font-size: 12px;
-  padding-top: 5px;
+}
+.dz-filename,
+.dz-size {
+  display: none;
 }
 .dz-complete {
 }
@@ -417,13 +425,13 @@ option {
 }
 
 .dz-remove {
-  background-color: yellow;
   width: 25px;
   height: 25px;
   position: absolute;
   z-index: 100;
-  top: 0;
-  right: 0;
+  top: -11px;
+  cursor: pointer;
+  right: -11px;
 }
 // иконка для удаления превью -
 // <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -432,6 +440,7 @@ option {
 // </svg>
 //url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='11' fill='%23A3784E'/%3E%3Cpath d='M7.91797 7.9165L14.0846 14.0832M14.0846 7.9165L7.91797 14.0832' stroke='white' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 // !!! настроить после подключения загрузки
+
 .dz-error-message {
   display: none;
 }
