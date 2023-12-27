@@ -7,14 +7,18 @@
         расскажите о ней подробнее.<br />Давайте вместе запустим продукт!
       </p>
     </div>
+    <div class="st-form__item st-form__item_3 mobile">
+      <h1>Задать вопрос</h1>
+      <p>Остались вопросы?<br />Пишите — ответим!</p>
+    </div>
     <div class="st-form__item st-form__item_2">
       <!-- форма обратной связи -->
       <div class="container">
-        <form class="form startupsform">
+        <form class="form startupsform" name="startupsform">
           <label for="name" class="form__label">
             <input
               type="text"
-              name="startups-fio"
+              name="contact-fio"
               class="input-reset form__input contact-fio"
               value=""
               placeholder="Имя"
@@ -58,7 +62,6 @@
               </div>
             </div>
           </div>
-          @include('../partials/dropzone_script.html')
 
           <!-- dropzone end -->
           <div class="form__agreement">
@@ -87,7 +90,7 @@
       </div>
     </div>
 
-    <div class="st-form__item st-form__item_3">
+    <div class="st-form__item st-form__item_3 desktop">
       <h1>Задать вопрос</h1>
       <p>Остались вопросы?<br />Пишите — ответим!</p>
     </div>

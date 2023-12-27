@@ -35,3 +35,10 @@
     padding-bottom: 30%;
   }
 }
+
+#stform2 .graph-modal__container {
+  height: 630px;
+  @include mobile {
+    height: 700px;
+  }
+}

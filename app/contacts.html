@@ -15,7 +15,7 @@
     // previewTemplate: ``,
     thumbnail: function (file, dataUrl) {
       if (file.previewElement) {
-        console.log("preview", file.previewElement)
+        // console.log("preview", file.previewElement)
         file.previewElement.classList.remove("dz-file-preview")
         var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]")
         for (var i = 0; i < images.length; i++) {
@@ -70,7 +70,75 @@
         )
       }
     }
-  }</script><!-- dropzone end --><div class="form__agreement"><label class="label-check">Я даю свое согласие на обработку моих данных <a href="#" class="linkin">Политики конфиденциальности</a> и соглашаюсь с положениями <input type="checkbox" name="agreement" id="agreement" value="yes"> <span class="checkmark"></span></label></div><input type="hidden" name="form_origin" value="Из контактной формы"> <input type="hidden" name="form_popup" value="st1"> <button type="submit" class="btn-primary form__submit-btn">Отправить</button></form></div><!-- модальное окно после отправки формы --><div class="graph-modal"><div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="m1"><button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button><div class="graph-modal__content"><h3>СПАСИБО!</h3><p>Мы приняли ваш запрос и уже взяли в работу.<br>Скоро свяжемся с вами.</p><button class="btn-reset btn-primary" onclick="location.href = '/';">на главную</button></div></div></div></section></div><section class="map"><div id="map" class="map__container"></div><script type="text/javascript">// [55.743801, 37.661500] - Солженицына
+  }</script><script>Dropzone.autoDiscover = false
+  if (document.getElementById("demo-upload2")) {
+    var dropzone = new Dropzone("#demo-upload2", {
+      previewTemplate: document.querySelector("#preview-template").innerHTML,
+      parallelUploads: 1,
+      thumbnailHeight: 80,
+      thumbnailWidth: 80,
+      maxFilesize: 3,
+      filesizeBase: 1000,
+      // previewTemplate: ``,
+      thumbnail: function (file, dataUrl) {
+        if (file.previewElement) {
+          console.log("preview", file.previewElement)
+          file.previewElement.classList.remove("dz-file-preview")
+          var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]")
+          for (var i = 0; i < images.length; i++) {
+            var thumbnailElement = images[i]
+            thumbnailElement.alt = file.name
+            thumbnailElement.src = dataUrl
+          }
+          setTimeout(function () {
+            file.previewElement.classList.add("dz-image-preview")
+          }, 1)
+        }
+      },
+    })
+
+    // Now fake the file upload, since GitHub does not handle file uploads
+    // and returns a 404
+
+    var minSteps = 6,
+      maxSteps = 60,
+      timeBetweenSteps = 100,
+      bytesPerStep = 100000
+
+    dropzone.uploadFiles = function (files) {
+      var self = this
+
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i]
+        totalSteps = Math.round(Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep)))
+
+        for (var step = 0; step < totalSteps; step++) {
+          var duration = timeBetweenSteps * (step + 1)
+          setTimeout(
+            (function (file, totalSteps, step) {
+              return function () {
+                file.upload = {
+                  progress: (100 * (step + 1)) / totalSteps,
+                  total: file.size,
+                  bytesSent: ((step + 1) * file.size) / totalSteps,
+                }
+
+                self.emit("uploadprogress", file, file.upload.progress, file.upload.bytesSent)
+                if (file.upload.progress == 100) {
+                  file.status = Dropzone.SUCCESS
+                  self.emit("success", file, "success", null)
+                  self.emit("complete", file)
+                  self.processQueue()
+                  //document.getElementsByClassName("dz-success-mark").style.opacity = "1";
+                }
+              }
+            })(file, totalSteps, step),
+            duration
+          )
+        }
+      }
+    }
+  }</script><!-- dropzone end --><div class="form__agreement"><label class="label-check">Я даю свое согласие на обработку моих данных <a href="#" class="linkin">Политики конфиденциальности</a> и соглашаюсь с положениями <input type="checkbox" name="agreement" id="agreement" value="yes"> <span class="checkmark"></span></label></div><input type="hidden" name="form_origin" value="Из контактной формы"> <input type="hidden" name="form_popup" value="st1"> <button type="submit" class="btn-primary form__submit-btn">Отправить</button></form></div><!-- модальное окно после отправки формы --><div class="graph-modal"><div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="m1"><button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button><div class="graph-modal__content"><h3>СПАСИБО!</h3><p>Мы ознакомимся с вашим предложением и свяжемся с вами в течение 1 недели.</p><button class="btn-reset btn-primary" onclick="location.href = '/';">на главную</button></div></div></div></section></div><section class="map"><div id="map" class="map__container"></div><script type="text/javascript">// [55.743801, 37.661500] - Солженицына
 // [55.906663, 38.136960] - Лосино-петровский
 
   let center = [55.824720, 37.873702]; // начальный центр карты при загрузке
