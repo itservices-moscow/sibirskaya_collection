@@ -11,36 +11,36 @@ im.mask(inputs)
 // console.log("im", inputs, im);
 
 const rules3 = [
-  {
-    ruleSelector: ".contact-fio",
-    rules: [
-      {
-        rule: "minLength",
-        value: 2,
-        errorMessage: "Имя должно быть не короче 2 символов",
-      },
-      {
-        rule: "required",
-        value: true,
-        errorMessage: "Заполните имя",
-      },
-    ],
-  },
-  {
-    ruleSelector: ".contact-email",
-    rules: [
-      {
-        rule: "email",
-        value: true,
-        errorMessage: "Введите корректный email",
-      },
-      {
-        rule: "required",
-        value: true,
-        errorMessage: "Заполните email",
-      },
-    ],
-  },
+  // {
+  //   ruleSelector: ".contact-fio",
+  //   rules: [
+  //     {
+  //       rule: "minLength",
+  //       value: 2,
+  //       errorMessage: "Имя должно быть не короче 2 символов",
+  //     },
+  //     {
+  //       rule: "required",
+  //       value: true,
+  //       errorMessage: "Заполните имя",
+  //     },
+  //   ],
+  // },
+  // {
+  //   ruleSelector: ".contact-email",
+  //   rules: [
+  //     {
+  //       rule: "email",
+  //       value: true,
+  //       errorMessage: "Введите корректный email",
+  //     },
+  //     {
+  //       rule: "required",
+  //       value: true,
+  //       errorMessage: "Заполните email",
+  //     },
+  //   ],
+  // },
   {
     ruleSelector: "#agreement", // чекбокс
     rules: [
@@ -50,18 +50,18 @@ const rules3 = [
       },
     ],
   },
-  {
-    ruleSelector: ".contact-tel",
-    tel: true,
-    telError: "Введите корректный телефон",
-    rules: [
-      {
-        rule: "required",
-        value: true,
-        errorMessage: "Заполните телефон",
-      },
-    ],
-  },
+  // {
+  //   ruleSelector: ".contact-tel",
+  //   tel: true,
+  //   telError: "Введите корректный телефон",
+  //   rules: [
+  //     {
+  //       rule: "required",
+  //       value: true,
+  //       errorMessage: "Заполните телефон",
+  //     },
+  //   ],
+  // },
 ]
 
 export const validateForms = (selector, rules, afterSend) => {
@@ -109,10 +109,11 @@ export const validateForms = (selector, rules, afterSend) => {
   validation.onSuccess((ev) => {
     console.log("[Верно заполнено, отправляем форму]", ev)
     // send
-
     let formData = new FormData(ev.target)
     console.log(...formData)
 
+    let popId = formData.get("form_popup")
+    console.log(popId)
     // let xhr = new XMLHttpRequest()
     // xhr.onreadystatechange = function () {
     //   if (xhr.readyState === 4) {
@@ -125,7 +126,7 @@ export const validateForms = (selector, rules, afterSend) => {
     // xhr.send(formData)
 
     // открыть модальное окно - перенести в запрос
-    modal.open("m1")
+    modal.open(popId)
 
     ev.target.reset()
   })
@@ -136,3 +137,4 @@ const afterForm = () => {
 }
 
 validateForms(".contactform", rules3, afterForm)
+validateForms(".startupsform", rules3, afterForm)

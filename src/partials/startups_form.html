@@ -10,13 +10,12 @@
     <div class="st-form__item st-form__item_2">
       <!-- форма обратной связи -->
       <div class="container">
-        <form action="#" class="form startupsform">
-          <input type="hidden" name="form_origin" value="Из контактной формы" />
+        <form class="form startupsform">
           <label for="name" class="form__label">
             <input
               type="text"
               name="startups-fio"
-              class="input-reset form__input startups-fio"
+              class="input-reset form__input contact-fio"
               value=""
               placeholder="Имя"
               data-validate-field="fio" />
@@ -25,7 +24,7 @@
             <input
               type="email"
               name="email"
-              class="input-reset form__input startups-email"
+              class="input-reset form__input contact-email"
               value=""
               placeholder="Почта"
               data-validate-field="email" />
@@ -34,7 +33,7 @@
             <input
               type="tel"
               name="tel"
-              class="input-reset form__input startups-tel"
+              class="input-reset form__input contact-tel"
               value=""
               placeholder="Телефон"
               data-validate-field="tel" />
@@ -43,7 +42,7 @@
             <input
               type="text"
               name="message"
-              class="input-reset form__input startups-message"
+              class="input-reset form__input contact-message"
               value=""
               placeholder="Сообщение"
               data-validate-field="message" />
@@ -70,7 +69,9 @@
               <span class="checkmark"></span>
             </label>
           </div>
-          <button type="submit" class="btn-primary form__submit-btn" data-graph-path="">Отправить</button>
+          <input type="hidden" name="form_origin" value="Из Стартапов" />
+          <input type="hidden" name="form_popup" value="st1" />
+          <button type="submit" class="btn-primary form__submit-btn">Отправить</button>
         </form>
       </div>
       <!-- модальное окно после отправки формы -->
@@ -79,11 +80,8 @@
           <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
           <div class="graph-modal__content">
             <h3>СПАСИБО!</h3>
-            <p>
-              Мы приняли ваш запрос и уже взяли в работу.<br />
-              Скоро свяжемся с вами.
-            </p>
-            <button class="btn-reset btn-primary">на главную</button>
+            <p>Мы ознакомимся с вашим предложением и свяжемся с вами в течение 1 недели.</p>
+            <button class="btn-reset btn-primary" onClick="location.href = '/';">на главную</button>
           </div>
         </div>
       </div>
