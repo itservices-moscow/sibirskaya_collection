@@ -1,20 +1,19 @@
 .startups > section {
   padding: 25px 55px 160px 55px;
   @include mobile {
-        padding: 25px 24px 160px 24px;
-      }
+    padding: 25px 24px 160px 24px;
+  }
 }
 
 section.back-black {
   position: absolute;
-  background-color: transparent;// var(--color-black);
+  background-color: transparent; // var(--color-black);
   padding: 16px 55px 10px 55px;
   z-index: 10;
   @include mobile {
     padding: 32px 24px 10px 24px;
   }
 }
-
 
 .st-head {
   position: relative;
@@ -40,7 +39,7 @@ section.back-black {
     left: 120px;
     text-align: center;
     @include mobile {
-      width:312px;
+      width: 312px;
       height: 312px;
       padding-top: 84px;
       border-radius: 163px;
@@ -50,7 +49,6 @@ section.back-black {
     p {
       color: var(--coffee-milk);
     }
-
   }
   &__action {
     width: 520px;
@@ -67,15 +65,13 @@ section.back-black {
       margin-bottom: 0;
     }
     p {
-      font-size: 22px!important;
+      font-size: 22px !important;
       @include mobile {
-        font-size: 18px!important;
+        font-size: 18px !important;
       }
     }
   }
 }
-
-
 
 .st-idea {
   color: var(--main-white);
@@ -86,10 +82,10 @@ section.back-black {
     height: 1750px;
   }
   > h1 {
-      color: var(--main-white);
-      text-align: center;
-      margin-top: 160px;
-    }
+    color: var(--main-white);
+    text-align: center;
+    margin-top: 160px;
+  }
 
   &_1 {
     top: 350px;
@@ -107,9 +103,9 @@ section.back-black {
     top: 1000px;
     left: 20vw;
     @include mobile {
-        top: 1200px;
-        left: 10vw;
-      }
+      top: 1200px;
+      left: 10vw;
+    }
   }
   &__circle {
     position: absolute;
@@ -123,9 +119,9 @@ section.back-black {
     width: 621px;
     height: 421px;
     h1 {
-        color: var(--main-bronze);
-        white-space: nowrap;
-      }
+      color: var(--main-bronze);
+      white-space: nowrap;
+    }
   }
   &__number {
     width: 25px;
@@ -137,9 +133,9 @@ section.back-black {
     display: flex;
     align-items: flex-end;
     @include mobile {
-        height: 142px;
-        margin: 0 8px 300px 44px;
-      }
+      height: 142px;
+      margin: 0 8px 300px 44px;
+    }
     &_2 {
       margin: -170px 0 300px 44px;
       @include mobile {
@@ -152,7 +148,7 @@ section.back-black {
     height: 150px;
     padding-top: 168px;
     @include mobile {
-        max-width: 300px;
+      max-width: 300px;
     }
     h1 {
       margin: 0;
@@ -184,7 +180,6 @@ section.back-black {
 }
 
 .st-keys {
-
   &__container {
     margin-top: 160px;
     grid-template-columns: repeat(2, 1fr);
@@ -217,17 +212,17 @@ section.back-black {
     }
     &_2 {
       @include mobile {
-          text-align: left;
-          margin-bottom: 64px;
-          order: 2;
-        }
+        text-align: left;
+        margin-bottom: 64px;
+        order: 2;
+      }
     }
     &_3 {
       @include mobile {
-          text-align: right;
-          margin-bottom: 24px;
-          order: 3;
-        }
+        text-align: right;
+        margin-bottom: 24px;
+        order: 3;
+      }
     }
     &_4 {
       text-align: right;
@@ -242,11 +237,11 @@ section.back-black {
       justify-self: right;
       text-align: right;
       @include mobile {
-          text-align: left;
-          justify-self: left;
-          margin-bottom: 24px;
-          order: 5;
-        }
+        text-align: left;
+        justify-self: left;
+        margin-bottom: 24px;
+        order: 5;
+      }
     }
     &_6 {
       @include mobile {
@@ -254,7 +249,6 @@ section.back-black {
         order: 6;
       }
     }
-
   }
 
   img {
@@ -263,43 +257,45 @@ section.back-black {
   &__btn {
     display: block;
     margin: 120px auto 32px auto;
-    width: 308px;
+    width: 329px;
+    @include mobile {
+      width: 100%;
+    }
   }
-
 }
 
 .st-form {
   &__container {
-      margin-top: 140px;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 160px 32px;
+    margin-top: 140px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 160px 32px;
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0;
+    }
+  }
+
+  &__item {
+    border-top: 1px solid var(--coffee-milk);
+    margin: 0 32px;
+    padding: 24px 0;
+    @include mobile {
+      margin: 0;
+    }
+    h1 {
+      margin: 0;
+      color: var(--main-bronze);
+    }
+    p {
+      font-size: 22px;
 
       @include mobile {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 0;
+        font-size: 18px;
       }
     }
-
-    &__item {
-      border-top: 1px solid var(--coffee-milk);
-      margin: 0 32px;
-      padding: 24px 0;
-      @include mobile {
-        margin: 0;
-      }
-      h1 {
-        margin: 0;
-        color: var(--main-bronze);
-      }
-      p {
-        font-size: 22px;
-
-        @include mobile {
-          font-size: 18px;
-        }
-      }
-      &_1 {
-        text-align: right;
-      }
+    &_1 {
+      text-align: right;
     }
+  }
 }
