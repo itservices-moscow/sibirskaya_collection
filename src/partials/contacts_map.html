@@ -1,83 +1,97 @@
-<div id="map" class="map__container">
-</div>
-
+<div id="map" class="map__container"></div>
 
 <script type="text/javascript">
+  // [55.743801, 37.661500] - Солженицына
+  // [55.906663, 38.136960] - Лосино-петровский
 
-// [55.743801, 37.661500] - Солженицына
-// [55.906663, 38.136960] - Лосино-петровский
-
-  let center = [55.824720, 37.873702]; // начальный центр карты при загрузке
+  let center = [55.82472, 37.873702] // начальный центр карты при загрузке
 
   function init() {
-    let map = new ymaps.Map('map', {
+    let map = new ymaps.Map("map", {
       center: center,
-      zoom: 9
-    });
+      zoom: 9,
+    })
 
     // пин Солженицына
-    let placemark1 = new ymaps.Placemark([55.743801, 37.661500], {
-      balloonContentHeader: '<h3 class="baloon__header">ЦЕНТРАЛЬНЫЙ<br>ОФИС</h3>',
-      balloonContentBody: ` <div class="baloon__address">РФ, 109004, г. Москва, ул. Александра Солженицына, 17с1</div>
+    let placemark1 = new ymaps.Placemark(
+      [55.743801, 37.6615],
+      {
+        balloonContentHeader: '<h3 class="baloon__header">ЦЕНТРАЛЬНЫЙ<br>ОФИС</h3>',
+        balloonContentBody: ` <div class="baloon__address">РФ, 109004, г. Москва, ул. Александра Солженицына, 17с1</div>
                             <span class="baloon__phone">+7 (495) 726-55-38</span>
           `,
-      balloonContentFooter: `<a href="mailto:info@shmpk.ru" class="baloon__email">info@shmpk.ru</a>
+        balloonContentFooter: `<a href="mailto:info@shmpk.ru" class="baloon__email">info@shmpk.ru</a>
           `,
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: '/img/svg/pin-default.svg',
-      iconImageSize: [38, 38],
-      iconImageOffset: [0, 0]
-    });
-
+      },
+      {
+        iconLayout: "default#image",
+        iconImageHref: "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg", // '/img/svg/pin-default.svg',
+        iconImageSize: [38, 38],
+        iconImageOffset: [0, 0],
+      }
+    )
 
     // пин Лосино-Петровский
-    let placemark2 = new ymaps.Placemark([55.906663, 38.136960], {
-      		balloonContentHeader: '<h3 class="baloon__header">ПРОИЗВОДСТВЕННАЯ<br>ПЛОЩАДКА</h3>',
-          balloonContentBody: ` <div class="baloon__address">РФ, 141140, МО, г. Лосино-Петровский, рабочий поселок Свердловский, ул. Центральная 1к1</div>
+    let placemark2 = new ymaps.Placemark(
+      [55.906663, 38.13696],
+      {
+        balloonContentHeader: '<h3 class="baloon__header">ПРОИЗВОДСТВЕННАЯ<br>ПЛОЩАДКА</h3>',
+        balloonContentBody: ` <div class="baloon__address">РФ, 141140, МО, г. Лосино-Петровский, рабочий поселок Свердловский, ул. Центральная 1к1</div>
           `,
-          balloonContentFooter: `<span class="baloon__phone">+7 (495) 933-80-71</span><br/><span class="baloon__time">10:00-19:00 (MSK)</span>
+        balloonContentFooter: `<span class="baloon__phone">+7 (495) 933-80-71</span><br/><span class="baloon__time">10:00-19:00 (MSK)</span>
           `,
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: '/img/svg/pin-default.svg',
-      iconImageSize: [38, 38],
-      iconImageOffset: [0, 0]
-    });
+      },
+      {
+        iconLayout: "default#image",
+        iconImageHref: "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg", // '/img/svg/pin-default.svg',
+        iconImageSize: [38, 38],
+        iconImageOffset: [0, 0],
+      }
+    )
 
     // отключение элементов управления (не рекомендуется)
-     map.controls.remove('geolocationControl'); // удаляем геолокацию
-     map.controls.remove('searchControl'); // удаляем поиск
-     map.controls.remove('trafficControl'); // удаляем контроль трафика
-     map.controls.remove('typeSelector'); // удаляем тип
-     map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-     map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-     // map.controls.remove('rulerControl'); // удаляем контрол правил
+    map.controls.remove("geolocationControl") // удаляем геолокацию
+    map.controls.remove("searchControl") // удаляем поиск
+    map.controls.remove("trafficControl") // удаляем контроль трафика
+    map.controls.remove("typeSelector") // удаляем тип
+    map.controls.remove("fullscreenControl") // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove("zoomControl") // удаляем контрол зуммирования
+    // map.controls.remove('rulerControl'); // удаляем контрол правил
     // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 
     // добавляем метки на карту
-    map.geoObjects.add(placemark1);
-    map.geoObjects.add(placemark2);
-
+    map.geoObjects.add(placemark1)
+    map.geoObjects.add(placemark2)
 
     // события для смены иконки при наведении мыши
-    placemark1.events.add('mouseenter', function (e) {
-      e.get('target').options.set('iconImageHref', 'https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-over.svg');
-    })
-      .add('mouseleave', function (e) {
-        e.get('target').options.set('iconImageHref', 'https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg');
-      });
+    placemark1.events
+      .add("mouseenter", function (e) {
+        e.get("target").options.set(
+          "iconImageHref",
+          "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-over.svg"
+        )
+      })
+      .add("mouseleave", function (e) {
+        e.get("target").options.set(
+          "iconImageHref",
+          "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg"
+        )
+      })
 
-    placemark2.events.add('mouseenter', function (e) {
-      e.get('target').options.set('iconImageHref', 'https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-over.svg');
-    })
-      .add('mouseleave', function (e) {
-        e.get('target').options.set('iconImageHref', 'https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg');
-      });
-
+    placemark2.events
+      .add("mouseenter", function (e) {
+        e.get("target").options.set(
+          "iconImageHref",
+          "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-over.svg"
+        )
+      })
+      .add("mouseleave", function (e) {
+        e.get("target").options.set(
+          "iconImageHref",
+          "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg"
+        )
+      })
   }
 
-  ymaps.ready(init);
-
-
+  ymaps.ready(init)
 </script>

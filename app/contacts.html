@@ -139,76 +139,95 @@
       }
     }
   }</script><!-- dropzone end --><div class="form__agreement"><label class="label-check">Я даю свое согласие на обработку моих данных <a href="#" class="linkin">Политики конфиденциальности</a> и соглашаюсь с положениями <input type="checkbox" name="agreement" id="agreement" value="yes"> <span class="checkmark"></span></label></div><input type="hidden" name="form_origin" value="Из контактной формы"> <input type="hidden" name="form_popup" value="cmodal1"> <button type="submit" class="btn-primary form__submit-btn">Отправить</button></form></div><!-- модальное окно после отправки формы --><div class="graph-modal"><div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="cmodal1"><button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button><div class="graph-modal__content"><h3>СПАСИБО!</h3><p>Мы ознакомимся с вашим предложением и свяжемся с вами в течение 1 недели.</p><button class="btn-reset btn-primary" onclick="location.href = '/';">на главную</button></div></div></div></section></div><section class="map"><div id="map" class="map__container"></div><script type="text/javascript">// [55.743801, 37.661500] - Солженицына
-// [55.906663, 38.136960] - Лосино-петровский
+  // [55.906663, 38.136960] - Лосино-петровский
 
-  let center = [55.824720, 37.873702]; // начальный центр карты при загрузке
+  let center = [55.82472, 37.873702] // начальный центр карты при загрузке
 
   function init() {
-    let map = new ymaps.Map('map', {
+    let map = new ymaps.Map("map", {
       center: center,
-      zoom: 9
-    });
+      zoom: 9,
+    })
 
     // пин Солженицына
-    let placemark1 = new ymaps.Placemark([55.743801, 37.661500], {
-      balloonContentHeader: '<h3 class="baloon__header">ЦЕНТРАЛЬНЫЙ<br>ОФИС</h3>',
-      balloonContentBody: ` <div class="baloon__address">РФ, 109004, г. Москва, ул. Александра Солженицына, 17с1</div>
+    let placemark1 = new ymaps.Placemark(
+      [55.743801, 37.6615],
+      {
+        balloonContentHeader: '<h3 class="baloon__header">ЦЕНТРАЛЬНЫЙ<br>ОФИС</h3>',
+        balloonContentBody: ` <div class="baloon__address">РФ, 109004, г. Москва, ул. Александра Солженицына, 17с1</div>
                             <span class="baloon__phone">+7 (495) 726-55-38</span>
           `,
-      balloonContentFooter: `<a href="mailto:info@shmpk.ru" class="baloon__email">info@shmpk.ru</a>
+        balloonContentFooter: `<a href="mailto:info@shmpk.ru" class="baloon__email">info@shmpk.ru</a>
           `,
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: '/img/svg/pin-default.svg',
-      iconImageSize: [38, 38],
-      iconImageOffset: [0, 0]
-    });
-
+      },
+      {
+        iconLayout: "default#image",
+        iconImageHref: "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg", // '/img/svg/pin-default.svg',
+        iconImageSize: [38, 38],
+        iconImageOffset: [0, 0],
+      }
+    )
 
     // пин Лосино-Петровский
-    let placemark2 = new ymaps.Placemark([55.906663, 38.136960], {
-      		balloonContentHeader: '<h3 class="baloon__header">ПРОИЗВОДСТВЕННАЯ<br>ПЛОЩАДКА</h3>',
-          balloonContentBody: ` <div class="baloon__address">РФ, 141140, МО, г. Лосино-Петровский, рабочий поселок Свердловский, ул. Центральная 1к1</div>
+    let placemark2 = new ymaps.Placemark(
+      [55.906663, 38.13696],
+      {
+        balloonContentHeader: '<h3 class="baloon__header">ПРОИЗВОДСТВЕННАЯ<br>ПЛОЩАДКА</h3>',
+        balloonContentBody: ` <div class="baloon__address">РФ, 141140, МО, г. Лосино-Петровский, рабочий поселок Свердловский, ул. Центральная 1к1</div>
           `,
-          balloonContentFooter: `<span class="baloon__phone">+7 (495) 933-80-71</span><br/><span class="baloon__time">10:00-19:00 (MSK)</span>
+        balloonContentFooter: `<span class="baloon__phone">+7 (495) 933-80-71</span><br/><span class="baloon__time">10:00-19:00 (MSK)</span>
           `,
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: '/img/svg/pin-default.svg',
-      iconImageSize: [38, 38],
-      iconImageOffset: [0, 0]
-    });
+      },
+      {
+        iconLayout: "default#image",
+        iconImageHref: "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg", // '/img/svg/pin-default.svg',
+        iconImageSize: [38, 38],
+        iconImageOffset: [0, 0],
+      }
+    )
 
     // отключение элементов управления (не рекомендуется)
-     map.controls.remove('geolocationControl'); // удаляем геолокацию
-     map.controls.remove('searchControl'); // удаляем поиск
-     map.controls.remove('trafficControl'); // удаляем контроль трафика
-     map.controls.remove('typeSelector'); // удаляем тип
-     map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-     map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-     // map.controls.remove('rulerControl'); // удаляем контрол правил
+    map.controls.remove("geolocationControl") // удаляем геолокацию
+    map.controls.remove("searchControl") // удаляем поиск
+    map.controls.remove("trafficControl") // удаляем контроль трафика
+    map.controls.remove("typeSelector") // удаляем тип
+    map.controls.remove("fullscreenControl") // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove("zoomControl") // удаляем контрол зуммирования
+    // map.controls.remove('rulerControl'); // удаляем контрол правил
     // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 
     // добавляем метки на карту
-    map.geoObjects.add(placemark1);
-    map.geoObjects.add(placemark2);
-
+    map.geoObjects.add(placemark1)
+    map.geoObjects.add(placemark2)
 
     // события для смены иконки при наведении мыши
-    placemark1.events.add('mouseenter', function (e) {
-      e.get('target').options.set('iconImageHref', 'https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-over.svg');
-    })
-      .add('mouseleave', function (e) {
-        e.get('target').options.set('iconImageHref', 'https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg');
-      });
+    placemark1.events
+      .add("mouseenter", function (e) {
+        e.get("target").options.set(
+          "iconImageHref",
+          "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-over.svg"
+        )
+      })
+      .add("mouseleave", function (e) {
+        e.get("target").options.set(
+          "iconImageHref",
+          "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg"
+        )
+      })
 
-    placemark2.events.add('mouseenter', function (e) {
-      e.get('target').options.set('iconImageHref', 'https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-over.svg');
-    })
-      .add('mouseleave', function (e) {
-        e.get('target').options.set('iconImageHref', 'https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg');
-      });
-
+    placemark2.events
+      .add("mouseenter", function (e) {
+        e.get("target").options.set(
+          "iconImageHref",
+          "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-over.svg"
+        )
+      })
+      .add("mouseleave", function (e) {
+        e.get("target").options.set(
+          "iconImageHref",
+          "https://itservices-moscow.github.io/sibirskaya_collection/app/img/svg/pin-default.svg"
+        )
+      })
   }
 
-  ymaps.ready(init);</script></section></main><footer class="footer"><div class="container flex footer__container footer__t"><nav class="footer_nav" title="Нижнее меню"><div class="navf"><div class="navf__item"><div class="accordion">Производство</div><div class="panel"><ul class="list-reset navf-sub"><li class="navf-sub__item"><a href="quality.html" class="navf-sub__link">Контроль качества</a></li><li class="navf-sub__item"><a href="laboratories.html" class="navf-sub__link">Собственные лаборатории</a></li><li class="navf-sub__item"><a href="creating-products.html" class="navf-sub__link">Разработка новых продуктов</a></li><li class="navf-sub__item"><a href="#" class="navf-sub__link">Карьера</a></li></ul></div></div><div class="navf__item"><div class="accordion">Продукт</div><div class="panel"><ul class="list-reset navf-sub"><li class="navf-sub__item"><a href="brands-sk.html" class="navf-sub__link">Sибирская коллекция</a></li><li class="navf-sub__item"><a href="brands-sk-selective.html" class="navf-sub__link">SK Selective</a></li><li class="navf-sub__item"><a href="brands-sk-selective-kids.html" class="navf-sub__link">SK Selective kids</a></li></ul></div></div><div class="navf__item"><div class="empty"><a href="new.html">Новинки</a></div></div><div class="navf__item"><div class="empty"><a href="startups.html">Стартапы</a></div></div><div class="navf__item"><div class="empty"><a href="contacts.html">Контакты</a></div></div></div></nav><div class="footer_center flex"><img class="f-logo" src="img/svg/sk-logo-main.svg" alt=""> <a href="#" class="youtube-link desktop"><img src="img/youtube-logo.png" alt=""></a></div><div class="footer_info"><p>ЦЕНТРАЛЬНЫЙ ОФИС<br><span class="phone">+7 495 726-55-38</span><br><span><a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a></span></p><p>ПРОИЗВОДСТВО<br><span class="phone">+7 495 933-80-71</span><br><span><a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a></span></p><p>ОТДЕЛ КАЧЕСТВА<br><span class="phone">8-800-250-18-80</span> <span class="rf">Звонок по РФ бесплатный</span> <span class="email"><a href="mailto:shmpk-kachestvo@shmpk.ru" class="email">shmpk-kachestvo@shmpk.ru</a></span></p></div><a href="#" class="youtube-link mobile"><img src="img/youtube-logo.png" alt=""></a></div><div class="container flex footer__container footer__b"><a href="#" class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a> <a href="#">Политика конфиденциальности</a> <a href="#">Правила пользования сайтом</a> <a href="#">Пользовательское соглашение</a> <a href="#" class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a></div></footer></div></body></html>
+  ymaps.ready(init)</script></section></main><footer class="footer"><div class="container flex footer__container footer__t"><nav class="footer_nav" title="Нижнее меню"><div class="navf"><div class="navf__item"><div class="accordion">Производство</div><div class="panel"><ul class="list-reset navf-sub"><li class="navf-sub__item"><a href="quality.html" class="navf-sub__link">Контроль качества</a></li><li class="navf-sub__item"><a href="laboratories.html" class="navf-sub__link">Собственные лаборатории</a></li><li class="navf-sub__item"><a href="creating-products.html" class="navf-sub__link">Разработка новых продуктов</a></li><li class="navf-sub__item"><a href="#" class="navf-sub__link">Карьера</a></li></ul></div></div><div class="navf__item"><div class="accordion">Продукт</div><div class="panel"><ul class="list-reset navf-sub"><li class="navf-sub__item"><a href="brands-sk.html" class="navf-sub__link">Sибирская коллекция</a></li><li class="navf-sub__item"><a href="brands-sk-selective.html" class="navf-sub__link">SK Selective</a></li><li class="navf-sub__item"><a href="brands-sk-selective-kids.html" class="navf-sub__link">SK Selective kids</a></li></ul></div></div><div class="navf__item"><div class="empty"><a href="new.html">Новинки</a></div></div><div class="navf__item"><div class="empty"><a href="startups.html">Стартапы</a></div></div><div class="navf__item"><div class="empty"><a href="contacts.html">Контакты</a></div></div></div></nav><div class="footer_center flex"><img class="f-logo" src="img/svg/sk-logo-main.svg" alt=""> <a href="#" class="youtube-link desktop"><img src="img/youtube-logo.png" alt=""></a></div><div class="footer_info"><p>ЦЕНТРАЛЬНЫЙ ОФИС<br><span class="phone">+7 495 726-55-38</span><br><span><a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a></span></p><p>ПРОИЗВОДСТВО<br><span class="phone">+7 495 933-80-71</span><br><span><a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a></span></p><p>ОТДЕЛ КАЧЕСТВА<br><span class="phone">8-800-250-18-80</span> <span class="rf">Звонок по РФ бесплатный</span> <span class="email"><a href="mailto:shmpk-kachestvo@shmpk.ru" class="email">shmpk-kachestvo@shmpk.ru</a></span></p></div><a href="#" class="youtube-link mobile"><img src="img/youtube-logo.png" alt=""></a></div><div class="container flex footer__container footer__b"><a href="#" class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a> <a href="#">Политика конфиденциальности</a> <a href="#">Правила пользования сайтом</a> <a href="#">Пользовательское соглашение</a> <a href="#" class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a></div></footer></div></body></html>
