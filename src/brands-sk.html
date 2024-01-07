@@ -23,8 +23,46 @@
             </div>
           </div>
         </section>
-      </main>
+        <section>
+          <style>
+            .pachka-container {
+              /*transform: scale(0.5) translate(-40%, -50%);*/
+            }
 
+            #pachka-box {
+              width: 1000px;
+              height: 1000px;
+              /*background-color: yellowgreen;*/
+              display: block;
+              background-image: url("/img/sprites/doi_sprite_1000.png");
+              animation: pachka 2.7s steps(35) infinite;
+            }
+
+            .animated2 {
+            }
+            .pachka-img {
+            }
+
+            @keyframes pachka {
+              100% {
+                background-position: -35000px;
+              }
+            }
+          </style>
+          <div class="pachka-container">
+            <div id="pachka-box"></div>
+          </div>
+          <script>
+            // const element = document.querySelector(".view360__icon")
+            // element.addEventListener("mouseover", function () {
+            //   document.querySelector("#pachka-box").classList.add("animated2")
+            // })
+            // element.addEventListener("mouseover", function () {
+            //   document.querySelector("#pachka-box").classList.remove("animated2")
+            // })
+          </script>
+        </section>
+      </main>
       @include('partials/footer.html')
     </div>
   </body>
