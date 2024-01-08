@@ -1,16 +1,12 @@
 .highlights {
   position: relative;
-  background-color: var(--color-black);
-  background-image: url($rootpath + "img/mainpic-3d.png");
-  background-repeat: no-repeat;
-  background-position: top center;
+  // background-color: var(--color-black);
+  background-color: rgba(13, 13, 13, 0.3);
   color: var(--light-gray);
   z-index: 10;
   padding: 0 55px;
-  // overflow: visible;
   padding-top: 300px;
   @include mobile {
-    background-size: 70%;
     padding: 0 24px;
     padding-top: 400px;
   }
@@ -18,7 +14,6 @@
   &__cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto auto;
-    // justify-content: space-between;
     @include mobile {
       grid-template-columns: 100%;
     }
@@ -82,24 +77,6 @@
         background-position: 0% 0%;
       }
     }
-  }
-}
-
-.sticky-wrapper {
-  height: 1200px;
-  overflow: visible;
-  background-color: gray;
-}
-.pachka {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 150px;
-  overflow: visible;
-  border: 1px dashed orange;
-  img {
-    width: 250px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 

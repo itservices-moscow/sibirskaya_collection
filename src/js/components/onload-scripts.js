@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // ПОКАЗАТЬ СЛОЙ С ХЛЕБОМ НА ГЛАВНОЙ
   window.addEventListener("scroll", function () {
     let scrollPosition = document.documentElement.scrollTop
+    console.log("[scroll]", scrollPosition) //document.querySelector("#highlights").getBoundingClientRect()
     if (document.querySelector(".extra-bg")) {
       let extraPosY = Math.round(document.querySelector(".extra").getBoundingClientRect().top)
-      //console.log('display extra', scrollPosition);
       if (scrollPosition > 3200 && scrollPosition < 6600) {
         document.querySelector(".extra-bg").style.display = "block"
       } else {
