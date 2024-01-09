@@ -10,40 +10,46 @@
   box-shadow: 0px -35px 40px 0px rgba(13, 13, 13, 0.8);
 }
 .sticky {
-  top: 122px;
+  top: 88px;
   position: sticky;
   position: -webkit-sticky;
   //border: 1px dashed orange;
 }
-
-#stretcher-pachka {
-  width: 1px;
-  height: 2000px;
+.pachka {
+  display: flex;
+  margin: 0;
+  //padding-top: 10px !important;
+  width: 100%;
+  justify-content: space-between;
+  overflow: visible;
 }
 
 #pachka-box {
-  transform: scale(0.6) translateY(-40%);
-  //border: 1px dashed red;
-  @include mobile {
-    transform: scale(0.6) translateY(-40%);
-  }
-  width: 1000px;
+  // background-color: yellowgreen;
+  width: 750px;
   height: 1000px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   background-image: url($rootpath + "/img/sprites/doi_sprite_1000.png");
   background-repeat: repeat-x;
-  animation: pachka steps(35);
-  animation-timeline: scroll();
+  background-size: 27000px 750px;
+  // animation: pachka steps(35);
+  // animation-timeline: scroll();
+  @include mobile {
+    transform-origin: top center;
+    transform: scale(0.6);
+    // margin-left: 0;
+    // margin-right: 0;
+  }
 }
 
 @keyframes pachka {
   0% {
-    background-position: 0px 40px;
+    background-position: 0px 0px;
   }
   100% {
     //background-position: -17500px;
-    background-position: -35000px 40px;
+    background-position: -35000px 0px;
   }
 }
