@@ -1,8 +1,6 @@
-
-
 .filter.active {
-    width: 100%;
-    left: 0!important;
+  width: 100%;
+  left: 0 !important;
 }
 
 .filter {
@@ -29,16 +27,16 @@
     background-color: var(--color-black);
     color: var(--main-white);
     padding: 10px 24px;
-
   }
-    .icon-close {
-      min-width: 20px;
-      width: 20px;
-      height: 20px;
-    }
+  .icon-close {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+  }
   &__title {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 8px;
     color: var(--dark-bronze);
   }
 
@@ -53,11 +51,10 @@
   color: var(--main-bronze);
   text-decoration: underline;
   margin: 16px 5px;
-
 }
 
 .btn-filter {
-
+  border: 1px solid rgba(192, 179, 168, 0.5);
   &__item {
     margin-bottom: 6px;
     text-align: left;
@@ -66,22 +63,23 @@
 
   &__item > .accordion {
     cursor: pointer;
-    height: 49px;
+    height: 48px;
     width: 100%;
     max-width: 280px;
     display: block;
-    padding: 12px 24px;
+    padding: 6px 24px;
     text-align: left;
     color: var(--main-black);
     background-color: transparent;
-    border: 1px solid var(--coffee-milk);
+    border: 1px solid rgba(192, 179, 168, 0.5);
     border-radius: 50px;
     transition: 0.3s ease;
-      @include hover {
-        color: var(--main-white);
-        background-color: var(--main-bronze);
-        cursor: pointer;
-      }
+    @include hover {
+      color: var(--main-white);
+      background-color: var(--main-bronze);
+      border: 1px solid var(--main-bronze);
+      cursor: pointer;
+    }
     transition: 0.4s;
   }
 
@@ -96,6 +94,8 @@
 
   &__item > .accordion:hover:after {
     color: var(--main-white);
+    //stroke: #fff;
+    //content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='18' viewBox='0 0 20 18' fill='none'%3E%3Cpath d='M1 4.5L10 13.5L19 4.5' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
 
   &__item .empty {
@@ -103,10 +103,9 @@
     transition: 0.3s;
   }
 
-
   /* Style the accordion panel. Note: hidden by default */
   &__item > .panel {
-    margin: 0 32px ;
+    margin: 0 32px;
     color: var(--main-black);
     max-height: 0;
 
@@ -126,10 +125,7 @@
     color: var(--main-white);
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='18' viewBox='0 0 20 18' fill='none'%3E%3Cpath d='M1 13.5L10 4.5L19 13.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
-
 }
-
-
 
 .filter2nd {
   &__btn {
@@ -144,17 +140,14 @@
     font-size: 14px;
     line-height: 17px;
     border-bottom: 1px solid var(--main-bronze);
-    &:after {
-        padding-top: 2px;
-        padding-left: 12px;
-        float: right;
-        content: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9.125L7 3.125L13 9.125' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      }
+    // &:after {
+    //     padding-top: 2px;
+    //     padding-left: 12px;
+    //     float: right;
+    //     content: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9.125L7 3.125L13 9.125' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    //   }
   }
 
-
-
   &__panel {
-
   }
 }

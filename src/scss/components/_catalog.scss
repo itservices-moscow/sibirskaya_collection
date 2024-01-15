@@ -4,15 +4,13 @@ main.catalog {
 }
 
 span.icon-filter {
- cursor: pointer;
+  cursor: pointer;
 }
 
 div.icon-filter {
   text-align: right;
   margin: 0 24px;
 }
-
-
 
 section.buffer {
   height: var(--header-height);
@@ -21,13 +19,12 @@ section.buffer {
 section.catalog {
   padding-bottom: 40px;
   @include mobile {
-
   }
 }
 
 .catalog {
   &__container {
-    margin: 40px 55px 0 55px;
+    margin: 60px 55px 0 55px;
     grid-template-columns: 280px calc(100% - 344px);
     gap: 0 64px;
     min-width: 1000px;
@@ -37,8 +34,6 @@ section.catalog {
       gap: 0;
       min-width: 300px;
     }
-
-
   }
   &__left {
     // background-color:aquamarine;
@@ -58,7 +53,6 @@ section.catalog {
         grid-template-columns: 100% 1fr;
       }
     }
-
   }
 }
 
@@ -75,13 +69,14 @@ section.catalog {
   &__pic {
     width: 100%;
     text-align: center;
+    padding: 24px 10px 32px 10px;
     background-color: var(--bg-goods);
     transition: 0.4s ease-in-out;
     &:hover {
-        background-color: var(--main-beige);
-        cursor: pointer;
-        transition: 0.4s;
-      }
+      background-color: var(--main-beige);
+      cursor: pointer;
+      transition: 0.4s;
+    }
     img {
       transform: scale(1);
       transition: 0.4s;
@@ -89,7 +84,7 @@ section.catalog {
         transform: scale(0.85);
       }
     }
-    }
+  }
   &__tags {
     display: flex;
     align-items: flex-start;
@@ -101,8 +96,8 @@ section.catalog {
       padding: 8px 10px;
       font-size: 14px;
       @include mobile {
-          width: 100%;
-        }
+        width: 100%;
+      }
     }
     @include mobile {
       flex-direction: column;
@@ -114,6 +109,11 @@ section.catalog {
   }
   &__tag {
     background-color: var(--main-beige);
+    .vert {
+      color: var(--coffee-milk);
+      font-size: 14px;
+      padding: 6px;
+    }
   }
   &__type {
     font-size: 18px;
@@ -154,4 +154,3 @@ section.catalog {
     cursor: pointer;
   }
 }
-
