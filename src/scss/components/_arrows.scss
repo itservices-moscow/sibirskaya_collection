@@ -1,4 +1,3 @@
-
 .arr-right-on > a {
   vertical-align: middle;
 }
@@ -9,11 +8,11 @@
   color: var(--main-bronze);
 }
 
-.arr-right-on>a .arr svg {
+.arr-right-on > a .arr svg {
   width: 23px;
 }
 
-.arr-right-on>a:hover .arr * {
+.arr-right-on > a:hover .arr * {
   -webkit-transform: translate(8px, 0);
   -ms-transform: translate(8px 0);
   transform: translate(8px 0);
@@ -49,7 +48,6 @@
 
 // Animated Arrow Button
 
-
 $text-arrow-space: 6px;
 $shaft-width: 1px;
 $newshaft-width: 54px;
@@ -62,61 +60,59 @@ $arrow-head-thickness: $shaft-thickness;
   transition: all 0.2s;
 
   &.-left {
-      top: 5px;
-      position: absolute;
-      >.shaft {
-        width: $shaft-width;
-        transition-delay: 0.2s;
-
-        &:before,
-        &:after {
-          width: $arrow-head-width;
-          transition-delay: 0.3s;
-          transition: all 0.5s;
-        }
-
-        &:before {
-          transform: rotate(40deg);
-        }
-
-        &:after {
-          transform: rotate(-40deg);
-        }
-      }
-    }
-
-    >.shaft {
-      display: block;
-      height: $shaft-thickness;
-      background-color: var(--main-bronze);
-      position: relative;
-      transition: all 0.2s;
-      transition-delay: 0;
-      will-change: transform;
+    top: 5px;
+    position: absolute;
+    > .shaft {
+      width: $shaft-width;
+      transition-delay: 0.2s;
 
       &:before,
       &:after {
-        background-color: var(--main-bronze);
-        // content: '';
-        display: block;
-        height: $arrow-head-thickness;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transition: all 0.2s;
-        transition-delay: 0;
+        width: $arrow-head-width;
+        transition-delay: 0.3s;
+        transition: all 0.5s;
       }
 
       &:before {
-        transform-origin: top right;
+        transform: rotate(40deg);
       }
 
       &:after {
-        transform-origin: bottom right;
+        transform: rotate(-40deg);
       }
     }
+  }
 
+  > .shaft {
+    display: block;
+    height: $shaft-thickness;
+    background-color: var(--main-bronze);
+    position: relative;
+    transition: all 0.2s;
+    transition-delay: 0;
+    will-change: transform;
 
+    &:before,
+    &:after {
+      background-color: var(--main-bronze);
+      // content: '';
+      display: block;
+      height: $arrow-head-thickness;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 0.2s;
+      transition-delay: 0;
+    }
+
+    &:before {
+      transform-origin: top right;
+    }
+
+    &:after {
+      transform-origin: bottom right;
+    }
+  }
 }
 
 .arr-left {
@@ -126,15 +122,15 @@ $arrow-head-thickness: $shaft-thickness;
 }
 .arr-right {
   img {
-      margin-left: 24px;
-    }
-
+    margin-left: 24px;
+  }
 }
 
 .arr-left-on {
   text-align: right;
 }
-.arr-left-on, .arr-right-on {
+.arr-left-on,
+.arr-right-on {
   z-index: 10;
   vertical-align: middle;
 }
@@ -155,44 +151,4 @@ $arrow-head-thickness: $shaft-thickness;
 .arr-right-on:hover svg.icon path {
   transition: 0.3s;
   d: path("m25.7154,14.47366l7.3846,-6.97472m0,0l-7.3846,-7.02528m7.41129,7.05197l-32.12669,-0.02669");
-}
-
-
-.icon-back-white svg.icon path {
-  stroke: #fff;
-}
-
-.icon-back svg.icon path {
-  // stroke: #C0B3A8;
-  transition: 0.2s;
-}
-
-.icon-back:hover svg.icon path {
-  transition: 0.3s;
-}
-
-.icon-back:hover svg.icon path.cir {
-  stroke: #886A44;
-}
-
-.icon-back-white:hover svg.icon path.cir {
-  stroke: #fff;
-}
-
-.icon-back svg path.arr,
-.icon-back-white svg path.arr {
-  transition: 0.2s transform;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
-.icon-back:hover svg path.arr {
-  transition: 0.3s;
-  stroke: #886A44;
-  transform: translate(-7px, 0);
-}
-.icon-back-white:hover svg path.arr {
-  transition: 0.3s;
-  stroke: #fff;
-  transform: translate(-7px, 0);
 }
