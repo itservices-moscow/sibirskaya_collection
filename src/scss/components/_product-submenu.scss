@@ -1,7 +1,7 @@
 .submenu {
   &__container {
-      margin-bottom: 64px;
-      overflow: hidden;
+    margin-bottom: 64px;
+    overflow: hidden;
   }
   &__list {
     justify-content: space-between;
@@ -16,7 +16,6 @@
       -webkit-overflow-scrolling: touch;
       padding-bottom: 20px;
       margin-bottom: -20px;
-
     }
   }
 }
@@ -25,8 +24,8 @@
   position: relative;
   margin-right: 40px;
   @include mobile {
-      // max-width: calc(100vw - 48px);
-    }
+    // max-width: calc(100vw - 48px);
+  }
   &__flex {
     align-items: center;
   }
@@ -35,7 +34,7 @@
     white-space: nowrap;
     font-size: 22px;
     margin: 0;
-    color: var(--medium-gray);
+    color: #838383;
     text-transform: uppercase;
   }
   &__number {
@@ -60,11 +59,9 @@
     margin-top: 48px;
     display: none;
   }
-
 }
 
 .subitem_active {
-
   .subitem {
     &__name {
       color: var(--main-black);
@@ -73,7 +70,6 @@
       @include mobile {
         margin: 28px 14px 8px 14px;
       }
-
     }
 
     &__number {
@@ -97,6 +93,5 @@
     &__forward {
       display: inline-block;
     }
-
   }
 }
