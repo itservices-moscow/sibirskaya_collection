@@ -12,16 +12,15 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: var(--dark-bronze);
-        cursor: pointer;
-      }
+      background-color: #82603e; //var(--dark-bronze);
+      cursor: pointer;
+    }
 
     &:disabled {
       background-color: var(--light-gray);
       color: var(--main-black);
       cursor: default;
     }
-
   }
 
   &-secondary {
@@ -42,8 +41,6 @@
         stroke: #fff;
       }
     }
-
-
 
     &:disabled {
       background-color: transparent;
@@ -79,7 +76,6 @@
     //   border: 1px solid var(--medium-gray);
     //   cursor: default;
     // }
-
   }
 
   &-filter.selected {
@@ -87,5 +83,4 @@
     background-color: var(--main-bronze);
     border: 1px solid var(--main-bronze);
   }
-
 }

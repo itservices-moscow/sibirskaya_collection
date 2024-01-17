@@ -67,7 +67,7 @@
     width: 100%;
     max-width: 280px;
     display: block;
-    padding: 6px 24px;
+    padding: 12px 24px 8px 24px;
     text-align: left;
     color: var(--main-black);
     background-color: transparent;
@@ -94,8 +94,7 @@
 
   &__item > .accordion:hover:after {
     color: var(--main-white);
-    //stroke: #fff;
-    //content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='18' viewBox='0 0 20 18' fill='none'%3E%3Cpath d='M1 4.5L10 13.5L19 4.5' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='18' viewBox='0 0 20 18' fill='none'%3E%3Cpath d='M1 4.5L10 13.5L19 4.5' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
 
   &__item .empty {
@@ -121,7 +120,10 @@
   }
 
   &__item > .active:after {
-    padding-top: 2px;
+    color: var(--main-white);
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='18' viewBox='0 0 20 18' fill='none'%3E%3Cpath d='M1 13.5L10 4.5L19 13.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+  &__item > .active:hover:after {
     color: var(--main-white);
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='18' viewBox='0 0 20 18' fill='none'%3E%3Cpath d='M1 13.5L10 4.5L19 13.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
@@ -135,19 +137,16 @@
     text-transform: uppercase;
     display: block;
     width: 100%;
-    padding: 16px 0 5px 0;
+    padding: 5px 0 5px 0;
     text-align: left;
     font-size: 14px;
     line-height: 17px;
-    border-bottom: 1px solid var(--main-bronze);
-    // &:after {
-    //     padding-top: 2px;
-    //     padding-left: 12px;
-    //     float: right;
-    //     content: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9.125L7 3.125L13 9.125' stroke='%23A3784E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    //   }
+    border-bottom: 1px solid rgba(204, 161, 107, 0.4);
   }
 
   &__panel {
+  }
+  &-top {
+    margin-top: 10px;
   }
 }
