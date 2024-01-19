@@ -7,22 +7,29 @@
       @include('partials/header.html')
 
       <main class="creating">
-        @include('partials/buffer_top.html') @include('partials/arrowback.html')
-        <h1 class="heading">Отдел разработки новых продуктов</h1>
+        <div class="creating__title">
+          @include('partials/buffer_top.html')
+          @include('partials/arrowback.html')
+          <h1 class="heading">Отдел разработки новых продуктов</h1>
+        </div>
         <div class="container creating__container grid">
           <section class="creating__creating">
-            <div>
+            <div class="creating__item creating__item-1">
+              <img src="img/creating-icon-1-2x.png" width="36" />
               <h2>3 месяца</h2>
               <p>средний срок разработки нового продукта</p>
-              <p><img src="img/creating-icon-1-2x.png" width="36" /></p>
+            </div>
 
+            <div class="creating__item creating__item-2">
+              <img src="img/creating-icon-2-2x.png" width="36" />
               <h2>6 этапов</h2>
               <p>анализа проходит каждая идея перед появлением на полке</p>
-              <p><img src="img/creating-icon-2-2x.png" width="36" /></p>
+            </div>
 
+            <div class="creating__item creating__item-3">
+              <img src="img/creating-icon-3-2x.png" width="36" />
               <h2>Без ГМО</h2>
               <p>Используем только лучшие ингредиенты</p>
-              <p><img src="img/creating-icon-3-2x.png" width="36" /></p>
             </div>
           </section>
           <section class="creating__form">

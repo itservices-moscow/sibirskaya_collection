@@ -1,4 +1,14 @@
 .creating {
+  $sticky-offset: 260px;
+
+  @include desktop {
+    &__title {
+      position: sticky;
+      top: 0;
+      z-index: 9;
+      background: var(--main-beige);
+    }
+  }
 
   &__container {
     margin: 40px 55px 100px 55px;
@@ -18,13 +28,41 @@
   }
 
   &__creating {
-    max-width: 500px;
+    max-width: 422px;
+    @include desktop {
+      padding-bottom: 600px;
+    }
+  }
+
+  &__item {
+    height: 240px;
+    background: var(--main-beige);
+    border-top: 1px solid rgba(192, 179, 168, 0.30);
+    padding: 24px 16px;
+    img {
+      margin-bottom: 16px;
+    }
+    h2 {
+      color: var(--dark-bronze);
+      margin: 0 0 4px;
+    }
+    p {
+      margin: 0;
+    }
+    @include desktop {
+      --sticky-height: 240px;
+      position: sticky;
+      top: $sticky-offset;
+      @include folding-blocks(3);
+    }
   }
 
   &__form {
+    position: sticky;
+    top: $sticky-offset;
     background-color: var(--main-white);
     max-width: 500px;
-
+    align-self: start;
     .container {
       padding: 32px;
       h3 {
@@ -33,18 +71,3 @@
     }
   }
 }
-
-// div.creating {
-//   border-top: 1px solid var(--coffee-milk);
-//   padding: 32px 24px;
-//   gap: 38px;
-//   align-items: top;
-
-//   h3 {
-//     margin: 0;
-//   }
-
-//   p {
-//     margin: 0;
-//   }
-// }
