@@ -21,7 +21,9 @@
   &__header {
     cursor: pointer;
     span {
-      padding: 12px;
+      display: flex;
+      padding: 0 12px;
+      justify-content: space-between;
     }
   }
   &__mass {
@@ -42,9 +44,7 @@
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='18' viewBox='0 0 20 18' fill='none'%3E%3Cpath d='M1 4.5L10 13.5L19 4.5' stroke='%23C0B3A8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     width: 20px;
     height: 18px;
-    margin: 0;
-    margin-right: 12px;
-    float: right;
+    align-self: center;
   }
 
   & > .accordion:hover > span:after {

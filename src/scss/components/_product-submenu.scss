@@ -24,7 +24,8 @@
   position: relative;
   margin-right: 40px;
   @include mobile {
-    // max-width: calc(100vw - 48px);
+    max-width: calc(100vw - 48px);
+    margin-left: -4px;
   }
   &__flex {
     align-items: center;
@@ -45,6 +46,10 @@
     height: 30px;
     font-size: 22px;
     font-family: "IntroDemoCondLightCAPS";
+    @include mobile {
+      left: 8px;
+      top: 10px;
+    }
   }
   &__note {
     display: none;
@@ -53,11 +58,17 @@
     width: 20px;
     margin-top: 48px;
     display: none;
+    @include mobile {
+      margin-top: 94px;
+    }
   }
   &__forward {
     width: 20px;
     margin-top: 48px;
     display: none;
+    @include mobile {
+      margin-top: 94px;
+    }
   }
 }
 
@@ -68,7 +79,10 @@
       font-size: 42px;
       margin: 28px 24px 8px 24px;
       @include mobile {
-        margin: 28px 14px 8px 14px;
+        font-size: 42px;
+        margin: 28px 0 8px 12px;
+        max-width: 255px;
+        overflow: visible;
       }
     }
 
@@ -84,6 +98,9 @@
       margin: 0;
       font-size: 14px;
       display: block;
+      @include mobile {
+        margin: -18px 0 0 18px;
+      }
     }
 
     &__back {

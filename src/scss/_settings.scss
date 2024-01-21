@@ -80,6 +80,11 @@ h1.heading {
     display: none !important;
   }
 }
+.smallscreen {
+  @include smallscreen-plus {
+    display: none !important;
+  }
+}
 
 .desktop {
   @include mobile {
@@ -132,6 +137,11 @@ span.tel {
 
 p {
   margin: 12px 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.18px;
 }
 
 .site-container {

@@ -6,7 +6,8 @@
 }
 
 @mixin desktop {
-  @media (min-width: (1280px)) { /* and (max-width: (1440px)) */
+  @media (min-width: (1280px)) {
+    /* and (max-width: (1440px)) */
     @content;
   }
 }
@@ -28,3 +29,8 @@
 //     @content;
 //   }
 // }
+@mixin smallscreen-plus {
+  @media (min-width: (550px)) {
+    @content;
+  }
+}
