@@ -126,13 +126,11 @@ $arrow-head-thickness: $shaft-thickness;
   }
 }
 
-.arr-left-on {
-  text-align: right;
-}
 .arr-left-on,
 .arr-right-on {
+  display: inline-flex;
+  text-align: right;
   z-index: 10;
-  vertical-align: middle;
 }
 
 .arr-left-on svg.icon path {
