@@ -34,9 +34,9 @@ section.quality {
 
 .accordionQ {
   // --accordion-time: 0.3s;
-  --sticky-height: 68px;
+  --header-height: 68px;
   @include mobile {
-    --sticky-height: 44px;
+    --header-height: 44px;
   }
   position: sticky;
   top: $sticky-offset;
@@ -111,7 +111,7 @@ section.quality {
   flex-shrink: 0;
   font-family: "IntroDemoCondLightCAPS";
   font-size: 22px;
-  line-height: var(--sticky-height);
+  line-height: var(--header-height);
   text-align: center;
   // transition: transform var(--accordion-time) ease-out;
 }

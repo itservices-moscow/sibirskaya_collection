@@ -81,9 +81,9 @@ section.labs {
 .accordionL1,
 .accordionL2 {
   // --accordion-time: 0.3s;
-  --sticky-height: 56px;
+  --header-height: 56px;
   @include mobile {
-    --sticky-height: 44px;
+    --header-height: 44px;
   }
   position: sticky;
   top: var(--sticky-offset);
@@ -107,7 +107,7 @@ section.labs {
 .accordionL1__control,
 .accordionL2__control {
   display: flex;
-  height: var(--sticky-height);
+  height: var(--header-height);
   cursor: pointer;
   align-items: center;
 }
@@ -132,7 +132,7 @@ section.labs {
   flex-shrink: 0;
   font-family: "IntroDemoCondLightCAPS";
   font-size: 22px;
-  line-height: var(--sticky-height);
+  line-height: var(--header-height);
   text-align: center;
   // transition: transform var(--accordion-time) ease-out;
 }

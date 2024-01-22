@@ -348,14 +348,24 @@
     return document.querySelector(element).getBoundingClientRect().y
   }
 
+  document.documentElement.scrollTop = 0;
+
   const sections = document.querySelectorAll(".accordionQ");
   const bullets = document.querySelectorAll(".pagination__bullet");
+  const offset = sections[0].offsetTop;
+  const breakpoints = Array.prototype.map.call(sections, (el) => el.offsetTop - offset);
   let currentSection = 0;
 
+  sections.forEach((el, index) => {
+    const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
+    el.addEventListener("click", scrollToSection);
+    bullets[index].addEventListener("click", scrollToSection);
+  });
+
   window.addEventListener("scroll", function () {
-    for (let index = 0; sections[index]; index++) {
-      let el = sections[index];
-      if (!sections[index + 1] || el.offsetTop != sections[index + 1].offsetTop) {
+    breakpoints.forEach((breakpoint, index) => {
+      if (window.scrollY >= breakpoint
+      && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
         if (index != currentSection) {
           bullets[currentSection].classList.remove("current");
           bullets[index].classList.add("current");
@@ -363,10 +373,8 @@
         }
         return;
       }
-    }
+    });
   });
   </script>
-
 </body>
-
 </html>

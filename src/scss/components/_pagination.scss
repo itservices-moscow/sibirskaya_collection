@@ -12,6 +12,7 @@
     height: 10px;
     border-radius: 50%;
     background: var(--coffee-milk);
+    cursor: pointer;
     margin-bottom: 12px;
     @include mobile {
       margin-bottom: 16px;
