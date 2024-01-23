@@ -1,22 +1,13 @@
-// fetch("https://reqbin.com/echo/get/json", {
-//   method: "GET",
-//   headers: {
-//     Accept: "application/json",
-//   },
-// })
-//   .then((response) => response.json())
-//   .then((response) => console.log(JSON.stringify(response)))
-
 const loadMore = (test, test2, more_minmore) => {
-  const requestURL = "catalog-test-2.json"
+  const requestURL = "catalog-test-1.json"
 
   console.log(test, more_minmore)
-
+  //https://www.npmjs.com/package/html-to-json-parser - использован этот конвертер для json
   fetch(requestURL)
     .then((response) => response.json())
     .then((data) => {
       if (data.status == "success") {
-        console.log("[data]", data)
+        console.log("[data]", JSON.stringify(data.result))
 
         document.getElementById("goodsblock").innerHTML += data.result
         if (Number(data.nextCount) < more_minmore) {
@@ -28,28 +19,30 @@ const loadMore = (test, test2, more_minmore) => {
     })
 }
 
-const loadProducts = (id, val) => {
-  console.log("[loadProducts]", id, val)
+const loadProducts = (id, val, more_minmore) => {
+  const requestURL = "catalog-test-3.json"
+  //https://www.npmjs.com/package/html-to-json-parser - использован этот конвертер для json
+  fetch(requestURL)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.status == "success") {
+        console.log("[data]", JSON.stringify(data.result))
+
+        document.getElementById("goodsblock").innerHTML = data.result
+        if (Number(data.nextCount) < more_minmore) {
+          document.getElementById("loadmore").style.visibility = "hidden"
+        } else {
+          document.getElementById("loadmore").style.visibility = "visible"
+        }
+      } else {
+        console.log("[status]", data.status)
+      }
+    })
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
   const filterButtonsBrands = document?.querySelectorAll('[data-filter-function="brands"]')
   console.log("brands", filterButtonsBrands)
-
-  filterButtonsBrands.forEach((element) => {
-    const id = element.getAttribute("data-filter-id")
-    const val = element.getAttribute("data-filter-value")
-    element.addEventListener("click", function (e) {
-      e.target.classList.toggle("selected")
-      //fetch here
-      loadProducts(id, val)
-    })
-    // if (id === "all") {
-    //   element.addEventListener("click", function (ev) {
-    //     //document.getElementById("").classList.remove("topmenu_show")
-    //   })
-    // }
-  })
 
   const filterSelectAllBtns = document?.querySelectorAll('[data-filter-function="selectall"]')
 
@@ -60,10 +53,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   const filterClearAll = document?.querySelector('[data-filter-function="clearall"]')
 
+  filterButtonsBrands.forEach((element) => {
+    const id = element.getAttribute("data-filter-id")
+    const val = element.getAttribute("data-filter-value")
+    element.addEventListener("click", function (e) {
+      filterButtonsBrands.forEach((element) => {
+        element.classList.remove("selected")
+        element.setAttribute("data-filter-value", "none")
+      })
+      e.target.classList.toggle("selected")
+      e.target.setAttribute("data-filter-value", "selected")
+
+      //fetch here
+      loadProducts(id, val, more_minmore)
+    })
+  })
+
   filterShowMoreBtn.addEventListener("click", function (e) {
     //fetch
-    //data-filter-group
-    //data-filter-lastid
     loadMore(more_group, more_lastid, more_minmore)
   })
   filterClearAll.addEventListener("click", function (e) {

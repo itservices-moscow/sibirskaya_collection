@@ -1,5 +1,5 @@
   {
   "status":"success",
   "nextCount":"18",
-  "result":"html блоков для списка"
+  "result":"<div id=\"para\">\n  <p>\n    Paragraph 1\n  </p>\n  <p>\n    Paragraph 2\n  </p>\n</div>"
 }
