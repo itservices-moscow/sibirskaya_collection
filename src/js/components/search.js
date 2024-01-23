@@ -7,11 +7,11 @@ const suggestError = document.createElement("div");
 suggestError.className = "searchsuggest-error";
 suggestError.textContent = "К сожалению, по вашему запросу ничего не нашлось. Попробуйте использовать другие ключевые слова";
 
-const backdrop = document.querySelector(".topmenu-mobile__backdrop");
-
-document.querySelectorAll(".searchbox, .searchbox-mob").forEach((el) => {
+document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
   const suggestWrapper = el.querySelector(".searchsuggest");
   const searchInput = el.querySelector("input");
+  const backdrop = el.querySelector(".topmenu-mobile__backdrop");
+  const closeButton = el.querySelector(".topmenu-mobile__close");
 
   const handleInput = debounce(() => {
     if (!searchInput.value)
@@ -27,27 +27,39 @@ document.querySelectorAll(".searchbox, .searchbox-mob").forEach((el) => {
         if (suggests.length) {
           suggests.forEach((item) => {
             const suggestItem = suggestWrapper.appendChild(suggestItemBase.cloneNode());
-            suggestItem.textContent = item.title;
+            suggestItem.innerHTML = item.title.replace(
+              searchInput.value,
+              "<span class='searchsuggest-highlight'>$&</span>"
+            );
           });
         } else {
           suggestWrapper.appendChild(suggestError);
         }
-        backdrop.style.visibility = "visible";
+        if (backdrop) backdrop.style.visibility = "visible";
       }
     });
   }, 500);
 
+  const resetSearch = () => {
+    suggestWrapper.textContent = "";
+    if (backdrop) backdrop.style.visibility = "hidden";
+  }
+
   searchInput.addEventListener("input", () => {
-    if (searchInput.value) {
-      handleInput();
-    } else {
-      suggestWrapper.textContent = "";
-      backdrop.style.visibility = "hidden";
-    }
+    if (searchInput.value) handleInput();
+    else resetSearch();
   });
 
   suggestWrapper.addEventListener("click", (event) => {
-    if (event.target.classList.contains("searchsuggest-item"))
+    if (event.target.classList.contains("searchsuggest-item")) {
       searchInput.value = event.target.textContent;
+      searchInput.form.submit();
+    }
   });
+
+  if (closeButton)
+    closeButton.addEventListener("click", () => {
+      searchInput.value = "";
+      resetSearch();
+    });
 });
