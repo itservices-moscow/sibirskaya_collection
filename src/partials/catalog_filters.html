@@ -1,12 +1,18 @@
 <div class="filter__title">Бренд</div>
-<button class="btn-filter">Sибирская коллекция</button>
-<button class="btn-filter">SK Selective</button>
-<button class="btn-filter">SK Selective Kids</button>
+<button class="btn-filter" data-filter-function="brands" data-filter-id="sk" data-filter-value="selected">
+  Sибирская коллекция
+</button>
+<button class="btn-filter" data-filter-function="brands" data-filter-id="sk-sel" data-filter-value="none">
+  SK Selective
+</button>
+<button class="btn-filter" data-filter-function="brands" data-filter-id="sk-sel-kids" data-filter-value="none">
+  SK Selective Kids
+</button>
 
 <div class="filter__buffer"></div>
 
 <div class="filter__title">Категория</div>
-<button class="btn-filter">Выбрать все</button>
+<button class="btn-filter" data-filter-function="selectall" data-filter-group="all">Выбрать все</button>
 <!-- добавить автовыбор всех категорий !!! -->
 <!-- внутренняя секция 1 уровень категории -->
 <div class="btn-filter__item">
@@ -21,7 +27,14 @@
         <div>
           <label class="label-check"
             >Выбрать все
-            <input type="checkbox" id="p1" name="pelmeni-premium" value="All" checked />
+            <input
+              type="checkbox"
+              id="p1"
+              name="pelmeni-premium"
+              value="All"
+              checked
+              data-filter-function="selectall"
+              data-filter-group="pelmeni-premium" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -77,7 +90,14 @@
         <div>
           <label class="label-check"
             >Выбрать все
-            <input type="checkbox" id="p1" name="pelmeni-classic" value="All" checked />
+            <input
+              type="checkbox"
+              id="p1"
+              name="pelmeni-classic"
+              value="All"
+              checked
+              data-filter-function="selectall"
+              data-filter-group="pelmeni-classic" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -118,11 +138,49 @@
 <div class="btn-filter__item">
   <button class="accordion">Вареники</button>
   <div class="panel">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.
-    </p>
+    <!-- внутренняя секция 2 уровень чекбоксы -->
+    <div class="filter2nd">
+      <button class="btn-reset filter2nd__btn">вареники</button>
+      <div class="filter2nd__panel">
+        <br />
+        <div>
+          <label class="label-check"
+            >Выбрать все
+            <input
+              type="checkbox"
+              id=""
+              name="vareniki1"
+              value="All"
+              checked
+              data-filter-function="selectall"
+              data-filter-group="vareniki1" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С один
+            <input type="checkbox" id="" name="vareniki1" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С два
+            <input type="checkbox" id="" name="vareniki1" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С три
+            <input type="checkbox" id="" name="vareniki1" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
   </div>
 </div>
 

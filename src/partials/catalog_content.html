@@ -1,4 +1,4 @@
-<div class="goods grid">
+<div class="goods grid" id="goodsblock">
   <div class="goods__item">
     <div class="goods__pic">
       <a href="product-pelmeni-1.html"><img src="img/image78.png" /></a>
@@ -146,6 +146,14 @@
 <div class="goods goods-more grid">
   <div class="goods__item goods__item-btnmore desktop"></div>
   <div class="goods__item goods__item-btnmore">
-    <button class="btn-reset btn-primary w-100">показать ещё</button>
+    <button
+      class="btn-reset btn-primary w-100"
+      id="loadmore"
+      data-filter-function="loadmore"
+      data-filter-group="all"
+      data-filter-lastid="333"
+      data-filter-minmore="12">
+      показать ещё
+    </button>
   </div>
 </div>

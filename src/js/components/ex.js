@@ -1,4 +1,3 @@
-//onClick="this.classList.toggle('selected');"
 const addToggleClass = (selector, t_class) => {
   const elements = document.querySelectorAll(selector)
   elements.forEach(function (elem) {
@@ -8,4 +7,4 @@ const addToggleClass = (selector, t_class) => {
   })
 }
 
-setTimeout(addToggleClass(".btn-filter", "selected"), 1000)
+//addToggleClass(".btn-filter", "selected")

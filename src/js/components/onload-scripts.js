@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 
-    console.log("[scroll]", scrollPosition, document.querySelector(".sticky-wrapper").getBoundingClientRect())
+    // console.log("[scroll]", scrollPosition, document.querySelector(".sticky-wrapper").getBoundingClientRect())
 
     if (document.querySelector(".sticky-wrapper")) {
       if (scrollPosition > 1876 && scrollPosition < 4676) {
@@ -86,30 +86,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document.getElementById("searchicon").addEventListener("click", (e) => {
     document.getElementById("searchbox").classList.toggle("active")
   })
-  // document.getElementById('searchicon').addEventListener('click', (e) => {
-  //   e.stopPropagation();
-  // })
 })
-
-// +52
-// { highlights
-//     "x": 0,
-//     "y": 2664,
-//     "width": 1519.2000732421875,
-//     "height": 1646.875,
-//     "top": 2664,
-//     "right": 1519.2000732421875,
-//     "bottom": 4310.875,
-//     "left": 0
-// }
-
-// { s-w
-//     "x": 0,
-//     "y": 1664,
-//     "width": 1519.2000732421875,
-//     "height": 2900,
-//     "top": 1664,
-//     "right": 1519.2000732421875,
-//     "bottom": 4564,
-//     "left": 0
-// }
