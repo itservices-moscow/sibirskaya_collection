@@ -1,4 +1,3 @@
-$sticky-offset: 260px;
 $section-height: 440px;
 
 .quality__title {
@@ -8,6 +7,7 @@ $section-height: 440px;
 }
 
 section.quality {
+  --sticky-offset: 260px;
   max-width: 1100px;
   margin: -$section-height auto $section-height;
   .content {
@@ -23,9 +23,6 @@ section.quality {
       padding-left: 24px;
     }
   }
-  .pagination {
-    top: $sticky-offset;
-  }
 }
 
 
@@ -39,7 +36,7 @@ section.quality {
     --header-height: 44px;
   }
   position: sticky;
-  top: $sticky-offset;
+  top: var(--sticky-offset);
   height: $section-height;
   background: var(--main-beige);
   border-top: 1px solid var(--coffee-milk);

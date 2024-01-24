@@ -16,8 +16,7 @@
       </div>
 
       <section class="labs">
-        <h1 class="title01 bronze">Физико-химическая</h1>
-<!--         <div class="labs__content"> -->
+        <h1 class="bronze">Физико-химическая</h1>
           <div class="accordionL1 accordionL1-1">
             <div class="pagination-track" id="pagination1">
               <div class="pagination">
@@ -69,11 +68,11 @@
               </div>
             </div>
           </div>
-<!--         </div> -->
 
         <div class="labs__section">
-          <h1 class="title02 bronze">Микро-биологическая</h1>
-<!--         <div class="labs__content"> -->
+          <div class="labs__heading">
+            <h1 class="bronze">Микро-биологическая</h1>
+          </div>
 
           <div class="accordionL2 accordionL2-1">
             <div class="pagination-track" id="pagination2">
@@ -237,24 +236,42 @@
     // });
     // accordion5.open();
 
+    const labsP = document.querySelector(".labs__title p");
+
     function onResize() {
-      document.querySelectorAll("section.labs h1").forEach(el => {
-        el.style.top = document.querySelector(".labs__title p").getBoundingClientRect().bottom + "px";
-      })
+      document.querySelector("main.labs").style.setProperty(
+        "--heading-offset",
+        labsP.offsetTop + labsP.offsetHeight + "px"
+      );
     }
+
+    document.documentElement.scrollTop = 0;
 
     onResize();
     window.addEventListener("resize", onResize);
 
-    document.querySelectorAll(".pagination").forEach((el, index) => {
-      const sections = document.querySelectorAll(`.accordionL${index+1}`);
+    document.querySelectorAll(".pagination").forEach((el, i) => {
+      const sectionName = `.accordionL${i + 1}`;
+      const sections = document.querySelectorAll(sectionName);
       const bullets = el.querySelectorAll(".pagination__bullet");
+      const firstOffset = sections[0].offsetTop;
+      const parentOffset = sections[0].parentNode.offsetTop;
+      const breakpoints = Array.prototype.map.call(
+        sections,
+        (el) => el.offsetTop - firstOffset + parentOffset
+      );
       let currentSection = 0;
 
+      sections.forEach((el, index) => {
+        const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
+        el.querySelector(`${sectionName}__control`).addEventListener("click", scrollToSection);
+        bullets[index].addEventListener("click", scrollToSection);
+      });
+
       window.addEventListener("scroll", function () {
-        for (let index = 0; sections[index]; index++) {
-          let el = sections[index];
-          if (!sections[index + 1] || el.offsetTop != sections[index + 1].offsetTop) {
+        breakpoints.forEach((breakpoint, index) => {
+          if (window.scrollY >= breakpoint
+          && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
             if (index != currentSection) {
               bullets[currentSection].classList.remove("current");
               bullets[index].classList.add("current");
@@ -262,10 +279,9 @@
             }
             return;
           }
-        }
+        });
       });
     });
   </script>
 </body>
-
 </html>

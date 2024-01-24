@@ -41,10 +41,10 @@ section.labs {
   margin-top: -$section-height;
   // grid-template-columns: auto 760px;
   // gap: 145px;
-  @include mobile {
+  // @include mobile {
     // grid-template-columns: 100%;
     // gap: 48px;
-  }
+  // }
   .pagination-track {
     background: var(--main-beige);
     padding-left: 28px;
@@ -54,11 +54,12 @@ section.labs {
   }
   h1 {
     position: sticky;
+    top: var(--heading-offset);
     max-width: 423px;
     font-size: 65px;
     line-height: normal;
     @include desktop {
-      float: left;
+      margin: 0;
     }
     @include mobile {
       font-size: 29px;
@@ -72,7 +73,17 @@ section.labs {
     position: relative;
     background: linear-gradient(to bottom, transparent, var(--main-beige) $gradient-height);
     padding-top: $gradient-height;
-    margin-bottom: 120px;
+  }
+  &__heading {
+    @include desktop {
+      position: absolute;
+      top: $gradient-height;
+      bottom: var(--heading-offset);
+    }
+    @include mobile {
+      position: sticky;
+      top: var(--heading-offset);
+    }
   }
 }
 
@@ -100,7 +111,7 @@ section.labs {
 }
 
 .accordionL2 {
-  z-index: 99;
+  z-index: 19;
   @include folding-blocks(2);
 }
 

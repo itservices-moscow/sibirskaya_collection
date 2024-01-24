@@ -350,15 +350,16 @@
 
   document.documentElement.scrollTop = 0;
 
-  const sections = document.querySelectorAll(".accordionQ");
+  const sectionName = ".accordionQ";
+  const sections = document.querySelectorAll(sectionName);
   const bullets = document.querySelectorAll(".pagination__bullet");
-  const offset = sections[0].offsetTop;
-  const breakpoints = Array.prototype.map.call(sections, (el) => el.offsetTop - offset);
+  const firstOffset = sections[0].offsetTop;
+  const breakpoints = Array.prototype.map.call(sections, (el) => el.offsetTop - firstOffset);
   let currentSection = 0;
 
   sections.forEach((el, index) => {
     const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
-    el.addEventListener("click", scrollToSection);
+    el.querySelector(`${sectionName}__control`).addEventListener("click", scrollToSection);
     bullets[index].addEventListener("click", scrollToSection);
   });
 
