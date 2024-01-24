@@ -13,13 +13,11 @@
 
 <div class="filter__title">Категория</div>
 <button class="btn-filter" data-filter-function="selectall" data-filter-group="all">Выбрать все</button>
-<!-- добавить автовыбор всех категорий !!! -->
 <!-- внутренняя секция 1 уровень категории -->
 <div class="btn-filter__item">
   <button class="accordion">Пельмени</button>
   <div class="panel">
-    <!-- внутренняя секция 2 уровень чекбоксы accordion panel -->
-    <!-- внутренняя секция должна быть развернута по умолчанию-->
+    <!-- внутренняя секция 2 уровень чекбоксы  -->
     <div class="filter2nd filter2nd-top">
       <button class="btn-reset filter2nd__btn">Премиум</button>
       <div class="filter2nd__panel">
@@ -33,7 +31,7 @@
               name="pelmeni-premium"
               value="All"
               checked
-              data-filter-function="selectall"
+              data-filter-function="selectall_cb"
               data-filter-group="pelmeni-premium" />
             <span class="checkmark"></span>
           </label>
@@ -96,7 +94,7 @@
               name="pelmeni-classic"
               value="All"
               checked
-              data-filter-function="selectall"
+              data-filter-function="selectall_cb"
               data-filter-group="pelmeni-classic" />
             <span class="checkmark"></span>
           </label>
@@ -152,7 +150,7 @@
               name="vareniki1"
               value="All"
               checked
-              data-filter-function="selectall"
+              data-filter-function="selectall_cb"
               data-filter-group="vareniki1" />
             <span class="checkmark"></span>
           </label>

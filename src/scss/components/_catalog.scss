@@ -57,7 +57,8 @@ section.scrollup > div > img {
       grid-template-columns: repeat(3, 1fr);
       gap: 32px 16px;
       @include mobile {
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: calc(50% - 8px) calc(50% - 8px);
       }
     }
     .goods-more {
@@ -73,7 +74,7 @@ section.scrollup > div > img {
 .goods {
   &__item {
     width: 308px;
-    max-height: 414px;
+    max-height: 484px;
     min-height: 200px;
     @include mobile {
       width: 100%;
