@@ -131,14 +131,17 @@
 }
 
 .searchsuggest {
-  position: absolute;
-  top: 100%;
   width: 100%;
   max-width: 327px;
   background: #FFF;
-  z-index: 9;
+  margin: 0 auto;
+  visibility: hidden;
+  .search-active & {
+    visibility: visible;
+  }
   @include desktop {
-    margin-top: 8px;
+    position: absolute;
+    top: 100%;
   }
 }
 

@@ -10,13 +10,9 @@ suggestError.textContent = "К сожалению, по вашему запро�
 document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
   const suggestWrapper = el.querySelector(".searchsuggest");
   const searchInput = el.querySelector("input");
-  const backdrop = el.querySelector(".topmenu-mobile__backdrop");
   const closeButton = el.querySelector(".topmenu-mobile__close");
 
   const showSuggest = debounce(() => {
-    if (!searchInput.value)
-      return;
-
     fetch("search-suggest.json")
     .then(response => response.json())
     .then(data => {
@@ -28,28 +24,23 @@ document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
           suggests.forEach((item) => {
             const suggestItem = suggestWrapper.appendChild(suggestItemBase.cloneNode());
             suggestItem.innerHTML = item.title.replace(
-              searchInput.value,
+              new RegExp(searchInput.value, "i"),
               "<span class='searchsuggest-highlight'>$&</span>"
             );
           });
         } else {
           suggestWrapper.appendChild(suggestError);
         }
-        if (backdrop) backdrop.style.visibility = "visible";
       }
     });
   }, 500);
 
   const hideSuggest = () => {
-    suggestWrapper.textContent = "";
-    if (backdrop) backdrop.style.visibility = "hidden";
+    el.classList.remove("search-active");
   }
 
-  searchInput.addEventListener("input", () => {
-    if (searchInput.value) showSuggest();
-    else hideSuggest();
-  });
-
+  searchInput.addEventListener("input", showSuggest);
+  searchInput.addEventListener("focus", () => { el.classList.add("search-active"); })
   searchInput.addEventListener("blur", () => { setTimeout(hideSuggest, 100); });
 
   suggestWrapper.addEventListener("click", (event) => {
@@ -60,5 +51,8 @@ document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
   });
 
   if (closeButton)
-    closeButton.addEventListener("click", () => { searchInput.value = ""; });
+    closeButton.addEventListener("click", () => {
+      searchInput.value = "";
+      suggestWrapper.textContent = "";
+    });
 });
