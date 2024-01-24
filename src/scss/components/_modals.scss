@@ -1,0 +1,44 @@
+.graph-modal {
+  &__container {
+    text-align: center;
+    width: 630px;
+    height: 265px;
+    padding: 24px;
+    border-radius: 0;
+    @include mobile {
+      width: calc(100vw - 48px);
+      max-width: 390px;
+      margin: 24px;
+      // transform: translateY(-190%);
+    }
+  }
+  &__close {
+    top: 24px;
+    right: 24px;
+    width: 15px;
+    height: 15px;
+  }
+  &__content button {
+    margin-top: 24px;
+    width: 308px;
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.graph-modal.is-open {
+  @include mobile {
+    //bottom: 20vh;
+    top: auto;
+    padding-top: 200%;
+    padding-bottom: 30%;
+  }
+}
+
+#stform2 .graph-modal__container {
+  height: 630px;
+  @include mobile {
+    height: 700px;
+  }
+}

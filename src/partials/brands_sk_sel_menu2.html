@@ -1,0 +1,26 @@
+<ul class="list-reset brandmenu desktop">
+  <li><a class="brandmenu__link active" href="#">пельмени</a></li>
+  <!-- onclick - для демонстрации прелоада, можно стирать -->
+  <li onclick="document.getElementById('view360').classList.toggle('loading');"><a class="brandmenu__link">сырники</a>
+  </li>
+  <li onclick="document.getElementById('view360').classList.toggle('loading');"><a class="brandmenu__link">блины</a>
+  </li>
+
+
+
+</ul>
+<div class="menu-container mobile">
+  <ul class="list-reset brandmenu accordion">
+    <li><a class="brandmenu__link active">пельмени</a></li>
+  </ul>
+
+  <div class="panel">
+    <ul class="list-reset brandmenu">
+      <li onclick="document.getElementById('view360').classList.toggle('loading');"><a
+          class="brandmenu__link">сырники</a>
+      </li>
+      <li onclick="document.getElementById('view360').classList.toggle('loading');"><a class="brandmenu__link">блины</a>
+      </li>
+    </ul>
+  </div>
+</div>

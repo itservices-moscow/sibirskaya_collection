@@ -1,0 +1,221 @@
+<div class="filter__title">Бренд</div>
+<button class="btn-filter" data-filter-function="brands" data-filter-id="sk" data-filter-value="selected">
+  Sибирская коллекция
+</button>
+<button class="btn-filter" data-filter-function="brands" data-filter-id="sk-sel" data-filter-value="none">
+  SK Selective
+</button>
+<button class="btn-filter" data-filter-function="brands" data-filter-id="sk-sel-kids" data-filter-value="none">
+  SK Selective Kids
+</button>
+
+<div class="filter__buffer"></div>
+
+<div class="filter__title">Категория</div>
+<button class="btn-filter" data-filter-function="selectall" data-filter-group="all">Выбрать все</button>
+<!-- внутренняя секция 1 уровень категории -->
+<div class="btn-filter__item">
+  <button class="accordion">Пельмени</button>
+  <div class="panel">
+    <!-- внутренняя секция 2 уровень чекбоксы  -->
+    <div class="filter2nd filter2nd-top">
+      <button class="btn-reset filter2nd__btn">Премиум</button>
+      <div class="filter2nd__panel">
+        <br />
+        <div>
+          <label class="label-check"
+            >Выбрать все
+            <input
+              type="checkbox"
+              id="p1"
+              name="pelmeni-premium"
+              value="All"
+              checked
+              data-filter-function="selectall_cb"
+              data-filter-group="pelmeni-premium" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С телятиной
+            <input type="checkbox" id="" name="pelmeni-premium" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С индейкой
+            <input type="checkbox" id="" name="pelmeni-premium" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С курицей
+            <input type="checkbox" id="" name="pelmeni-premium" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >4 вида мяса
+            <input type="checkbox" id="" name="pelmeni-premium" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >Халяль
+            <input type="checkbox" id="" name="pelmeni-premium" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >Эксклюзив
+            <input type="checkbox" id="" name="pelmeni-premium" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- внутренняя секция 2 уровень чекбоксы -->
+    <div class="filter2nd">
+      <button class="btn-reset filter2nd__btn">Классика</button>
+      <div class="filter2nd__panel">
+        <br />
+        <div>
+          <label class="label-check"
+            >Выбрать все
+            <input
+              type="checkbox"
+              id="p1"
+              name="pelmeni-classic"
+              value="All"
+              checked
+              data-filter-function="selectall_cb"
+              data-filter-group="pelmeni-classic" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С говядиной
+            <input type="checkbox" id="" name="pelmeni-classic" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С индейкой
+            <input type="checkbox" id="" name="pelmeni-classic" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С курицей
+            <input type="checkbox" id="" name="pelmeni-classic" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >4 вида мяса
+            <input type="checkbox" id="" name="pelmeni-classic" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+  </div>
+</div>
+
+<div class="btn-filter__item">
+  <button class="accordion">Вареники</button>
+  <div class="panel">
+    <!-- внутренняя секция 2 уровень чекбоксы -->
+    <div class="filter2nd">
+      <button class="btn-reset filter2nd__btn">вареники</button>
+      <div class="filter2nd__panel">
+        <br />
+        <div>
+          <label class="label-check"
+            >Выбрать все
+            <input
+              type="checkbox"
+              id=""
+              name="vareniki1"
+              value="All"
+              checked
+              data-filter-function="selectall_cb"
+              data-filter-group="vareniki1" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С один
+            <input type="checkbox" id="" name="vareniki1" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С два
+            <input type="checkbox" id="" name="vareniki1" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div>
+          <label class="label-check"
+            >С три
+            <input type="checkbox" id="" name="vareniki1" value="" checked />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+  </div>
+</div>
+
+<div class="btn-filter__item">
+  <button class="accordion">Блины</button>
+  <div class="panel">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </p>
+  </div>
+</div>
+
+<div class="btn-filter__item">
+  <button class="accordion">Котлеты</button>
+  <div class="panel">
+    <p><!-- filters --></p>
+  </div>
+</div>
+
+<div class="btn-filter__item">
+  <button class="accordion">Vegan</button>
+  <div class="panel">
+    <p><!-- filters --></p>
+  </div>
+</div>
+
+<div class="btn-filter__item">
+  <button class="accordion">Пицца</button>
+  <div class="panel">
+    <p><!-- filters --></p>
+  </div>
+</div>
+<div class="btn-filter__item">
+  <button class="accordion">Халяль</button>
+  <div class="panel">
+    <p><!-- filters --></p>
+  </div>
+</div>
