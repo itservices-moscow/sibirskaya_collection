@@ -310,12 +310,13 @@ option {
     }
   }
   &__agreement {
-    margin-top: 16px;
+    margin-top: 26px;
     .label-check {
       font-size: 14px;
+      margin-bottom: 32px;
     }
     .just-validate-error-label {
-      margin: 3px 0 20px 0;
+      margin: -23px 0 20px 0;
     }
   }
   &__submit-btn {

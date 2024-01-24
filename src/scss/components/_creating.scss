@@ -11,6 +11,7 @@
   }
 
   &__container {
+    position: relative;
     margin: 40px 55px 100px 55px;
     margin-top: 40px;
     grid-template-columns: calc(60% - 115px) 40%;
@@ -37,7 +38,7 @@
   &__item {
     height: 240px;
     background: var(--main-beige);
-    border-top: 1px solid rgba(192, 179, 168, 0.30);
+    border-top: 1px solid rgba(192, 179, 168, 0.3);
     padding: 24px 16px;
     img {
       margin-bottom: 16px;
@@ -69,5 +70,14 @@
         margin-top: 0;
       }
     }
+  }
+}
+
+.contacts__form-cp {
+  @include desktop {
+    position: sticky;
+    top: 227px;
+    right: 0;
+    max-height: 580px;
   }
 }
