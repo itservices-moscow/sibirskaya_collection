@@ -13,7 +13,7 @@ document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
   const backdrop = el.querySelector(".topmenu-mobile__backdrop");
   const closeButton = el.querySelector(".topmenu-mobile__close");
 
-  const handleInput = debounce(() => {
+  const showSuggest = debounce(() => {
     if (!searchInput.value)
       return;
 
@@ -40,15 +40,17 @@ document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
     });
   }, 500);
 
-  const resetSearch = () => {
+  const hideSuggest = () => {
     suggestWrapper.textContent = "";
     if (backdrop) backdrop.style.visibility = "hidden";
   }
 
   searchInput.addEventListener("input", () => {
-    if (searchInput.value) handleInput();
-    else resetSearch();
+    if (searchInput.value) showSuggest();
+    else hideSuggest();
   });
+
+  searchInput.addEventListener("blur", () => { setTimeout(hideSuggest, 100); });
 
   suggestWrapper.addEventListener("click", (event) => {
     if (event.target.classList.contains("searchsuggest-item")) {
@@ -58,8 +60,5 @@ document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
   });
 
   if (closeButton)
-    closeButton.addEventListener("click", () => {
-      searchInput.value = "";
-      resetSearch();
-    });
+    closeButton.addEventListener("click", () => { searchInput.value = ""; });
 });

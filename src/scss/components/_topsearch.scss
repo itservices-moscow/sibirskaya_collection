@@ -131,9 +131,15 @@
 }
 
 .searchsuggest {
+  position: absolute;
+  top: 100%;
+  width: 100%;
   max-width: 327px;
   background: #FFF;
-  margin: 0 auto;
+  z-index: 9;
+  @include desktop {
+    margin-top: 8px;
+  }
 }
 
 .searchsuggest-item,
