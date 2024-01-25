@@ -2,7 +2,7 @@ $section-height: 700px;
 $gradient-height: 200px;
 
 main.labs {
-  --sticky-offset: 260px;
+  --sticky-offset: 234px;
   max-width: 1328px;
   margin: 0 auto;
   @include mobile {
@@ -55,12 +55,13 @@ section.labs {
     font-size: 65px;
     line-height: normal;
     @include desktop {
-      margin: 0;
       top: var(--heading-offset);
+      float: left;
+      margin: 0;
     }
     @include mobile {
-      font-size: 29px;
       top: var(--mob-heading-offset);
+      font-size: 29px;
     }
   }
 }
