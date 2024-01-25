@@ -236,29 +236,22 @@
     // });
     // accordion5.open();
 
+    const wrapper = document.querySelector("main.labs");
+    const stickyOffset = parseInt(getComputedStyle(wrapper).getPropertyValue("--sticky-offset"));
     const labsP = document.querySelector(".labs__title p");
-
-    function onResize() {
-      document.querySelector("main.labs").style.setProperty(
-        "--heading-offset",
-        labsP.offsetTop + labsP.offsetHeight + "px"
-      );
-    }
 
     document.documentElement.scrollTop = 0;
 
-    onResize();
-    window.addEventListener("resize", onResize);
+    wrapper.style.setProperty("--heading-offset", labsP.offsetTop + labsP.offsetHeight + "px");
 
     document.querySelectorAll(".pagination").forEach((el, i) => {
       const sectionName = `.accordionL${i + 1}`;
       const sections = document.querySelectorAll(sectionName);
       const bullets = el.querySelectorAll(".pagination__bullet");
-      const firstOffset = sections[0].offsetTop;
-      const parentOffset = sections[0].parentNode.offsetTop;
+      const parentOffset = sections[0].offsetParent.offsetTop;
       const breakpoints = Array.prototype.map.call(
         sections,
-        (el) => el.offsetTop - firstOffset + parentOffset
+        (el) => parentOffset + el.offsetTop - stickyOffset
       );
       let currentSection = 0;
 

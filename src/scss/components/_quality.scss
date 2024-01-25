@@ -1,15 +1,14 @@
-$section-height: 440px;
-
-.quality__title {
-  position: sticky;
-  top: 0;
-  margin-bottom: $section-height;
+main.quality {
+  --sticky-offset: 108px;
+  --folded-height: 68px;
+  @include mobile {
+    --folded-height: 44px;
+  }
 }
 
 section.quality {
-  --sticky-offset: 260px;
   max-width: 1100px;
-  margin: -$section-height auto $section-height;
+  margin: 40px auto var(--folded-height);
   .content {
     position: relative;
     @include mobile {
@@ -31,15 +30,12 @@ section.quality {
 
 .accordionQ {
   // --accordion-time: 0.3s;
-  --header-height: 68px;
-  @include mobile {
-    --header-height: 44px;
-  }
   position: sticky;
   top: var(--sticky-offset);
-  height: $section-height;
+  height: 480px;
   background: var(--main-beige);
   border-top: 1px solid var(--coffee-milk);
+  transition: transform 0.5s;
   @include folding-blocks(8);
 }
 
@@ -108,7 +104,7 @@ section.quality {
   flex-shrink: 0;
   font-family: "IntroDemoCondLightCAPS";
   font-size: 22px;
-  line-height: var(--header-height);
+  line-height: var(--folded-height);
   text-align: center;
   // transition: transform var(--accordion-time) ease-out;
 }

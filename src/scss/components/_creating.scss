@@ -51,7 +51,7 @@
       margin: 0;
     }
     @include desktop {
-      --header-height: 240px;
+      --folded-height: 240px;
       position: sticky;
       top: $sticky-offset;
       @include folding-blocks(3);

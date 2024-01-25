@@ -1,7 +1,7 @@
 @mixin folding-blocks($count) {
   @for $i from 1 through $count {
     &-#{$i} {
-      transform: translateY(calc(var(--header-height) * ($i - 1)));
+      transform: translateY(calc(var(--folded-height) * ($i - 1) + var(--scroll-offset, 0px)));
     }
   }
 }

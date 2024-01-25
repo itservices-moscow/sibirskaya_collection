@@ -3,12 +3,11 @@ $gradient-height: 200px;
 
 main.labs {
   --sticky-offset: 260px;
-  --sticky-text-offset: 260px;
   max-width: 1328px;
   margin: 0 auto;
   @include mobile {
-    --sticky-offset: 500px;
-    --sticky-text-offset: 294px;
+    --mob-heading-offset: 108px;
+    --sticky-offset: 164px;
     margin-left: 24px;
     margin-right: 24px;
   }
@@ -18,18 +17,23 @@ main.labs {
 }
 
 .labs__title {
-  position: sticky;
-  top: 0;
+  position: relative;
   margin-bottom: $section-height;
-  z-index: 9;
+  @include desktop {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+  }
   h1 {
     margin-bottom: 40px;
   }
   p {
-    position: absolute;
     max-width: 423px;
     margin: 0;
     padding-bottom: 40px;
+    @include desktop {
+      position: absolute;
+    }
     @include mobile {
       padding-bottom: 32px;
     }
@@ -37,14 +41,7 @@ main.labs {
 }
 
 section.labs {
-  // display: grid;
   margin-top: -$section-height;
-  // grid-template-columns: auto 760px;
-  // gap: 145px;
-  // @include mobile {
-    // grid-template-columns: 100%;
-    // gap: 48px;
-  // }
   .pagination-track {
     background: var(--main-beige);
     padding-left: 28px;
@@ -54,15 +51,16 @@ section.labs {
   }
   h1 {
     position: sticky;
-    top: var(--heading-offset);
     max-width: 423px;
     font-size: 65px;
     line-height: normal;
     @include desktop {
       margin: 0;
+      top: var(--heading-offset);
     }
     @include mobile {
       font-size: 29px;
+      top: var(--mob-heading-offset);
     }
   }
 }
@@ -82,7 +80,7 @@ section.labs {
     }
     @include mobile {
       position: sticky;
-      top: var(--heading-offset);
+      top: var(--mob-heading-offset);
     }
   }
 }
@@ -92,9 +90,9 @@ section.labs {
 .accordionL1,
 .accordionL2 {
   // --accordion-time: 0.3s;
-  --header-height: 56px;
+  --folded-height: 56px;
   @include mobile {
-    --header-height: 44px;
+    --folded-height: 44px;
   }
   position: sticky;
   top: var(--sticky-offset);
@@ -111,14 +109,13 @@ section.labs {
 }
 
 .accordionL2 {
-  z-index: 19;
   @include folding-blocks(2);
 }
 
 .accordionL1__control,
 .accordionL2__control {
   display: flex;
-  height: var(--header-height);
+  height: var(--folded-height);
   cursor: pointer;
   align-items: center;
 }
@@ -143,7 +140,7 @@ section.labs {
   flex-shrink: 0;
   font-family: "IntroDemoCondLightCAPS";
   font-size: 22px;
-  line-height: var(--header-height);
+  line-height: var(--folded-height);
   text-align: center;
   // transition: transform var(--accordion-time) ease-out;
 }
