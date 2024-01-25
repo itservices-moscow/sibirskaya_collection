@@ -98,7 +98,7 @@ section.labs {
   position: sticky;
   top: var(--sticky-offset);
   max-width: 722px;
-  height: $section-height;
+  min-height: $section-height;
   background: var(--main-beige);
   border-top: 1px solid var(--coffee-milk);
   margin-left: auto;
