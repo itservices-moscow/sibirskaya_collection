@@ -1,5 +1,5 @@
 @mixin folding-blocks($count) {
-  :root {
+  @at-root :root {
     --scroll-offset: 0px;
   }
   @for $i from 1 through $count {
