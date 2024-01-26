@@ -1,6 +1,6 @@
-.creating {
-  $sticky-offset: 260px;
+$sticky-offset: 260px;
 
+.creating {
   @include desktop {
     &__title {
       position: sticky;
@@ -57,28 +57,12 @@
       @include folding-blocks(3);
     }
   }
-
-  &__form {
-    position: sticky;
-    top: $sticky-offset;
-    background-color: var(--main-white);
-    max-width: 500px;
-    align-self: start;
-    .container {
-      padding: 32px;
-      h2 {
-        margin-top: 0;
-        margin-bottom: 24px;
-      }
-    }
-  }
 }
 
 .contacts__form-cp {
   @include desktop {
     position: sticky;
-    top: 227px;
-    right: 0;
-    max-height: 580px;
+    top: $sticky-offset;
+    align-self: start;
   }
 }
