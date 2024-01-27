@@ -1,10 +1,14 @@
 .submenu {
   &__container {
+    display: flex;
+    align-items: center;
     margin-bottom: 64px;
-    overflow: hidden;
+  }
+  &__block{
+    margin-right: 40px;
+    position: relative;
   }
   &__list {
-    justify-content: space-between;
     align-items: center;
     @include mobile {
       display: flex;
@@ -23,6 +27,12 @@
 .subitem {
   position: relative;
   margin-right: 40px;
+  &.hidden{
+    display: none;
+  }
+  // &:first-child{
+  //   display: none;
+  // }
   @include mobile {
     max-width: calc(100vw - 48px);
     margin-left: -4px;
@@ -37,6 +47,7 @@
     margin: 0;
     color: #838383;
     text-transform: uppercase;
+    cursor: pointer;
   }
   &__number {
     display: none;
@@ -57,6 +68,10 @@
   &__back {
     width: 20px;
     margin-top: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
     display: none;
     @include mobile {
       margin-top: 94px;
@@ -65,6 +80,10 @@
   &__forward {
     width: 20px;
     margin-top: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
     display: none;
     @include mobile {
       margin-top: 94px;

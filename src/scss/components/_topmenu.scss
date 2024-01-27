@@ -52,9 +52,21 @@
   margin: 40px 56px 48px 56px;
   // grid-template-columns: repeat(4, 1fr);
   &__item {
-    width: 25%;
+    width: 100%;
     box-sizing: border-box;
     // border: 1px dashed orange;
+    position: relative;
+    &:not(:last-child){
+      margin-right: 32px;
+      @media screen and (max-width: 1600px){
+        margin-right: 16px;
+      }
+    }
+    &:first-child{
+      .nav-top{
+        padding-left: 0;
+      }
+    }
     &-manuf {
       width: 40%;
     }
@@ -70,13 +82,22 @@
 }
 
 .topmenu-container nav {
-  position: absolute;
   height: 312px;
   box-sizing: border-box;
 }
 
+.nav-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 32px;
+  @media screen and (max-width: 1600px){
+    padding-left: 16px;
+  }
+}
+
 .nav-top-l1 {
-  width: 393px;
   &__item {
     height: 78px;
     border-bottom: 1px solid var(--light-gray);
@@ -136,10 +157,6 @@
 
 .nav-top-l2 {
   border-left: 1px solid rgba(#C0B3A8, .3);
-  padding-left: 32px;
-  margin-left: 32px;
-  width: 403px;
-
   &__item {
     height: 38px;
     position: relative;
@@ -193,9 +210,6 @@
 
 .nav-top-l3 {
   border-left: 1px solid rgba(#C0B3A8, .3);
-  padding-left: 32px;
-  margin-left: 32px;
-  width: 403px;
   visibility: hidden;
   opacity: 0;
   &__item {
@@ -245,7 +259,7 @@
       height: 24px;
       position: absolute;
       top: 0;
-      right: 10px;
+      right: 0;
       transition: all 0.2s;
       transition-delay: 0;
     }
@@ -254,8 +268,6 @@
 
 .nav-top-l4 {
   border-left: 1px solid rgba(#C0B3A8, .3);
-  padding-left: 32px;
-  margin-left: 32px;
   visibility: hidden;
   opacity: 0;
 

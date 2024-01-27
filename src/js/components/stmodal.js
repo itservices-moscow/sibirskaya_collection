@@ -10,9 +10,9 @@ let im = new Inputmask("+7(999)999-99-99")
 im.mask(inputs)
 // console.log("im", inputs, im);
 
-const rules3 = [
+const rules4 = [
   {
-    ruleSelector: ".contact-fio",
+    ruleSelector: ".contact-fio2",
     rules: [
       {
         rule: "minLength",
@@ -27,7 +27,7 @@ const rules3 = [
     ],
   },
   {
-    ruleSelector: ".contact-email",
+    ruleSelector: ".contact-email2",
     rules: [
       {
         rule: "email",
@@ -42,7 +42,7 @@ const rules3 = [
     ],
   },
   {
-    ruleSelector: "#agreement", // чекбокс
+    ruleSelector: "#agreement2", // чекбокс
     rules: [
       {
         rule: "required",
@@ -51,7 +51,7 @@ const rules3 = [
     ],
   },
   {
-    ruleSelector: ".contact-tel",
+    ruleSelector: ".contact-tel2",
     tel: true,
     telError: "Введите корректный телефон",
     rules: [
@@ -112,7 +112,7 @@ export const validateForms = (selector, rules, afterSend) => {
     let formData = new FormData(ev.target)
     //console.log(...formData)
 
-    let popId = formData.get("form_popup")
+    // let popId = formData.get("form_popup2")
     //console.log(popId)
     // let xhr = new XMLHttpRequest()
     // xhr.onreadystatechange = function () {
@@ -126,7 +126,8 @@ export const validateForms = (selector, rules, afterSend) => {
     // xhr.send(formData)
 
     // открыть модальное окно - перенести в запрос
-    modal.open(popId)
+    modal.close('st-keys-modal')
+    modal.open('st1')
 
     ev.target.reset()
   })
@@ -136,5 +137,4 @@ const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия")
 }
 
-validateForms(".contactform", rules3, afterForm)
-validateForms(".startupsform", rules3, afterForm)
+validateForms(".startupsform2", rules4, afterForm)

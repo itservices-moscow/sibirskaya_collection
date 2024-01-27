@@ -117,37 +117,42 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
   })
 
-  const menuBrandsHover = document?.querySelectorAll("[data-show-submenu]")
-  menuBrandsHover.forEach((element) => {
-    const id = element.getAttribute("data-show-submenu")
-    element.addEventListener("mouseover", (e) => {
-      // Находим ближайшего родителя с классом "topmenu-container__item"
-      const parentItem = element.closest(".topmenu-container__item");
 
-      // Убираем класс "active" у всех дочерних элементов родителя
+
+
+  const navTopL2Items = document.querySelectorAll('.topmenu-container__item[data-menuleave-hide="nav-top-l2"]  [data-show-submenu]');
+  const navTopL4 = document.querySelectorAll('.topmenu-container__item[data-menuleave-hide="nav-top-l4"] .nav-top');
+
+  navTopL2Items.forEach(function (item) {
+    item.addEventListener('mouseover', function () {
+      const isActive = item.classList.contains('active');
+      navTopL4.forEach(element => {
+        // Проверяем наличие класса 'active' и не удаляем класс, если он есть
+        if (!isActive) {
+          element.classList.remove('topmenu_show');
+        }
+      });
+    });
+  });
+
+  // Дополнительный код для отображения подменю брендов и управления классом 'active'
+  const menuBrandsHover = document?.querySelectorAll("[data-show-submenu]");
+  menuBrandsHover.forEach((element) => {
+    const id = element.getAttribute("data-show-submenu");
+    element.addEventListener("mouseover", (e) => {
+      const parentItem = element.closest(".topmenu-container__item");
       parentItem.querySelectorAll("[data-show-submenu]").forEach((el) => {
         el.classList.remove("active");
       });
-
-      // Добавляем класс "active" только текущему элементу
       element.classList.add("active");
-
-      // Показываем подменю для текущего элемента
       document.getElementById(id).classList.add("topmenu_show");
-
-      // Скрываем подменю для соседних элементов
       const siblings = getSiblings(document.getElementById(id));
       siblings.forEach((el) => {
         el.classList.remove("topmenu_show");
       });
     });
-
-    element.addEventListener("mouseout", (e) => {
-      // Ваш код для обработки события "mouseout"
-    });
   });
 
-  // Функция для получения соседних элементов
   function getSiblings(element) {
     const siblings = Array.from(element.parentNode.children);
     return siblings.filter((el) => el !== element);
@@ -155,18 +160,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-  // СКРЫТЬ ПОДМЕНЮ БРЕНДОВ
-  const menuBrandsHide = document?.querySelectorAll("[data-menuleave-hide]")
-  menuBrandsHide.forEach((element) => {
-    //console.log("[hide]", element.children)
-    element.addEventListener("mouseout", function (ev) {
-      element.children.forEach((child) => {
-        // нужны уточнения
-        // child.classList.remove("topmenu_show")
-        // console.log(child)
-      })
-    })
-  })
+
+
+
+
   // СКРЫТЬ ДЕСКТОПНОЕ МЕНЮ ПО КЛИКУ НА БЭКДРОП
   // const menuDesktopBackdrops = document?.querySelectorAll(".topmenu-backdrop");
   // menuDesktopBackdrops.forEach((element) => {

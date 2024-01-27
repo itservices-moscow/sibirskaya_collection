@@ -322,7 +322,8 @@ option {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 329px;
+    width: 100%;
+    margin-top: 32px;
     @include mobile {
       width: 100%;
     }
@@ -359,7 +360,7 @@ option {
   border: 1px dashed var(--coffee-milk);
   background: rgba(192, 179, 168, 0.1);
   border-image: none;
-  max-width: 500px;
+  max-width: 600px;
   text-align: center;
   font-size: 14px;
   margin: 32px 0;
