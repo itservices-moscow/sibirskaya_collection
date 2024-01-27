@@ -2,11 +2,21 @@
   position: relative;
   width: 100%;
   max-width: 700px;
-  height: 567px;
-  background-color: #F2EFEC;
+  height: 562px;
+  max-height: 562px;
+  background-color: #f2efec;
 
   @include mobile {
     height: 458px;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.14px;
+    padding-bottom: 3px;
   }
 
   &__content {
@@ -14,11 +24,17 @@
     text-align: center;
 
     // содержит изображение товара - когда будет готов спрайт 360, изменить отступы и макс. размеры
-    @include mobile {}
+    @include mobile {
+    }
 
     div {
+      min-width: 680px;
       text-align: center;
       width: 100%;
+      @include mobile {
+        min-width: calc(100vw - 48px);
+        width: calc(100vw - 48px);
+      }
     }
 
     img {
@@ -30,7 +46,7 @@
       }
     }
     &_sk {
-    img {
+      img {
         width: 275px;
         margin-top: 37px;
 
@@ -51,7 +67,7 @@
     height: 100px;
     bottom: 0;
     left: 0;
-    padding: 16px 32px;
+    padding: 16px 44px 16px 32px;
 
     @include mobile {
       height: 100%;
@@ -74,7 +90,6 @@
     }
   }
 }
-
 
 #view360.loading .view360__preloader {
   visibility: visible;

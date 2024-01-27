@@ -13,26 +13,25 @@
   }
 
   li {
-    height: 75px;
+    height: 80px;
     list-style: none !important;
     margin: 0;
     padding: 0;
     cursor: pointer;
     &:hover {
-        color: var(--main-white);
-        background-color: var(--main-bronze);
-      }
+      color: var(--main-white);
+      background-color: var(--main-bronze);
+    }
   }
 
   &__link {
-    padding: 26px; // !!!
-    padding-bottom: auto;
+    padding: 29px 24px;
     display: block;
     width: 100%;
     height: 100%;
     color: var(--main-bronze);
     background-color: var(--main-beige);
-    border-bottom: 1px solid var(--main-bronze);
+    border-top: 1px solid rgba(192, 179, 168, 0.3);
     text-transform: uppercase;
     transition: 0.3s;
 
@@ -53,8 +52,6 @@
   }
 }
 
-
-
 // стили для мобильного аккордеона
 .brands-details__menu_sk {
   @include mobile {
@@ -65,7 +62,7 @@
 
 .brands-details__menu {
   .menu-container.mobile {
-      overflow-y: clip;
+    overflow-y: clip;
   }
   .menu-container .accordion {
     cursor: pointer;
@@ -79,8 +76,8 @@
   }
 
   .menu-container .panel {
-        font-size: 18px;
-          line-height: 22px;
+    font-size: 18px;
+    line-height: 22px;
   }
   .menu-container .accordion.active {
     //color: var(--main-black);
@@ -89,7 +86,6 @@
   .menu-container .accordion:hover {
     //color: var(--main-bronze);
   }
-
 
   /* Подменю брендов. Hidden by default. */
   .menu-container .panel {
@@ -100,7 +96,8 @@
   }
 
   .menu-container .accordion .brandmenu__link:after {
-    content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='24' viewBox='0 0 26 24' fill='none'%3E%3Cpath d='M0.999999 6L13 18L25 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");    float: right;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='24' viewBox='0 0 26 24' fill='none'%3E%3Cpath d='M0.999999 6L13 18L25 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    float: right;
     margin-left: 8px;
     margin-top: -3px;
   }
@@ -110,5 +107,4 @@
     transform: rotate(180deg);
     margin-top: -5px;
   }
-
 }
