@@ -2,8 +2,8 @@
   position: relative;
   width: 100%;
   max-width: 700px;
-  height: 562px;
-  max-height: 562px;
+  height: 561px;
+  max-height: 561px;
   background-color: #f2efec;
 
   @include mobile {
@@ -18,12 +18,11 @@
     letter-spacing: 0.14px;
     padding-bottom: 3px;
   }
-
+  // содержит изображение товара
   &__content {
     position: relative;
     text-align: center;
 
-    // содержит изображение товара - когда будет готов спрайт 360, изменить отступы и макс. размеры
     @include mobile {
     }
 
@@ -80,13 +79,23 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    background-color: var(--light-gray);
+    background: #f2efec;
     z-index: 10;
     top: 0;
     visibility: hidden;
-
     .container {
-      padding-top: 45%;
+      //transform: translateY(-50%);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .preloader-icon {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
 }

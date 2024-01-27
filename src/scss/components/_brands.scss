@@ -246,9 +246,10 @@
 
   // блок с внутренним скроллом
   &__menu_sk {
-    height: 562px;
+    height: 561px;
     @include mobile {
-      height: 458px;
+      height: max-content;
+      max-height: 468px;
     }
     overflow: auto;
   }

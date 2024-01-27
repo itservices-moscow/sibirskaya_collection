@@ -22,6 +22,9 @@
       color: var(--main-white);
       background-color: var(--main-bronze);
     }
+    &:last-child a {
+      border-bottom: 1px solid rgba(192, 179, 168, 0.3);
+    }
   }
 
   &__link {
