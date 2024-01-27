@@ -1,4 +1,3 @@
-
 .new {
   background-color: var(--main-white);
 }
@@ -6,7 +5,7 @@
 section.newitem {
   margin: 0 180px 0 180px;
   overflow: visible;
-  @include mobile{
+  @include mobile {
     margin: 0 24px;
   }
 }
@@ -22,31 +21,35 @@ section.newitem > .container {
   background-color: var(--main-beige);
   @include mobile {
     width: 100%;
-    height: auto;
+    height: 284px;
     margin: 153px 0;
     padding: 40px 16px;
-
   }
 }
 
 .newitem {
-  &__name {
-  position: absolute;
-  border: 1px solid var(--main-bronze);
-  border-radius: 80px;
-  width: 146px;
-  height: 146px;
-  line-height: 146px;
-  top: -76px;
-  left: calc(50% - 73px);
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--main-bronze);
-  background-color: var(--main-beige);
-  @include mobile {
-    left: 0;
+  // height: 328px;
+  // @include mobile {
+  //   height: 284px;
+  // }
 
-  }
+  &__name {
+    position: absolute;
+    border: 1px solid var(--main-bronze);
+    border-radius: 80px;
+    width: 146px;
+    height: 146px;
+    line-height: 146px;
+    top: -76px;
+    left: calc(50% - 73px);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-bronze);
+    background-color: var(--main-beige);
+    font-size: 18px;
+    @include mobile {
+      left: 0;
+    }
   }
   &__pic {
     position: absolute;
@@ -56,7 +59,7 @@ section.newitem > .container {
     top: 50%;
     transform: translateY(-50%);
     right: -118px;
-    @include mobile{
+    @include mobile {
       width: 155px;
       height: 120px;
       top: -50%;
@@ -78,6 +81,12 @@ section.newitem > .container {
     }
     p {
       margin-top: 10px;
+    }
+  }
+  &_first {
+    margin-top: 145px !important;
+    @include mobile {
+      margin-top: 113px !important;
     }
   }
 }

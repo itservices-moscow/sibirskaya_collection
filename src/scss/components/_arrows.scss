@@ -3,9 +3,11 @@
 }
 .arr-right-on > a span {
   font-size: 14px;
-  line-height: 17px;
+  line-height: 26px;
   text-transform: uppercase;
   color: var(--main-bronze);
+  // отступ fix
+  margin-inline-end: 10px;
 }
 
 .arr-right-on > a .arr svg {
