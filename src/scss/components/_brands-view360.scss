@@ -98,8 +98,47 @@
       }
     }
   }
+  &__icon {
+    cursor: grabbing;
+  }
 }
 
 #view360.loading .view360__preloader {
   visibility: visible;
+}
+
+// 3D спрайт:
+.sprite-container {
+  transform-origin: top left;
+  transform: scale(0.5); //translate(-40%, -50%);
+  margin-left: 70px; // test
+  //margin-right: auto;
+  @include mobile {
+    transform: scale(0.3); // translate(-40%, -50%);
+    width: calc(100vw - 48px);
+    margin-left: 10px;
+    height: 458px;
+  }
+}
+
+#sprite-box {
+  width: 1132px;
+  height: 1132px;
+  display: block;
+  background-image: url($rootpath + "img/sprites/kotlety_sprite.png");
+  @include mobile {
+  }
+}
+
+.animated {
+  // background-color: yellowgreen;
+  animation: sprite 2.7s steps(36) infinite;
+}
+.sprite-img {
+}
+
+@keyframes sprite {
+  100% {
+    background-position: -40752px;
+  }
 }
