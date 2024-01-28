@@ -99,7 +99,7 @@
     }
   }
   &__icon {
-    cursor: grabbing;
+    cursor: pointer; //grabbing;
   }
 }
 
@@ -125,14 +125,16 @@
   width: 1132px;
   height: 1132px;
   display: block;
+  // background-color: yellowgreen;
   background-image: url($rootpath + "img/sprites/kotlety_sprite.png");
+  animation: sprite 2.7s steps(36) infinite;
+  animation-play-state: paused;
   @include mobile {
   }
 }
 
 .animated {
-  // background-color: yellowgreen;
-  animation: sprite 2.7s steps(36) infinite;
+  //animation-play-state: running;
 }
 .sprite-img {
 }
