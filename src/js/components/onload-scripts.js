@@ -28,6 +28,21 @@ function rotatePachka(steps, top, bottom, scrollval) {
 //     "left": 0
 // }
 
+// высчитывает значения ширины для видео на главной (in logariphmic scale)
+function scaleMapNumbers(pos) {
+  var screenW = window.screen.width
+  var minM = 570
+  var maxM = 788
+  // var minV = Math.log(40) // например, от 40 до 100 %
+  // var maxV = Math.log(103)
+  var minV = Math.log(760) // изначальная ширина
+  var maxV = Math.log(screenW) // ширина экрана
+  var scal = (maxV - minV) / (maxM - minM)
+  var res = Math.ceil(Math.exp(minV + scal * (pos - minM)))
+
+  return res > screenW ? screenW : res
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
   // ПОКАЗАТЬ СЛОЙ С ХЛЕБОМ НА ГЛАВНОЙ
   window.addEventListener("scroll", function () {
@@ -50,30 +65,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 
-    // document.querySelector(".scrollval").innerHTML = scrollPosition
-    // let calc = scrollPosition
-    // if (scrollPosition > 500 && scrollPosition < 1400) {
-    //   calc = Math.ceil(scrollPosition / 100)
-    //   // document.getElementById("video-container").style.width = calc + "px"
-    //   // console.log(document.getElementById("video-container").style.width)
-    //   document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc
-    // }
-
-    // СКРЫТЬ ПЕРВУЮ СЕКЦИЮ ГЛАВНОЙ, КОГДА РАЗВЕРНЕТСЯ ВИДЕО
-    // if (document.querySelector(".intro")) {
-    //   if (
-    //     (scrollPosition > 800 && document.querySelector(".intro").style.visibility === "") ||
-    //     document.querySelector(".intro").style.visibility === "visible"
-    //   ) {
-    //     document.querySelector(".intro").style.visibility = "hidden"
-    //   }
-    //   if (scrollPosition < 800 && document.querySelector(".intro").style.visibility === "hidden") {
-    //     document.querySelector(".intro").style.visibility = "visible"
-    //   }
-    // }
+    document.querySelector(".scrollval").innerHTML = scrollPosition
+    let calc = scrollPosition
+    if (scrollPosition > 570 && scrollPosition < 900) {
+      let calc2 = scaleMapNumbers(scrollPosition)
+      document.getElementById("video-container").style.width = calc2 + "px"
+      //document.getElementById("video-container").style.width = calc2 + "%"
+      //height -? "calc(" + calc2 + "% - 88px)"
+      console.log(document.getElementById("video-container").style.width)
+      document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc + "<br/>" + calc2
+    }
   })
 
-  // ПОИСК В ХЕДЕРЕ
+  // ПОИСК В ХЕДЕРЕ - раскрытие инпута
   const searchposX = document.getElementById("searchanchor").getBoundingClientRect().x
   // console.log('searchposX', searchposX)
   document.getElementById("searchbox").style.right = "calc(100% - " + (Math.ceil(searchposX) + 36) + "px)"
