@@ -252,17 +252,19 @@ option {
   left: 0;
   height: 22px;
   width: 22px;
-  border: 1px solid var(--main-bronze);
+  border: 1px solid var(--medium-gray);
 }
 
 /* On mouse-over */
 .label-check:hover input ~ .checkmark {
-  // background-color: var(--coffee-milk);
+  border-color: var(--main-bronze);
+  background-color: transparent;
 }
 
 /* When the checkbox is checked, add a bronze background */
 .label-check input:checked ~ .checkmark {
   background-color: var(--main-bronze);
+  border-color: var(--main-bronze);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */

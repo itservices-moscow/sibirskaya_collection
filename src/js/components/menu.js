@@ -106,21 +106,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
   hideBlockTopmenu("topmenu-brands", "link-brands")
   hideBlockTopmenu("topmenu-manuf", "link-manuf")
 
-  const menuManufHover = document?.querySelectorAll("[data-onhover-id]")
-  menuManufHover.forEach((element) => {
-    const id = element.getAttribute("data-onhover-id")
-    element.addEventListener("mouseover", function (ev) {
-      document.getElementById(id).classList.add('hover-bg')
-    })
-    element.addEventListener("mouseout", function (ev) {
-      document.getElementById(id).classList.remove('hover-bg')
-    })
-  })
+  // const menuManufHover = document?.querySelectorAll("[data-onhover-id]")
+  // menuManufHover.forEach((element) => {
+  //   const id = element.getAttribute("data-onhover-id")
+  //   element.addEventListener("mouseover", function (ev) {
+  //     document.getElementById(id).classList.add('hover-bg')
+  //   })
+  //   element.addEventListener("mouseout", function (ev) {
+  //     document.getElementById(id).classList.remove('hover-bg')
+  //   })
+  // })
 
 
 
 
-  const navTopL2Items = document.querySelectorAll('.topmenu-container__item[data-menuleave-hide="nav-top-l2"]  [data-show-submenu]');
+  const navTopL2Items = document.querySelectorAll('.nav-top-l2__item');
   const navTopL4 = document.querySelectorAll('.topmenu-container__item[data-menuleave-hide="nav-top-l4"] .nav-top');
 
   navTopL2Items.forEach(function (item) {

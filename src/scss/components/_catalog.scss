@@ -54,9 +54,9 @@ section.scrollup > div > img {
   }
   &__content {
     .goods {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
       gap: 32px 16px;
-      @include mobile {
+      @media (max-width: 768px) {
         // grid-template-columns: repeat(2, 1fr);
         grid-template-columns: calc(50% - 8px) calc(50% - 8px);
       }
@@ -73,7 +73,7 @@ section.scrollup > div > img {
 
 .goods {
   &__item {
-    width: 308px;
+    width: 100%;
     max-height: 484px;
     min-height: 200px;
     @include mobile {
@@ -111,6 +111,20 @@ section.scrollup > div > img {
     padding: 24px 10px 32px 10px;
     background-color: var(--bg-goods);
     transition: 0.4s ease-in-out;
+    @include mobile {
+      padding: 14px;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      img{
+        aspect-ratio: 16/16;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
     img {
       transform: scale(1);
       transition: 0.4s;
@@ -126,9 +140,6 @@ section.scrollup > div > img {
       margin: 0;
       padding: 8px 10px;
       font-size: 14px;
-      @include mobile {
-        width: 100%;
-      }
     }
     @include mobile {
       flex-direction: column;
@@ -138,9 +149,12 @@ section.scrollup > div > img {
   &__genre {
     background-color: var(--color-black);
     color: var(--main-white);
+    width: 100%;
   }
   &__tag {
     background-color: var(--main-beige);
+    flex-wrap: wrap;
+    width: 100%;
     @include mobile {
       display: inline-flex;
       align-items: center;
@@ -149,7 +163,7 @@ section.scrollup > div > img {
     .vert {
       color: var(--coffee-milk);
       font-size: 14px;
-      padding: 6px;
+      padding: 0.5px 6px;
     }
   }
   &__type {

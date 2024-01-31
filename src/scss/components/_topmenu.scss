@@ -308,10 +308,18 @@
   display: inline-block;
   max-width: 308px;
   margin-left: 32px;
+  &:hover{
+    a{
+      color: var(--main-bronze);
+    }
+  }
   &__link {
+    display: block;
+    width: 100%;
     text-transform: uppercase;
     font-size: 18px;
     color: var(--main-black);
+    padding-bottom: 22px;
     &:hover {
       color: var(--main-bronze);
       transition: 0.3s;
