@@ -22,12 +22,13 @@ function scaleMapNumbers(pos) {
   var screenW = window.screen.width
   var minM = 570
   var maxM = 788
-  // var minV = Math.log(40) // например, от 40 до 100 %
-  // var maxV = Math.log(103)
   var minV = Math.log(760) // изначальная ширина
   var maxV = Math.log(screenW) // ширина экрана
   var scal = (maxV - minV) / (maxM - minM)
   var res = Math.ceil(Math.exp(minV + scal * (pos - minM)))
+  if (screenW < 676) {
+    res = 678
+  }
 
   return res > screenW ? screenW : res
 }
@@ -71,12 +72,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 
-    document.querySelector(".scrollval").innerHTML = scrollPosition
+    // document.querySelector(".scrollval").innerHTML = scrollPosition
     let calc = scrollPosition
     if (scrollPosition > 570 && scrollPosition < 900) {
       let calc2 = scaleMapNumbers(scrollPosition)
       document.getElementById("video-container").style.width = calc2 + "px"
-      //console.log(document.getElementById("video-container").style.width)
+      console.log(document.getElementById("video-container").style.width)
       document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc + "<br/>" + calc2
     }
   })

@@ -17,6 +17,7 @@
     line-height: 24px;
     letter-spacing: 0.14px;
     padding-bottom: 3px;
+    min-width: 240px;
   }
   // содержит изображение товара
   &__content {
@@ -126,17 +127,20 @@
   height: 1132px;
   display: block;
   // background-color: yellowgreen;
-  background-image: url($rootpath + "img/sprites/kotlety_sprite.png");
+  // background-image: url($rootpath + "img/sprites/kotlety_sprite.png");
+  background-image: url($rootpath + "img/brands-sk-r-pic2.png");
+  background-repeat: no-repeat;
   animation: sprite 2.7s steps(36) infinite;
   animation-play-state: paused;
   @include mobile {
   }
 }
+.sb-center {
+  background-position: center center;
+}
 
 .animated {
   //animation-play-state: running;
-}
-.sprite-img {
 }
 
 @keyframes sprite {

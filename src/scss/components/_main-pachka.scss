@@ -8,19 +8,19 @@
   //background-color: gray;
   background-color: var(--color-black);
   box-shadow: 0px -35px 40px 0px rgba(13, 13, 13, 0.97);
-  border: 1px dashed greenyellow;
+  // border: 1px dashed greenyellow;
   @include mobile {
     //height: 2800px;
   }
 }
 .sticky {
   top: 88px;
-  height: 500px;
+  height: 750px;
   position: sticky;
   position: -webkit-sticky;
-  border: 1px dashed orange;
+  // border: 1px dashed orange;
   @include mobile {
-    height: 300px;
+    height: 550px;
   }
 }
 .pachka {
@@ -35,7 +35,6 @@
 }
 
 #pachka-box {
-  // background-color: yellowgreen;
   width: 750px;
   height: 1000px;
   display: block;
@@ -49,8 +48,6 @@
   @include mobile {
     transform-origin: top center;
     transform: scale(0.6);
-    // margin-left: 0;
-    // margin-right: 0;
   }
 }
 

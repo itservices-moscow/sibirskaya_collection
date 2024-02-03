@@ -18,15 +18,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
         elem.classList.remove("active")
       })
       e.target.classList.add("active")
-      //imageBox.style.backgroundImage = "url('" + url + "')"
 
       switch (imgtype) {
         case "image":
           console.log("show image")
-          imageBox.style.backgroundImage = "none" // прописать здесь код для обычной картинки
+          imageBox.classList.add("sb-center")
+          imageBox.style.backgroundImage = "url('" + url + "')" // прописать здесь код для обычной картинки
           break
         case "3d":
-          imageBox.style.backgroundImage = "url('" + url + "')"
+          // preloader (поставить сюда fetch или нужную функцию подгрузки)
+          document.getElementById("view360").classList.toggle("loading")
+          setTimeout(function () {
+            imageBox.classList.remove("sb-center")
+            imageBox.style.backgroundImage = "url('" + url + "')" // отобразить 3d спрайт
+            document.getElementById("view360").classList.toggle("loading")
+          }, 3000)
+
           break
         default:
           break
