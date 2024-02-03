@@ -17,17 +17,6 @@ function rotatePachka(steps, top, bottom, scrollval) {
   document.querySelector("#pachka-box").style.backgroundPosition = bgpos
 }
 
-// {
-//     "x": 0,
-//     "y": 1876,
-//     "width": 1519.2000732421875,
-//     "height": 2800,
-//     "top": 1876,
-//     "right": 1519.2000732421875,
-//     "bottom": 4676,
-//     "left": 0
-// }
-
 // высчитывает значения ширины для видео на главной (in logariphmic scale)
 function scaleMapNumbers(pos) {
   var screenW = window.screen.width
@@ -44,13 +33,30 @@ function scaleMapNumbers(pos) {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
+  // ВИДЕО НА ГЛАВНОЙ
+  if (document.querySelector("#video-main")) {
+    const vid = document.querySelector("#video-main")
+    const playbtn = document.querySelector("#video-play-btn")
+
+    playbtn.addEventListener("click", (e) => {
+      e.preventDefault()
+
+      if (vid.paused) {
+        vid.play()
+      } else {
+        vid.pause()
+      }
+      playbtn.classList.toggle("paused")
+    })
+  }
+
   // ПОКАЗАТЬ СЛОЙ С ХЛЕБОМ НА ГЛАВНОЙ
   window.addEventListener("scroll", function () {
     let scrollPosition = document.documentElement.scrollTop
 
     if (document.querySelector(".extra-bg")) {
       let extraPosY = Math.round(document.querySelector(".extra").getBoundingClientRect().top)
-      if (scrollPosition > 3200 && scrollPosition < 6600) {
+      if (scrollPosition > 3200 && scrollPosition < 7000) {
         document.querySelector(".extra-bg").style.display = "block"
       } else {
         document.querySelector(".extra-bg").style.display = "none"
@@ -60,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // console.log("[scroll]", scrollPosition, document.querySelector(".sticky-wrapper").getBoundingClientRect())
 
     if (document.querySelector(".sticky-wrapper")) {
-      if (scrollPosition > 1876 && scrollPosition < 4676) {
-        rotatePachka(45, 1876, 4676, scrollPosition)
+      if (scrollPosition > 1876 && scrollPosition < 5076) {
+        rotatePachka(45, 1876, 5076, scrollPosition)
       }
     }
 
@@ -70,9 +76,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (scrollPosition > 570 && scrollPosition < 900) {
       let calc2 = scaleMapNumbers(scrollPosition)
       document.getElementById("video-container").style.width = calc2 + "px"
-      //document.getElementById("video-container").style.width = calc2 + "%"
-      //height -? "calc(" + calc2 + "% - 88px)"
-      console.log(document.getElementById("video-container").style.width)
+      //console.log(document.getElementById("video-container").style.width)
       document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc + "<br/>" + calc2
     }
   })

@@ -5,11 +5,10 @@
   background-color: rgba(13, 13, 13, 0.5);
   color: var(--light-gray);
   z-index: 10;
-  padding: 0 55px;
-  padding-top: 300px;
+  padding: 300px 55px 50px 55px;
+
   @include mobile {
-    padding: 0 24px;
-    padding-top: 400px;
+    padding: 300px 24px 30px 24px;
   }
 
   &__cards {
