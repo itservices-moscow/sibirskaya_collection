@@ -7,6 +7,15 @@
       top: 0;
       z-index: 9;
       background: var(--main-beige);
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: -66px;
+        left: 0;
+        right: 0;
+        height: 66px;
+        background-color: var(--main-beige);
+      }
     }
   }
 
@@ -61,12 +70,31 @@
     position: sticky;
     top: $sticky-offset;
     background-color: var(--main-white);
-    max-width: 500px;
+    max-width: 486px;
     align-self: start;
     .container {
-      padding: 32px;
+      padding: 32px 32px 48px;
+      border-top: 1px solid rgba(163, 120, 78);
       h3 {
         margin-top: 0;
+        font-size: 29px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
+      input[type=checkbox]{
+        margin-right: 16px;
+      }
+      a{
+        color: var(--main-black);
+        text-decoration-line: underline;
+        &:hover{
+          color: var(--main-bronze);
+        }
+      }
+      .form__btn{
+        margin-top: 32px;
+        width: 100%;
+        display: block;
       }
     }
   }

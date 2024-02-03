@@ -110,6 +110,7 @@ section.labs {
   height: var(--header-height);
   cursor: pointer;
   align-items: center;
+  margin-bottom: -12px;
 }
 
 .accordionL1__content,
@@ -123,6 +124,9 @@ section.labs {
   // box-sizing: content-box;
   .container {
     max-width: 535px;
+    p{
+      margin: 24px 0;
+    }
   }
 }
 
