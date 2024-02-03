@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       switch (imgtype) {
         case "image":
           console.log("show image")
-          //imageBox.style.backgroundImage = "url('" + url + "')" // прописать здесь код для обычной картинки
+          imageBox.style.backgroundImage = "none" // прописать здесь код для обычной картинки
           break
         case "3d":
           imageBox.style.backgroundImage = "url('" + url + "')"

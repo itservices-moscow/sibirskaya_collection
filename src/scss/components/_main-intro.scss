@@ -68,19 +68,14 @@
   position: relative;
 }
 
-#video-main,
-.video-js {
-  margin-top: 88px;
+#video-main {
+  // margin-top: 88px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   min-height: 400px;
-}
-
-.video-js .vjs-play-control {
-  position: absolute;
-  top: 164px;
-  right: -32px;
+  @include mobile {
+  }
 }
 
 #video-play-btn {
