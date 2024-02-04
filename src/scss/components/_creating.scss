@@ -1,14 +1,13 @@
+// $sticky-offset: 260px; // re-defined in _vars.scss
 .creating {
-  $sticky-offset: 260px;
-
   @include desktop {
     &__title {
       position: sticky;
       top: 0;
       z-index: 9;
       background: var(--main-beige);
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         position: absolute;
         bottom: -66px;
         left: 0;
@@ -46,7 +45,7 @@
   &__item {
     height: 240px;
     background: var(--main-beige);
-    border-top: 1px solid rgba(192, 179, 168, 0.30);
+    border-top: 1px solid rgba(192, 179, 168, 0.3);
     padding: 24px 16px;
     img {
       margin-bottom: 16px;
@@ -61,14 +60,14 @@
     @include desktop {
       --header-height: 240px;
       position: sticky;
-      top: $sticky-offset;
+      top: var(--sticky-offset);
       @include folding-blocks(3);
     }
   }
 
   &__form {
     position: sticky;
-    top: $sticky-offset;
+    top: var(--sticky-offset);
     background-color: var(--main-white);
     max-width: 486px;
     align-self: start;
@@ -81,17 +80,17 @@
         line-height: 36px;
         margin-bottom: 24px;
       }
-      input[type=checkbox]{
+      input[type="checkbox"] {
         margin-right: 16px;
       }
-      a{
+      a {
         color: var(--main-black);
         text-decoration-line: underline;
-        &:hover{
+        &:hover {
           color: var(--main-bronze);
         }
       }
-      .form__btn{
+      .form__btn {
         margin-top: 32px;
         width: 100%;
         display: block;
@@ -103,7 +102,7 @@
 .contacts__form-cp {
   @include desktop {
     position: sticky;
-    top: $sticky-offset;
+    top: var(--sticky-offset);
     align-self: start;
   }
 }
