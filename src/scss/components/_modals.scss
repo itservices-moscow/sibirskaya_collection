@@ -1,10 +1,9 @@
 .graph-modal {
   &__container {
-    text-align: center;
     width: 630px;
-    height: 265px;
     padding: 24px;
     border-radius: 0;
+    padding: 48px 104px 56px;
     @include mobile {
       width: calc(100vw - 48px);
       max-width: 390px;
@@ -19,11 +18,8 @@
     height: 15px;
   }
   &__content button {
-    margin-top: 24px;
-    width: 308px;
-    @include mobile {
-      width: 100%;
-    }
+    margin-top: 20px;
+    width: 100%;
   }
 }
 
@@ -36,9 +32,8 @@
   }
 }
 
-#stform2 .graph-modal__container {
-  height: 630px;
-  @include mobile {
-    height: 700px;
+.graph-modal__container#stForm2 {
+  h2{
+    margin-top: 0;
   }
 }
