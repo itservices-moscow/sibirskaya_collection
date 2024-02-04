@@ -6,6 +6,18 @@
   &__list {
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 42px;
+      z-index: 10;
+      position: absolute;
+      background: linear-gradient(to right, transparent, var(--main-beige));
+    }
     @include mobile {
       display: flex;
       flex-direction: row;
@@ -16,6 +28,9 @@
       -webkit-overflow-scrolling: touch;
       padding-bottom: 20px;
       margin-bottom: -20px;
+      &:after {
+        display: none;
+      }
     }
   }
 }

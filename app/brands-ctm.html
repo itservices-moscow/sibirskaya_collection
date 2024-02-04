@@ -1,8 +1,632 @@
-<!DOCTYPE html><html lang="ru" class="page"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><title>Sибирская коллекция</title><link rel="preload" href="fonts/avenirnextcyrlight.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/IntroDemoCondBlackCAPS.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/introdemocond-lightcaps.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="css/vendor.css"><link rel="stylesheet" href="css/main.css"><script defer="defer" src="js/main.js"></script><!--
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <title>Sибирская коллекция</title>
+  <link rel="preload" href="fonts/avenirnextcyrlight.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/IntroDemoCondBlackCAPS.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/introdemocond-lightcaps.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <script defer src="js/main.js"></script>
+  <!--
   <script src="js/vendor/video.min.js" tupe="text/javascript"></script>
-  <script defer src="js/vendor/dropzone.min.js"></script> --><script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script><!-- swiper поэкранный скролл --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- Яндекс.карты - подключать только на стр. Контакты --><script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=en_US" type="text/javascript"></script><!-- upload locally --></head><body class="page__body"><div class="site-container" id="site-container"><header class="header"><div class="container header__container grid" data-menu-hide="all"><div class="header-grid"><a href="index.html" class="logo"><img src="img/svg/sk-logo.svg" alt=""></a></div><!-- средняя секция на десктопе --><div class="header-grid desktop"><nav class="nav" title="Главное меню"><ul class="list-reset nav__list flex" id="nav__list"><li class="nav__item"><a href="#" class="nav__link" id="link-manuf">Производство</a></li><li class="nav__item"><a href="#" class="nav__link" id="link-brands">Продукт</a></li><li class="nav__item"><a href="new.html" class="nav__link" data-menu-hide-onhover="all">Новинки</a></li><li class="nav__item"><a href="startups.html" class="nav__link" data-menu-hide-onhover="all">Стартапам</a></li><li class="nav__item"><a href="contacts.html" class="nav__link" data-menu-hide-onhover="all">Контакты</a></li><li class="nav__item"><div id="searchanchor"></div><form class="searchbox" id="searchbox"><input class="searchinput" type="text" name="" placeholder="Поиск"> <span class="searchbuffer"> </span><button class="btn-reset searchsearch" data-graph-path="">НАЙТИ</button> <button class="searchbutton" type="button"><div id="searchicon"><img src="img/svg/search-icon.svg"></div></button><div class="searchsuggest"></div></form></li></ul></nav></div><!-- средняя секция на мобильных и маленьких экранах <1280 --><div class="header-grid mobile"><div class="flex"><div class="lang"><a href="#" class="active">RU</a>   <a href="#">EN</a></div></div></div><!-- правая секция на десктопе --><div class="header-grid desktop"><div class="header-r flex"><div><button class="btn-reset nav__button btn-secondary">КУПИТЬ</button></div><div class="lang"><a href="catalog.html" class="active">RU</a>   <a href="#">EN</a></div></div></div><!-- правая секция на мобильных и маленьких экранах <1280 --><div class="header-grid mobile"><div class="flex"><button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger><span class="burger__line"></span> <span class="burger__line"></span> <span class="burger__line"></span></button></div></div></div></header><div class="topmenu-mobile mobile" data-menu><div class="topmenu-mobile__head flex hidden" data-menu-search><div class="topmenu-mobile__buffer"></div><div class="topmenu-mobile__search"><form class="searchbox-mob flex" id="searchbox-mob"><input class="searchinput-mob" type="text" name="" placeholder="Поиск"> <button class="btn-reset searchbutton-mob"></button></form></div><div class="topmenu-mobile__backdrop"><div class="searchsuggest"></div></div><button class="btn-reset topmenu-mobile__close icon-close burger-close" aria-label="Закрыть меню" data-menu-close></button></div><script type="text/javascript">// МОБИЛЬНОЕ МЕНЮ
-    function toggleMobMenuPanel(panelClass) {
-      document.querySelector(panelClass).classList.toggle("closed")
-    }</script><div class="topmenu-mobile__content hidden" data-menu-content><nav title="Главное меню"><div class="nav-mob nav-mob-l0"><ul class="list-reset nav-mob__list"><li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-manuf');"><a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a></li><li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-brands');"><a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a></li><li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li><li class="nav-mob__item"><a href="startups.html" class="nav-mob__link">Стартапам</a></li><li class="nav-mob__item"><a href="contacts.html" class="nav-mob__link">Контакты</a></li></ul><button class="btn-reset btn-secondary">Купить нашу продукцию</button></div><div class="nav-mob nav-mob-l1 nav-mob-brands closed"><div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');"><img src="img/back-sm.png"> <span>продукт</span></div><ul class="list-reset nav-mob__list"><li class="nav-top-l1__brands"><a href="#" class="nav-top-l1__link">бренды</a><ul class="list-reset nav-mob-l2__list flex"><li class="nav-mob-l2__item"><a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');">Sибирская коллекция</a></li><li class="nav-mob-l2__item"><a href="brands-sk-selective.html" class="nav-mob-l2__link" onclick="">SK SELECTIVE</a></li><li class="nav-mob-l2__item"><a href="brands-sk-selective-kids.html" class="nav-mob-l2__link">SK SELECTIVE KIDS</a></li><li class="nav-mob-l2__item link-more"><a href="brands-sk.html" class="nav-mob-l2__link">СМОТРЕТЬ ВСЕ</a></li></ul></li><li class="nav-mob-l1__item"><a href="brands-kids.html" class="nav-mob-l1__link">детское питание</a></li><li class="nav-mob-l1__item"><a href="brands-horeca.html" class="nav-mob-l1__link">horeca</a></li><li class="nav-mob-l1__item"><a href="brands-ctm.html" class="nav-mob-l1__link">stm</a></li></ul></div><div class="nav-mob nav-mob-l1 nav-mob-manuf closed"><div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');"><img src="img/back-sm.png"> <span>производство</span></div><ul class="list-reset nav-mob__list"><li class="nav-mob__item"><a href="quality.html" class="nav-mob__link">контроль качества</a></li><li class="nav-mob__item"><a href="laboratories.html" class="nav-mob__link">Собственные лаборатории</a></li><li class="nav-mob__item"><a href="creating-products.html" class="nav-mob__link">Разработка новых продуктов</a></li><li class="nav-mob__item"><a href="#" class="nav-mob__link">карьера</a></li></ul><div class="pic-container flex"><div class="piclink"><a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic"></a><a href="creating-products.html" class="piclink__link">отдел разработки</a></div><div class="piclink"><a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic"></a><a href="#" class="piclink__link">карьера</a></div></div></div><div class="nav-mob nav-mob-l3 nav-mob-sk closed"><div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');"><img src="img/back-sm.png"> <span>Бренды:<br>Sибирская коллекция</span></div><ul class="list-reset nav-mob__list"><li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a></li><li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a></li><li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li><li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li><li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">vegan</a></li><li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">пицца</a></li><li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">kids</a></li><li class="nav-mob-l3__item link-more"><a href="catalog.html" class="nav-mob-l3__link">СМОТРЕТЬ ВСЕ</a></li></ul></div><div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed"><div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');"><img src="img/back-sm.png"> <span>пельмени<br>Sибирская коллекция</span></div><ul class="list-reset nav-mob__list"><!-- в верстке будет два вида - говядина и телятина --><li class="nav-mob-l4__item"><a href="product-pelmeni-1.html" class="nav-mob-l4__link">с говядиной</a></li><li class="nav-mob-l4__item"><a href="product-pelmeni-1.html" class="nav-mob-l4__link">с телятиной</a></li><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с индейкой</a></li><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с курицей</a></li><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">4 вида мяса</a></li><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">халяль</a></li><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">эксклюзив</a></li><li class="nav-mob-l4__item link-more"><a href="catalog.html" class="nav-mob-l4__link">СМОТРЕТЬ ВСЕ</a></li></ul></div><div class="nav-mob nav-mob-l4 nav-mob-vareniki closed"><div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');"><img src="img/back-sm.png"> <span>вареники<br>Sибирская коллекция</span></div><ul class="list-reset nav-mob__list"><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с картошкой</a></li><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с вишней</a></li><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с творогом</a></li><li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">эксклюзив</a></li><li class="nav-mob-l4__item link-more"><a href="catalog.html" class="nav-mob-l4__link">СМОТРЕТЬ ВСЕ</a></li></ul></div></nav></div></div><nav class="topmenu topmenu_brands" id="topmenu-brands"><div class="topmenu-container"><div class="topmenu-container__item"><nav class="nav-top nav-top-l1" title=""><ul class="list-reset nav-top-l1__list"><li class="nav-top-l1__item active"><a href="#" class="nav-top-l1__link">бренды</a></li><li class="nav-top-l1__item"><a href="brands-kids.html" class="nav-top-l1__link">детское питание</a></li><li class="nav-top-l1__item"><a href="brands-horeca.html" class="nav-top-l1__link">horeca</a></li><li class="nav-top-l1__item"><a href="brands-ctm.html" class="nav-top-l1__link">stm</a></li></ul></nav></div><div class="topmenu-container__item" data-menuleave-hide="nav-top-l2"><nav class="nav-top nav-top-l2" title=""><ul class="list-reset nav-top-l2__list"><li class="nav-top-l2__item"><a href="#" class="nav-top-l2__link" data-show-submenu="nav-top-l3-0">Sибирская коллекция</a></li><li class="nav-top-l2__item"><a href="brands-sk-selective.html" class="nav-top-l2__link" data-show-submenu="nav-top-l3-1">SK SELECTIVE</a></li><li class="nav-top-l2__item"><a href="brands-sk-selective-kids.html" class="nav-top-l2__link">SK SELECTIVE KIDS</a></li><li class="nav-top-l2__item nav-top-l2__item-more"><span class="arr-right-on"><a href="brands-sk.html"><span class="text">СМОТРЕТЬ ВСЕ</span> <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></span></li></ul></nav></div><div class="topmenu-container__item" data-menuleave-hide="nav-top-l3"><nav class="nav-top nav-top-l3" id="nav-top-l3-0" title=""><ul class="list-reset nav-top-l3__list"><li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link" data-show-submenu="nav-top-l4-0">пельмени</a></li><li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link" data-show-submenu="nav-top-l4-1">вареники</a></li><li class="nav-top-l3__item"><a href="product-bliny-1.html" class="nav-top-l3__link">блины</a></li><li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">котлеты</a></li><li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">vegan</a></li><li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">пицца</a></li><li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">kids</a></li><li class="nav-top-l3__item nav-top-l3__item-more"><span class="arr-right-on"><a href="catalog.html"><span class="text">СМОТРЕТЬ ВСЕ</span> <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></span></li></ul></nav><nav class="nav-top nav-top-l3" id="nav-top-l3-1" title=""><ul class="list-reset nav-top-l3__list"><li class="nav-top-l3__item"><!-- ссылки - для примера --> <a href="#" class="nav-top-l3__link" href="brands-sk-selective.html">пельмени</a></li><li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">вареники</a></li><li class="nav-top-l3__item"><a href="product-bliny-1.html" class="nav-top-l3__link">блины</a></li><li class="nav-top-l3__item nav-top-l3__item-more"><span class="arr-right-on"><a href="catalog.html"><span class="text">СМОТРЕТЬ ВСЕ</span> <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></span></li></ul></nav></div><div class="topmenu-container__item" data-menuleave-hide="nav-top-l4"><nav class="nav-top nav-top-l4" id="nav-top-l4-0" title=""><ul class="list-reset nav-top-l4__list"><li class="nav-top-l4__item"><a href="product-pelmeni-1.html" class="nav-top-l4__link">с говядиной</a></li><li class="nav-top-l4__item"><a href="product-pelmeni-2.html" class="nav-top-l4__link">с телятиной</a></li><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с индейкой</a></li><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с курицей</a></li><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">4 вида мяса</a></li><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">халяль</a></li><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">эксклюзив</a></li><li class="nav-top-l4__item nav-top-l4__item-more"><span class="arr-right-on"><a href="catalog.html"><span class="text">СМОТРЕТЬ ВСЕ</span> <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></span></li></ul></nav><nav class="nav-top nav-top-l4" id="nav-top-l4-1" title=""><ul class="list-reset nav-top-l4__list"><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с картошкой</a></li><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с вишней</a></li><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с творогом</a></li><li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">эксклюзив</a></li><li class="nav-top-l4__item nav-top-l4__item-more"><span class="arr-right-on"><a href="catalog.html"><span class="text">СМОТРЕТЬ ВСЕ</span> <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></span></li></ul></nav></div></div><div class="topmenu-backdrop" data-menu-hide="topmenu-brands"></div></nav><nav class="topmenu topmenu_brands" id="topmenu-manuf"><div class="topmenu-container"><div class="topmenu-container__item topmenu-container__item-manuf"><nav class="nav-top-l1" title=""><ul class="list-reset nav-top-l1__list"><li class="nav-top-l1__item"><a href="quality.html" class="nav-top-l1__link">контроль качества</a></li><li class="nav-top-l1__item"><a href="laboratories.html" class="nav-top-l1__link">Собственные лаборатории</a></li><li class="nav-top-l1__item" id="menu-item-creating"><a href="creating-products.html" class="nav-top-l1__link">Разработка новых продуктов</a></li><li class="nav-top-l1__item" id="menu-item-career"><a href="#" class="nav-top-l1__link">карьера</a></li></ul></nav></div><div class="topmenu-container__item topmenu-container__item-manuf2"></div><div class="topmenu-container__item topmenu-container__item-manuf3"><div class="piclink" data-onhover-id="menu-item-creating"><a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic"></a><a href="creating-products.html" class="piclink__link">отдел разработки</a></div><div class="piclink" data-onhover-id="menu-item-career"><a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic"></a><a href="#" class="piclink__link">карьера у нас</a></div></div></div><div class="topmenu-backdrop" data-menu-hide="topmenu-manuf"></div></nav><div class="cookie-alert" id="cookie-alert"><div><p>Мы используем<br class="smallscreen">файлы <a href="#">cookie</a>,<br>чтобы пользоваться сайтом было удобно</p><button class="btn-secondary" onclick="localStorage.setItem('cookiealert', 'ok'); document.getElementById('cookie-alert').style.opacity = 0;  document.getElementById('cookie-alert').style.visibility = hidden;">OK</button></div><script type="text/javascript">if (localStorage.getItem("cookiealert") == "ok") {
+  <script defer src="js/vendor/dropzone.min.js"></script> -->
+  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
+  <!-- swiper поэкранный скролл -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Яндекс.карты - подключать только на стр. Контакты -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=en_US" type="text/javascript"></script>
+
+  <!-- upload locally -->
+</head>
+
+  <body class="page__body">
+    <div class="site-container" id="site-container">
+      <header class="header">
+  <div class="container header__container grid" data-menu-hide="all">
+    <div class="header-grid">
+      <a href="index.html" class="logo">
+        <img src="img/svg/sk-logo.svg" alt="" />
+      </a>
+    </div>
+
+    <!-- средняя секция на десктопе -->
+    <div class="header-grid desktop">
+      <nav class="nav" title="Главное меню">
+        <ul class="list-reset nav__list flex" id="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link" id="link-manuf">Производство</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link" id="link-brands">Продукт</a>
+          </li>
+          <li class="nav__item">
+            <a href="new.html" class="nav__link" data-menu-hide-onhover="all">Новинки</a>
+          </li>
+          <li class="nav__item">
+            <a href="startups.html" class="nav__link" data-menu-hide-onhover="all">Стартапам</a>
+          </li>
+          <li class="nav__item">
+            <a href="contacts.html" class="nav__link" data-menu-hide-onhover="all">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <div id="searchanchor"></div>
+            <form class="searchbox" id="searchbox">
+              <input class="searchinput" type="text" name="" placeholder="Поиск" />
+              <span class="searchbuffer"> </span>
+              <button class="btn-reset searchsearch" data-graph-path="">НАЙТИ</button>
+              <button class="searchbutton" type="button">
+                <div id="searchicon">
+                  <img src="img/svg/search-icon.svg" />
+                </div>
+              </button>
+              <div class="searchsuggest"></div>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- средняя секция на мобильных и маленьких экранах <1280 -->
+    <div class="header-grid mobile">
+      <div class="flex">
+        <div class="lang"><a href="#" class="active">RU</a>   <a href="#">EN</a></div>
+      </div>
+    </div>
+
+    <!-- правая секция на десктопе -->
+    <div class="header-grid desktop">
+      <div class="header-r flex">
+        <div>
+          <button class="btn-reset nav__button btn-secondary">КУПИТЬ</button>
+        </div>
+        <div class="lang"><a href="catalog.html" class="active">RU</a>   <a href="#">EN</a></div>
+      </div>
+    </div>
+
+    <!-- правая секция на мобильных и маленьких экранах <1280 -->
+    <div class="header-grid mobile">
+      <div class="flex">
+        <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="topmenu-mobile mobile" data-menu>
+  <div class="topmenu-mobile__head flex hidden" data-menu-search>
+    <div class="topmenu-mobile__buffer"></div>
+    <div class="topmenu-mobile__search">
+      <form class="searchbox-mob flex" id="searchbox-mob">
+        <input class="searchinput-mob" type="text" name="" placeholder="Поиск" />
+        <button class="btn-reset searchbutton-mob"></button>
+      </form>
+    </div>
+    <div class="topmenu-mobile__backdrop">
+      <div class="searchsuggest"></div>
+    </div>
+    <button
+      class="btn-reset topmenu-mobile__close icon-close burger-close"
+      aria-label="Закрыть меню"
+      data-menu-close></button>
+  </div>
+  <script type="text/javascript">
+    // МОБИЛЬНОЕ МЕНЮ
+    function openMobMenuPanel(panelClass, parentClass) {
+      document.querySelector(panelClass).classList.remove("slide-right")
+      document.querySelector(parentClass).classList.add("slide-left")
+    }
+    function closeMobMenuPanel(panelClass, parentClass) {
+      document.querySelector(panelClass).classList.add("slide-right")
+      document.querySelector(parentClass).classList.remove("slide-left")
+    }
+  </script>
+  <div class="topmenu-mobile__content hidden" data-menu-content>
+    <nav title="Главное меню">
+      <div class="nav-mob nav-mob-l0">
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+            <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
+          </li>
+          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+            <a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a>
+          </li>
+          <li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li>
+          <li class="nav-mob__item"><a href="startups.html" class="nav-mob__link">Стартапам</a></li>
+          <li class="nav-mob__item"><a href="contacts.html" class="nav-mob__link">Контакты</a></li>
+        </ul>
+        <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
+      </div>
+
+      <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+          <img src="img/back-sm.png" />
+          <span>продукт</span>
+        </div>
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-top-l1__brands">
+            <a href="#" class="nav-top-l1__link">бренды</a>
+            <ul class="list-reset nav-mob-l2__list flex">
+              <li class="nav-mob-l2__item">
+                <a href="#" class="nav-mob-l2__link" onclick="openMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');"
+                  >Sибирская коллекция</a
+                >
+              </li>
+              <li class="nav-mob-l2__item">
+                <a href="brands-sk-selective.html" class="nav-mob-l2__link" onClick="">SK SELECTIVE</a>
+              </li>
+              <li class="nav-mob-l2__item">
+                <a href="brands-sk-selective-kids.html" class="nav-mob-l2__link">SK SELECTIVE KIDS</a>
+              </li>
+              <li class="nav-mob-l2__item link-more">
+                <a href="brands-sk.html" class="nav-mob-l2__link">СМОТРЕТЬ ВСЕ</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-mob-l1__item"><a href="brands-kids.html" class="nav-mob-l1__link">детское питание</a></li>
+          <li class="nav-mob-l1__item"><a href="brands-horeca.html" class="nav-mob-l1__link">horeca</a></li>
+          <li class="nav-mob-l1__item"><a href="brands-ctm.html" class="nav-mob-l1__link">stm</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+          <img src="img/back-sm.png" />
+          <span>производство</span>
+        </div>
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob__item"><a href="quality.html" class="nav-mob__link">контроль качества</a></li>
+          <li class="nav-mob__item"><a href="laboratories.html" class="nav-mob__link">Собственные лаборатории</a></li>
+          <li class="nav-mob__item">
+            <a href="creating-products.html" class="nav-mob__link">Разработка новых продуктов</a>
+          </li>
+          <li class="nav-mob__item"><a href="#" class="nav-mob__link">карьера</a></li>
+        </ul>
+        <div class="pic-container flex">
+          <div class="piclink">
+            <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
+            <a href="creating-products.html" class="piclink__link">отдел разработки</a>
+          </div>
+          <div class="piclink">
+            <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
+            <a href="#" class="piclink__link">карьера</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
+          <img src="img/back-sm.png" />
+          <span>Бренды:<br />Sибирская коллекция</span>
+        </div>
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob-l3__item">
+            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">пельмени</a>
+          </li>
+          <li class="nav-mob-l3__item">
+            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">вареники</a>
+          </li>
+          <li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">vegan</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">пицца</a></li>
+          <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">kids</a></li>
+          <li class="nav-mob-l3__item link-more"><a href="catalog.html" class="nav-mob-l3__link">СМОТРЕТЬ ВСЕ</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
+          <img src="img/back-sm.png" />
+          <span>пельмени<br />Sибирская коллекция</span>
+        </div>
+        <ul class="list-reset nav-mob__list">
+          <!-- в верстке будет два вида - говядина и телятина -->
+          <li class="nav-mob-l4__item"><a href="product-pelmeni-1.html" class="nav-mob-l4__link">с говядиной</a></li>
+          <li class="nav-mob-l4__item"><a href="product-pelmeni-1.html" class="nav-mob-l4__link">с телятиной</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с индейкой</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с курицей</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">4 вида мяса</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">халяль</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">эксклюзив</a></li>
+          <li class="nav-mob-l4__item link-more"><a href="catalog.html" class="nav-mob-l4__link">СМОТРЕТЬ ВСЕ</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
+          <img src="img/back-sm.png" />
+          <span>вареники<br />Sибирская коллекция</span>
+        </div>
+        <ul class="list-reset nav-mob__list">
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с картошкой</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с вишней</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">с творогом</a></li>
+          <li class="nav-mob-l4__item"><a href="#" class="nav-mob-l4__link">эксклюзив</a></li>
+          <li class="nav-mob-l4__item link-more"><a href="catalog.html" class="nav-mob-l4__link">СМОТРЕТЬ ВСЕ</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+ <nav class="topmenu topmenu_brands" id="topmenu-brands">
+  <div class="topmenu-container">
+    <div class="topmenu-container__item">
+      <nav class="nav-top nav-top-l1" title="">
+        <ul class="list-reset nav-top-l1__list">
+          <li class="nav-top-l1__item active"><a href="#" class="nav-top-l1__link">бренды</a></li>
+          <li class="nav-top-l1__item"><a href="brands-kids.html" class="nav-top-l1__link">детское питание</a></li>
+          <li class="nav-top-l1__item"><a href="brands-horeca.html" class="nav-top-l1__link">horeca</a></li>
+          <li class="nav-top-l1__item"><a href="brands-ctm.html" class="nav-top-l1__link">stm</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="topmenu-container__item" data-menuleave-hide="nav-top-l2">
+      <nav class="nav-top nav-top-l2" title="">
+        <ul class="list-reset nav-top-l2__list">
+          <li class="nav-top-l2__item">
+            <a href="#" class="nav-top-l2__link" data-show-submenu="nav-top-l3-0">Sибирская коллекция</a>
+          </li>
+          <li class="nav-top-l2__item">
+            <a href="brands-sk-selective.html" class="nav-top-l2__link" data-show-submenu="nav-top-l3-1"
+              >SK SELECTIVE</a
+            >
+          </li>
+          <li class="nav-top-l2__item">
+            <a href="brands-sk-selective-kids.html" class="nav-top-l2__link">SK SELECTIVE KIDS</a>
+          </li>
+          <li class="nav-top-l2__item nav-top-l2__item-more">
+            <span class="arr-right-on">
+              <a href="brands-sk.html">
+                <span class="text">СМОТРЕТЬ ВСЕ</span>
+                <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round"
+    stroke-linejoin="round">
+  </path>
+</svg>
+
+              </a>
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="topmenu-container__item" data-menuleave-hide="nav-top-l3">
+      <nav class="nav-top nav-top-l3" id="nav-top-l3-0" title="">
+        <ul class="list-reset nav-top-l3__list">
+          <li class="nav-top-l3__item">
+            <a href="#" class="nav-top-l3__link" data-show-submenu="nav-top-l4-0">пельмени</a>
+          </li>
+          <li class="nav-top-l3__item">
+            <a href="#" class="nav-top-l3__link" data-show-submenu="nav-top-l4-1">вареники</a>
+          </li>
+          <li class="nav-top-l3__item"><a href="product-bliny-1.html" class="nav-top-l3__link">блины</a></li>
+          <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">котлеты</a></li>
+          <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">vegan</a></li>
+          <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">пицца</a></li>
+          <li class="nav-top-l3__item"><a href="#" class="nav-top-l3__link">kids</a></li>
+
+          <li class="nav-top-l3__item nav-top-l3__item-more">
+            <span class="arr-right-on">
+              <a href="catalog.html">
+                <span class="text">СМОТРЕТЬ ВСЕ</span>
+                <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round"
+    stroke-linejoin="round">
+  </path>
+</svg>
+
+              </a>
+            </span>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav-top nav-top-l3" id="nav-top-l3-1" title="">
+        <ul class="list-reset nav-top-l3__list">
+          <li class="nav-top-l3__item">
+            <!-- ссылки - для примера -->
+            <a href="#" class="nav-top-l3__link" href="brands-sk-selective.html">пельмени</a>
+          </li>
+          <li class="nav-top-l3__item">
+            <a href="#" class="nav-top-l3__link">вареники</a>
+          </li>
+          <li class="nav-top-l3__item"><a href="product-bliny-1.html" class="nav-top-l3__link">блины</a></li>
+
+          <li class="nav-top-l3__item nav-top-l3__item-more">
+            <span class="arr-right-on">
+              <a href="catalog.html">
+                <span class="text">СМОТРЕТЬ ВСЕ</span>
+                <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round"
+    stroke-linejoin="round">
+  </path>
+</svg>
+
+              </a>
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="topmenu-container__item" data-menuleave-hide="nav-top-l4">
+      <nav class="nav-top nav-top-l4" id="nav-top-l4-0" title="">
+        <ul class="list-reset nav-top-l4__list">
+          <li class="nav-top-l4__item"><a href="product-pelmeni-1.html" class="nav-top-l4__link">с говядиной</a></li>
+          <li class="nav-top-l4__item"><a href="product-pelmeni-2.html" class="nav-top-l4__link">с телятиной</a></li>
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с индейкой</a></li>
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с курицей</a></li>
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">4 вида мяса</a></li>
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">халяль</a></li>
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">эксклюзив</a></li>
+
+          <li class="nav-top-l4__item nav-top-l4__item-more">
+            <span class="arr-right-on">
+              <a href="catalog.html">
+                <span class="text">СМОТРЕТЬ ВСЕ</span>
+                <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round"
+    stroke-linejoin="round">
+  </path>
+</svg>
+
+              </a>
+            </span>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav-top nav-top-l4" id="nav-top-l4-1" title="">
+        <ul class="list-reset nav-top-l4__list">
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с картошкой</a></li>
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с вишней</a></li>
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с творогом</a></li>
+          <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">эксклюзив</a></li>
+
+          <li class="nav-top-l4__item nav-top-l4__item-more">
+            <span class="arr-right-on">
+              <a href="catalog.html">
+                <span class="text">СМОТРЕТЬ ВСЕ</span>
+                <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round"
+    stroke-linejoin="round">
+  </path>
+</svg>
+
+              </a>
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="topmenu-backdrop" data-menu-hide="topmenu-brands"></div>
+</nav>
+
+<nav class="topmenu topmenu_brands" id="topmenu-manuf">
+  <div class="topmenu-container">
+    <div class="topmenu-container__item topmenu-container__item-manuf">
+      <nav class="nav-top-l1" title="">
+        <ul class="list-reset nav-top-l1__list">
+          <li class="nav-top-l1__item"><a href="quality.html" class="nav-top-l1__link">контроль качества</a></li>
+          <li class="nav-top-l1__item">
+            <a href="laboratories.html" class="nav-top-l1__link">Собственные лаборатории</a>
+          </li>
+          <li class="nav-top-l1__item" id="menu-item-creating">
+            <a href="creating-products.html" class="nav-top-l1__link">Разработка новых продуктов</a>
+          </li>
+          <li class="nav-top-l1__item" id="menu-item-career"><a href="#" class="nav-top-l1__link">карьера</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="topmenu-container__item topmenu-container__item-manuf2"></div>
+    <div class="topmenu-container__item topmenu-container__item-manuf3">
+      <div class="piclink" data-onhover-id="menu-item-creating">
+        <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
+        <a href="creating-products.html" class="piclink__link">отдел разработки</a>
+      </div>
+      <div class="piclink" data-onhover-id="menu-item-career">
+        <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
+        <a href="#" class="piclink__link">карьера у нас</a>
+      </div>
+    </div>
+  </div>
+  <div class="topmenu-backdrop" data-menu-hide="topmenu-manuf"></div>
+</nav>
+ <div class="cookie-alert" id="cookie-alert">
+  <div>
+    <p>
+      Мы используем<br class="smallscreen" />
+      файлы <a href="#">cookie</a>,<br />
+      чтобы пользоваться сайтом было удобно
+    </p>
+    <button
+      class="btn-secondary"
+      onClick="localStorage.setItem('cookiealert', 'ok'); document.getElementById('cookie-alert').style.opacity = 0;  document.getElementById('cookie-alert').style.visibility = hidden;">
+      OK
+    </button>
+  </div>
+  <script type="text/javascript">
+    if (localStorage.getItem("cookiealert") == "ok") {
       document.getElementById("cookie-alert").style.visibility = "hidden"
-    }</script></div><main class="brands-ctm"><section class="back mobile"><div class="container"><span class="icon-back"><a href="#" onclick="history.back();"><svg width="56" height="42" viewBox="0 0 56 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.6448 28.6365L17.5 21.0277M17.5 21.0277L25.6448 13.3638M17.5 21.0277L55 21.0277" class="arr" stroke="#3C3B35" stroke-linecap="round" stroke-linejoin="round"/><path d="M40.75 21C40.75 32.3304 31.7313 41.5 20.625 41.5C9.51872 41.5 0.5 32.3304 0.5 21C0.5 9.66963 9.51872 0.5 20.625 0.5C31.7313 0.5 40.75 9.66963 40.75 21Z" stroke="#C0B3A8" class="cir"/></svg></a></span></div></section><section class="back desktop"><div class="container"><span class="icon-back"><a href="#" onclick="history.back();"><svg xmlns="http://www.w3.org/2000/svg" width="89" height="66" viewBox="0 0 89 66" fill="none"><path d="M41.0317 45L28 33.0433M28 33.0433L41.0317 21M28 33.0433H88" class="arr" stroke="#3C3B35" stroke-linecap="round" stroke-linejoin="round"/><circle cx="33" cy="33" r="32.5" stroke="#C0B3A8" class="cir"/></svg></a></span></div></section><section class="brands"><div class="container brands__container grid"><div class="brands__left"><ul class="list-reset prodmenu"><li><a class="prodmenu__link" href="brands-sk-selective.html">бренды</a></li><li><a class="prodmenu__link" href="brands-kids.html">детское питание</a></li><li><a class="prodmenu__link" href="brands-horeca.html">horeca</a></li><li><a class="prodmenu__link active" href="brands-ctm.html">ctm</a></li></ul></div><div class="brands__content"><div class="brands-content grid"><div class="brands-content__info"><div class="container brands-info"><div class="brands-info__bg"></div><div class="brands-info__content flex"><div class="brands-info__text brands-info__text_horeca"><h1>CTM</h1><p>Разрабатываем продукты по запросу под вашим брендом</p><button class="btn-reset btn-primary">отправить запрос</button></div><div class="brands-info__pic brands-info__pic_horeca"><!-- <img src="img/horeca-pic.png" /> --></div></div></div></div></div></div></div></section><section class="brands-smth desktop"><div class="container smth flex"><div>ЛОГОТИП</div><div>ЛОГОТИП</div><div>ЛОГОТИП</div><div>ЛОГОТИП</div><div>ЛОГОТИП</div><div>ЛОГОТИП</div></div></section><section class="mobile"><div style="height: 290px"></div></section></main><footer class="footer"><div class="container flex footer__container footer__t"><nav class="footer_nav" title="Нижнее меню"><div class="navf"><div class="navf__item"><div class="accordion">Производство</div><div class="panel"><ul class="list-reset navf-sub"><li class="navf-sub__item"><a href="quality.html" class="navf-sub__link">Контроль качества</a></li><li class="navf-sub__item"><a href="laboratories.html" class="navf-sub__link">Собственные лаборатории</a></li><li class="navf-sub__item"><a href="creating-products.html" class="navf-sub__link">Разработка новых продуктов</a></li><li class="navf-sub__item"><a href="#" class="navf-sub__link">Карьера</a></li></ul></div></div><div class="navf__item"><div class="accordion">Продукт</div><div class="panel"><ul class="list-reset navf-sub"><li class="navf-sub__item"><a href="brands-sk.html" class="navf-sub__link">Sибирская коллекция</a></li><li class="navf-sub__item"><a href="brands-sk-selective.html" class="navf-sub__link">SK Selective</a></li><li class="navf-sub__item"><a href="brands-sk-selective-kids.html" class="navf-sub__link">SK Selective kids</a></li></ul></div></div><div class="navf__item"><div class="empty"><a href="new.html">Новинки</a></div></div><div class="navf__item"><div class="empty"><a href="startups.html">Стартапы</a></div></div><div class="navf__item"><div class="empty"><a href="contacts.html">Контакты</a></div></div></div></nav><div class="footer_center flex"><img class="f-logo" src="img/svg/sk-logo-main.svg" alt=""> <a href="#" class="youtube-link desktop"><img src="img/youtube-logo.png" alt=""></a></div><div class="footer_info"><p>ЦЕНТРАЛЬНЫЙ ОФИС<br><span class="phone">+7 495 726-55-38</span><br><span><a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a></span></p><p>ПРОИЗВОДСТВО<br><span class="phone">+7 495 933-80-71</span><br><span><a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a></span></p><p>ОТДЕЛ КАЧЕСТВА<br><span class="phone">8-800-250-18-80</span> <span class="rf">Звонок по РФ бесплатный</span> <span class="email"><a href="mailto:shmpk-kachestvo@shmpk.ru" class="email">shmpk-kachestvo@shmpk.ru</a></span></p></div><a href="#" class="youtube-link mobile"><img src="img/youtube-logo.png" alt=""></a></div><div class="container flex footer__container footer__b"><span class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span> <a href="#">Политика конфиденциальности</a> <a href="#">Правила пользования сайтом</a> <a href="#">Пользовательское соглашение</a> <span class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span></div></footer></div></body></html>
+    }
+  </script>
+</div>
+
+      <main class="brands-ctm">
+        <section class="back mobile">
+  <div class="container">
+    <span class="icon-back">
+      <a href="#" onclick="history.back();">
+        <svg width="56" height="42" viewBox="0 0 56 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.6448 28.6365L17.5 21.0277M17.5 21.0277L25.6448 13.3638M17.5 21.0277L55 21.0277"
+            class="arr"
+            stroke="#3C3B35"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path
+            d="M40.75 21C40.75 32.3304 31.7313 41.5 20.625 41.5C9.51872 41.5 0.5 32.3304 0.5 21C0.5 9.66963 9.51872 0.5 20.625 0.5C31.7313 0.5 40.75 9.66963 40.75 21Z"
+            stroke="#C0B3A8"
+            class="cir" />
+        </svg>
+      </a>
+    </span>
+  </div>
+</section>
+<section class="back desktop">
+  <div class="container">
+    <span class="icon-back">
+      <a href="#" onclick="history.back();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="89" height="66" viewBox="0 0 89 66" fill="none">
+          <path
+            d="M41.0317 45L28 33.0433M28 33.0433L41.0317 21M28 33.0433H88"
+            class="arr"
+            stroke="#3C3B35"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+          <circle cx="33" cy="33" r="32.5" stroke="#C0B3A8" class="cir" />
+        </svg>
+      </a>
+    </span>
+  </div>
+</section>
+
+        <section class="brands">
+          <div class="container brands__container grid">
+            <div class="brands__left">
+
+              <ul class="list-reset prodmenu">
+                <li><a class="prodmenu__link" href="brands-sk-selective.html">бренды</a></li>
+                <li><a class="prodmenu__link" href="brands-kids.html">детское питание</a></li>
+                <li><a class="prodmenu__link" href="brands-horeca.html">horeca</a></li>
+                <li><a class="prodmenu__link active" href="brands-ctm.html">ctm</a></li>
+              </ul>
+            </div>
+            <div class="brands__content"><div class="brands-content grid">
+  <div class="brands-content__info">
+    <div class="container brands-info">
+      <div class="brands-info__bg"></div>
+      <div class="brands-info__content flex">
+        <div class="brands-info__text brands-info__text_horeca">
+          <h1>CTM</h1>
+          <p>Разрабатываем продукты по запросу под вашим брендом</p>
+          <button class="btn-reset btn-primary">отправить запрос</button>
+        </div>
+        <div class="brands-info__pic brands-info__pic_horeca">
+          <!-- <img src="img/horeca-pic.png" /> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          </div>
+        </section>
+        <section class="brands-smth desktop">
+          <div class="container smth flex">
+            <div>ЛОГОТИП</div>
+            <div>ЛОГОТИП</div>
+            <div>ЛОГОТИП</div>
+            <div>ЛОГОТИП</div>
+            <div>ЛОГОТИП</div>
+            <div>ЛОГОТИП</div>
+          </div>
+        </section>
+        <section class="mobile"><div style="height: 290px"></div></section>
+      </main>
+
+      <footer class="footer">
+  <div class="container flex footer__container footer__t">
+    <nav class="footer_nav" title="Нижнее меню">
+      <div class="navf">
+        <div class="navf__item">
+          <div class="accordion">Производство</div>
+          <div class="panel">
+            <ul class="list-reset navf-sub">
+              <li class="navf-sub__item"><a href="quality.html" class="navf-sub__link">Контроль качества</a></li>
+              <li class="navf-sub__item">
+                <a href="laboratories.html" class="navf-sub__link">Собственные лаборатории</a>
+              </li>
+              <li class="navf-sub__item">
+                <a href="creating-products.html" class="navf-sub__link">Разработка новых продуктов</a>
+              </li>
+              <li class="navf-sub__item"><a href="#" class="navf-sub__link">Карьера</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navf__item">
+          <div class="accordion">Продукт</div>
+          <div class="panel">
+            <ul class="list-reset navf-sub">
+              <li class="navf-sub__item"><a href="brands-sk.html" class="navf-sub__link">Sибирская коллекция</a></li>
+              <li class="navf-sub__item"><a href="brands-sk-selective.html" class="navf-sub__link">SK Selective</a></li>
+              <li class="navf-sub__item">
+                <a href="brands-sk-selective-kids.html" class="navf-sub__link">SK Selective kids</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="navf__item">
+          <div class="empty"><a href="new.html">Новинки</a></div>
+        </div>
+        <div class="navf__item">
+          <div class="empty"><a href="startups.html">Стартапы</a></div>
+        </div>
+        <div class="navf__item">
+          <div class="empty"><a href="contacts.html">Контакты</a></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="footer_center flex">
+      <img class="f-logo" src="img/svg/sk-logo-main.svg" alt="" />
+      <a href="#" class="youtube-link desktop">
+        <img src="img/youtube-logo.png" alt="" />
+      </a>
+    </div>
+    <div class="footer_info">
+      <p>
+        ЦЕНТРАЛЬНЫЙ ОФИС<br />
+        <span class="phone">+7 495 726-55-38</span><br />
+        <span><a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a></span>
+      </p>
+      <p>
+        ПРОИЗВОДСТВО<br />
+        <span class="phone">+7 495 933-80-71</span><br />
+        <span><a href="mailto:info@shmpk.ru" class="email">info@shmpk.ru</a></span>
+      </p>
+      <p>
+        ОТДЕЛ КАЧЕСТВА<br />
+        <span class="phone">8-800-250-18-80</span>
+        <span class="rf">Звонок по РФ бесплатный</span>
+        <span class="email"><a href="mailto:shmpk-kachestvo@shmpk.ru" class="email">shmpk-kachestvo@shmpk.ru</a></span>
+      </p>
+    </div>
+    <a href="#" class="youtube-link mobile">
+      <img src="img/youtube-logo.png" alt="" />
+    </a>
+  </div>
+  <div class="container flex footer__container footer__b">
+    <span class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#">Политика конфиденциальности</a>
+    <a href="#">Правила пользования сайтом</a>
+    <a href="#">Пользовательское соглашение</a>
+    <span class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
