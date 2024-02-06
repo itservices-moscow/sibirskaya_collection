@@ -15,37 +15,80 @@
     <div class="intro-buffer"></div>
   </div>
 </section>
-<div class="scrollval">0</div>
-<!--<div id="progress"></div> -->
+<!-- <section class="intro-empty"></section> -->
+<div class="scrollval"></div>
 <section class="intro-vid">
-  <!--
+  <!-- <div
+    class="video-container"
+    id="video-container"
+    data-aos="vid-animation"
+    data-aos-offset="200"
+    data-aos-easing="ease-in-sine"
+    data-aos-duration="1500"
+    data-aos-anchor=".anchor-aos-vid">
+    <video
+      id="my-video"
+      class="video-js"
+      controls
+      autoplay
+      preload="auto"
+      data-setup="{}"
+      poster="img/video1.png"
+      muted
+      playsinline>
       <source src="video1.mp4" type="video/mp4" />
-  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
-  <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.12.1/lang/ru.min.js"></script>
-      data-setup='
+    </video>
 
-		{
-			"techOrder": ["youtube"],
-			"sources": [{
-				"type": "video/youtube",
-				"src": "https://www.youtube.com/watch?v=p0ApIGVwvXw&"
-			}]
-		}
+  </div> -->
+  <img class="i-video" src="img/video1.png" alt="" />
+  <div class="intro-buffer"></div>
+  <div class="intro-buffer"></div>
+  <div class="intro-buffer"></div>
+  <script>
+    videojs(document.querySelector(".video-js"), {
+      language: "ru",
+    })
+  </script>
+</section>
 
-	'
- -->
-  <div id="video-container" class="video-container">
-    <div id="video-play-btn"></div>
-    <video id="video-main" loop muted playsinline autoplay preload="auto" poster="img/video1.png">
-      <source src="sib1.mp4" type="video/mp4" />
-      <source src="sib1.webm" type="video/webm" />
+<!--
+  <img
+    class="i-video"
+    src="img/video1.png"
+    alt=""
+    data-aos="vid-animation"
+    data-aos-offset="200"
+    data-aos-easing="ease-out"
+    data-aos-duration="700"
+    data-aos-anchor=".anchor-aos-vid" />
+-->
+<!-- настройки анимации -->
+<!-- data-aos-anchor-placement="center-top"-->
+<!-- <div
+    class="video-container"
+    data-aos="vid-animation"
+    data-aos-offset="200"
+    data-aos-easing="ease-in-sine"
+    data-aos-duration="500"
+    data-aos-anchor=".anchor-vid"> -->
+<!--
+  <div id="progress">
+    <video
+      id="my-video"
+      class="video-js"
+      controls
+      autoplay
+      preload="auto"
+      width="800"
+      height="400"
+      data-setup="{}"
+      poster="img/video1.png"
+      muted
+      playsinline>
+      <source src="video1.mp4" type="video/mp4" />
     </video>
   </div>
-
-  <div class="intro-buffer buffer-black"></div>
-  <div class="intro-buffer"></div>
-  <div class="intro-buffer"></div>
+  -->
+<!--
 </section>
+-->

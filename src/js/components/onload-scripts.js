@@ -17,47 +17,25 @@ function rotatePachka(steps, top, bottom, scrollval) {
   document.querySelector("#pachka-box").style.backgroundPosition = bgpos
 }
 
-// высчитывает значения ширины для видео на главной (in logariphmic scale)
-function scaleMapNumbers(pos) {
-  var screenW = window.screen.width
-  var minM = 570
-  var maxM = 788
-  var minV = Math.log(760) // изначальная ширина
-  var maxV = Math.log(screenW) // ширина экрана
-  var scal = (maxV - minV) / (maxM - minM)
-  var res = Math.ceil(Math.exp(minV + scal * (pos - minM)))
-  if (screenW < 676) {
-    res = 678
-  }
-
-  return res > screenW ? screenW : res
-}
+// {
+//     "x": 0,
+//     "y": 1876,
+//     "width": 1519.2000732421875,
+//     "height": 2800,
+//     "top": 1876,
+//     "right": 1519.2000732421875,
+//     "bottom": 4676,
+//     "left": 0
+// }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  // ВИДЕО НА ГЛАВНОЙ
-  if (document.querySelector("#video-main")) {
-    const vid = document.querySelector("#video-main")
-    const playbtn = document.querySelector("#video-play-btn")
-
-    playbtn.addEventListener("click", (e) => {
-      e.preventDefault()
-
-      if (vid.paused) {
-        vid.play()
-      } else {
-        vid.pause()
-      }
-      playbtn.classList.toggle("paused")
-    })
-  }
-
   // ПОКАЗАТЬ СЛОЙ С ХЛЕБОМ НА ГЛАВНОЙ
   window.addEventListener("scroll", function () {
     let scrollPosition = document.documentElement.scrollTop
 
     if (document.querySelector(".extra-bg")) {
       let extraPosY = Math.round(document.querySelector(".extra").getBoundingClientRect().top)
-      if (scrollPosition > 3200 && scrollPosition < 7000) {
+      if (scrollPosition > 3200 && scrollPosition < 6600) {
         document.querySelector(".extra-bg").style.display = "block"
       } else {
         document.querySelector(".extra-bg").style.display = "none"
@@ -67,22 +45,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // console.log("[scroll]", scrollPosition, document.querySelector(".sticky-wrapper").getBoundingClientRect())
 
     if (document.querySelector(".sticky-wrapper")) {
-      if (scrollPosition > 1876 && scrollPosition < 5076) {
-        rotatePachka(45, 1876, 5076, scrollPosition)
+      if (scrollPosition > 1876 && scrollPosition < 4676) {
+        rotatePachka(45, 1876, 4676, scrollPosition)
       }
     }
 
     // document.querySelector(".scrollval").innerHTML = scrollPosition
-    let calc = scrollPosition
-    if (scrollPosition > 570 && scrollPosition < 900) {
-      let calc2 = scaleMapNumbers(scrollPosition)
-      document.getElementById("video-container").style.width = calc2 + "px"
-      console.log(document.getElementById("video-container").style.width)
-      document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc + "<br/>" + calc2
-    }
+    // let calc = scrollPosition
+    // if (scrollPosition > 500 && scrollPosition < 1400) {
+    //   calc = Math.ceil(scrollPosition / 100)
+    //   // document.getElementById("video-container").style.width = calc + "px"
+    //   // console.log(document.getElementById("video-container").style.width)
+    //   document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc
+    // }
+
+    // СКРЫТЬ ПЕРВУЮ СЕКЦИЮ ГЛАВНОЙ, КОГДА РАЗВЕРНЕТСЯ ВИДЕО
+    // if (document.querySelector(".intro")) {
+    //   if (
+    //     (scrollPosition > 800 && document.querySelector(".intro").style.visibility === "") ||
+    //     document.querySelector(".intro").style.visibility === "visible"
+    //   ) {
+    //     document.querySelector(".intro").style.visibility = "hidden"
+    //   }
+    //   if (scrollPosition < 800 && document.querySelector(".intro").style.visibility === "hidden") {
+    //     document.querySelector(".intro").style.visibility = "visible"
+    //   }
+    // }
   })
 
-  // ПОИСК В ХЕДЕРЕ - раскрытие инпута
+  // ПОИСК В ХЕДЕРЕ
   const searchposX = document.getElementById("searchanchor").getBoundingClientRect().x
   // console.log('searchposX', searchposX)
   document.getElementById("searchbox").style.right = "calc(100% - " + (Math.ceil(searchposX) + 36) + "px)"

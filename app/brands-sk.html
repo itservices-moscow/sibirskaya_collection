@@ -10,12 +10,12 @@
   <link rel="preload" href="fonts/avenirnextcyrlight.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/IntroDemoCondBlackCAPS.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/introdemocond-lightcaps.woff2" as="font" type="font/woff2" crossorigin />
+
   <link rel="stylesheet" href="css/vendor.css" />
   <link rel="stylesheet" href="css/main.css" />
-
   <script defer src="js/main.js"></script>
+
   <!--
-  <script src="js/vendor/video.min.js" tupe="text/javascript"></script>
   <script defer src="js/vendor/dropzone.min.js"></script> -->
   <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 
@@ -125,23 +125,18 @@
   </div>
   <script type="text/javascript">
     // МОБИЛЬНОЕ МЕНЮ
-    function openMobMenuPanel(panelClass, parentClass) {
-      document.querySelector(panelClass).classList.remove("slide-right")
-      document.querySelector(parentClass).classList.add("slide-left")
-    }
-    function closeMobMenuPanel(panelClass, parentClass) {
-      document.querySelector(panelClass).classList.add("slide-right")
-      document.querySelector(parentClass).classList.remove("slide-left")
+    function toggleMobMenuPanel(panelClass) {
+      document.querySelector(panelClass).classList.toggle("closed")
     }
   </script>
   <div class="topmenu-mobile__content hidden" data-menu-content>
     <nav title="Главное меню">
       <div class="nav-mob nav-mob-l0">
         <ul class="list-reset nav-mob__list">
-          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
             <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
           </li>
-          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-brands');">
             <a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a>
           </li>
           <li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li>
@@ -151,8 +146,8 @@
         <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
       </div>
 
-      <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+      <div class="nav-mob nav-mob-l1 nav-mob-brands closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');">
           <img src="img/back-sm.png" />
           <span>продукт</span>
         </div>
@@ -161,7 +156,7 @@
             <a href="#" class="nav-top-l1__link">бренды</a>
             <ul class="list-reset nav-mob-l2__list flex">
               <li class="nav-mob-l2__item">
-                <a href="#" class="nav-mob-l2__link" onclick="openMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');"
+                <a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');"
                   >Sибирская коллекция</a
                 >
               </li>
@@ -182,8 +177,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+      <div class="nav-mob nav-mob-l1 nav-mob-manuf closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
           <img src="img/back-sm.png" />
           <span>производство</span>
         </div>
@@ -207,17 +202,17 @@
         </div>
       </div>
 
-      <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
+      <div class="nav-mob nav-mob-l3 nav-mob-sk closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');">
           <img src="img/back-sm.png" />
           <span>Бренды:<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
           <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">пельмени</a>
+            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a>
           </li>
           <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">вареники</a>
+            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a>
           </li>
           <li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li>
           <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
@@ -228,8 +223,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
+      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">
           <img src="img/back-sm.png" />
           <span>пельмени<br />Sибирская коллекция</span>
         </div>
@@ -246,8 +241,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
+      <div class="nav-mob nav-mob-l4 nav-mob-vareniki closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">
           <img src="img/back-sm.png" />
           <span>вареники<br />Sибирская коллекция</span>
         </div>
@@ -636,33 +631,7 @@
     prevButton.textContent = prevTitle;
     nextButton.textContent = nextTitle;
   }
-</script>
-
-  <!--
-  <div class="brands-content__submenu">
-    <div class="brands-nav flex">
-      <span class="arr-left-on">
-        <a href="brands-sk-selective.html"> <svg xmlns="http://www.w3.org/2000/svg" width="42" class="icon" height="15" viewBox="0 0 26 15" fill="none">
-  <path d="M8.38462 14.5L1 7.52528M1 7.52528L8.38462 0.5M1 7.52528L25 7.52528" stroke="#886A44" stroke-linecap="round"
-    stroke-linejoin="round" pathLength="100">
-  </path>
-</svg>
-</a>
-        <a href="brands-sk-selective.html">SK&nbsp;selective</a>
-      </span>
-
-      <span class="arr-right-on">
-        <a href="brands-sk-selective-kids.html">SK&nbsp;selective<br class="mobile" />&nbsp;kids</a>
-        <a href="brands-sk-selective-kids.html"><svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round"
-    stroke-linejoin="round">
-  </path>
-</svg>
-</a>
-      </span>
-    </div>
-  </div> -->
-</div>
+</script></div>
             <a id="details"></a>
           </div>
         </section>
@@ -670,61 +639,70 @@
           <div class="container brands-details__container grid">
             <div class="brands-details__view360"><div class="view360" id="view360">
   <div class="view360__preloader">
-    <div class="container"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" class="preloader-icon">
-  <circle cx="12" cy="3.5" r="1.5" fill="#725437" opacity="0">
-    <animateTransform
-      attributeName="transform"
-      calcMode="discrete"
-      dur="2.4s"
-      repeatCount="indefinite"
-      type="rotate"
+    <div class="container"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <circle cx="12" cy="3.5" r="1.5" fill="currentColor" opacity="0">
+    <animateTransform attributeName="transform" calcMode="discrete" dur="2.4s" repeatCount="indefinite" type="rotate"
       values="0 12 12;90 12 12;180 12 12;270 12 12" />
     <animate attributeName="opacity" dur="0.6s" keyTimes="0;0.5;1" repeatCount="indefinite" values="1;1;0" />
   </circle>
-  <circle cx="12" cy="3.5" r="1.5" fill="#725437" opacity="0">
-    <animateTransform
-      attributeName="transform"
-      begin="0.2s"
-      calcMode="discrete"
-      dur="2.4s"
-      repeatCount="indefinite"
-      type="rotate"
-      values="30 12 12;120 12 12;210 12 12;300 12 12" />
-    <animate
-      attributeName="opacity"
-      begin="0.2s"
-      dur="0.6s"
-      keyTimes="0;0.5;1"
-      repeatCount="indefinite"
+  <circle cx="12" cy="3.5" r="1.5" fill="currentColor" opacity="0">
+    <animateTransform attributeName="transform" begin="0.2s" calcMode="discrete" dur="2.4s" repeatCount="indefinite"
+      type="rotate" values="30 12 12;120 12 12;210 12 12;300 12 12" />
+    <animate attributeName="opacity" begin="0.2s" dur="0.6s" keyTimes="0;0.5;1" repeatCount="indefinite"
       values="1;1;0" />
   </circle>
-  <circle cx="12" cy="3.5" r="1.5" fill="#725437" opacity="0">
-    <animateTransform
-      attributeName="transform"
-      begin="0.4s"
-      calcMode="discrete"
-      dur="2.4s"
-      repeatCount="indefinite"
-      type="rotate"
-      values="60 12 12;150 12 12;240 12 12;330 12 12" />
-    <animate
-      attributeName="opacity"
-      begin="0.4s"
-      dur="0.6s"
-      keyTimes="0;0.5;1"
-      repeatCount="indefinite"
+  <circle cx="12" cy="3.5" r="1.5" fill="currentColor" opacity="0">
+    <animateTransform attributeName="transform" begin="0.4s" calcMode="discrete" dur="2.4s" repeatCount="indefinite"
+      type="rotate" values="60 12 12;150 12 12;240 12 12;330 12 12" />
+    <animate attributeName="opacity" begin="0.4s" dur="0.6s" keyTimes="0;0.5;1" repeatCount="indefinite"
       values="1;1;0" />
   </circle>
 </svg>
 </div>
   </div>
   <div class="view360__content view360__content_sk">
-    <div id="imagebox-brands">
-      <!-- 3д спрайт -->
+    <div>
+      <!-- здесь будет 3д спрайт, с другой высотой-->
       <!--   <img src="img/brands-sk-cutlet.png" alt="" /> -->
+
+      <!-- 3D: -->
+      <style>
+        .sprite-container {
+          transform: scale(0.5) translate(-40%, -50%);
+        }
+
+        #sprite-box {
+          width: 1132px;
+          height: 1132px;
+          display: block;
+          background-image: url("img/sprites/kotlety_sprite.png");
+          animation: sprite 2.7s steps(36) infinite;
+        }
+
+        .animated {
+          background-color: yellowgreen;
+        }
+        .sprite-img {
+        }
+
+        @keyframes sprite {
+          100% {
+            background-position: -40752px;
+          }
+        }
+      </style>
       <div class="sprite-container">
-        <div id="sprite-box" style="animation-play-state: paused" class="sb-center"></div>
+        <div id="sprite-box"></div>
       </div>
+      <script>
+        const element = document.querySelector(".view360__icon")
+        element.addEventListener("mouseover", function () {
+          document.querySelector("#sprite-box").classList.add("animated")
+        })
+        element.addEventListener("mouseover", function () {
+          document.querySelector("#sprite-box").classList.remove("animated")
+        })
+      </script>
     </div>
   </div>
   <div class="view360__nav">
@@ -745,59 +723,20 @@
             <div class="brands-details__menu brands-details__menu_sk">
               <!-- Длинное меню продуктов-->
               <ul class="list-reset brandmenu desktop">
-  <li>
-    <a
-      class="brandmenu__link active"
-      data-subbrand-id="pelm1234"
-      data-subbrand-imgtype="image"
-      data-subbrand-url="../img/brands-sk-r-pic2.png"
-      >пельмени</a
-    >
+  <li><a class="brandmenu__link" href="#">пельмени</a></li>
+  <!-- onclick - для демонстрации прелоада, можно стирать -->
+  <li onclick="document.getElementById('view360').classList.toggle('loading');"><a class="brandmenu__link">вареники</a>
   </li>
-  <li>
-    <a
-      class="brandmenu__link"
-      data-subbrand-id="varenik1"
-      data-subbrand-imgtype="image"
-      data-subbrand-url="../img/brands-sk-cutlet.png"
-      >вареники</a
-    >
+  <li onclick="document.getElementById('view360').classList.toggle('loading');"><a class="brandmenu__link">блины</a>
   </li>
-  <li>
-    <a
-      class="brandmenu__link"
-      data-subbrand-id="bliny88"
-      data-subbrand-imgtype="3d"
-      data-subbrand-url="../img/sprites/kotlety_sprite.png"
-      >блины</a
-    >
-  </li>
-  <li>
-    <a
-      class="brandmenu__link"
-      data-subbrand-id="kotlet1"
-      data-subbrand-imgtype="3d"
-      data-subbrand-url="../img/sprites/kotlety_sprite.png"
-      >котлеты</a
-    >
-  </li>
-  <li>
-    <a
-      class="brandmenu__link"
-      data-subbrand-id="vegg3242432"
-      data-subbrand-imgtype="image"
-      data-subbrand-url="../img/brands-sk-cutlet.png"
-      >vegan</a
-    >
-  </li>
-  <li>
-    <a class="brandmenu__link" data-subbrand-id="h4639d" data-subbrand-imgtype="3d" data-subbrand-url="">пицца</a>
-  </li>
-  <!-- выше демонстрация, у остальных пунктов тоже должны быть атрибуты data- -->
-  <li><a class="brandmenu__link">халяль</a></li>
-  <li><a class="brandmenu__link">kids</a></li>
-  <li><a class="brandmenu__link">пункт</a></li>
-  <li><a class="brandmenu__link">пункт</a></li>
+  <li><a href="#" class="brandmenu__link active">котлеты</a></li>
+  <li><a href="#" class="brandmenu__link">vegan</a></li>
+  <li><a href="#" class="brandmenu__link">пицца</a></li>
+  <li><a href="#" class="brandmenu__link">халяль</a></li>
+  <li><a href="#" class="brandmenu__link">kids</a></li>
+  <li><a href="#" class="brandmenu__link">пункт</a></li>
+  <li><a href="#" class="brandmenu__link">пункт</a></li>
+
 </ul>
 <div class="menu-container mobile">
   <ul class="list-reset brandmenu accordion">
@@ -806,59 +745,17 @@
 
   <div class="panel">
     <ul class="list-reset brandmenu">
-      <li>
-        <a
-          class="brandmenu__link active"
-          data-subbrand-id="pelm1234"
-          data-subbrand-imgtype="image"
-          data-subbrand-url="../img/brands-sk-r-pic2.png"
-          >пельмени</a
-        >
+      <li onclick="document.getElementById('view360').classList.toggle('loading');"><a
+          class="brandmenu__link">вареники</a>
       </li>
-      <li>
-        <a
-          class="brandmenu__link"
-          data-subbrand-id="varenik1"
-          data-subbrand-imgtype="image"
-          data-subbrand-url="../img/brands-sk-cutlet.png"
-          >вареники</a
-        >
+      <li onclick="document.getElementById('view360').classList.toggle('loading');"><a class="brandmenu__link">блины</a>
       </li>
-      <li>
-        <a
-          class="brandmenu__link"
-          data-subbrand-id="bliny88"
-          data-subbrand-imgtype="3d"
-          data-subbrand-url="../img/sprites/kotlety_sprite.png"
-          >блины</a
-        >
-      </li>
-      <li>
-        <a
-          class="brandmenu__link"
-          data-subbrand-id="kotlet1"
-          data-subbrand-imgtype="3d"
-          data-subbrand-url="../img/sprites/kotlety_sprite.png"
-          >котлеты</a
-        >
-      </li>
-      <li>
-        <a
-          class="brandmenu__link"
-          data-subbrand-id="vegg3242432"
-          data-subbrand-imgtype="image"
-          data-subbrand-url="../img/brands-sk-cutlet.png"
-          >vegan</a
-        >
-      </li>
-      <li>
-        <a class="brandmenu__link" data-subbrand-id="h4639d" data-subbrand-imgtype="3d" data-subbrand-url="">пицца</a>
-      </li>
-      <!-- выше демонстрация, у остальных пунктов тоже должны быть атрибуты data- -->
-      <li><a class="brandmenu__link">халяль</a></li>
-      <li><a class="brandmenu__link">kids</a></li>
-      <li><a class="brandmenu__link">пункт</a></li>
-      <li><a class="brandmenu__link">пункт</a></li>
+      <li><a href="#" class="brandmenu__link">vegan</a></li>
+      <li><a href="#" class="brandmenu__link">пицца</a></li>
+      <li><a href="#" class="brandmenu__link">халяль</a></li>
+      <li><a href="#" class="brandmenu__link">kids</a></li>
+      <li><a href="#" class="brandmenu__link">пункт</a></li>
+      <li><a href="#" class="brandmenu__link">пункт</a></li>
     </ul>
   </div>
 </div>
@@ -939,11 +836,11 @@
     </a>
   </div>
   <div class="container flex footer__container footer__b">
-    <span class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#" class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
     <a href="#">Политика конфиденциальности</a>
     <a href="#">Правила пользования сайтом</a>
     <a href="#">Пользовательское соглашение</a>
-    <span class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#" class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
   </div>
 </footer>
 

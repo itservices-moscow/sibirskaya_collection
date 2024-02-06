@@ -76,7 +76,7 @@
   visibility: hidden;
 
   @include hover {
-    color: var(--main-white);
+    color: var(--medium-gray);
     background-color: var(--main-bronze);
     border-color: var(--main-bronze);
     cursor: pointer;
@@ -131,18 +131,9 @@
 }
 
 .searchsuggest {
-  width: 100%;
   max-width: 327px;
   background: #FFF;
   margin: 0 auto;
-  visibility: hidden;
-  .search-active & {
-    visibility: visible;
-  }
-  @include desktop {
-    position: absolute;
-    top: 100%;
-  }
 }
 
 .searchsuggest-item,
@@ -156,10 +147,6 @@
 .searchsuggest-item {
   border-bottom: 1px solid var(--light-gray);
   cursor: pointer;
-  transition: .3s ease;
-  &:hover {
-    background: var(--main-beige);
-  }
 }
 
 .searchsuggest-highlight {

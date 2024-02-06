@@ -258,6 +258,7 @@ option {
 /* On mouse-over */
 .label-check:hover input ~ .checkmark {
   border-color: var(--main-bronze);
+  background-color: transparent;
 }
 
 /* When the checkbox is checked, add a bronze background */
@@ -365,7 +366,6 @@ option {
   text-align: center;
   font-size: 14px;
   margin: 32px 0;
-  cursor: pointer;
 }
 
 .dz-started {

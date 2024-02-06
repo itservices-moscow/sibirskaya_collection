@@ -11,12 +11,12 @@
   <link rel="preload" href="fonts/avenirnextcyrlight.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/IntroDemoCondBlackCAPS.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/introdemocond-lightcaps.woff2" as="font" type="font/woff2" crossorigin />
+
   <link rel="stylesheet" href="css/vendor.css" />
   <link rel="stylesheet" href="css/main.css" />
-
   <script defer src="js/main.js"></script>
+
   <!--
-  <script src="js/vendor/video.min.js" tupe="text/javascript"></script>
   <script defer src="js/vendor/dropzone.min.js"></script> -->
   <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 
@@ -126,23 +126,18 @@
   </div>
   <script type="text/javascript">
     // МОБИЛЬНОЕ МЕНЮ
-    function openMobMenuPanel(panelClass, parentClass) {
-      document.querySelector(panelClass).classList.remove("slide-right")
-      document.querySelector(parentClass).classList.add("slide-left")
-    }
-    function closeMobMenuPanel(panelClass, parentClass) {
-      document.querySelector(panelClass).classList.add("slide-right")
-      document.querySelector(parentClass).classList.remove("slide-left")
+    function toggleMobMenuPanel(panelClass) {
+      document.querySelector(panelClass).classList.toggle("closed")
     }
   </script>
   <div class="topmenu-mobile__content hidden" data-menu-content>
     <nav title="Главное меню">
       <div class="nav-mob nav-mob-l0">
         <ul class="list-reset nav-mob__list">
-          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
             <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
           </li>
-          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-brands');">
             <a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a>
           </li>
           <li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li>
@@ -152,8 +147,8 @@
         <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
       </div>
 
-      <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+      <div class="nav-mob nav-mob-l1 nav-mob-brands closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');">
           <img src="img/back-sm.png" />
           <span>продукт</span>
         </div>
@@ -162,7 +157,7 @@
             <a href="#" class="nav-top-l1__link">бренды</a>
             <ul class="list-reset nav-mob-l2__list flex">
               <li class="nav-mob-l2__item">
-                <a href="#" class="nav-mob-l2__link" onclick="openMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');"
+                <a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');"
                   >Sибирская коллекция</a
                 >
               </li>
@@ -183,8 +178,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+      <div class="nav-mob nav-mob-l1 nav-mob-manuf closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
           <img src="img/back-sm.png" />
           <span>производство</span>
         </div>
@@ -208,17 +203,17 @@
         </div>
       </div>
 
-      <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
+      <div class="nav-mob nav-mob-l3 nav-mob-sk closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');">
           <img src="img/back-sm.png" />
           <span>Бренды:<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
           <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">пельмени</a>
+            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a>
           </li>
           <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">вареники</a>
+            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a>
           </li>
           <li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li>
           <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
@@ -229,8 +224,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
+      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">
           <img src="img/back-sm.png" />
           <span>пельмени<br />Sибирская коллекция</span>
         </div>
@@ -247,8 +242,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
+      <div class="nav-mob nav-mob-l4 nav-mob-vareniki closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">
           <img src="img/back-sm.png" />
           <span>вареники<br />Sибирская коллекция</span>
         </div>
@@ -467,6 +462,8 @@
 
     <main class="quality">
       <div class="quality__title">
+        <div class="buffer-top"></div>
+
         <section class="back mobile">
   <div class="container">
     <span class="icon-back">
@@ -511,138 +508,145 @@
       <section class="quality" id="quality01">
 
           <div class="content">
-            <div class="accordionQ accordionQ-1">
+            <div id="sticky-1" class="accordionQ accordionQ-1">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">01</span>
-                <img src="img/quality-01.svg" alt="Сертификация FSSC 22000"/>
+                <img src="img/quality-01-2x.png" alt="Сертификация FSSC 22000"/>
                 <span class="accordionQ__title">
                   <h2>Сертификация FSSC 22000</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-                  <img src="img/quality-01.svg" alt="Сертификация FSSC 22000"/>
+                  <img src="img/quality-01-2x.png" alt="Сертификация FSSC 22000"/>
                   <p>Система менеджмента безопастности пищевой продукции производственной площадки, внедрена с 2015 года</p>
                 </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-2">
+            <div id="sticky-2" class="accordionQ accordionQ-2">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">02</span>
-                <img src="img/quality-02.svg" alt="Анализ поступившего сырья" />
+                <img src="img/quality-02-2x.png" alt="Анализ поступившего сырья" />
                 <span class="accordionQ__title">
                   <h2>Анализ поступившего сырья</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-                  <img src="img/quality-02.svg" alt="Анализ поступившего сырья" />
+                  <img src="img/quality-02-2x.png" alt="Анализ поступившего сырья" />
                   <p>На входе все сырье проходит контроль качества в собственных лабораториях и при нахождении отклонений от заявленных показателей отправляется обратно</p>
               </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-3">
+            <div id="sticky-3" class="accordionQ accordionQ-3">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">03</span>
-                <img src="img/quality-03.svg" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
+                <img src="img/quality-03.png" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
                 <span class="accordionQ__title">
                   <h2>Изготовление продуктов в строгом соответствии с рецептурами</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-                  <img src="img/quality-03.svg" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
+                  <img src="img/quality-03.png" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
                   <p>Контроль на каждом этапе производства помогает делать эталонные продукты с одним и тем же вкусом на протяжении многих лет</p>
                 </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-4">
+            <div id="sticky-4" class="accordionQ accordionQ-4">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">04</span>
-                <img src="img/quality-04.svg" alt="Шоковая заморозка" />
+                <img src="img/quality-04.png" alt="Шоковая заморозка" />
                 <span class="accordionQ__title">
                   <h2>Шоковая заморозка</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-                  <img src="img/quality-04.svg" alt="Шоковая заморозка" />
-                  <p>Продукты в среднем замораживаются за 20 минут, что помогает лучше сохранять структуру тканей и поэтому пищевая ценность и вкусовые качества остаются неизменными</p>
+                  <img src="img/quality-04.png" alt="Шоковая заморозка" />
+                  <p>Продукты в среднем замораживаются за 20 минут, что   помогает лучше сохранять структуру тканей и поэтому пищевая ценность и вкусовые качества остаются неизменными</p>
                 </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-5">
+            <div id="sticky-5" class="accordionQ accordionQ-5">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">05</span>
-                <img src="img/quality-05.svg" alt="Металлодетектор на выходе с линии" />
+                <img src="img/quality-05.png" alt="Металлодетектор на выходе с линии" />
                 <span class="accordionQ__title">
                   <h2>Металлодетектор на выходе с линии</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-                  <img src="img/quality-05.svg" alt="Металлодетектор на выходе с линии" />
+                  <img src="img/quality-05.png" alt="Металлодетектор на выходе с линии" />
                   <p>Каждая упаковка проверяется на наличие металических инородных предметов</p>
                 </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-6">
+            <div id="sticky-6" class="accordionQ accordionQ-6">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">06</span>
-                <img src="img/quality-06.svg" alt="Лабораторные исследования" />
+                <img src="img/quality-06.png" alt="Лабораторные исследования" />
                 <span class="accordionQ__title">
                   <h2>Лабораторные исследования</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-                  <img src="img/quality-06.svg" alt="Лабораторные исследования" />
-                  <p>Собственные физико-химическая и микробиологическая лаборатории аккредитованные с 2013 года проводят ряд исследований
-                    <br><br><a class="link-more" href="laboratories.html">
-                      <span>Узнать подробнее</span>
-                      <img src="img/svg/arr-right.svg" alt="Show more">
-                    </a></p>
+                  <img src="img/quality-06.png" alt="Лабораторные исследования" />
+                  <p>
+                    Собственные физико-химическая и микробиологическая лаборатории аккредитованные с 2013 года проводят ряд исследований
+
+                    <a class="arr-right-on" href="laboratories.html">
+                      <span>узнать подробнее</span>
+                      <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round"
+    stroke-linejoin="round">
+  </path>
+</svg>
+
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-7">
+            <div id="sticky-7" class="accordionQ accordionQ-7">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">07</span>
-                <img src="img/quality-07.svg" alt="Дегустация каждой произведённой партии" />
+                <img src="img/quality-07.png" alt="Дегустация каждой произведённой партии" />
                 <span class="accordionQ__title">
                   <h2>Дегустация каждой произведённой партии</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-                  <img src="img/quality-07.svg" alt="Дегустация каждой произведённой партии" />
+                  <img src="img/quality-07.png" alt="Дегустация каждой произведённой партии" />
                   <p>Специальная дегустационная панель, прошедшая обучение сенсорному анализу, изучает вкусовые качества каждой партии. В случае несоответствия эталону партия не отправляется к покупателям</p>
                 </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-8">
+            <div id="sticky-8" class="accordionQ accordionQ-8">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">08</span>
-                <img src="img/quality-08.svg" alt="Анализ поступившего сырья" />
+                <img src="img/quality-08.png" alt="Анализ поступившего сырья" />
                 <span class="accordionQ__title">
                   <h2>Контроль условий хранения и логистики</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-                  <img src="img/quality-08.svg" alt="Анализ поступившего сырья" />
+                  <img src="img/quality-08.png" alt="Анализ поступившего сырья" />
                   <p>Продукция хранится в морозильных камерах при температуре -18 градусов Цельсия и доставляется до торговых точек в специально оборудованных автомобилях также при -18</p>
                 </div>
               </div>
             </div>
-            <div class="accordionQ accordionQ-9" style="opacity: 0; min-height: 10px; padding: 0;"></div>
 
             <div class="pagination-track">
               <div class="pagination">
@@ -658,6 +662,7 @@
             </div>
           </div>
 
+      </div>
       </section>
       <div class="fake"></div>
     </main>
@@ -733,11 +738,11 @@
     </a>
   </div>
   <div class="container flex footer__container footer__b">
-    <span class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#" class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
     <a href="#">Политика конфиденциальности</a>
     <a href="#">Правила пользования сайтом</a>
     <a href="#">Пользовательское соглашение</a>
-    <span class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#" class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
   </div>
 </footer>
 
@@ -750,7 +755,11 @@
           let defaultOptions = {
             isOpen: () => {
               console.log(this)
-              return this.accordion.classList.contains('is-open');
+              if (this.accordion.classList.contains('is-open')) {
+                return true;
+              } else {
+                return false;
+              }
             },
             isClose: () => { },
             speed: 300
@@ -887,33 +896,30 @@
     }
     console.log(scrollY, getBlockPositionY('.accordionQ-1'))
     //var draw = length * scrollpercent;
-    if ((scrollY > getBlockPositionY('.accordionQ-1') + 270) && accordion1.accordion.classList.contains('is-open')) {
+    if ((scrollY > getBlockPositionY('.accordionQ-1') + 40) && accordion1.accordion.classList.contains('is-open')) {
       accordion1.close(); }
 
-    if ((scrollY > getBlockPositionY('.accordionQ-2') + 370)  && accordion2.accordion.classList.contains('is-open')) {
+    if ((scrollY > getBlockPositionY('.accordionQ-2') + 140)  && accordion2.accordion.classList.contains('is-open')) {
       accordion2.close();
     }
-    if ((scrollY > getBlockPositionY('.accordionQ-3') + 370)   && accordion3.accordion.classList.contains('is-open')) {
+    if ((scrollY > getBlockPositionY('.accordionQ-3') + 140)   && accordion3.accordion.classList.contains('is-open')) {
       accordion3.close();
     }
-    if ((scrollY > getBlockPositionY('.accordionQ-4') + 370)   && accordion4.accordion.classList.contains('is-open')) {
+    if ((scrollY > getBlockPositionY('.accordionQ-4') + 140)   && accordion4.accordion.classList.contains('is-open')) {
       accordion4.close();
     }
-    if((scrollY > getBlockPositionY('.accordionQ-5') + 370) && accordion5.accordion.classList.contains('is-open')) {
+    if((scrollY > getBlockPositionY('.accordionQ-5') + 140) && accordion5.accordion.classList.contains('is-open')) {
       accordion5.close();
     }
-    if ((scrollY > getBlockPositionY('.accordionQ-6') + 370) && accordion6.accordion.classList.contains('is-open')) {
+    if ((scrollY > getBlockPositionY('.accordionQ-6') + 140) && accordion6.accordion.classList.contains('is-open')) {
       accordion6.close();
     }
-    if ((scrollY > getBlockPositionY('.accordionQ-7') + 370)  && accordion7.accordion.classList.contains('is-open')) {
+    if ((scrollY > getBlockPositionY('.accordionQ-7') + 140)  && accordion7.accordion.classList.contains('is-open')) {
       accordion7.close();
     }
 
-    if ((scrollY > getBlockPositionY('.accordionQ-8') + 370) && accordion8.accordion.classList.contains('is-open')) {
+    if ((scrollY > getBlockPositionY('.accordionQ-8') + 140) && accordion8.accordion.classList.contains('is-open')) {
       accordion8.close();
-    }
-    if ((scrollY > getBlockPositionY('.accordionQ-9') + 370) && accordion9.accordion.classList.contains('is-open')) {
-      accordion9.close();
     }
 
     // Переверните чертеж (при прокрутке вверх)
@@ -926,42 +932,28 @@
 
   document.documentElement.scrollTop = 0;
 
-  const wrapper = document.querySelector("main.quality");
-  const compStyle = getComputedStyle(wrapper);
-  const sectionName = ".accordionQ";
-  const sections = document.querySelectorAll(sectionName);
+  const sections = document.querySelectorAll(".accordionQ");
   const bullets = document.querySelectorAll(".pagination__bullet");
-  const foldedHeight = parseInt(compStyle.getPropertyValue("--folded-height"));
-  const stickyOffset = parseInt(compStyle.getPropertyValue("--sticky-offset"));
-  const parentOffset = sections[0].offsetParent.offsetTop;
-  const breakpoints = Array.prototype.map.call(
-    sections,
-    (el) => parentOffset + el.offsetTop - stickyOffset
-  );
+  const offset = sections[0].offsetTop;
+  const breakpoints = Array.prototype.map.call(sections, (el) => el.offsetTop - offset);
   let currentSection = 0;
 
   sections.forEach((el, index) => {
     const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
-    if (index < sections.length - 1) {
-      el.querySelector(`${sectionName}__control`).addEventListener("click", scrollToSection);
-      bullets[index].addEventListener("click", scrollToSection);
-    }
+    el.addEventListener("click", scrollToSection);
+    bullets[index].addEventListener("click", scrollToSection);
   });
 
-  let qualityTitleHeight = document.querySelector('.quality__title').clientHeight;
-  wrapper.style.setProperty("--title-height", `${qualityTitleHeight}px`);
   window.addEventListener("scroll", function () {
     breakpoints.forEach((breakpoint, index) => {
       if (window.scrollY >= breakpoint
       && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
-        if (index !== currentSection) {
-          let scrollOffset = -Math.min(index, sections.length - 2) * foldedHeight;
-          wrapper.style.setProperty("--scroll-offset", Math.min(scrollOffset, 0) + "px");
-
+        if (index != currentSection) {
           bullets[currentSection].classList.remove("current");
           bullets[index].classList.add("current");
           currentSection = index;
         }
+        return;
       }
     });
   });

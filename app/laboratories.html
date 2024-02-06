@@ -11,12 +11,12 @@
   <link rel="preload" href="fonts/avenirnextcyrlight.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/IntroDemoCondBlackCAPS.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/introdemocond-lightcaps.woff2" as="font" type="font/woff2" crossorigin />
+
   <link rel="stylesheet" href="css/vendor.css" />
   <link rel="stylesheet" href="css/main.css" />
-
   <script defer src="js/main.js"></script>
+
   <!--
-  <script src="js/vendor/video.min.js" tupe="text/javascript"></script>
   <script defer src="js/vendor/dropzone.min.js"></script> -->
   <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 
@@ -126,23 +126,18 @@
   </div>
   <script type="text/javascript">
     // МОБИЛЬНОЕ МЕНЮ
-    function openMobMenuPanel(panelClass, parentClass) {
-      document.querySelector(panelClass).classList.remove("slide-right")
-      document.querySelector(parentClass).classList.add("slide-left")
-    }
-    function closeMobMenuPanel(panelClass, parentClass) {
-      document.querySelector(panelClass).classList.add("slide-right")
-      document.querySelector(parentClass).classList.remove("slide-left")
+    function toggleMobMenuPanel(panelClass) {
+      document.querySelector(panelClass).classList.toggle("closed")
     }
   </script>
   <div class="topmenu-mobile__content hidden" data-menu-content>
     <nav title="Главное меню">
       <div class="nav-mob nav-mob-l0">
         <ul class="list-reset nav-mob__list">
-          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
             <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
           </li>
-          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-brands');">
             <a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a>
           </li>
           <li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li>
@@ -152,8 +147,8 @@
         <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
       </div>
 
-      <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+      <div class="nav-mob nav-mob-l1 nav-mob-brands closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');">
           <img src="img/back-sm.png" />
           <span>продукт</span>
         </div>
@@ -162,7 +157,7 @@
             <a href="#" class="nav-top-l1__link">бренды</a>
             <ul class="list-reset nav-mob-l2__list flex">
               <li class="nav-mob-l2__item">
-                <a href="#" class="nav-mob-l2__link" onclick="openMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');"
+                <a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');"
                   >Sибирская коллекция</a
                 >
               </li>
@@ -183,8 +178,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+      <div class="nav-mob nav-mob-l1 nav-mob-manuf closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
           <img src="img/back-sm.png" />
           <span>производство</span>
         </div>
@@ -208,17 +203,17 @@
         </div>
       </div>
 
-      <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
+      <div class="nav-mob nav-mob-l3 nav-mob-sk closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');">
           <img src="img/back-sm.png" />
           <span>Бренды:<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
           <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">пельмени</a>
+            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a>
           </li>
           <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">вареники</a>
+            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a>
           </li>
           <li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li>
           <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
@@ -229,8 +224,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
+      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">
           <img src="img/back-sm.png" />
           <span>пельмени<br />Sибирская коллекция</span>
         </div>
@@ -247,8 +242,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
+      <div class="nav-mob nav-mob-l4 nav-mob-vareniki closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">
           <img src="img/back-sm.png" />
           <span>вареники<br />Sибирская коллекция</span>
         </div>
@@ -507,12 +502,13 @@
   </div>
 </section>
 
-        <h1 class="heading">собственные лаборатории</h1>
-        <p>На производстве с 2013 года функционируют аккредитованные производственные физико‑химическая и микробиологическая лаборатории</p>
+        <h1 class="heading">собственные <br class="mobile">лаборатории</h1>
+        <p>На производстве с 2013 года функционируют аккредитованные производственные физико-химическая и микробиологическая лаборатории</p>
       </div>
 
       <section class="labs">
-        <h1 class="bronze">Физико-химическая</h1>
+        <h1 class="title01 bronze">Физико-химическая</h1>
+<!--         <div class="labs__content"> -->
           <div class="accordionL1 accordionL1-1">
             <div class="pagination-track" id="pagination1">
               <div class="pagination">
@@ -529,7 +525,7 @@
             <div class="accordionL1__content" aria-hidden="true">
               <div class="container">
                 <p>Проводит входной контроль сырья: животного происхождения, масложирового, растительного и муки</p>
-                <img src="img/labs-1-01-2x.jpg" width="535" />
+                <p><img src="img/labs-1-01-2x.jpg" width="535" /></p>
               </div>
 
             </div>
@@ -543,8 +539,8 @@
             </div>
             <div class="accordionL1__content" aria-hidden="true">
               <div class="container">
-                <p>Исследует более 20 показателей перед допуском сырья для производства</p>
-                <img src="img/labs-1-02-2x.jpg" width="535" />
+                <p>Исследует более 20 показателей перед допуском сырья <br> для производства</p>
+                <p><img src="img/labs-1-02-2x.jpg" width="535" /></p>
               </div>
             </div>
           </div>
@@ -560,15 +556,15 @@
                 <p>Массовые доли белка, жира, сахара, фосфора и других микроэлементов.</p>
                 <p>Особое внимание уделяется испытаниям муки: проверяется качество и количество клейковины, число падения, белизна в
                   муке</p>
-                <img src="img/labs-1-03-2x.jpg" width="535" />
+                <p><img src="img/labs-1-03-2x.jpg" width="535" /></p>
               </div>
             </div>
           </div>
+<!--         </div> -->
 
         <div class="labs__section">
-          <div class="labs__heading">
-            <h1 class="bronze">Микро-биологическая</h1>
-          </div>
+          <h1 class="title02 bronze">Микро-биологическая</h1>
+<!--         <div class="labs__content"> -->
 
           <div class="accordionL2 accordionL2-1">
             <div class="pagination-track" id="pagination2">
@@ -585,7 +581,7 @@
             <div class="accordionL2__content" aria-hidden="true">
               <div class="container">
                 <p>Осуществляет санитарно-микробиологический контроль на всех 8 этапах процесса производства продукции</p>
-                <img src="img/labs-2-01-2x.jpg" width="535" />
+                <p><img src="img/labs-2-01-2x.jpg" width="535" /></p>
               </div>
 
             </div>
@@ -601,7 +597,7 @@
               <div class="container">
                 <p>Контроль сырья, готовой продукции, санитарно-гигиенического состояния производственных помещений, технологического
                   оборудования, инвентаря, тары, рук, санитарной одежды работающих</p>
-                <img src="img/labs-2-02-2x.jpg" width="535" />
+                <p><img src="img/labs-2-02-2x.jpg" width="535" /></p>
               </div>
             </div>
           </div>
@@ -680,11 +676,11 @@
     </a>
   </div>
   <div class="container flex footer__container footer__b">
-    <span class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#" class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
     <a href="#">Политика конфиденциальности</a>
     <a href="#">Правила пользования сайтом</a>
     <a href="#">Пользовательское соглашение</a>
-    <span class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#" class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
   </div>
 </footer>
 
@@ -811,35 +807,24 @@
     // });
     // accordion5.open();
 
-    const wrapper = document.querySelector("main.labs");
-    const stickyOffset = parseInt(getComputedStyle(wrapper).getPropertyValue("--sticky-offset"));
-    const labsP = document.querySelector(".labs__title p");
+    function onResize() {
+      document.querySelectorAll("section.labs h1").forEach(el => {
+        el.style.top = document.querySelector(".labs__title p").getBoundingClientRect().bottom + "px";
+      })
+    }
 
-    document.documentElement.scrollTop = 0;
+    onResize();
+    window.addEventListener("resize", onResize);
 
-    wrapper.style.setProperty("--heading-offset", labsP.offsetTop + labsP.offsetHeight + "px");
-
-    document.querySelectorAll(".pagination").forEach((el, i) => {
-      const sectionName = `.accordionL${i + 1}`;
-      const sections = document.querySelectorAll(sectionName);
+    document.querySelectorAll(".pagination").forEach((el, index) => {
+      const sections = document.querySelectorAll(`.accordionL${index+1}`);
       const bullets = el.querySelectorAll(".pagination__bullet");
-      const parentOffset = sections[0].offsetParent.offsetTop;
-      const breakpoints = Array.prototype.map.call(
-        sections,
-        (el) => parentOffset + el.offsetTop - stickyOffset
-      );
       let currentSection = 0;
 
-      sections.forEach((el, index) => {
-        const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
-        el.querySelector(`${sectionName}__control`).addEventListener("click", scrollToSection);
-        bullets[index].addEventListener("click", scrollToSection);
-      });
-
       window.addEventListener("scroll", function () {
-        breakpoints.forEach((breakpoint, index) => {
-          if (window.scrollY >= breakpoint
-          && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
+        for (let index = 0; sections[index]; index++) {
+          let el = sections[index];
+          if (!sections[index + 1] || el.offsetTop != sections[index + 1].offsetTop) {
             if (index != currentSection) {
               bullets[currentSection].classList.remove("current");
               bullets[index].classList.add("current");
@@ -847,9 +832,10 @@
             }
             return;
           }
-        });
+        }
       });
     });
   </script>
 </body>
+
 </html>

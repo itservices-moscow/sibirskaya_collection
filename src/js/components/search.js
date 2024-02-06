@@ -5,48 +5,50 @@ suggestItemBase.className = "searchsuggest-item";
 
 const suggestError = document.createElement("div");
 suggestError.className = "searchsuggest-error";
-suggestError.innerText = "К сожалению, по вашему запросу ничего не нашлось. Попробуйте использовать другие ключевые слова";
+suggestError.textContent = "К сожалению, по вашему запросу ничего не нашлось. Попробуйте использовать другие ключевые слова";
 
 document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
   const suggestWrapper = el.querySelector(".searchsuggest");
   const searchInput = el.querySelector("input");
+  const backdrop = el.querySelector(".topmenu-mobile__backdrop");
   const closeButton = el.querySelector(".topmenu-mobile__close");
 
-  const showSuggest = debounce(() => {
+  const handleInput = debounce(() => {
+    if (!searchInput.value)
+      return;
+
     fetch("search-suggest.json")
     .then(response => response.json())
     .then(data => {
-      if (data.status === "success" && data.callBack === "searchSuggest") {
+      if (data.status == "success" && data.callBack == "searchSuggest") {
         const suggests = data.callbackData;
-        console.log(suggests)
 
         suggestWrapper.textContent = "";
-        if (searchInput.value != 0) {
-          if (suggests.length) {
-            suggests.forEach((item) => {
-              const suggestItem = suggestWrapper.appendChild(suggestItemBase.cloneNode());
-              suggestItem.innerHTML = item.title.replace(
-                new RegExp(searchInput.value, "i"),
-                "<span class='searchsuggest-highlight'>$&</span>"
-              );
-            });
-          } else {
-            suggestWrapper.appendChild(suggestError);
-          }
+        if (suggests.length) {
+          suggests.forEach((item) => {
+            const suggestItem = suggestWrapper.appendChild(suggestItemBase.cloneNode());
+            suggestItem.innerHTML = item.title.replace(
+              searchInput.value,
+              "<span class='searchsuggest-highlight'>$&</span>"
+            );
+          });
         } else {
           suggestWrapper.appendChild(suggestError);
         }
+        if (backdrop) backdrop.style.visibility = "visible";
       }
     });
   }, 500);
 
-  const hideSuggest = () => {
-    el.classList.remove("search-active");
+  const resetSearch = () => {
+    suggestWrapper.textContent = "";
+    if (backdrop) backdrop.style.visibility = "hidden";
   }
 
-  searchInput.addEventListener("input", showSuggest);
-  searchInput.addEventListener("focus", () => { el.classList.add("search-active"); })
-  searchInput.addEventListener("blur", () => { setTimeout(hideSuggest, 100); });
+  searchInput.addEventListener("input", () => {
+    if (searchInput.value) handleInput();
+    else resetSearch();
+  });
 
   suggestWrapper.addEventListener("click", (event) => {
     if (event.target.classList.contains("searchsuggest-item")) {
@@ -58,6 +60,6 @@ document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach((el) => {
   if (closeButton)
     closeButton.addEventListener("click", () => {
       searchInput.value = "";
-      suggestWrapper.textContent = "";
+      resetSearch();
     });
 });

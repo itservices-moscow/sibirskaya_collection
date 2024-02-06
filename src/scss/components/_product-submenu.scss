@@ -1,23 +1,15 @@
 .submenu {
   &__container {
+    display: flex;
+    align-items: center;
     margin-bottom: 64px;
-    overflow: hidden;
+  }
+  &__block{
+    margin-right: 40px;
+    position: relative;
   }
   &__list {
-    justify-content: space-between;
     align-items: center;
-    position: relative;
-    &:after {
-      content: '';
-      display: block;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      width: 42px;
-      z-index: 10;
-      position: absolute;
-      background: linear-gradient(to right, transparent, var(--main-beige));
-    }
     @include mobile {
       display: flex;
       flex-direction: row;
@@ -28,9 +20,6 @@
       -webkit-overflow-scrolling: touch;
       padding-bottom: 20px;
       margin-bottom: -20px;
-      &:after {
-        display: none;
-      }
     }
   }
 }
@@ -38,6 +27,12 @@
 .subitem {
   position: relative;
   margin-right: 40px;
+  &.hidden{
+    display: none;
+  }
+  // &:first-child{
+  //   display: none;
+  // }
   @include mobile {
     max-width: calc(100vw - 48px);
     margin-left: -4px;
@@ -52,6 +47,7 @@
     margin: 0;
     color: #838383;
     text-transform: uppercase;
+    cursor: pointer;
   }
   &__number {
     display: none;
@@ -72,6 +68,10 @@
   &__back {
     width: 20px;
     margin-top: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
     display: none;
     @include mobile {
       margin-top: 94px;
@@ -80,6 +80,10 @@
   &__forward {
     width: 20px;
     margin-top: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
     display: none;
     @include mobile {
       margin-top: 94px;

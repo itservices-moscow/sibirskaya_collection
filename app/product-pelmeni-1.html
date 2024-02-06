@@ -10,12 +10,12 @@
   <link rel="preload" href="fonts/avenirnextcyrlight.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/IntroDemoCondBlackCAPS.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/introdemocond-lightcaps.woff2" as="font" type="font/woff2" crossorigin />
+
   <link rel="stylesheet" href="css/vendor.css" />
   <link rel="stylesheet" href="css/main.css" />
-
   <script defer src="js/main.js"></script>
+
   <!--
-  <script src="js/vendor/video.min.js" tupe="text/javascript"></script>
   <script defer src="js/vendor/dropzone.min.js"></script> -->
   <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 
@@ -125,23 +125,18 @@
   </div>
   <script type="text/javascript">
     // МОБИЛЬНОЕ МЕНЮ
-    function openMobMenuPanel(panelClass, parentClass) {
-      document.querySelector(panelClass).classList.remove("slide-right")
-      document.querySelector(parentClass).classList.add("slide-left")
-    }
-    function closeMobMenuPanel(panelClass, parentClass) {
-      document.querySelector(panelClass).classList.add("slide-right")
-      document.querySelector(parentClass).classList.remove("slide-left")
+    function toggleMobMenuPanel(panelClass) {
+      document.querySelector(panelClass).classList.toggle("closed")
     }
   </script>
   <div class="topmenu-mobile__content hidden" data-menu-content>
     <nav title="Главное меню">
       <div class="nav-mob nav-mob-l0">
         <ul class="list-reset nav-mob__list">
-          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
             <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
           </li>
-          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-brands');">
             <a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a>
           </li>
           <li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li>
@@ -151,8 +146,8 @@
         <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
       </div>
 
-      <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+      <div class="nav-mob nav-mob-l1 nav-mob-brands closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');">
           <img src="img/back-sm.png" />
           <span>продукт</span>
         </div>
@@ -161,7 +156,7 @@
             <a href="#" class="nav-top-l1__link">бренды</a>
             <ul class="list-reset nav-mob-l2__list flex">
               <li class="nav-mob-l2__item">
-                <a href="#" class="nav-mob-l2__link" onclick="openMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');"
+                <a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');"
                   >Sибирская коллекция</a
                 >
               </li>
@@ -182,8 +177,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+      <div class="nav-mob nav-mob-l1 nav-mob-manuf closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
           <img src="img/back-sm.png" />
           <span>производство</span>
         </div>
@@ -207,17 +202,17 @@
         </div>
       </div>
 
-      <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
+      <div class="nav-mob nav-mob-l3 nav-mob-sk closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');">
           <img src="img/back-sm.png" />
           <span>Бренды:<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
           <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">пельмени</a>
+            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a>
           </li>
           <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">вареники</a>
+            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a>
           </li>
           <li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li>
           <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
@@ -228,8 +223,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
+      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">
           <img src="img/back-sm.png" />
           <span>пельмени<br />Sибирская коллекция</span>
         </div>
@@ -246,8 +241,8 @@
         </ul>
       </div>
 
-      <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
-        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
+      <div class="nav-mob nav-mob-l4 nav-mob-vareniki closed">
+        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">
           <img src="img/back-sm.png" />
           <span>вареники<br />Sибирская коллекция</span>
         </div>
@@ -544,8 +539,7 @@
     <li class="subitem" data-product-tab="tab-7"><h1 class="subitem__name">эксклюзив</h1></li>
 
   </ul>
-</div>
-</div>
+</div></div>
             <div class="product__left"><ul class="list-reset prodmenu">
   <li><a class="prodmenu__link active" href="#">новосибирские</a></li>
   <li><a class="prodmenu__link" href="#">бабушкины</a></li>
@@ -1144,8 +1138,7 @@
     <img src="img/image78-2x.png" alt=""/>
   </div>
 
-</div>
-</div>
+</div></div>
 
             <div></div>
           </div>
@@ -1224,11 +1217,11 @@
     </a>
   </div>
   <div class="container flex footer__container footer__b">
-    <span class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#" class="desktop">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
     <a href="#">Политика конфиденциальности</a>
     <a href="#">Правила пользования сайтом</a>
     <a href="#">Пользовательское соглашение</a>
-    <span class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</span>
+    <a href="#" class="mobile">© 2023. ООО «ЩЕЛКОВСКИЙ МПК»</a>
   </div>
 </footer>
 

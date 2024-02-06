@@ -29,6 +29,10 @@ import { burger } from "./functions/burger"
 //   slidesPerView: 'auto',
 // });
 
+// Подключение анимаций по скроллу
+import AOS from "aos"
+AOS.init()
+
 // Подключение плавной прокрутки к якорям
 import SmoothScroll from "smooth-scroll"
 const scroll = new SmoothScroll('a[href*="#"]')
