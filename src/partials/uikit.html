@@ -1,69 +1,62 @@
 <section class="uikit">
   <div class="container">
-<div>
-  <H2>СТРЕЛКИ:</H2>
-  <div>
-    <span class="arr-left-on">
-      <a href="">
-        @include('../partials/arrowleft.html')
-        SK selective kids
-      </a>
-    </span>
-&nbsp;&nbsp;&nbsp;&nbsp;
-    <span class="arr-right-on">
-      <a href="">Sибирская <br class="mobile">коллекция</a>
-      @include('../partials/arrowright.html')
-    </span>
-&nbsp;&nbsp;&nbsp;&nbsp;
-      <span class="arr-right-on">
-        <a href="catalog.html">
-          <span class="text">СМОТРЕТЬ ВСЕ</span>
+    <div>
+      <h2>СТРЕЛКИ:</h2>
+      <div>
+        <span class="arr-left-on">
+          <a href=""> @include('../partials/arrowleft.html') SK selective kids </a>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="arr-right-on">
+          <a href="">Sибирская <br class="mobile" />коллекция</a>
           @include('../partials/arrowright.html')
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="arr-right-on">
+          <a href="catalog.html">
+            <span class="text">СМОТРЕТЬ ВСЕ</span>
+            @include('../partials/arrowright.html')
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="container flex">
+      <span class="icon-back">
+        <a href="#">
+          <svg width="56" height="42" viewBox="0 0 56 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M25.6448 28.6365L17.5 21.0277M17.5 21.0277L25.6448 13.3638M17.5 21.0277L55 21.0277"
+              class="arr"
+              stroke="#3C3B35"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              d="M40.75 21C40.75 32.3304 31.7313 41.5 20.625 41.5C9.51872 41.5 0.5 32.3304 0.5 21C0.5 9.66963 9.51872 0.5 20.625 0.5C31.7313 0.5 40.75 9.66963 40.75 21Z"
+              stroke="#C0B3A8"
+              class="cir" />
+          </svg>
         </a>
       </span>
+      @include('../partials/arrowback.html')
+
+      <span class="icon-back-white">
+        <a href="#">
+          <svg width="56" height="42" viewBox="0 0 56 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              class="arr"
+              d="M25.6448 28.6365L17.5 21.0277M17.5 21.0277L25.6448 13.3638M17.5 21.0277L55 21.0277"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              class="cir"
+              d="M40.75 21C40.75 32.3304 31.7313 41.5 20.625 41.5C9.51872 41.5 0.5 32.3304 0.5 21C0.5 9.66963 9.51872 0.5 20.625 0.5C31.7313 0.5 40.75 9.66963 40.75 21Z"
+              stroke="#fff" />
+          </svg>
+        </a>
+      </span>
+      @include('../partials/arrowback_black.html')
+    </div>
   </div>
-
-</div>
-  <div class="container flex">
-
-    <span class="icon-back">
-      <a href="#">
-        <svg width="56" height="42" viewBox="0 0 56 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M25.6448 28.6365L17.5 21.0277M17.5 21.0277L25.6448 13.3638M17.5 21.0277L55 21.0277" class="arr"
-            stroke="#3C3B35" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M40.75 21C40.75 32.3304 31.7313 41.5 20.625 41.5C9.51872 41.5 0.5 32.3304 0.5 21C0.5 9.66963 9.51872 0.5 20.625 0.5C31.7313 0.5 40.75 9.66963 40.75 21Z"
-            stroke="#C0B3A8" class="cir" />
-        </svg>
-      </a>
-    </span>
- @include('../partials/arrowback.html')
-
-    <span class="icon-back-white">
-      <a href="#">
-        <svg width="56" height="42" viewBox="0 0 56 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="arr" d="M25.6448 28.6365L17.5 21.0277M17.5 21.0277L25.6448 13.3638M17.5 21.0277L55 21.0277"
-            stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
-          <path class="cir"
-            d="M40.75 21C40.75 32.3304 31.7313 41.5 20.625 41.5C9.51872 41.5 0.5 32.3304 0.5 21C0.5 9.66963 9.51872 0.5 20.625 0.5C31.7313 0.5 40.75 9.66963 40.75 21Z"
-            stroke="#fff" />
-        </svg>
-      </a>
-    </span>
-    @include('../partials/arrowback_black.html')
-
-  </div>
-
-  </div>
-
-  <div><h2>КНОПКИ</h2>
-
-              <button class="btn-reset btn-primary">отправить запрос</button>
-              <button class="btn-reset btn-secondary">скачать каталог&nbsp;
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                  <path d="M3.29435 8.5L8.00023 13.3366L12.7061 8.54686M8.00023 0.5V13.0714M0.941406 16.5H15.0591" stroke="#A3784E"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-  </div>
+  test commit
 </section>
