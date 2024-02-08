@@ -259,7 +259,7 @@
  <nav class="topmenu topmenu_brands" id="topmenu-brands">
   <div class="topmenu-container">
     <div class="topmenu-container__item">
-      <nav class="nav-top-l1" title="">
+      <nav class="nav-top nav-top-l1" title="">
         <ul class="list-reset nav-top-l1__list">
           <li class="nav-top-l1__item active"><a href="#" class="nav-top-l1__link">бренды</a></li>
           <li class="nav-top-l1__item"><a href="brands-kids.html" class="nav-top-l1__link">детское питание</a></li>
@@ -268,8 +268,8 @@
         </ul>
       </nav>
     </div>
-    <div class="topmenu-container__item">
-      <nav class="nav-top-l2" title="">
+    <div class="topmenu-container__item" data-menuleave-hide="nav-top-l2">
+      <nav class="nav-top nav-top-l2" title="">
         <ul class="list-reset nav-top-l2__list">
           <li class="nav-top-l2__item">
             <a href="#" class="nav-top-l2__link" data-show-submenu="nav-top-l3-0">Sибирская коллекция</a>
@@ -299,7 +299,7 @@
       </nav>
     </div>
     <div class="topmenu-container__item" data-menuleave-hide="nav-top-l3">
-      <nav class="nav-top-l3" id="nav-top-l3-0" title="">
+      <nav class="nav-top nav-top-l3" id="nav-top-l3-0" title="">
         <ul class="list-reset nav-top-l3__list">
           <li class="nav-top-l3__item">
             <a href="#" class="nav-top-l3__link" data-show-submenu="nav-top-l4-0">пельмени</a>
@@ -328,7 +328,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="nav-top-l3" id="nav-top-l3-1" title="">
+      <nav class="nav-top nav-top-l3" id="nav-top-l3-1" title="">
         <ul class="list-reset nav-top-l3__list">
           <li class="nav-top-l3__item">
             <!-- ссылки - для примера -->
@@ -356,7 +356,7 @@
       </nav>
     </div>
     <div class="topmenu-container__item" data-menuleave-hide="nav-top-l4">
-      <nav class="nav-top-l4" id="nav-top-l4-0" title="">
+      <nav class="nav-top nav-top-l4" id="nav-top-l4-0" title="">
         <ul class="list-reset nav-top-l4__list">
           <li class="nav-top-l4__item"><a href="product-pelmeni-1.html" class="nav-top-l4__link">с говядиной</a></li>
           <li class="nav-top-l4__item"><a href="product-pelmeni-2.html" class="nav-top-l4__link">с телятиной</a></li>
@@ -381,7 +381,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="nav-top-l4" id="nav-top-l4-1" title="">
+      <nav class="nav-top nav-top-l4" id="nav-top-l4-1" title="">
         <ul class="list-reset nav-top-l4__list">
           <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с картошкой</a></li>
           <li class="nav-top-l4__item"><a href="#" class="nav-top-l4__link">с вишней</a></li>
@@ -647,17 +647,6 @@
           <button type="submit" class="btn-primary form__submit-btn">Отправить</button>
         </form>
       </div>
-      <!-- модальное окно после отправки формы -->
-      <div class="graph-modal">
-        <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="st1">
-          <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-          <div class="graph-modal__content">
-            <h3>СПАСИБО!</h3>
-            <p>Мы ознакомимся с вашим предложением и свяжемся с вами в течение 1 недели.</p>
-            <button class="btn-reset btn-primary" onClick="location.href = '/';">на главную</button>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="st-form__item st-form__item_3 desktop">
@@ -835,46 +824,30 @@
 
         <!-- divider -->
         <!-- форма попап обратной связи -->
-<div class="graph-modal" id="stform2">
+<div class="graph-modal">
   <!--  data-graph-target="stform2" ?? -->
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="st-keys-modal">
+  <div class="graph-modal__container" id="stForm2" role="dialog" aria-modal="true" data-graph-target="st-keys-modal">
     <div>
+      <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+      <h2>
+        Напишите нам о вашей идее
+      </h2>
       <form class="form startupsform2">
         <label for="name" class="form__label">
-          <input
-            type="text"
-            name="contact-fio"
-            class="input-reset form__input contact-fio"
-            value=""
-            placeholder="Имя"
+          <input type="text" name="contact-fio2" class="input-reset form__input contact-fio2" value="" placeholder="Имя"
             data-validate-field="fio" />
         </label>
         <label class="form__label">
-          <input
-            type="email"
-            name="email"
-            class="input-reset form__input contact-email"
-            value=""
-            placeholder="Почта"
+          <input type="email" name="email2" class="input-reset form__input contact-email2" value="" placeholder="Почта"
             data-validate-field="email" />
         </label>
         <label class="form__label">
-          <input
-            type="tel"
-            name="tel"
-            class="input-reset form__input contact-tel"
-            value=""
-            placeholder="Телефон"
+          <input type="tel" name="tel2" class="input-reset form__input contact-tel2" value="" placeholder="Телефон"
             data-validate-field="tel" />
         </label>
         <label class="form__label">
-          <input
-            type="text"
-            name="message"
-            class="input-reset form__input contact-message"
-            value=""
-            placeholder="Сообщение"
-            data-validate-field="message" />
+          <input type="text" name="message" class="input-reset form__input contact-message" value=""
+            placeholder="Сообщение" data-validate-field="message" />
         </label>
 
         <!-- скрипт для dropzone подключается только на страницах, где есть этот блок -->
@@ -892,17 +865,25 @@
         <!-- dropzone end -->
 
         <div class="form__agreement">
-          <label class="label-check"
-            >Я даю свое согласие на обработку моих данных <a href="#" class="linkin">Политики конфиденциальности</a> и
+          <label class="label-check">Я даю свое согласие на обработку моих данных <a href="#" class="linkin">Политики
+              конфиденциальности</a> и
             соглашаюсь с положениями
-            <input type="checkbox" name="agreement" id="agreement" value="yes" />
+            <input type="checkbox" name="agreement2" id="agreement2" value="yes" />
             <span class="checkmark"></span>
           </label>
         </div>
         <input type="hidden" name="form_origin" value="Из Стартапов - Расскажите" />
-        <input type="hidden" name="form_popup" value="st2" />
+        <input type="hidden" name="form_popup2" value="st2" />
         <button type="submit" class="btn-primary form__submit-btn">Отправить</button>
       </form>
+    </div>
+  </div>
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="st1">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <h2 style="text-align: center;">СПАСИБО!</h2>
+      <p style="text-align: center;">Мы ознакомимся с вашим предложением и свяжемся с вами в течение 1 недели.</p>
+      <button class="btn-reset btn-primary" onClick="location.href = '/';">на главную</button>
     </div>
   </div>
 </div>
@@ -920,7 +901,6 @@
   </div>
 </div>
 -->
-
       </main>
       <footer class="footer">
   <div class="container flex footer__container footer__t">

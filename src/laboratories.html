@@ -11,12 +11,13 @@
       <div class="labs__title">
         @include('partials/buffer_top.html')
         @include('partials/arrowback.html')
-        <h1 class="heading">собственные лаборатории</h1>
-        <p>На производстве с 2013 года функционируют аккредитованные производственные физико&#8209;химическая и микробиологическая лаборатории</p>
+        <h1 class="heading">собственные <br class="mobile">лаборатории</h1>
+        <p>На производстве с 2013 года функционируют аккредитованные производственные физико-химическая и микробиологическая лаборатории</p>
       </div>
 
       <section class="labs">
-        <h1 class="bronze">Физико-химическая</h1>
+        <h1 class="title01 bronze">Физико-химическая</h1>
+<!--         <div class="labs__content"> -->
           <div class="accordionL1 accordionL1-1">
             <div class="pagination-track" id="pagination1">
               <div class="pagination">
@@ -47,7 +48,7 @@
             </div>
             <div class="accordionL1__content" aria-hidden="true">
               <div class="container">
-                <p>Исследует более 20 показателей перед допуском сырья для производства</p>
+                <p>Исследует более 20 показателей перед допуском сырья <br> для производства</p>
                 <p><img src="img/labs-1-02-2x.jpg" width="535" /></p>
               </div>
             </div>
@@ -68,11 +69,11 @@
               </div>
             </div>
           </div>
+<!--         </div> -->
 
         <div class="labs__section">
-          <div class="labs__heading">
-            <h1 class="bronze">Микро-биологическая</h1>
-          </div>
+          <h1 class="title02 bronze">Микро-биологическая</h1>
+<!--         <div class="labs__content"> -->
 
           <div class="accordionL2 accordionL2-1">
             <div class="pagination-track" id="pagination2">
@@ -236,35 +237,24 @@
     // });
     // accordion5.open();
 
-    const wrapper = document.querySelector("main.labs");
-    const stickyOffset = parseInt(getComputedStyle(wrapper).getPropertyValue("--sticky-offset"));
-    const labsP = document.querySelector(".labs__title p");
+    function onResize() {
+      document.querySelectorAll("section.labs h1").forEach(el => {
+        el.style.top = document.querySelector(".labs__title p").getBoundingClientRect().bottom + "px";
+      })
+    }
 
-    document.documentElement.scrollTop = 0;
+    onResize();
+    window.addEventListener("resize", onResize);
 
-    wrapper.style.setProperty("--heading-offset", labsP.offsetTop + labsP.offsetHeight + "px");
-
-    document.querySelectorAll(".pagination").forEach((el, i) => {
-      const sectionName = `.accordionL${i + 1}`;
-      const sections = document.querySelectorAll(sectionName);
+    document.querySelectorAll(".pagination").forEach((el, index) => {
+      const sections = document.querySelectorAll(`.accordionL${index+1}`);
       const bullets = el.querySelectorAll(".pagination__bullet");
-      const parentOffset = sections[0].offsetParent.offsetTop;
-      const breakpoints = Array.prototype.map.call(
-        sections,
-        (el) => parentOffset + el.offsetTop - stickyOffset
-      );
       let currentSection = 0;
 
-      sections.forEach((el, index) => {
-        const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
-        el.querySelector(`${sectionName}__control`).addEventListener("click", scrollToSection);
-        bullets[index].addEventListener("click", scrollToSection);
-      });
-
       window.addEventListener("scroll", function () {
-        breakpoints.forEach((breakpoint, index) => {
-          if (window.scrollY >= breakpoint
-          && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
+        for (let index = 0; sections[index]; index++) {
+          let el = sections[index];
+          if (!sections[index + 1] || el.offsetTop != sections[index + 1].offsetTop) {
             if (index != currentSection) {
               bullets[currentSection].classList.remove("current");
               bullets[index].classList.add("current");
@@ -272,9 +262,10 @@
             }
             return;
           }
-        });
+        }
       });
     });
   </script>
 </body>
+
 </html>

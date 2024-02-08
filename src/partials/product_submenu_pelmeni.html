@@ -1,25 +1,36 @@
 
 <div class="container submenu__container">
+  <div class="submenu__block subitem_active">
+    <div class="subitem__number" id="product-number">01</div>
+    <div class="subitem__flex flex">
+      <span class="arr-left-on" id="product-prev">
+        <button class="subitem__back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="42" class="icon" height="15" viewBox="0 0 26 15" fill="none">
+            <path d="M8.38462 14.5L1 7.52528M1 7.52528L8.38462 0.5M1 7.52528L25 7.52528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round" pathLength="100">
+            </path>
+          </svg>
+        </button>
+      </span>
+      <h1 class="subitem__name" id="product-tab-title">с говядиной</h1>
+      <span class="arr-right-on" id="product-next">
+        <button class="subitem__forward">
+          <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round">
+            </path>
+          </svg>
+        </button>
+      </span>
+    </div>
+    <span class="subitem__note">вкусы</span>
+  </div>
   <ul class="list-reset submenu__list flex">
-    <li class="subitem subitem_active">
-      <div class="subitem__number">01</div>
-      <div class="subitem__flex flex">
-        <span class="arr-left-on">
-          <a href="#" class="subitem__back">@include('../partials/arrowleft.html')</a>
-        </span>
-        <h1 class="subitem__name">с говядиной</h1>
-        <span class="arr-right-on">
-          <a href="product-pelmeni-2.html" class="subitem__forward">@include('../partials/arrowright.html')</a>
-        </span>
-      </div>
-      <span class="subitem__note">вкусы</span>
-    </li>
-    <li class="subitem"><h1 class="subitem__name">с телятиной</h1></li>
-    <li class="subitem"><h1 class="subitem__name">с индейкой</h1></li>
-    <li class="subitem"><h1 class="subitem__name">с курицей</h1></li>
-    <li class="subitem"><h1 class="subitem__name">4 вида мяса</h1></li>
-    <li class="subitem"><h1 class="subitem__name">халяль</h1></li>
-    <li class="subitem"><h1 class="subitem__name">эксклюзив</h1></li>
+    <li class="subitem" data-product-tab="tab-1"><h1 class="subitem__name">с говядиной</h1></li>
+    <li class="subitem" data-product-tab="tab-2"><h1 class="subitem__name">с телятиной</h1></li>
+    <li class="subitem" data-product-tab="tab-3"><h1 class="subitem__name">с индейкой</h1></li>
+    <li class="subitem" data-product-tab="tab-4"><h1 class="subitem__name">с курицей</h1></li>
+    <li class="subitem" data-product-tab="tab-5"><h1 class="subitem__name">4 вида мяса</h1></li>
+    <li class="subitem" data-product-tab="tab-6"><h1 class="subitem__name">халяль</h1></li>
+    <li class="subitem" data-product-tab="tab-7"><h1 class="subitem__name">эксклюзив</h1></li>
 
   </ul>
 </div>

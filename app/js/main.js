@@ -19,8 +19,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/search */ "./src/js/components/search.js");
 /* harmony import */ var _components_catalog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/catalog */ "./src/js/components/catalog.js");
 /* harmony import */ var _components_catalog__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_catalog__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_brands360__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/brands360 */ "./src/js/components/brands360.js");
-/* harmony import */ var _components_brands360__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_brands360__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_stmodal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/stmodal */ "./src/js/components/stmodal.js");
+/* harmony import */ var _components_product_tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/product-tabs.js */ "./src/js/components/product-tabs.js");
+/* harmony import */ var _components_product_tabs_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_product_tabs_js__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -125,73 +127,6 @@ __webpack_require__.r(__webpack_exports__);
 // import "./vendor/dropzone.min.js"
 
 
-
-/***/ }),
-
-/***/ "./src/js/components/brands360.js":
-/*!****************************************!*\
-  !*** ./src/js/components/brands360.js ***!
-  \****************************************/
-/***/ (() => {
-
-document.addEventListener("DOMContentLoaded", event => {
-  console.log("script brands", event);
-  const brandsListItems = document?.querySelectorAll("[data-subbrand-id]");
-  const imageBox = document.querySelector("#sprite-box");
-  // const filterSelectAllGroup = document?.querySelectorAll('[data-filter-function="selectall_cb"]')
-
-  // переключение между пунктами
-  brandsListItems.forEach(element => {
-    const id = element.getAttribute("data-subbrand-id");
-    const imgtype = element.getAttribute("data-subbrand-imgtype");
-    const url = element.getAttribute("data-subbrand-url");
-    //console.log("[item:]", id, imgtype, url)
-
-    element.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelectorAll(".brandmenu__link.active").forEach(elem => {
-        //console.log("ex", elem)
-        elem.classList.remove("active");
-      });
-      e.target.classList.add("active");
-      switch (imgtype) {
-        case "image":
-          console.log("show image");
-          imageBox.classList.add("sb-center");
-          imageBox.style.backgroundImage = "url('" + url + "')"; // прописать здесь код для обычной картинки
-          break;
-        case "3d":
-          // preloader (поставить сюда fetch или нужную функцию подгрузки)
-          document.getElementById("view360").classList.toggle("loading");
-          setTimeout(function () {
-            imageBox.classList.remove("sb-center");
-            imageBox.style.backgroundImage = "url('" + url + "')"; // отобразить 3d спрайт
-            document.getElementById("view360").classList.toggle("loading");
-          }, 3000);
-          break;
-        default:
-          break;
-      }
-    });
-  });
-
-  //animationPlayState = "running"
-  const element = document.querySelector(".view360__icon");
-  element.addEventListener("click", function (e) {
-    e.preventDefault();
-    //document.querySelector("#sprite-box").classList.add("animated")
-    const state = document.querySelector("#sprite-box").style.animationPlayState;
-    document.querySelector("#sprite-box").style.animationPlayState = state === "paused" ? "running" : "paused";
-  });
-  // element.addEventListener("mouseover", function (e) {
-  //   document.querySelector("#sprite-box").style.animationPlayState = "running"
-  //   console.log("over", e)
-  // })
-  // element.addEventListener("mouseout", function (e) {
-  //   document.querySelector("#sprite-box").style.animationPlayState = "paused"
-  //   console.log("out", e)
-  // })
-});
 
 /***/ }),
 
@@ -587,55 +522,81 @@ document.addEventListener("DOMContentLoaded", function (event) {
   showBlockTopmenu("topmenu-manuf", "link-manuf", "topmenu-brands");
   hideBlockTopmenu("topmenu-brands", "link-brands");
   hideBlockTopmenu("topmenu-manuf", "link-manuf");
-  const menuManufHover = document?.querySelectorAll("[data-onhover-id]");
-  menuManufHover.forEach(element => {
-    const id = element.getAttribute("data-onhover-id");
-    element.addEventListener("mouseover", function (ev) {
-      document.getElementById(id).style.backgroundColor = "#FAF5F0";
-    });
-    element.addEventListener("mouseout", function (ev) {
-      document.getElementById(id).style.backgroundColor = "";
-    });
-  });
-  const menuBrandsHover = document?.querySelectorAll("[data-show-submenu]");
-  menuBrandsHover.forEach(element => {
-    const id = element.getAttribute("data-show-submenu");
-    element.addEventListener("mouseover", e => {
-      // console.log(id, document.getElementById(id))
-      document.getElementById(id).classList.add("topmenu_show");
-      const siblings = getSiblings(document.getElementById(id));
-      siblings.forEach(element => {
-        element.classList.remove("topmenu_show");
+
+  // const menuManufHover = document?.querySelectorAll("[data-onhover-id]")
+  // menuManufHover.forEach((element) => {
+  //   const id = element.getAttribute("data-onhover-id")
+  //   element.addEventListener("mouseover", function (ev) {
+  //     document.getElementById(id).classList.add('hover-bg')
+  //   })
+  //   element.addEventListener("mouseout", function (ev) {
+  //     document.getElementById(id).classList.remove('hover-bg')
+  //   })
+  // })
+
+  const navTopL2Items = document.querySelectorAll('.nav-top-l2__item');
+  const navTopL4 = document.querySelectorAll('.topmenu-container__item[data-menuleave-hide="nav-top-l4"] .nav-top');
+  navTopL2Items.forEach(function (item) {
+    item.addEventListener('mouseover', function () {
+      const isActive = item.classList.contains('active');
+      navTopL4.forEach(element => {
+        // Проверяем наличие класса 'active' и не удаляем класс, если он есть
+        if (!isActive) {
+          element.classList.remove('topmenu_show');
+        }
       });
     });
   });
 
-  // СКРЫТЬ ПОДМЕНЮ БРЕНДОВ
-  const menuBrandsHide = document?.querySelectorAll("[data-menuleave-hide]");
-  menuBrandsHide.forEach(element => {
-    //console.log("[hide]", element.children)
-    element.addEventListener("mouseout", function (ev) {
-      element.children.forEach(child => {
-        // нужны уточнения
-        // child.classList.remove("topmenu_show")
-        // console.log(child)
+  // Дополнительный код для отображения подменю брендов и управления классом 'active'
+  const menuBrandsHover = document?.querySelectorAll("[data-show-submenu]");
+  menuBrandsHover.forEach(element => {
+    const id = element.getAttribute("data-show-submenu");
+    element.addEventListener("mouseover", e => {
+      const parentItem = element.closest(".topmenu-container__item");
+      parentItem.querySelectorAll("[data-show-submenu]").forEach(el => {
+        el.classList.remove("active");
+      });
+      element.classList.add("active");
+      document.getElementById(id).classList.add("topmenu_show");
+      const siblings = getSiblings(document.getElementById(id));
+      siblings.forEach(el => {
+        el.classList.remove("topmenu_show");
       });
     });
   });
+  function getSiblings(element) {
+    const siblings = Array.from(element.parentNode.children);
+    return siblings.filter(el => el !== element);
+  }
+
   // СКРЫТЬ ДЕСКТОПНОЕ МЕНЮ ПО КЛИКУ НА БЭКДРОП
-  const menuDesktopBackdrops = document?.querySelectorAll("[data-menu-hide]");
+  // const menuDesktopBackdrops = document?.querySelectorAll(".topmenu-backdrop");
+  // menuDesktopBackdrops.forEach((element) => {
+  //   const id = element.getAttribute("data-menu-hide");
+  //   element.addEventListener("click", function (ev) {
+  //     document.getElementById(id).classList.remove("topmenu_show");
+  //   });
+  //   if (id === "all") {
+  //     element.addEventListener("mouseover", function (ev) {
+  //       document.getElementById("topmenu-manuf").classList.remove("topmenu_show");
+  //       document.getElementById("topmenu-brands").classList.remove("topmenu_show");
+  //     });
+  //   }
+  // });
+
+  const menuDesktopBackdrops = document?.querySelectorAll(".topmenu-backdrop");
   menuDesktopBackdrops.forEach(element => {
-    const id = element.getAttribute("data-menu-hide");
-    element.addEventListener("click", function (ev) {
-      document.getElementById(id).classList.remove("topmenu_show");
+    element.addEventListener('mouseover', function () {
+      document.getElementById("topmenu-manuf").classList.remove("topmenu_show");
+      document.getElementById("topmenu-brands").classList.remove("topmenu_show");
     });
-    if (id === "all") {
-      element.addEventListener("click", function (ev) {
-        document.getElementById("topmenu-manuf").classList.remove("topmenu_show");
-        document.getElementById("topmenu-brands").classList.remove("topmenu_show");
-      });
-    }
   });
+  // menuDesktopBackdrops.addEventListener('mouseover', function () {
+
+  // });
+
+  // topmenu
 
   // И ПРИ ХОВЕРЕ НА ДР. ПУНКТЫ
   const menuDesktopHide = document?.querySelectorAll("[data-menu-hide-onhover]");
@@ -651,6 +612,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
   accordionInit("accordion");
 
   // закрывающая скобка document onload
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var items = document.querySelectorAll('.nav-top-l1__item');
+  items.forEach(function (item, index) {
+    item.addEventListener('mouseover', function () {
+      // Добавляем класс hover текущему элементу и предыдущему
+      this.classList.add('hover');
+      if (index > 0) {
+        items[index - 1].classList.add('hover');
+      }
+    });
+    item.addEventListener('mouseout', function () {
+      // Убираем класс hover у всех элементов
+      items.forEach(function (item) {
+        item.classList.remove('hover');
+      });
+    });
+  });
 });
 
 /***/ }),
@@ -754,6 +733,51 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 /***/ }),
 
+/***/ "./src/js/components/product-tabs.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/product-tabs.js ***!
+  \*******************************************/
+/***/ (() => {
+
+const subitems = document.querySelectorAll('.subitem');
+let currentIndex = 0;
+function updateCurrentItem() {
+  subitems.forEach(function (subitem, index) {
+    const productTab = subitem.getAttribute('data-product-tab');
+    const productContent = document.querySelector('.product-content[data-product-tab="' + productTab + '"]');
+    if (index === currentIndex) {
+      productContent.classList.add('active');
+    } else {
+      productContent.classList.remove('active');
+    }
+    if (index <= currentIndex) {
+      subitem.classList.add('hidden');
+    } else {
+      subitem.classList.remove('hidden');
+    }
+  });
+  const subitemName = subitems[currentIndex].querySelector('.subitem__name').innerText;
+  document.getElementById('product-tab-title').innerText = subitemName;
+  document.getElementById('product-number').innerText = (currentIndex + 1).toString().padStart(2, '0');
+}
+subitems.forEach(function (subitem, index) {
+  subitem.addEventListener('click', function () {
+    currentIndex = index;
+    updateCurrentItem();
+  });
+});
+document.getElementById('product-next').addEventListener('click', function () {
+  currentIndex = (currentIndex + 1) % subitems.length;
+  updateCurrentItem();
+});
+document.getElementById('product-prev').addEventListener('click', function () {
+  currentIndex = (currentIndex - 1 + subitems.length) % subitems.length;
+  updateCurrentItem();
+});
+updateCurrentItem();
+
+/***/ }),
+
 /***/ "./src/js/components/search.js":
 /*!*************************************!*\
   !*** ./src/js/components/search.js ***!
@@ -810,6 +834,140 @@ document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach(el => {
     suggestWrapper.textContent = "";
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/components/stmodal.js":
+/*!**************************************!*\
+  !*** ./src/js/components/stmodal.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   validateForms: () => (/* binding */ validateForms)
+/* harmony export */ });
+/* harmony import */ var just_validate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! just-validate */ "./node_modules/just-validate/dist/just-validate.es.js");
+/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/dist/inputmask.js");
+/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _vendor_graph_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../vendor/graph-modal */ "./src/js/vendor/graph-modal.js");
+
+
+
+// инициализируем модальное окно для submit
+
+const modal = new _vendor_graph_modal__WEBPACK_IMPORTED_MODULE_2__["default"]();
+let inputs = document.querySelectorAll('input[type="tel"]');
+let im = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())("+7(999)999-99-99");
+im.mask(inputs);
+// console.log("im", inputs, im);
+
+const rules4 = [{
+  ruleSelector: ".contact-fio2",
+  rules: [{
+    rule: "minLength",
+    value: 2,
+    errorMessage: "Имя должно быть не короче 2 символов"
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните имя"
+  }]
+}, {
+  ruleSelector: ".contact-email2",
+  rules: [{
+    rule: "email",
+    value: true,
+    errorMessage: "Введите корректный email"
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните email"
+  }]
+}, {
+  ruleSelector: "#agreement2",
+  // чекбокс
+  rules: [{
+    rule: "required",
+    errorMessage: "Обязательно"
+  }]
+}, {
+  ruleSelector: ".contact-tel2",
+  tel: true,
+  telError: "Введите корректный телефон",
+  rules: [{
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните телефон"
+  }]
+}];
+const validateForms = (selector, rules, afterSend) => {
+  const form = document?.querySelector(selector);
+  const telSelector = form?.querySelector('input[type="tel"]');
+  if (!form) {
+    console.error("Нет такого селектора!");
+    return false;
+  }
+  if (!rules) {
+    console.error("Вы не передали правила валидации!");
+    return false;
+  }
+  if (telSelector) {
+    for (let item of rules) {
+      if (item.tel) {
+        item.rules.push({
+          rule: "function",
+          validator: function () {
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
+          },
+          errorMessage: item.telError
+        });
+      }
+    }
+  }
+  const validation = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](selector, {
+    errorLabelStyle: {
+      color: "#FF3A2E"
+    },
+    submitHandler: function (form, values, ajax) {
+      console.log(form);
+    }
+  });
+  for (let item of rules) {
+    // console.log("rule > ", item.rules);
+    validation.addField(item.ruleSelector, item.rules);
+  }
+  validation.onSuccess(ev => {
+    console.log("[Верно заполнено, отправляем форму]", ev);
+    // send
+    let formData = new FormData(ev.target);
+    //console.log(...formData)
+
+    // let popId = formData.get("form_popup2")
+    //console.log(popId)
+    // let xhr = new XMLHttpRequest()
+    // xhr.onreadystatechange = function () {
+    //   if (xhr.readyState === 4) {
+    //     if (xhr.status === 200) {
+    //       console.log("Отправлено")
+    //     }
+    //   }
+    // }
+    // xhr.open("POST", "mail.php", true)
+    // xhr.send(formData)
+
+    // открыть модальное окно - перенести в запрос
+    modal.close('st-keys-modal');
+    modal.open('st1');
+    ev.target.reset();
+  });
+};
+const afterForm = () => {
+  console.log("Произошла отправка, тут можно писать любые действия");
+};
+validateForms(".startupsform2", rules4, afterForm);
 
 /***/ }),
 

@@ -1,17 +1,25 @@
-$sticky-offset: 260px;
-
 .creating {
+  $sticky-offset: 260px;
+
   @include desktop {
     &__title {
       position: sticky;
       top: 0;
       z-index: 9;
       background: var(--main-beige);
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: -66px;
+        left: 0;
+        right: 0;
+        height: 66px;
+        background-color: var(--main-beige);
+      }
     }
   }
 
   &__container {
-    position: relative;
     margin: 40px 55px 100px 55px;
     margin-top: 40px;
     grid-template-columns: calc(60% - 115px) 40%;
@@ -38,7 +46,7 @@ $sticky-offset: 260px;
   &__item {
     height: 240px;
     background: var(--main-beige);
-    border-top: 1px solid rgba(192, 179, 168, 0.3);
+    border-top: 1px solid rgba(192, 179, 168, 0.30);
     padding: 24px 16px;
     img {
       margin-bottom: 16px;
@@ -51,18 +59,43 @@ $sticky-offset: 260px;
       margin: 0;
     }
     @include desktop {
-      --folded-height: 240px;
+      --header-height: 240px;
       position: sticky;
       top: $sticky-offset;
       @include folding-blocks(3);
     }
   }
-}
 
-.contacts__form-cp {
-  @include desktop {
+  &__form {
     position: sticky;
     top: $sticky-offset;
+    background-color: var(--main-white);
+    max-width: 486px;
     align-self: start;
+    .container {
+      padding: 32px 32px 48px;
+      border-top: 1px solid rgba(163, 120, 78);
+      h3 {
+        margin-top: 0;
+        font-size: 29px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
+      input[type=checkbox]{
+        margin-right: 16px;
+      }
+      a{
+        color: var(--main-black);
+        text-decoration-line: underline;
+        &:hover{
+          color: var(--main-bronze);
+        }
+      }
+      .form__btn{
+        margin-top: 32px;
+        width: 100%;
+        display: block;
+      }
+    }
   }
 }

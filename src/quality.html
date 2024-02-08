@@ -17,7 +17,7 @@
       <section class="quality" id="quality01">
 
           <div class="content">
-            <div class="accordionQ accordionQ-1">
+            <div id="sticky-1" class="accordionQ accordionQ-1">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">01</span>
                 <img src="img/quality-01-2x.png" alt="Сертификация FSSC 22000"/>
@@ -33,7 +33,7 @@
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-2">
+            <div id="sticky-2" class="accordionQ accordionQ-2">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">02</span>
                 <img src="img/quality-02-2x.png" alt="Анализ поступившего сырья" />
@@ -49,7 +49,7 @@
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-3">
+            <div id="sticky-3" class="accordionQ accordionQ-3">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">03</span>
                 <img src="img/quality-03.png" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
@@ -65,7 +65,7 @@
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-4">
+            <div id="sticky-4" class="accordionQ accordionQ-4">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">04</span>
                 <img src="img/quality-04.png" alt="Шоковая заморозка" />
@@ -76,12 +76,12 @@
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
                   <img src="img/quality-04.png" alt="Шоковая заморозка" />
-                  <p>Продукты в среднем замораживаются за 20 минут, что помогает лучше сохранять структуру тканей и поэтому пищевая ценность и вкусовые качества остаются неизменными</p>
+                  <p>Продукты в среднем замораживаются за 20 минут, что &nbsp; помогает лучше сохранять структуру тканей и поэтому пищевая ценность и вкусовые качества остаются неизменными</p>
                 </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-5">
+            <div id="sticky-5" class="accordionQ accordionQ-5">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">05</span>
                 <img src="img/quality-05.png" alt="Металлодетектор на выходе с линии" />
@@ -97,7 +97,7 @@
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-6">
+            <div id="sticky-6" class="accordionQ accordionQ-6">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">06</span>
                 <img src="img/quality-06.png" alt="Лабораторные исследования" />
@@ -108,12 +108,19 @@
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
                   <img src="img/quality-06.png" alt="Лабораторные исследования" />
-                  <p>Собственные физико-химическая и микробиологическая лаборатории аккредитованные с 2013 года проводят ряд исследований</p>
+                  <p>
+                    Собственные физико-химическая и микробиологическая лаборатории аккредитованные с 2013 года проводят ряд исследований
+
+                    <a class="arr-right-on" href="laboratories.html">
+                      <span>узнать подробнее</span>
+                      @include('./partials/arrowright.html')
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-7">
+            <div id="sticky-7" class="accordionQ accordionQ-7">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">07</span>
                 <img src="img/quality-07.png" alt="Дегустация каждой произведённой партии" />
@@ -129,7 +136,7 @@
               </div>
             </div>
 
-            <div class="accordionQ accordionQ-8">
+            <div id="sticky-8" class="accordionQ accordionQ-8">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">08</span>
                 <img src="img/quality-08.png" alt="Анализ поступившего сырья" />
@@ -159,6 +166,7 @@
             </div>
           </div>
 
+      </div>
       </section>
       <div class="fake"></div>
     </main>
@@ -349,23 +357,15 @@
 
   document.documentElement.scrollTop = 0;
 
-  const wrapper = document.querySelector("main.quality");
-  const compStyle = getComputedStyle(wrapper);
-  const sectionName = ".accordionQ";
-  const sections = document.querySelectorAll(sectionName);
+  const sections = document.querySelectorAll(".accordionQ");
   const bullets = document.querySelectorAll(".pagination__bullet");
-  const foldedHeight = parseInt(compStyle.getPropertyValue("--folded-height"));
-  const stickyOffset = parseInt(compStyle.getPropertyValue("--sticky-offset"));
-  const parentOffset = sections[0].offsetParent.offsetTop;
-  const breakpoints = Array.prototype.map.call(
-    sections,
-    (el) => parentOffset + el.offsetTop - stickyOffset
-  );
+  const offset = sections[0].offsetTop;
+  const breakpoints = Array.prototype.map.call(sections, (el) => el.offsetTop - offset);
   let currentSection = 0;
 
   sections.forEach((el, index) => {
     const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
-    el.querySelector(`${sectionName}__control`).addEventListener("click", scrollToSection);
+    el.addEventListener("click", scrollToSection);
     bullets[index].addEventListener("click", scrollToSection);
   });
 
@@ -374,9 +374,6 @@
       if (window.scrollY >= breakpoint
       && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
         if (index != currentSection) {
-          let scrollOffset = -Math.min(index, sections.length - 2) * foldedHeight;
-          wrapper.style.setProperty("--scroll-offset", Math.min(scrollOffset, 0) + "px");
-
           bullets[currentSection].classList.remove("current");
           bullets[index].classList.add("current");
           currentSection = index;

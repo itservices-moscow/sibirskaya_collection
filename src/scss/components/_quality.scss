@@ -1,14 +1,15 @@
-main.quality {
-  --sticky-offset: 108px;
-  --folded-height: 68px;
-  @include mobile {
-    --folded-height: 44px;
-  }
+$sticky-offset: 260px;
+$section-height: 440px;
+
+.quality__title {
+  position: sticky;
+  top: 0;
+  margin-bottom: $section-height;
 }
 
 section.quality {
   max-width: 1100px;
-  margin: 40px auto calc(var(--folded-height) * 2);
+  margin: -$section-height auto $section-height;
   .content {
     position: relative;
     @include mobile {
@@ -22,6 +23,9 @@ section.quality {
       padding-left: 24px;
     }
   }
+  .pagination {
+    top: $sticky-offset;
+  }
 }
 
 
@@ -30,14 +34,15 @@ section.quality {
 
 .accordionQ {
   // --accordion-time: 0.3s;
+  --header-height: 68px;
+  @include mobile {
+    --header-height: 44px;
+  }
   position: sticky;
-  top: var(--sticky-offset);
-  min-height: 540px;
+  top: $sticky-offset;
+  height: $section-height;
   background: var(--main-beige);
   border-top: 1px solid var(--coffee-milk);
-  margin-bottom: calc(-1 * var(--folded-height));
-  padding-bottom: var(--folded-height);
-  transition: transform 0.5s;
   @include folding-blocks(8);
 }
 
@@ -52,6 +57,7 @@ section.quality {
       display: none;
     }
   }
+
   @include mobile {
     flex-direction: column;
     align-items: flex-start;
@@ -88,6 +94,18 @@ section.quality {
     margin: 0;
     letter-spacing: 0.18px;
     line-height: normal;
+    a{
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+      span{
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1%;
+        text-transform: uppercase;
+        margin-right: 16px;
+      }
+    }
   }
 }
 
@@ -106,7 +124,7 @@ section.quality {
   flex-shrink: 0;
   font-family: "IntroDemoCondLightCAPS";
   font-size: 22px;
-  line-height: var(--folded-height);
+  line-height: var(--header-height);
   text-align: center;
   // transition: transform var(--accordion-time) ease-out;
 }
