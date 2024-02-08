@@ -1,19 +1,74 @@
 <div class="brands-content grid">
   <div class="brands-content__submenu">
     <div class="brands-nav flex">
-      <span class="arr-left-on">
-        <a href="brands-sk-selective.html"> @include('../partials/arrowleft.html')</a>
-        <a href="brands-sk-selective.html">SK&nbsp;selective</a>
+      <span class="arr-left-on swiper-button-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" class="icon" height="15" viewBox="0 0 26 15" fill="none">
+          <path d="M8.38462 14.5L1 7.52528M1 7.52528L8.38462 0.5M1 7.52528L25 7.52528" stroke="#886A44"
+            stroke-linecap="round" stroke-linejoin="round" pathLength="100">
+          </path>
+        </svg>
+        <span></span>
       </span>
 
-      <span class="arr-right-on">
-        <a href="brands-sk-selective-kids.html">SK&nbsp;selective<br class="mobile" />&nbsp;kids</a>
-        <a href="brands-sk-selective-kids.html">@include('../partials/arrowright.html')</a>
+      <span class="arr-right-on swiper-button-next">
+        <span></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="15" class="icon" viewBox="0 0 26 15" fill="none">
+          <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44"
+            stroke-linecap="round" stroke-linejoin="round">
+          </path>
+        </svg>
       </span>
     </div>
   </div>
-  <div class="brands-content__info">
-    <div class="container brands-info">
+  <div class="brands-content__info swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-brand-title="Sибирская коллекция">
+        <div class="container brands-info">
+          <div class="brands-info__bg"></div>
+          <div class="brands-info__content flex">
+            <div class="brands-info__text brands-info__text_sk">
+              <img src="img/brands-sk-h.png" class="sk-img-header" />
+              <p>Премиальный бренд <br> замороженных полуфабрикатов с широким ассортиментом</p>
+              <button class="btn-reset btn-primary" onclick="location.href='#details';">категории</button>
+            </div>
+            <div class="brands-info__pic brands-info__pic_sk">
+              <img src="img/brands-sk-r-pic.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-brand-title="SK SELECTIVE">
+        <div class="container brands-info">
+          <div class="brands-info__bg"></div>
+          <div class="brands-info__content flex">
+            <div class="brands-info__text">
+              <h1>SK Selective</h1>
+              <p>Для тех, кто заботится о своем питании и осознано подходит к выбору продуктов</p>
+              <button class="btn-reset btn-primary" onclick="location.href='#details';">категории</button>
+            </div>
+            <div class="brands-info__pic">
+              <img src="img/brands-sksel-pic.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-brand-title="SK SELECTIVE KIDS">
+        <div class="container brands-info">
+          <div class="brands-info__bg"></div>
+          <div class="brands-info__content flex">
+            <div class="brands-info__text">
+              <h1>SK Selective <wbr />kids</h1>
+              <p>Натуральные и готовые продукты из натурального мяса, которое поступает напрямую с органических ферм</p>
+              <button class="btn-reset btn-primary" onclick="location.href='#details';">категории</button>
+            </div>
+            <div class="brands-info__pic">
+              <img src="img/brands-sk-kids-pic.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container brands-info">
       <div class="brands-info__bg"></div>
       <div class="brands-info__content flex">
         <div class="brands-info__text brands-info__text_sk">
@@ -25,6 +80,45 @@
           <img src="img/brands-sk-r-pic.png" />
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
+
+<script>
+  const brandsContentInfoSlider = new Swiper('.brands-content__info', {
+    loop: true,
+    allowTouchMove: false,
+    effect: 'fade',
+    speed: 500,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      init: function () {
+        updateNavigationText(this);
+      },
+      slideChange: function () {
+        updateNavigationText(this);
+      },
+    },
+  });
+
+  function updateNavigationText(swiper) {
+    const prevButton = document.querySelector('.swiper-button-prev > span');
+    const nextButton = document.querySelector('.swiper-button-next > span');
+
+    const slides = swiper.slides;
+    const activeIndex = swiper.activeIndex;
+
+    const prevIndex = activeIndex === 0 ? slides.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === slides.length - 1 ? 0 : activeIndex + 1;
+
+    const prevTitle = slides[prevIndex].getAttribute('data-brand-title');
+    const nextTitle = slides[nextIndex].getAttribute('data-brand-title');
+
+    // Update the text content of the navigation buttons
+    prevButton.textContent = prevTitle;
+    nextButton.textContent = nextTitle;
+  }
+</script>

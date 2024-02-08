@@ -36,24 +36,55 @@
   @include mobile {
     max-width: calc(100vw - 48px);
   }
-  span {
-    gap: 15px;
-    align-items: center;
-    @include mobile {
-      align-items: flex-start;
-    }
-  }
-  span a {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 18px;
-    letter-spacing: 0.14px;
-  }
 }
 
 .brands-content {
+  .arr-left-on,
+  .arr-right-on{
+    width: auto;
+    position: static;
+    margin-top: 0;
+    gap: 12px;
+    &::after{
+      display: none;
+    }
+    svg{
+      width: auto;
+      height: auto;
+    }
+    span{
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.14px;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #886A44;
+      transition: .20s ease-out;
+    }
+  }
+  .swiper-slide{
+    padding: 0;
+    border: none;
+    min-height: 592px;
+    &.swiper-slide-active{
+      .brands-info{
+        &__pic{
+          opacity: 1;
+          img{
+            margin-left: 50px;
+          }
+          &_sk img{
+            margin-left: 10px;
+          }
+          &_horeca img{
+            margin-left: -15px;
+          }
+        }
+      }
+    }
+  }
   &__info {
+    width: 100%;
     margin-top: 10px;
     &_horeca {
       margin-bottom: 50px;
@@ -143,10 +174,11 @@
     }
 
     button {
-      width: 100%;
-      max-width: 268px;
+      width: auto;
+      padding: 0 56px;
       text-transform: uppercase;
-      margin-top: 16px;
+      box-sizing: border-box;
+      margin-top: 4px;
       @include mobile {
         max-width: 198px;
         margin-top: 8px;
@@ -156,6 +188,9 @@
     }
   }
   &__pic {
+    opacity: 0;
+    transition: opacity .20s ease-out;
+    width: 372px;
     margin-top: 147px;
     @include mobile {
       margin-top: -20px;
@@ -164,8 +199,9 @@
     img {
       z-index: 5;
       width: 322px;
-      margin-left: 50px;
+      // margin-left: 50px;
       filter: drop-shadow(-20px 0 45px rgba(242, 243, 246, 0.17));
+      transition: margin-left .20s ease-out;
       @include mobile {
         width: 134px;
         filter: drop-shadow(-15px -10px 35px rgba(242, 243, 246, 0.25));
@@ -178,7 +214,7 @@
       position: relative;
       width: 269px;
       margin-top: -120px;
-      margin-left: 65px;
+      // margin-left: 65px;
       filter: drop-shadow(-20px 0 60px rgba(242, 243, 246, 0.15));
       @include mobile {
         width: 118px;
@@ -219,7 +255,6 @@
     margin: 60px 24px 104px 24px;
   }
   &__container {
-    max-width: fit-content;
     grid-template-columns: 1fr 1fr;
     gap: 0;
     @include mobile {
@@ -246,12 +281,13 @@
 
   // блок с внутренним скроллом
   &__menu_sk {
-    height: 561px;
+    height: 567px;
     @include mobile {
-      height: max-content;
-      max-height: 468px;
+      // !!! здесь должно разворачиваться в список-аккордеон!
+      height: 458px;
     }
     overflow: auto;
+    padding-right: 1px;
   }
 
   &__menu_sk::-webkit-scrollbar {
@@ -261,7 +297,7 @@
 
   &__menu_sk::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: var(--medium-gray);
+    background-color: var(--main-bronze);
   }
 
   &__menu_sk::-webkit-scrollbar-track {
@@ -272,7 +308,8 @@
 }
 
 .sk-img-header {
-  width: 308px;
+  min-width: 308px;
+  max-width: 308px;
   height: 85px;
   @include mobile {
     width: 199px;
