@@ -9,6 +9,7 @@
   z-index: 10;
 }
 .product {
+  overflow: hidden;
   &__container {
     margin: 0 55px 160px 55px;
     grid-template-columns: 308px calc(100% - 472px);
@@ -63,6 +64,10 @@
 .product-content {
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
+  display: none;
+  &.active{
+    display: grid;
+  }
   @include mobile {
     grid-template-columns: 100%;
     @include mobile {

@@ -60,7 +60,7 @@
   border: 1px solid rgba(192, 179, 168, 0.5);
   @include mobile {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
   }
   &__item {
     margin-bottom: 6px;
@@ -84,7 +84,7 @@
 
     @include mobile {
       width: 100%;
-      max-width: 500px;
+      max-width: 100%;
     }
   }
 
@@ -143,6 +143,7 @@
 }
 
 .filter2nd {
+  margin-top: 10px;
   &__btn {
     border: 0;
     border-radius: 0;
@@ -155,11 +156,9 @@
     font-size: 14px;
     line-height: 17px;
     border-bottom: 1px solid rgba(204, 161, 107, 0.4);
+    cursor: default;
   }
 
   &__panel {
-  }
-  &-top {
-    margin-top: 10px;
   }
 }
