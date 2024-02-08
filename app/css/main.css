@@ -6137,49 +6137,45 @@ section.quality .pagination {
     --header-height: 44px;
   }
 }
-:root {
-  --scroll-offset: 0px;
-}
-
 .accordionQ-1 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 0));
+  -ms-transform: translateY(calc(var(--header-height) * 0));
+  transform: translateY(calc(var(--header-height) * 0));
 }
 .accordionQ-2 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 1));
+  -ms-transform: translateY(calc(var(--header-height) * 1));
+  transform: translateY(calc(var(--header-height) * 1));
 }
 .accordionQ-3 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 2));
+  -ms-transform: translateY(calc(var(--header-height) * 2));
+  transform: translateY(calc(var(--header-height) * 2));
 }
 .accordionQ-4 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 3 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 3 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 3 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 3));
+  -ms-transform: translateY(calc(var(--header-height) * 3));
+  transform: translateY(calc(var(--header-height) * 3));
 }
 .accordionQ-5 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 4 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 4 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 4 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 4));
+  -ms-transform: translateY(calc(var(--header-height) * 4));
+  transform: translateY(calc(var(--header-height) * 4));
 }
 .accordionQ-6 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 5 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 5 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 5 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 5));
+  -ms-transform: translateY(calc(var(--header-height) * 5));
+  transform: translateY(calc(var(--header-height) * 5));
 }
 .accordionQ-7 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 6 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 6 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 6 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 6));
+  -ms-transform: translateY(calc(var(--header-height) * 6));
+  transform: translateY(calc(var(--header-height) * 6));
 }
 .accordionQ-8 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 7 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 7 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 7 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 7));
+  -ms-transform: translateY(calc(var(--header-height) * 7));
+  transform: translateY(calc(var(--header-height) * 7));
 }
 
 .accordionQ__control {
@@ -6373,42 +6369,34 @@ section.labs h1 {
   }
 }
 
-:root {
-  --scroll-offset: 0px;
-}
-
 .accordionL1-1 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 0));
+  -ms-transform: translateY(calc(var(--header-height) * 0));
+  transform: translateY(calc(var(--header-height) * 0));
 }
 .accordionL1-2 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 1));
+  -ms-transform: translateY(calc(var(--header-height) * 1));
+  transform: translateY(calc(var(--header-height) * 1));
 }
 .accordionL1-3 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 2));
+  -ms-transform: translateY(calc(var(--header-height) * 2));
+  transform: translateY(calc(var(--header-height) * 2));
 }
 
 .accordionL2 {
   z-index: 99;
 }
-:root {
-  --scroll-offset: 0px;
-}
-
 .accordionL2-1 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 0));
+  -ms-transform: translateY(calc(var(--header-height) * 0));
+  transform: translateY(calc(var(--header-height) * 0));
 }
 .accordionL2-2 {
-  -webkit-transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
-  -ms-transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
-  transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
+  -webkit-transform: translateY(calc(var(--header-height) * 1));
+  -ms-transform: translateY(calc(var(--header-height) * 1));
+  transform: translateY(calc(var(--header-height) * 1));
 }
 
 .accordionL1__control,
@@ -6515,23 +6503,20 @@ section.labs h1 {
     position: sticky;
     top: 260px;
   }
-  :root {
-    --scroll-offset: 0px;
-  }
   .creating__item-1 {
-    -webkit-transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
-    -ms-transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
-    transform: translateY(calc(var(--folded-height) * 0 + var(--scroll-offset)));
+    -webkit-transform: translateY(calc(var(--header-height) * 0));
+    -ms-transform: translateY(calc(var(--header-height) * 0));
+    transform: translateY(calc(var(--header-height) * 0));
   }
   .creating__item-2 {
-    -webkit-transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
-    -ms-transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
-    transform: translateY(calc(var(--folded-height) * 1 + var(--scroll-offset)));
+    -webkit-transform: translateY(calc(var(--header-height) * 1));
+    -ms-transform: translateY(calc(var(--header-height) * 1));
+    transform: translateY(calc(var(--header-height) * 1));
   }
   .creating__item-3 {
-    -webkit-transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
-    -ms-transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
-    transform: translateY(calc(var(--folded-height) * 2 + var(--scroll-offset)));
+    -webkit-transform: translateY(calc(var(--header-height) * 2));
+    -ms-transform: translateY(calc(var(--header-height) * 2));
+    transform: translateY(calc(var(--header-height) * 2));
   }
 }
 .creating__form {
