@@ -8,31 +8,70 @@
 
       <main class="creating">
         <div class="creating__title">
-          @include('partials/buffer_top.html') @include('partials/arrowback.html')
+          @include('partials/buffer_top.html')
+          @include('partials/arrowback.html')
           <h1 class="heading">Отдел разработки новых продуктов</h1>
         </div>
         <div class="container creating__container grid">
           <section class="creating__creating">
             <div class="creating__item creating__item-1">
-              <img src="img/creating-icon-1-2x.png" width="36" />
+              <img src="img/creating-icon-1-2x.png" alt="icon" width="36" />
               <h2>3 месяца</h2>
               <p>средний срок разработки нового продукта</p>
             </div>
 
             <div class="creating__item creating__item-2">
-              <img src="img/creating-icon-2-2x.png" width="36" />
+              <img src="img/creating-icon-2-2x.png" alt="icon" width="36" />
               <h2>6 этапов</h2>
               <p>анализа проходит каждая идея перед появлением на полке</p>
             </div>
 
             <div class="creating__item creating__item-3">
-              <img src="img/creating-icon-3-2x.png" width="36" />
+              <img src="img/creating-icon-3-2x.png" alt="icon" width="36" />
               <h2>Без ГМО</h2>
               <p>Используем только лучшие ингредиенты</p>
             </div>
           </section>
+          <section class="creating__form">
+            <div class="container">
+              <h3>Сделаем продукт<br />по вашему&nbsp;запросу</h3>
+              <form action="#" class="form creatingform">
+                <label class="form__label">
+                  <input type="text" name="name" class="input-reset form__input" placeholder="Имя" /> </label
+                ><br />
+                <label class="form__label">
+                  <input type="text" name="email" class="input-reset form__input" placeholder="Почта" /> </label
+                ><br />
+                <label class="form__label">
+                  <input type="text" name="phone" class="input-reset form__input" placeholder="Телефон" /> </label
+                ><br />
+                <input type="checkbox" name="agreement" id="agreement" />
+                <label for="agreement">
+                  <span class="icon"><img src="img/svg/ph_check.svg" alt="Check mark"></span>
+                  <span>
+                    Я даю свое согласие на обработку моих данных и соглашаюсь с положениями
+                    <a href="" onclick="this.stopPropagation()" target="_blank">Политики&nbsp;конфиденциальности</a>
+                  </span>
+                </label>
+                <br /><button class="btn-reset btn-primary form__btn" data-graph-path="">Заказать разработку</button>
+              </form>
 
-          <section class="contacts__form contacts__form-cp">@include('partials/creating_form.html')</section>
+              <!-- modal -->
+              <div class="graph-modal">
+                <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="">
+                  <button
+                    class="btn-reset js-modal-close graph-modal__close"
+                    aria-label="Закрыть модальное окно"></button>
+                  <div class="graph-modal__content">
+                    <h3>Спасибо за ваше обращение!</h3>
+                    <p>Ответим вам в течение 3 дней.</p>
+                    <button class="btn-reset btn-primary">на главную</button>
+                  </div>
+                </div>
+              </div>
+              <!-- end modal -->
+            </div>
+          </section>
         </div>
       </main>
       @include('partials/footer.html')

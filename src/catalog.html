@@ -6,7 +6,7 @@
     <div class="site-container" id="site-container">
       @include('partials/header.html')
 
-      <div class="filter mobile" id="filters-menu-mobile">
+      <div class="filter mobile" id="filters-menu-mobile" onscroll="this.stopPropagation()">
         <div class="filter__head flex mobile">
           <div class="">Фильтры</div>
           <button

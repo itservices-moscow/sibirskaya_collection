@@ -792,21 +792,26 @@ const suggestItemBase = document.createElement("div");
 suggestItemBase.className = "searchsuggest-item";
 const suggestError = document.createElement("div");
 suggestError.className = "searchsuggest-error";
-suggestError.textContent = "К сожалению, по вашему запросу ничего не нашлось. Попробуйте использовать другие ключевые слова";
+suggestError.innerText = "К сожалению, по вашему запросу ничего не нашлось. Попробуйте использовать другие ключевые слова";
 document.querySelectorAll(".searchbox, .topmenu-mobile__head").forEach(el => {
   const suggestWrapper = el.querySelector(".searchsuggest");
   const searchInput = el.querySelector("input");
   const closeButton = el.querySelector(".topmenu-mobile__close");
   const showSuggest = (0,_functions_debounce__WEBPACK_IMPORTED_MODULE_0__.debounce)(() => {
     fetch("search-suggest.json").then(response => response.json()).then(data => {
-      if (data.status == "success" && data.callBack == "searchSuggest") {
+      if (data.status === "success" && data.callBack === "searchSuggest") {
         const suggests = data.callbackData;
+        console.log(suggests);
         suggestWrapper.textContent = "";
-        if (suggests.length) {
-          suggests.forEach(item => {
-            const suggestItem = suggestWrapper.appendChild(suggestItemBase.cloneNode());
-            suggestItem.innerHTML = item.title.replace(new RegExp(searchInput.value, "i"), "<span class='searchsuggest-highlight'>$&</span>");
-          });
+        if (searchInput.value != 0) {
+          if (suggests.length) {
+            suggests.forEach(item => {
+              const suggestItem = suggestWrapper.appendChild(suggestItemBase.cloneNode());
+              suggestItem.innerHTML = item.title.replace(new RegExp(searchInput.value, "i"), "<span class='searchsuggest-highlight'>$&</span>");
+            });
+          } else {
+            suggestWrapper.appendChild(suggestError);
+          }
         } else {
           suggestWrapper.appendChild(suggestError);
         }

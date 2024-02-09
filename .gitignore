@@ -2,6 +2,7 @@
 /temp
 .history
 .vscode
-package-lock.json
-.idea
 .github
+.idea
+.git
+package-lock.json

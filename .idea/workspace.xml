@@ -22,7 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dsv.app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -42,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707038678064</updated>
       <workItem from="1707038680666" duration="31654000" />
-      <workItem from="1707385394806" duration="2399000" />
+      <workItem from="1707385394806" duration="2636000" />
     </task>
     <servers />
   </component>

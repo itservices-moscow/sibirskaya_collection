@@ -113,6 +113,9 @@ button {
 a.linkin {
   text-decoration: underline;
   color: var(--main-black);
+  &:hover {
+    color: var(--main-bronze);
+  }
 }
 
 a {

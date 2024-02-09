@@ -76,7 +76,7 @@
   visibility: hidden;
 
   @include hover {
-    color: var(--medium-gray);
+    color: var(--main-white);
     background-color: var(--main-bronze);
     border-color: var(--main-bronze);
     cursor: pointer;
@@ -156,6 +156,10 @@
 .searchsuggest-item {
   border-bottom: 1px solid var(--light-gray);
   cursor: pointer;
+  transition: .3s ease;
+  &:hover {
+    background: var(--main-beige);
+  }
 }
 
 .searchsuggest-highlight {

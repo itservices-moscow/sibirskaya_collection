@@ -9,22 +9,57 @@ $section-height: 440px;
 
 section.quality {
   max-width: 1100px;
+  padding-bottom: calc(var(--folded-height) * 2);
+
   margin: -$section-height auto $section-height;
   .content {
     position: relative;
+    margin-top: calc(var(--title-height) * -1);
     @include mobile {
       margin-left: 24px;
       margin-right: 58px;
     }
   }
+
   .pagination-track {
     padding-left: 32px;
+    padding-bottom: 0;
+    z-index: 100;
+    .pagination {
+      top: calc(var(--title-height) + var(--folded-height) * 1.75);
+    }
     @include mobile {
       padding-left: 24px;
     }
   }
   .pagination {
     top: $sticky-offset;
+  }
+}
+.quality {
+  &__title {
+    position: sticky;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    background: var(--main-beige);
+    .back {
+      padding-top: 0;
+      top: 32px;
+      &.mobile {
+        top: 24px;
+      }
+    }
+    .heading {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      @include mobile {
+        padding-top: 98px;
+        padding-bottom: 40px;
+      }
+    }
   }
 }
 
@@ -43,6 +78,9 @@ section.quality {
   height: $section-height;
   background: var(--main-beige);
   border-top: 1px solid var(--coffee-milk);
+  margin-bottom: calc(-1 * var(--folded-height));
+  padding-bottom: var(--folded-height);
+  transition: transform 0.5s;
   @include folding-blocks(8);
 }
 
@@ -94,6 +132,20 @@ section.quality {
     margin: 0;
     letter-spacing: 0.18px;
     line-height: normal;
+    .link-more {
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      padding: .5rem 0;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--main-bronze);
+      img {
+        display: block;
+        margin-left: 24px;
+        width: 24px;
+      }
+    }
     a{
       display: flex;
       align-items: center;
