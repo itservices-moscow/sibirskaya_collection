@@ -3,3 +3,5 @@
 .history
 .vscode
 package-lock.json
+.idea
+.github
