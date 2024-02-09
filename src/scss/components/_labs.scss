@@ -25,7 +25,7 @@ main.labs {
     z-index: 9;
   }
   h1 {
-    margin-bottom: 40px;
+    margin-bottom: 64px;
   }
   p {
     max-width: 423px;
@@ -62,8 +62,9 @@ section.labs {
     max-width: 423px;
     font-size: 65px;
     line-height: normal;
+    padding-top: 1px;
+    margin-bottom: 32vh;
     @include desktop {
-      top: calc(var(--heading-offset) + 32px);
       float: left;
       margin: 0;
     }
