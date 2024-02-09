@@ -23,12 +23,12 @@ main.labs {
   margin-bottom: $section-height;
   z-index: 9;
   h1 {
-    margin-bottom: 40px;
+    margin-bottom: 64px;
   }
   p {
     position: absolute;
     max-width: 423px;
-    margin: 0;
+    margin: 32px 0 0 0;
     padding-bottom: 40px;
     @include mobile {
       padding-bottom: 32px;
@@ -65,8 +65,9 @@ section.labs {
     max-width: 423px;
     font-size: 65px;
     line-height: normal;
+    padding-top: 1px;
+    margin-bottom: 32vh;
     @include desktop {
-      top: calc(var(--heading-offset) + 32px);
       float: left;
     }
     @include mobile {

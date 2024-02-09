@@ -25,11 +25,24 @@ section.quality {
     padding-left: 32px;
     padding-bottom: 0;
     z-index: 100;
+    position: fixed;
+    left: 50vw;
+    margin-left: 550px;
     .pagination {
-      top: calc(var(--title-height) + var(--folded-height) * 1.75);
+      top: calc(var(--header-height) + 62px * 2 + 46px);
+      &__bullet {
+        opacity: .5;
+        transition: opacity .3s ease;
+        &.current {
+          opacity: 1;
+        }
+      }
     }
     @include mobile {
       padding-left: 24px;
+      padding-right: 24px;
+      left: unset;
+      right: 0;
     }
   }
   .pagination {
@@ -53,8 +66,9 @@ section.quality {
       }
     }
     .heading {
-      padding-top: 64px;
-      padding-bottom: 64px;
+      margin: 0 auto;
+      padding-top: 62px;
+      padding-bottom: 62px;
       @include mobile {
         padding-top: 98px;
         padding-bottom: 40px;

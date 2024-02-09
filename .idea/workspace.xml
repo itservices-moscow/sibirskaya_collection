@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd869df8-5015-4dae-929f-1ac400ea2e15" name="Default Changelist" comment="" />
+    <list default="true" id="dd869df8-5015-4dae-929f-1ac400ea2e15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/creating-products.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/creating-products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/quality.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creating-products.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/creating-products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quality.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_creating.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_creating.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_labs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_labs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_product-submenu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_product-submenu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_quality.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_quality.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,10 +55,22 @@
       <updated>1707038678064</updated>
       <workItem from="1707038680666" duration="31654000" />
       <workItem from="1707385394806" duration="2636000" />
+      <workItem from="1707495166234" duration="6919000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
