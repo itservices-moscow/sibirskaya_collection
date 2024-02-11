@@ -1,11 +1,13 @@
 .contacts {
   h1.heading {
     margin: 60px 20px;
+    @include mobile {
+      margin-top: 98px;
+      margin-bottom: 40px;
+    }
   }
   &__container {
     margin: 40px 55px 20px 55px;
-    margin-top: 40px;
-
     grid-template-columns: calc(60% - 115px) 40%;
     gap: 0 115px;
     max-width: 1090px;
@@ -28,9 +30,15 @@
   &__form {
     background-color: var(--main-white);
     max-width: 500px;
+    @include mobile {
+      margin-bottom: 104px;
+    }
     .container {
       padding: 32px;
       border-top: 1px solid var(--main-bronze);
+      @include mobile {
+        padding-bottom: 48px;
+      }
       h2 {
         margin: 0;
       }
@@ -41,10 +49,12 @@
 div.contact {
   border-top: 1px solid var(--coffee-milk);
   padding: 32px 24px;
-  gap: 38px;
-  align-items: top;
+  align-items: flex-start;
+  justify-content: space-between;
   @include mobile {
     width: 100%;
+    padding-bottom: 56px;
+    padding-top: 24px;
     flex-direction: column;
   }
   h3 {
@@ -52,6 +62,7 @@ div.contact {
     width: 50%;
     @include mobile {
       width: 100%;
+      margin-bottom: 20px;
     }
   }
   p {
@@ -80,7 +91,7 @@ div.contact {
 // КАРТА: КОНТЕЙНЕР
 
 .map {
-  margin: 40px 55px 160px 55px;
+  margin: 96px 55px 160px 55px;
   @include mobile {
     margin: 40px 24px 104px 24px;
   }
@@ -99,15 +110,30 @@ div.contact {
   }
 }
 
+[class*="balloon__layout"] {
+  border-radius: 4px;
+}
 [class*="balloon__close-button"] {
-  opacity: 1;
-  margin: 14px 17px 0 0;
+  margin: 16px 16px 0 0;
+  width: 27px!important;
+  height: 27px!important;
 }
 
 [class*="balloon__content"] {
-  padding: 25px !important;
-  border-radius: 10px;
+  padding: 24px !important;
   // margin-right: 10px;
+  & > ymaps {
+    @include mobile {
+      overflow-y: visible!important;
+      height: auto!important;
+    }
+  }
+}
+[class*="balloon-content__header"] {
+  margin-bottom: 16px!important;
+}
+[class*="balloon-content__footer"] {
+  margin-top: 16px!important;
 }
 
 [class*="balloon_layout_panel"] {

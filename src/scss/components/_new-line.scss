@@ -1,29 +1,44 @@
 .line {
-
+  min-height: calc(100vh - var(--header-height));
   .container {
     grid-template-columns: repeat(4, 1fr);
-    margin: 40px 0 160px;
+    gap: 0 32px;
+    margin: 0 auto;
+    max-width: 1328px;
     @include mobile {
       grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: calc(100vh - 48px);
     }
   }
-  h1 {
-    text-align: center;
+  > .title {
     margin-top: 130px;
+    margin-bottom: 72px;
   }
 
   &__item {
     background-color: var(--dark-gray);
     flex-direction: column;
-    padding: 48px 40px;
+    padding: 48px 24px 40px;
     transition: 0.4s;
     @include mobile {
-      padding: 24px 17px;
+      padding: 24px 16px;
     }
     @include hover {
       animation: itemmove 0.5s ;
       background-color: #535250;
       cursor: pointer!important;
+      .item-link svg {
+        transform: scaleX(1.2);
+      }
+    }
+    img {
+      margin: 0 auto;
+    }
+    .title {
+      font-size: 22px;
+      line-height: 28px;
+      margin: 32px 0 39px;
     }
 
   }
@@ -39,17 +54,25 @@
       }
   }
   .item-link {
-    float: left;
+    display: flex;
     white-space: nowrap;
-  }
-  .item-link .text  {
-    @include mobile {
-      padding-right: 7px;
+    .text {
+      @include mobile {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
+    svg {
+      transform-origin: left center;
+      @include mobile {
+        width: 24px;
+      }
+    }
+    * {
+      color: var(--main-white);
+      transition: 0.4s;
+    }
+  }
 
-  }
-  .item-link * {
-    color: var(--main-white);
-    transition: 0.4s;
-  }
 }

@@ -20,16 +20,13 @@
   }
 
   &__container {
-    margin: 40px 55px 100px 55px;
-    margin-top: 40px;
-    grid-template-columns: calc(60% - 115px) 40%;
+    margin: 40px auto 100px;
+    grid-template-columns: 1fr 1fr;
     gap: 0 115px;
     max-width: 1090px;
-    margin-left: auto;
-    margin-right: auto;
 
     @include mobile {
-      margin: 40px 24px 60px 24px;
+      margin: 40px 24px 60px;
       grid-template-columns: 100%;
       gap: 20px;
       min-width: 300px;
@@ -39,7 +36,7 @@
   &__creating {
     max-width: 422px;
     @include desktop {
-      padding-bottom: 600px;
+      padding-bottom: 37vh;
     }
   }
 
@@ -81,17 +78,63 @@
         line-height: 36px;
         margin-bottom: 24px;
       }
-      input[type=checkbox]{
-        margin-right: 16px;
+      input::placeholder {
+        color: var(--medium-gray);
       }
-      a{
-        color: var(--main-black);
-        text-decoration-line: underline;
-        &:hover{
-          color: var(--main-bronze);
+      input[type="checkbox"] {
+        visibility: hidden;
+        position: absolute;
+        + label {
+          display: flex;
+          cursor: pointer;
+          font-size: 14px;
+          line-height: 1.225;
+
+          span {
+            display: block;
+
+            &.icon {
+              width: 22px;
+              min-width: 22px;
+              height: 22px;
+              margin: 0 16px 0 0;
+              border: 1px solid #B8B8B8;
+              border-radius: 1px;
+              padding: 1px;
+              transition: .3s ease;
+              img {
+                opacity: 0;
+                transition: .3s ease;
+              }
+            }
+          }
+
+          &:hover, &:focus {
+            span.icon {
+              border-color: var(--main-bronze);
+            }
+          }
+        }
+        &:checked {
+          + label {
+            span.icon {
+              background: var(--main-bronze);
+              border-color: var(--main-bronze);
+              img {
+                opacity: 1;
+              }
+            }
+          }
         }
       }
-      .form__btn{
+      a {
+        color: var(--main-black);
+        text-decoration-line: underline;
+        transition: .3s ease;
+        &:hover {
+          color: var(--main-bronze);
+        }
+      }      .form__btn{
         margin-top: 32px;
         width: 100%;
         display: block;

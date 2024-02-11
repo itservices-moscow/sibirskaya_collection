@@ -3,6 +3,25 @@
     display: flex;
     align-items: center;
     margin-bottom: 64px;
+    position: relative;
+    &:before, &:after {
+      content: '';
+      display: block;
+      top: 0;
+      bottom: 0;
+      z-index: 10;
+      position: absolute;
+    }
+    &:before {
+      right: 0;
+      width: 42px;
+      background: linear-gradient(to right, transparent, var(--main-beige));
+    }
+    &:after {
+      left: 100%;
+      width: 50%;
+      background: var(--main-beige);
+    }
   }
   &__block{
     margin-right: 40px;
@@ -20,6 +39,9 @@
       -webkit-overflow-scrolling: touch;
       padding-bottom: 20px;
       margin-bottom: -20px;
+      &:after {
+        display: none;
+      }
     }
   }
 }

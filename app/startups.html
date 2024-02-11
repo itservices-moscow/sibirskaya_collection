@@ -108,15 +108,25 @@
 
 <div class="topmenu-mobile mobile" data-menu>
   <div class="topmenu-mobile__head flex hidden" data-menu-search>
+<<<<<<< HEAD
     <div class="topmenu-mobile__backdrop">
       <div class="searchsuggest"></div>
     </div>
+=======
+    <div class="topmenu-mobile__buffer"></div>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
     <div class="topmenu-mobile__search">
       <form class="searchbox-mob flex" id="searchbox-mob">
         <input class="searchinput-mob" type="text" name="" placeholder="Поиск" />
         <button class="btn-reset searchbutton-mob"></button>
       </form>
     </div>
+<<<<<<< HEAD
+=======
+    <div class="topmenu-mobile__backdrop">
+      <div class="searchsuggest"></div>
+    </div>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
     <button
       class="btn-reset topmenu-mobile__close icon-close burger-close"
       aria-label="Закрыть меню"
@@ -124,18 +134,35 @@
   </div>
   <script type="text/javascript">
     // МОБИЛЬНОЕ МЕНЮ
+<<<<<<< HEAD
     function toggleMobMenuPanel(panelClass) {
       document.querySelector(panelClass).classList.toggle("closed")
+=======
+    function openMobMenuPanel(panelClass, parentClass) {
+      document.querySelector(panelClass).classList.remove("slide-right")
+      document.querySelector(parentClass).classList.add("slide-left")
+    }
+    function closeMobMenuPanel(panelClass, parentClass) {
+      document.querySelector(panelClass).classList.add("slide-right")
+      document.querySelector(parentClass).classList.remove("slide-left")
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
     }
   </script>
   <div class="topmenu-mobile__content hidden" data-menu-content>
     <nav title="Главное меню">
       <div class="nav-mob nav-mob-l0">
         <ul class="list-reset nav-mob__list">
+<<<<<<< HEAD
           <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
             <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
           </li>
           <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-brands');">
+=======
+          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+            <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
+          </li>
+          <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
             <a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a>
           </li>
           <li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li>
@@ -145,9 +172,15 @@
         <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
       </div>
 
+<<<<<<< HEAD
       <div class="nav-mob nav-mob-l1 nav-mob-brands closed">
         <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');">
           <img src="img/back-sm.png" />
+=======
+      <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
+          <img src="img/back-sm.svg" />
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>продукт</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -155,7 +188,11 @@
             <a href="#" class="nav-top-l1__link">бренды</a>
             <ul class="list-reset nav-mob-l2__list flex">
               <li class="nav-mob-l2__item">
+<<<<<<< HEAD
                 <a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');"
+=======
+                <a href="#" class="nav-mob-l2__link" onclick="openMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');"
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   >Sибирская коллекция</a
                 >
               </li>
@@ -176,9 +213,15 @@
         </ul>
       </div>
 
+<<<<<<< HEAD
       <div class="nav-mob nav-mob-l1 nav-mob-manuf closed">
         <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
           <img src="img/back-sm.png" />
+=======
+      <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
+          <img src="img/back-sm.svg" />
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>производство</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -191,27 +234,48 @@
         </ul>
         <div class="pic-container flex">
           <div class="piclink">
+<<<<<<< HEAD
             <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
             <a href="creating-products.html" class="piclink__link">отдел разработки</a>
           </div>
           <div class="piclink">
             <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
+=======
+            <a href="creating-products.html"><img src="img/picture-20.png" alt="" class="piclink__pic" /></a>
+            <a href="creating-products.html" class="piclink__link">отдел разработки</a>
+          </div>
+          <div class="piclink">
+            <a href="#"><img src="img/picture-21.png" alt="" class="piclink__pic" /></a>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
             <a href="#" class="piclink__link">карьера</a>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div class="nav-mob nav-mob-l3 nav-mob-sk closed">
         <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');">
           <img src="img/back-sm.png" />
+=======
+      <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
+          <img src="img/back-sm.svg" />
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>Бренды:<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
           <li class="nav-mob-l3__item">
+<<<<<<< HEAD
             <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a>
           </li>
           <li class="nav-mob-l3__item">
             <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a>
+=======
+            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">пельмени</a>
+          </li>
+          <li class="nav-mob-l3__item">
+            <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">вареники</a>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
           </li>
           <li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li>
           <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
@@ -222,9 +286,15 @@
         </ul>
       </div>
 
+<<<<<<< HEAD
       <div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed">
         <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">
           <img src="img/back-sm.png" />
+=======
+      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
+          <img src="img/back-sm.svg" />
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>пельмени<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -240,9 +310,15 @@
         </ul>
       </div>
 
+<<<<<<< HEAD
       <div class="nav-mob nav-mob-l4 nav-mob-vareniki closed">
         <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">
           <img src="img/back-sm.png" />
+=======
+      <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
+        <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
+          <img src="img/back-sm.svg" />
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>вареники<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -427,11 +503,19 @@
     <div class="topmenu-container__item topmenu-container__item-manuf2"></div>
     <div class="topmenu-container__item topmenu-container__item-manuf3">
       <div class="piclink" data-onhover-id="menu-item-creating">
+<<<<<<< HEAD
         <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
         <a href="creating-products.html" class="piclink__link">отдел разработки</a>
       </div>
       <div class="piclink" data-onhover-id="menu-item-career">
         <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
+=======
+        <a href="creating-products.html"><img src="img/picture-20.png" alt="" class="piclink__pic" /></a>
+        <a href="creating-products.html" class="piclink__link">отдел разработки</a>
+      </div>
+      <div class="piclink" data-onhover-id="menu-item-career">
+        <a href="#"><img src="img/picture-21.pmg" alt="" class="piclink__pic" /></a>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
         <a href="#" class="piclink__link">карьера у нас</a>
       </div>
     </div>
@@ -459,8 +543,13 @@
 </div>
 
       <main class="startups">
+<<<<<<< HEAD
         <div class="buffer-top"></div>
  <section class="back-black mobile">
+=======
+        <h1 class="visually-hidden">Стартапам</h1>
+        <section class="back-black mobile">
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
   <div class="container">
     <span class="icon-back-white" onclick="history.back();">
       <a href="#">
@@ -500,13 +589,20 @@
 </section>
 
         <section class="st-head">
+<<<<<<< HEAD
   <div class="st-head__tip">Не ищите статьи о том, как запустить стартап.</div>
   <div class="st-head__action">
     <h1 class="head-h0">действуйте</h1>
+=======
+  <div class="st-head__action">
+    <div class="st-head__tip">Не ищите статьи о том, как запустить стартап.</div>
+    <h2 class="st_title">Действуйте</h2>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
     <p>Предложите свою идею нам — мы поможем создать и продать ваш продукт. У нас есть все ресурсы: оборудование, лаборатории,
     команда маркетинга, сила бренда. Главное — инвестиции.</p>
   </div>
 </section>
+<<<<<<< HEAD
  <section class="st-keys">
   <div class="st-keys__container grid">
     <div class="st-keys__item st-keys__item_1">
@@ -563,25 +659,86 @@
       <h1 class="head-h0">крепкая <wbr>опора</h1>
       <p>Вы получите все нужные ресурсы <wbr>известного бренда <wbr>Sибирская коллекция</p>
     </div>
+=======
+
+        <section class="st-keys">
+  <div class="st-keys__container">
+    <div class="st-keys__item">
+      <picture>
+        <img src="img/st-1.svg" alt="Инновационные продукты" width="81" height="88" />
+      </picture>
+      <div class="st-keys__item-content">
+        <h3 class="st_title"><span class="desktop">Инновационные продукты</span><span class="mobile">Инновацион- ные продукты</span></h3>
+        <p>Вы придумали новый продукт, <br>которого еще нет на рынке? Мы поможем реализовать вашу идею!</p>
+      </div>
+    </div>
+    <div class="st-keys__item">
+      <picture>
+        <img src="img/st-2.svg" alt="Программное обеспечение" width="81" height="88" />
+      </picture>
+      <div class="st-keys__item-content">
+        <h3 class="st_title">Программное обеспечение</h3>
+        <p>Оптимизируем закупку продуктов и поможем доставить их покупателю.</p>
+      </div>
+    </div>
+    <div class="st-keys__item">
+      <picture>
+        <img src="img/st-3.svg" alt="Маркетинг" width="81" height="88" />
+      </picture>
+      <div class="st-keys__item-content">
+        <h3 class="st_title">Маркетинг</h3>
+        <p>Мы знаем рынок и можем придумать, как продавать больше и лучше.</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-reset btn-primary st-keys__btn" data-graph-path="st-keys-modal">Расскажите о своей идее</button>
+</section>
+
+<section class="st-idea">
+  <h2 class="st_title">Преимущества</h2>
+  <div class="st-idea__item">
+    <h3 class="st_title">Любая идея</h3>
+    <p>У нас нет строгих критериев — <br/>мы рассмотрим любую вашу идею</p>
+  </div>
+  <div class="st-idea__item">
+    <h3 class="st_title">Быть первым</h3>
+    <p>Вы можете стать первым, <br>кто запустит свой <span>продукт вместе с</span> Sибирской коллекцией</p>
+  </div>
+  <div class="st-idea__item">
+    <h3 class="st_title">Крепкая опора</h3>
+    <p>Вы получите все <span>нужные ресурсы</span> <span>известного бренда</span> Sибирская коллекция</p>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
   </div>
 
 </section>
 
+<<<<<<< HEAD
         <!-- divider -->
         <section class="st-form">
   <div class="st-form__container grid">
     <div class="st-form__item st-form__item_1">
       <h1>Оставить заявку</h1>
+=======
+        <section class="st-form">
+  <div class="st-form__container grid">
+    <div class="st-form__item">
+      <h2 class="st_title">Оставить заявку</h2>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
       <p>
         Мы верим, что ваша идея<br />достойна реализации —<br />
         расскажите о ней подробнее.<br />Давайте вместе запустим продукт!
       </p>
     </div>
+<<<<<<< HEAD
     <div class="st-form__item st-form__item_3 mobile">
       <h1>Задать вопрос</h1>
       <p>Остались вопросы?<br />Пишите — ответим!</p>
     </div>
     <div class="st-form__item st-form__item_2">
+=======
+    <div class="st-form__item">
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
       <!-- форма обратной связи -->
       <div class="container">
         <form class="form startupsform" name="startupsform">
@@ -627,8 +784,13 @@
           <div id="dropzone">
             <div class="dropzone needsclick" id="demo-upload" action="/upload">
               <div class="dz-message needsclick">
+<<<<<<< HEAD
                 Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<br />
                 <br /><span class="note needsclick">jpg, pdf, doc | до 10 Мб</span>
+=======
+                Перетащите файлы или <u>выберите с вашего устройства</u>, чтобы загрузить их<br />
+                <br /><span class="note needsclick">jpg, pdf, doc    |    до 10 Мб</span>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
               </div>
             </div>
           </div>
@@ -649,13 +811,23 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <div class="st-form__item st-form__item_3 desktop">
       <h1>Задать вопрос</h1>
+=======
+    <div class="st-form__item">
+      <h2 class="st_title">Задать вопрос</h2>
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
       <p>Остались вопросы?<br />Пишите — ответим!</p>
     </div>
   </div>
 </section>
+<<<<<<< HEAD
  <div id="preview-template">
+=======
+
+        <div id="preview-template">
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
   <div class="dz-preview dz-file-preview hello">
     <div class="dz-details">
       <div class="dz-filename"><span data-dz-name></span></div>
@@ -901,6 +1073,10 @@
   </div>
 </div>
 -->
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6a658521329c56c4cb690088c6effee442872488
       </main>
       <footer class="footer">
   <div class="container flex footer__container footer__t">
