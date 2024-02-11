@@ -1,19 +1,84 @@
 section.new-keys {
-  padding-top: 160px;
+  padding-top: 190px;
   padding-bottom: 160px;
+  min-height: 100vh;
+  //position: relative;
+  //transform-style: inherit;
   @include mobile {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0; left: 0; right: 0; bottom: 0;
+  //  display: block;
+  //  transform: translateZ(-.5px) scale(2);
+  //  min-height: 100%;
+  //}
 }
 
-// стили карточек - стандартные из _main-keys.scss
-.new-keys * .keys__cards {
-  gap: 24px 0;
-}
-.new-keys * .keys__item {
-  @include mobile {
-    //margin-bottom: 24px;
+.new-keys {
+  .section__wrapper {
+    //position: absolute;
+    //top: 160px;
+    //left: 50%;
+    //transform: translateZ(-1px) scale(2) translateX(-25%);
+    > .title {
+      text-align: center;
+      margin: 0 0 72px;
+    }
   }
-
+  &__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 64px;
+    @include mobile {
+      grid-template-columns: 1fr;
+      padding-left: 16px;
+    }
+  }
+  &__item {
+    padding: 56px 0 0;
+    height: 360px;
+    border-top: 1px solid rgba(192, 179, 168, .3);
+    position: relative;
+    @include mobile {
+      height: auto;
+      padding: 24px 0;
+    }
+    .icon {
+      height: 66px;
+      margin: 0 0 32px;
+    }
+    .title {
+      font-size: 29px;
+      line-height: 36px;
+      margin: 0 0 12px;
+    }
+    p {
+      margin: 0;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 333px;
+      background: rgba(192, 179, 168, .3);
+      position: absolute;
+      top: 27px;
+      left: -32px;
+      @include mobile {
+        left: -16px;
+        top: 24px;
+        height: calc(100% - 48px);
+      }
+    }
+    &:nth-of-type(1) {
+      &:before {
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+  }
 }

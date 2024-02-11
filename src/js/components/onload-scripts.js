@@ -1,5 +1,5 @@
 function rotatePachka(steps, top, bottom, scrollval) {
-  const bglast = 26250
+  const bglast = 25250
   const height = bottom - top
   // const step = bglast / steps // шаг 1 кадра
   const step = 750

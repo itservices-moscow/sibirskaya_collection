@@ -7,12 +7,14 @@
       @include('partials/header.html')
 
       <main class="startups">
+        <h1 class="visually-hidden">Стартапам</h1>
         @include('partials/arrowback_black.html')
-        @include('partials/startups_head.html') @include('partials/startups_keys.html')
+        @include('partials/startups_head.html')
+        @include('partials/startups_keys.html')
         @include('partials/startups_idea.html')
+        @include('partials/startups_form.html')
 
-        <!-- divider -->
-        @include('partials/startups_form.html') @include('partials/dropzone_script.html')
+        @include('partials/dropzone_script.html')
         <!-- divider -->
         @include('partials/startups_popup.html')
       </main>

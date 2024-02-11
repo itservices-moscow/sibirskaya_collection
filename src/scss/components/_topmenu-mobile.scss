@@ -243,6 +243,9 @@
 }
 .nav-mob-l1 {
   z-index: 500;
+  &__brands {
+    border-bottom: 1px solid var(--light-gray);
+  }
   &__brands a {
     margin: 0;
   }

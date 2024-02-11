@@ -24,9 +24,13 @@ section.quality {
     padding-left: 32px;
     padding-bottom: 0;
     z-index: 100;
-    position: fixed;
-    left: 50vw;
-    margin-left: 550px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    margin: 0;
+    height: 100%;
     .pagination {
       top: calc(var(--header-height) + 62px * 2 + 46px);
       &__bullet {
@@ -39,9 +43,8 @@ section.quality {
     }
     @include mobile {
       padding-left: 24px;
-      padding-right: 24px;
       left: unset;
-      right: 0;
+      right: -40px;
     }
   }
 }

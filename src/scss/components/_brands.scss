@@ -7,6 +7,12 @@
 }
 
 .brands {
+  @include mobile {
+    overflow-y: hidden;
+    overflow-x: visible;
+    min-height: 100vh;
+    padding-bottom: 150px;
+  }
   &__container {
     padding-top: 238px;
     margin: 0 55px 160px 55px;
@@ -188,13 +194,12 @@
     }
   }
   &__pic {
-    opacity: 0;
     transition: opacity .20s ease-out;
     width: 372px;
     margin-top: 147px;
     @include mobile {
-      margin-top: -20px;
-      margin-left: 190px;
+      margin-top: 45px;
+      margin-left: 156px;
     }
     img {
       z-index: 5;
@@ -223,15 +228,20 @@
         filter: drop-shadow(-5px -10px 35px rgba(242, 243, 246, 0.25));
       }
     }
-    &_horeca img {
-      width: 387px;
-      margin-top: 50px;
-      filter: drop-shadow(0 0 60px rgba(242, 243, 246, 0.25));
+    &_horeca {
       @include mobile {
-        width: 171px;
-        margin-top: 4px;
-        margin-left: -15px;
-        filter: drop-shadow(-5px -10px 35px rgba(242, 243, 246, 0.25));
+        margin-top: 0;
+      }
+      img {
+        width: 387px;
+        margin-top: 50px;
+        filter: drop-shadow(0 0 60px rgba(242, 243, 246, 0.25));
+        @include mobile {
+          width: 171px;
+          margin-top: 4px;
+          margin-left: -15px;
+          filter: drop-shadow(-5px -10px 35px rgba(242, 243, 246, 0.25));
+        }
       }
     }
 
