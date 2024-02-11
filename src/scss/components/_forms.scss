@@ -367,6 +367,10 @@ option {
   font-size: 14px;
   margin: 32px 0;
   cursor: pointer;
+  transition: border-color .3s ease;
+  @include hover {
+    border-color: var(--main-bronze);
+  }
 }
 
 .dz-started {
