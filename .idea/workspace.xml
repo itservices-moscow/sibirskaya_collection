@@ -2,31 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c213416b-d5a8-4cdd-b1a6-851c609c511c" name="Default Changelist" comment="Merge main-new">
-      <change afterPath="$PROJECT_DIR$/app/css/main.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/css/vendor.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/arrow-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/back-sm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/new-card-box.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/new-card-fire.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/new-card-time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/new-card-time.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/picture-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/picture-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/st-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/st-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/st-3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/js/main.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/arrow-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/back-sm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/new-card-box.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/new-card-fire.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/new-card-time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/new-card-time.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/picture-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/picture-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/st-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/st-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/st-3.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/brands-ctm.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/brands-ctm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/brands-horeca.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/brands-horeca.html" afterDir="false" />
@@ -38,7 +13,9 @@
       <change beforePath="$PROJECT_DIR$/app/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/creating-products.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/creating-products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/main.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/vendor.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/vendor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/vendor.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/Rectangle47.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/Rectangle47.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/back-sm.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/back-sm.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/back.png" afterDir="false" />
@@ -94,6 +71,7 @@
       <change beforePath="$PROJECT_DIR$/app/img/new-card-20.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/new-card-20.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/new-card-box.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/new-card-box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/new-card-fire.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/new-card-fire.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/new-card-time.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/new-card-time.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/new-genzers.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/new-genzers.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/new-img-p-2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/new-img-p-2x.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/new-mass-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/new-mass-icon.png" afterDir="false" />
@@ -115,7 +93,9 @@
       <change beforePath="$PROJECT_DIR$/app/img/pic-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/pic-b.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/pic-main-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/pic-main-b.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/picture-20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/picture-20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/picture-20.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/picture-20.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/picture-21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/picture-21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/picture-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/picture-21.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/picture-otd-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/picture-otd-1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/play.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/play.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/prod-cat-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/prod-cat-a.png" afterDir="false" />
@@ -140,48 +120,9 @@
       <change beforePath="$PROJECT_DIR$/app/img/video1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/video1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/youtube-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/youtube-logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/zap.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/zap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/main.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/laboratories.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/laboratories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/new-pizza.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/new-pizza.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/product-bliny-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/product-bliny-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/product-pelmeni-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/product-pelmeni-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/product-pelmeni-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/product-pelmeni-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/quality.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/startups.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/startups.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/uikit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/uikit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/onload-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/onload-scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/new-pizza.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/new-pizza.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/new_dof.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/new_dof.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/new_genzers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/new_genzers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/new_jomo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/new_jomo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/new_keys.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/new_keys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/new_line.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/new_line.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/new_more.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/new_more.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/startups_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/startups_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/startups_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/startups_head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/startups_idea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/startups_idea.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/startups_keys.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/startups_keys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/startups_popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/startups_popup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/topmenu_manuf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/topmenu_manuf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/topmenu_mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/topmenu_mobile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_brands.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_brands.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_contacts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_contacts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_forms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_main-intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_main-intro.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_new-cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new-cards.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_new-jomo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new-jomo.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_new-keys.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new-keys.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_new-line.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new-line.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_new-more.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new-more.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_new.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_quality.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_quality.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_startups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_startups.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_topmenu-mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_topmenu-mobile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/startups.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/startups.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/main.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
