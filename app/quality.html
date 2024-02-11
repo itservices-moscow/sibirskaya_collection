@@ -109,25 +109,16 @@
 
 <div class="topmenu-mobile mobile" data-menu>
   <div class="topmenu-mobile__head flex hidden" data-menu-search>
-<<<<<<< HEAD
-    <div class="topmenu-mobile__backdrop">
-      <div class="searchsuggest"></div>
-    </div>
-=======
     <div class="topmenu-mobile__buffer"></div>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
     <div class="topmenu-mobile__search">
       <form class="searchbox-mob flex" id="searchbox-mob">
         <input class="searchinput-mob" type="text" name="" placeholder="Поиск" />
         <button class="btn-reset searchbutton-mob"></button>
       </form>
     </div>
-<<<<<<< HEAD
-=======
     <div class="topmenu-mobile__backdrop">
       <div class="searchsuggest"></div>
     </div>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
     <button
       class="btn-reset topmenu-mobile__close icon-close burger-close"
       aria-label="Закрыть меню"
@@ -135,10 +126,6 @@
   </div>
   <script type="text/javascript">
     // МОБИЛЬНОЕ МЕНЮ
-<<<<<<< HEAD
-    function toggleMobMenuPanel(panelClass) {
-      document.querySelector(panelClass).classList.toggle("closed")
-=======
     function openMobMenuPanel(panelClass, parentClass) {
       document.querySelector(panelClass).classList.remove("slide-right")
       document.querySelector(parentClass).classList.add("slide-left")
@@ -146,24 +133,16 @@
     function closeMobMenuPanel(panelClass, parentClass) {
       document.querySelector(panelClass).classList.add("slide-right")
       document.querySelector(parentClass).classList.remove("slide-left")
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
     }
   </script>
   <div class="topmenu-mobile__content hidden" data-menu-content>
     <nav title="Главное меню">
       <div class="nav-mob nav-mob-l0">
         <ul class="list-reset nav-mob__list">
-<<<<<<< HEAD
-          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
-            <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
-          </li>
-          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-brands');">
-=======
           <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
             <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
           </li>
           <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
             <a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a>
           </li>
           <li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li>
@@ -173,15 +152,9 @@
         <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l1 nav-mob-brands closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>продукт</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -189,11 +162,7 @@
             <a href="#" class="nav-top-l1__link">бренды</a>
             <ul class="list-reset nav-mob-l2__list flex">
               <li class="nav-mob-l2__item">
-<<<<<<< HEAD
-                <a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');"
-=======
                 <a href="#" class="nav-mob-l2__link" onclick="openMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');"
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   >Sибирская коллекция</a
                 >
               </li>
@@ -214,15 +183,9 @@
         </ul>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l1 nav-mob-manuf closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>производство</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -235,48 +198,27 @@
         </ul>
         <div class="pic-container flex">
           <div class="piclink">
-<<<<<<< HEAD
-            <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
-            <a href="creating-products.html" class="piclink__link">отдел разработки</a>
-          </div>
-          <div class="piclink">
-            <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
-=======
             <a href="creating-products.html"><img src="img/picture-20.png" alt="" class="piclink__pic" /></a>
             <a href="creating-products.html" class="piclink__link">отдел разработки</a>
           </div>
           <div class="piclink">
             <a href="#"><img src="img/picture-21.png" alt="" class="piclink__pic" /></a>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
             <a href="#" class="piclink__link">карьера</a>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l3 nav-mob-sk closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>Бренды:<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
           <li class="nav-mob-l3__item">
-<<<<<<< HEAD
-            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a>
-          </li>
-          <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a>
-=======
             <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">пельмени</a>
           </li>
           <li class="nav-mob-l3__item">
             <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">вареники</a>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           </li>
           <li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li>
           <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
@@ -287,15 +229,9 @@
         </ul>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>пельмени<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -311,15 +247,9 @@
         </ul>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l4 nav-mob-vareniki closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>вареники<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -504,19 +434,11 @@
     <div class="topmenu-container__item topmenu-container__item-manuf2"></div>
     <div class="topmenu-container__item topmenu-container__item-manuf3">
       <div class="piclink" data-onhover-id="menu-item-creating">
-<<<<<<< HEAD
-        <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
-        <a href="creating-products.html" class="piclink__link">отдел разработки</a>
-      </div>
-      <div class="piclink" data-onhover-id="menu-item-career">
-        <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
-=======
         <a href="creating-products.html"><img src="img/picture-20.png" alt="" class="piclink__pic" /></a>
         <a href="creating-products.html" class="piclink__link">отдел разработки</a>
       </div>
       <div class="piclink" data-onhover-id="menu-item-career">
         <a href="#"><img src="img/picture-21.pmg" alt="" class="piclink__pic" /></a>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
         <a href="#" class="piclink__link">карьера у нас</a>
       </div>
     </div>
@@ -545,11 +467,6 @@
 
     <main class="quality">
       <div class="quality__title">
-<<<<<<< HEAD
-        <div class="buffer-top"></div>
-
-=======
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
         <section class="back mobile">
   <div class="container">
     <span class="icon-back">
@@ -597,22 +514,14 @@
             <div id="sticky-1" class="accordionQ accordionQ-1">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">01</span>
-<<<<<<< HEAD
-                <img src="img/quality-01-2x.png" alt="Сертификация FSSC 22000"/>
-=======
                 <img src="img/quality-01.svg" alt="Сертификация FSSC 22000"/>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 <span class="accordionQ__title">
                   <h2>Сертификация FSSC 22000</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-<<<<<<< HEAD
-                  <img src="img/quality-01-2x.png" alt="Сертификация FSSC 22000"/>
-=======
                   <img src="img/quality-01.svg" alt="Сертификация FSSC 22000"/>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   <p>Система менеджмента безопастности пищевой продукции производственной площадки, внедрена с 2015 года</p>
                 </div>
               </div>
@@ -621,22 +530,14 @@
             <div id="sticky-2" class="accordionQ accordionQ-2">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">02</span>
-<<<<<<< HEAD
-                <img src="img/quality-02-2x.png" alt="Анализ поступившего сырья" />
-=======
                 <img src="img/quality-02.svg" alt="Анализ поступившего сырья" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 <span class="accordionQ__title">
                   <h2>Анализ поступившего сырья</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-<<<<<<< HEAD
-                  <img src="img/quality-02-2x.png" alt="Анализ поступившего сырья" />
-=======
                   <img src="img/quality-02.svg" alt="Анализ поступившего сырья" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   <p>На входе все сырье проходит контроль качества в собственных лабораториях и при нахождении отклонений от заявленных показателей отправляется обратно</p>
               </div>
               </div>
@@ -645,22 +546,14 @@
             <div id="sticky-3" class="accordionQ accordionQ-3">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">03</span>
-<<<<<<< HEAD
-                <img src="img/quality-03.png" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
-=======
                 <img src="img/quality-03.svg" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 <span class="accordionQ__title">
                   <h2>Изготовление продуктов в строгом соответствии с рецептурами</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-<<<<<<< HEAD
-                  <img src="img/quality-03.png" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
-=======
                   <img src="img/quality-03.svg" alt="Изготовление продуктов в строгом соответствии с рецептурами" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   <p>Контроль на каждом этапе производства помогает делать эталонные продукты с одним и тем же вкусом на протяжении многих лет</p>
                 </div>
               </div>
@@ -669,24 +562,15 @@
             <div id="sticky-4" class="accordionQ accordionQ-4">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">04</span>
-<<<<<<< HEAD
-                <img src="img/quality-04.png" alt="Шоковая заморозка" />
-=======
                 <img src="img/quality-04.svg" alt="Шоковая заморозка" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 <span class="accordionQ__title">
                   <h2>Шоковая заморозка</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-<<<<<<< HEAD
-                  <img src="img/quality-04.png" alt="Шоковая заморозка" />
-                  <p>Продукты в среднем замораживаются за 20 минут, что   помогает лучше сохранять структуру тканей и поэтому пищевая ценность и вкусовые качества остаются неизменными</p>
-=======
                   <img src="img/quality-04.svg" alt="Шоковая заморозка" />
                   <p>Продукты в среднем замораживаются за 20 минут, что  помогает лучше сохранять структуру тканей и поэтому пищевая ценность и вкусовые качества остаются неизменными</p>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 </div>
               </div>
             </div>
@@ -694,22 +578,14 @@
             <div id="sticky-5" class="accordionQ accordionQ-5">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">05</span>
-<<<<<<< HEAD
-                <img src="img/quality-05.png" alt="Металлодетектор на выходе с линии" />
-=======
                 <img src="img/quality-05.svg" alt="Металлодетектор на выходе с линии" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 <span class="accordionQ__title">
                   <h2>Металлодетектор на выходе с линии</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-<<<<<<< HEAD
-                  <img src="img/quality-05.png" alt="Металлодетектор на выходе с линии" />
-=======
                   <img src="img/quality-05.svg" alt="Металлодетектор на выходе с линии" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   <p>Каждая упаковка проверяется на наличие металических инородных предметов</p>
                 </div>
               </div>
@@ -718,22 +594,14 @@
             <div id="sticky-6" class="accordionQ accordionQ-6">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">06</span>
-<<<<<<< HEAD
-                <img src="img/quality-06.png" alt="Лабораторные исследования" />
-=======
                 <img src="img/quality-06.svg" alt="Лабораторные исследования" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 <span class="accordionQ__title">
                   <h2>Лабораторные исследования</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-<<<<<<< HEAD
-                  <img src="img/quality-06.png" alt="Лабораторные исследования" />
-=======
                   <img src="img/quality-06.svg" alt="Лабораторные исследования" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   <p>
                     Собственные физико-химическая и микробиологическая лаборатории аккредитованные с 2013 года проводят ряд исследований
 
@@ -754,22 +622,14 @@
             <div id="sticky-7" class="accordionQ accordionQ-7">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">07</span>
-<<<<<<< HEAD
-                <img src="img/quality-07.png" alt="Дегустация каждой произведённой партии" />
-=======
                 <img src="img/quality-07.svg" alt="Дегустация каждой произведённой партии" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 <span class="accordionQ__title">
                   <h2>Дегустация каждой произведённой партии</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-<<<<<<< HEAD
-                  <img src="img/quality-07.png" alt="Дегустация каждой произведённой партии" />
-=======
                   <img src="img/quality-07.svg" alt="Дегустация каждой произведённой партии" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   <p>Специальная дегустационная панель, прошедшая обучение сенсорному анализу, изучает вкусовые качества каждой партии. В случае несоответствия эталону партия не отправляется к покупателям</p>
                 </div>
               </div>
@@ -778,22 +638,14 @@
             <div id="sticky-8" class="accordionQ accordionQ-8">
               <div class="accordionQ__control" aria-expanded="false">
                 <span class="accordionQ__icon">08</span>
-<<<<<<< HEAD
-                <img src="img/quality-08.png" alt="Анализ поступившего сырья" />
-=======
                 <img src="img/quality-08.svg" alt="Анализ поступившего сырья" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                 <span class="accordionQ__title">
                   <h2>Контроль условий хранения и логистики</h2>
                 </span>
               </div>
               <div class="accordionQ__content" aria-hidden="true">
                 <div class="container flex">
-<<<<<<< HEAD
-                  <img src="img/quality-08.png" alt="Анализ поступившего сырья" />
-=======
                   <img src="img/quality-08.svg" alt="Анализ поступившего сырья" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   <p>Продукция хранится в морозильных камерах при температуре -18 градусов Цельсия и доставляется до торговых точек в специально оборудованных автомобилях также при -18</p>
                 </div>
               </div>
@@ -813,10 +665,6 @@
             </div>
           </div>
 
-<<<<<<< HEAD
-      </div>
-=======
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
       </section>
       <div class="fake"></div>
     </main>

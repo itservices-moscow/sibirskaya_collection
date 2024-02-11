@@ -108,25 +108,16 @@
 
 <div class="topmenu-mobile mobile" data-menu>
   <div class="topmenu-mobile__head flex hidden" data-menu-search>
-<<<<<<< HEAD
-    <div class="topmenu-mobile__backdrop">
-      <div class="searchsuggest"></div>
-    </div>
-=======
     <div class="topmenu-mobile__buffer"></div>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
     <div class="topmenu-mobile__search">
       <form class="searchbox-mob flex" id="searchbox-mob">
         <input class="searchinput-mob" type="text" name="" placeholder="Поиск" />
         <button class="btn-reset searchbutton-mob"></button>
       </form>
     </div>
-<<<<<<< HEAD
-=======
     <div class="topmenu-mobile__backdrop">
       <div class="searchsuggest"></div>
     </div>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
     <button
       class="btn-reset topmenu-mobile__close icon-close burger-close"
       aria-label="Закрыть меню"
@@ -134,10 +125,6 @@
   </div>
   <script type="text/javascript">
     // МОБИЛЬНОЕ МЕНЮ
-<<<<<<< HEAD
-    function toggleMobMenuPanel(panelClass) {
-      document.querySelector(panelClass).classList.toggle("closed")
-=======
     function openMobMenuPanel(panelClass, parentClass) {
       document.querySelector(panelClass).classList.remove("slide-right")
       document.querySelector(parentClass).classList.add("slide-left")
@@ -145,24 +132,16 @@
     function closeMobMenuPanel(panelClass, parentClass) {
       document.querySelector(panelClass).classList.add("slide-right")
       document.querySelector(parentClass).classList.remove("slide-left")
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
     }
   </script>
   <div class="topmenu-mobile__content hidden" data-menu-content>
     <nav title="Главное меню">
       <div class="nav-mob nav-mob-l0">
         <ul class="list-reset nav-mob__list">
-<<<<<<< HEAD
-          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
-            <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
-          </li>
-          <li class="nav-mob__item sub" onclick="toggleMobMenuPanel('.nav-mob-brands');">
-=======
           <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
             <a href="#" class="nav-mob__link" id="link-manuf-mob" data-mob-menu-link>Производство</a>
           </li>
           <li class="nav-mob__item sub" onclick="openMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
             <a href="#" class="nav-mob__link" id="link-brands-mob" data-mob-menu-link>Продукт</a>
           </li>
           <li class="nav-mob__item"><a href="new.html" class="nav-mob__link">Новинки</a></li>
@@ -172,15 +151,9 @@
         <button class="btn-reset btn-secondary">Купить нашу продукцию</button>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l1 nav-mob-brands closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-brands');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>продукт</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -188,11 +161,7 @@
             <a href="#" class="nav-top-l1__link">бренды</a>
             <ul class="list-reset nav-mob-l2__list flex">
               <li class="nav-mob-l2__item">
-<<<<<<< HEAD
-                <a href="#" class="nav-mob-l2__link" onclick="toggleMobMenuPanel('.nav-mob-sk');"
-=======
                 <a href="#" class="nav-mob-l2__link" onclick="openMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');"
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
                   >Sибирская коллекция</a
                 >
               </li>
@@ -213,15 +182,9 @@
         </ul>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l1 nav-mob-manuf closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-manuf');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>производство</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -234,48 +197,27 @@
         </ul>
         <div class="pic-container flex">
           <div class="piclink">
-<<<<<<< HEAD
-            <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
-            <a href="creating-products.html" class="piclink__link">отдел разработки</a>
-          </div>
-          <div class="piclink">
-            <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
-=======
             <a href="creating-products.html"><img src="img/picture-20.png" alt="" class="piclink__pic" /></a>
             <a href="creating-products.html" class="piclink__link">отдел разработки</a>
           </div>
           <div class="piclink">
             <a href="#"><img src="img/picture-21.png" alt="" class="piclink__pic" /></a>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
             <a href="#" class="piclink__link">карьера</a>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l3 nav-mob-sk closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-sk');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>Бренды:<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
           <li class="nav-mob-l3__item">
-<<<<<<< HEAD
-            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">пельмени</a>
-          </li>
-          <li class="nav-mob-l3__item">
-            <a href="#" class="nav-mob-l3__link" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">вареники</a>
-=======
             <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">пельмени</a>
           </li>
           <li class="nav-mob-l3__item">
             <a href="#" class="nav-mob-l3__link" onclick="openMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">вареники</a>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           </li>
           <li class="nav-mob-l3__item"><a href="product-bliny-1.html" class="nav-mob-l3__link">блины</a></li>
           <li class="nav-mob-l3__item"><a href="#" class="nav-mob-l3__link">котлеты</a></li>
@@ -286,15 +228,9 @@
         </ul>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l4 nav-mob-pelmeni closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-pelmeni');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>пельмени<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -310,15 +246,9 @@
         </ul>
       </div>
 
-<<<<<<< HEAD
-      <div class="nav-mob nav-mob-l4 nav-mob-vareniki closed">
-        <div class="nav-mob__back" onclick="toggleMobMenuPanel('.nav-mob-vareniki');">
-          <img src="img/back-sm.png" />
-=======
       <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
           <img src="img/back-sm.svg" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
           <span>вареники<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -503,19 +433,11 @@
     <div class="topmenu-container__item topmenu-container__item-manuf2"></div>
     <div class="topmenu-container__item topmenu-container__item-manuf3">
       <div class="piclink" data-onhover-id="menu-item-creating">
-<<<<<<< HEAD
-        <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
-        <a href="creating-products.html" class="piclink__link">отдел разработки</a>
-      </div>
-      <div class="piclink" data-onhover-id="menu-item-career">
-        <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
-=======
         <a href="creating-products.html"><img src="img/picture-20.png" alt="" class="piclink__pic" /></a>
         <a href="creating-products.html" class="piclink__link">отдел разработки</a>
       </div>
       <div class="piclink" data-onhover-id="menu-item-career">
         <a href="#"><img src="img/picture-21.pmg" alt="" class="piclink__pic" /></a>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
         <a href="#" class="piclink__link">карьера у нас</a>
       </div>
     </div>
@@ -545,12 +467,8 @@
       <main class="creating">
         <div class="creating__title">
           <div class="buffer-top"></div>
-<<<<<<< HEAD
- <section class="back mobile">
-=======
 
           <section class="back mobile">
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
   <div class="container">
     <span class="icon-back">
       <a href="#" onclick="history.back();">
@@ -593,103 +511,23 @@
         <div class="container creating__container grid">
           <section class="creating__creating">
             <div class="creating__item creating__item-1">
-<<<<<<< HEAD
-              <img src="img/creating-icon-1-2x.png" width="36" />
-=======
               <img src="img/creating-icon-1-2x.png" alt="icon" width="36" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
               <h2>3 месяца</h2>
               <p>средний срок разработки нового продукта</p>
             </div>
 
             <div class="creating__item creating__item-2">
-<<<<<<< HEAD
-              <img src="img/creating-icon-2-2x.png" width="36" />
-=======
               <img src="img/creating-icon-2-2x.png" alt="icon" width="36" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
               <h2>6 этапов</h2>
               <p>анализа проходит каждая идея перед появлением на полке</p>
             </div>
 
             <div class="creating__item creating__item-3">
-<<<<<<< HEAD
-              <img src="img/creating-icon-3-2x.png" width="36" />
-=======
               <img src="img/creating-icon-3-2x.png" alt="icon" width="36" />
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
               <h2>Без ГМО</h2>
               <p>Используем только лучшие ингредиенты</p>
             </div>
           </section>
-<<<<<<< HEAD
-
-          <section class="contacts__form contacts__form-cp"><div class="container">
-  <h2>Сделаем продукт<br />по вашему запросу</h2>
-  <form class="form contactform">
-    <label class="form__label">
-      <input
-        type="text"
-        name="contact-fio"
-        class="input-reset form__input contact-fio"
-        value=""
-        placeholder="Имя"
-        data-validate-field="fio" />
-      <span class="close" onclick="console.log(this.previousElementSibling);this.previousElementSibling.value = '';">
-        ×
-      </span>
-    </label>
-    <label class="form__label">
-      <input
-        type="email"
-        name="contact-email"
-        class="input-reset form__input contact-email"
-        value=""
-        placeholder="Почта"
-        data-validate-field="email" />
-      <span class="close" onclick="this.previousElementSibling.value = ''"> × </span>
-    </label>
-    <label class="form__label">
-      <input
-        type="tel"
-        name="contact-tel"
-        class="input-reset form__input contact-tel"
-        value=""
-        placeholder="Телефон"
-        data-validate-field="tel" />
-      <span class="close" onclick="console.log(this.previousElementSibling); this.previousElementSibling.value = ''">
-        ×
-      </span>
-    </label>
-
-    <div class="form__agreement">
-      <label class="label-check"
-        >Я даю свое согласие на обработку моих данных и соглашаюсь с положениями
-        <a href="#" class="linkin">Политики конфиденциальности</a>
-        <input type="checkbox" name="agreement" id="agreement" value="yes" />
-        <span class="checkmark"></span>
-      </label>
-    </div>
-
-    <input type="hidden" name="form_origin" value="Из контактной формы" />
-    <input type="hidden" name="form_popup" value="creating_modal1" />
-    <button type="submit" class="btn-primary form__submit-btn">ЗАКАЗАТЬ РАЗРАБОТКУ</button>
-  </form>
-</div>
-
-<!-- модальное окно после отправки формы -->
-<div class="graph-modal">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="creating_modal1">
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content">
-      <h3>Спасибо за ваше обращение!</h3>
-      <p>Ответим вам в течение 3 дней.</p>
-      <button class="btn-reset btn-primary" onClick="location.href = '/';">на главную</button>
-    </div>
-  </div>
-</div>
-</section>
-=======
           <section class="creating__form">
             <div class="container">
               <h3>Сделаем продукт<br />по вашему запросу</h3>
@@ -730,7 +568,6 @@
               <!-- end modal -->
             </div>
           </section>
->>>>>>> 6a658521329c56c4cb690088c6effee442872488
         </div>
       </main>
       <footer class="footer">
