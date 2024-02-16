@@ -2,28 +2,18 @@ section.new-keys {
   padding-top: 190px;
   padding-bottom: 160px;
   min-height: 100vh;
-  //position: relative;
-  //transform-style: inherit;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
   @include mobile {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  //&:before {
-  //  content: '';
-  //  position: absolute;
-  //  top: 0; left: 0; right: 0; bottom: 0;
-  //  display: block;
-  //  transform: translateZ(-.5px) scale(2);
-  //  min-height: 100%;
-  //}
 }
 
 .new-keys {
   .section__wrapper {
-    //position: absolute;
-    //top: 160px;
-    //left: 50%;
-    //transform: translateZ(-1px) scale(2) translateX(-25%);
     > .title {
       text-align: center;
       margin: 0 0 72px;

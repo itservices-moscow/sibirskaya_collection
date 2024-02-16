@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c213416b-d5a8-4cdd-b1a6-851c609c511c" name="Default Changelist" comment="Merge main-new">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/brands-sk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/brands-sk.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/vendor.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/vendor.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/Rectangle47.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/Rectangle47.png" afterDir="false" />
@@ -100,6 +106,7 @@
       <change beforePath="$PROJECT_DIR$/app/img/scroll-to-top.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/scroll-to-top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/sk-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sk-logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/sk-logo2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sk-logo2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/sprites/doi_sprite_1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/doi_sprite_1000.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/sprites/kotlety_sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/kotlety_sprite.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/st-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/st-1.png" afterDir="false" />
@@ -111,8 +118,29 @@
       <change beforePath="$PROJECT_DIR$/app/img/zap.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/zap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/new-pizza.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/new-pizza.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_arrows.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_arrows.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/quality.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/_functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/_functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/vendor/graph-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/vendor/graph-modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/brands_prod_sk.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/brands_prod_sk.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/contacts_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/contacts_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quality.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quality.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_settings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_settings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_brands.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_brands.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_catalog-filters.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_catalog-filters.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_contacts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_contacts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_creating.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_creating.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_labs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_labs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_modals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_modals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_new-keys.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new-keys.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_new-line.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new-line.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_new-more.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new-more.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_new.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_new.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_startups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_startups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_topmenu-mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_topmenu-mobile.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_topmenu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_topmenu.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,30 +158,36 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\PHP7\php.exe" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2bteCebzXf6074LQxxYRpuMq8mK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.stylelint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.stylelint" value="C:\Frontend\sibirskaya_collection\node_modules\stylelint" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-    <property name="vue.rearranger.settings.migration" value="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "C:\\Frontend\\sibirskaya_collection\\node_modules\\stylelint",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-b4dcf6bb9de9-com.jetbrains.php.sharedIndexes-PS-233.13135.108" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dd869df8-5015-4dae-929f-1ac400ea2e15" name="Default Changelist" comment="" />
+      <changelist id="c213416b-d5a8-4cdd-b1a6-851c609c511c" name="Default Changelist" comment="Merge main-new" />
       <created>1707038678064</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -161,6 +195,9 @@
       <workItem from="1707038680666" duration="31654000" />
       <workItem from="1707385394806" duration="2636000" />
       <workItem from="1707495166234" duration="7265000" />
+      <workItem from="1708007456626" duration="125000" />
+      <workItem from="1708007705537" duration="115000" />
+      <workItem from="1708008042764" duration="63000" />
     </task>
     <servers />
   </component>
@@ -189,7 +226,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge main-new" />

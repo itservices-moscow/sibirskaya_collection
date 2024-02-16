@@ -37,12 +37,14 @@
       </span>
     </label>
 
-    <select name="idea" id="idea" class="custom-select">
-      <option value="">Хочу предложить идею</option>
-      <option value="val1">Один</option>
-      <option value="val2">Два</option>
-      <option value="val3">Три</option>
-    </select>
+    <label class="custom-select">
+      <select name="idea" id="idea" class="custom-select__select">
+        <option value="">Хочу предложить идею</option>
+        <option value="val1">Один</option>
+        <option value="val2">Два</option>
+        <option value="val3">Три</option>
+      </select>
+    </label>
 
     <label class="form__label">
       <input
@@ -60,8 +62,10 @@
     <div id="dropzone">
       <div class="dropzone needsclick" id="demo-upload" action="/upload">
         <div class="dz-message needsclick">
-          Перетащите файлы или выберите с вашего устройства, чтобы загрузить их<br />
-          <br /><span class="note needsclick">jpg, pdf, doc | до 10 Мб</span>
+          <span class="desktop">Перетащите файлы или <u>выберите с вашего устройства</u>, чтобы загрузить их</span>
+          <span class="mobile"><u>Выберите файлы</u> с вашего устройства, чтобы загрузить их</span>
+          <br />
+          <br /><span class="note needsclick">jpg, pdf, doc &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; до&nbsp;10 Мб</span>
         </div>
       </div>
     </div>

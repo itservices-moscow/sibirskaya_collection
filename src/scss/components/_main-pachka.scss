@@ -46,8 +46,11 @@
   // animation: pachka steps(35);
   // animation-timeline: scroll();
   @include mobile {
+    min-width: 750px;
+    position: relative;
+    left: 50%;
     transform-origin: top center;
-    transform: scale(0.6);
+    transform: translateX(-50%) scale(0.6);
   }
 }
 

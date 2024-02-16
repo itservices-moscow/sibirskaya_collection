@@ -98,6 +98,10 @@
 }
 
 .nav-top-l1 {
+  &__brands {
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 16px;
+  }
   &__item {
     height: 78px;
     border-bottom: 1px solid var(--light-gray);
@@ -125,7 +129,7 @@
   }
   .active {
     background-color: var(--main-beige);
-    border-bottom-color: var(--main-beige);
+    //border-bottom-color: var(--main-beige);
     width: 100%;
   }
   .active :after {

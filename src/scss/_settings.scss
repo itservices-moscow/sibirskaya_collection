@@ -98,7 +98,7 @@ img {
   object-fit: cover;
 }
 
-a {
+a, a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
@@ -299,6 +299,7 @@ h3 {
 }
 .bronze {
   color: var(--main-bronze);
+  font: inherit;
 }
 
 .nobr {

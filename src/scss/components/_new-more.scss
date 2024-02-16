@@ -2,7 +2,8 @@
   color: var(--main-white);
   background-color: var(--color-black);
   padding-bottom: 120px;
-  //z-index: 100;
+  margin-top: 100vh;
+  z-index: 100;
   @include mobile {
     padding-bottom: 0;
   }

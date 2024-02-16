@@ -98,8 +98,8 @@ export default class GraphModal {
     this.modal.style.setProperty("--transition-time", `${this.speed / 1000}s`)
     this.modal.classList.add("is-open")
 
-    document.body.style.scrollBehavior = "auto"
-    document.documentElement.style.scrollBehavior = "auto"
+    document.body.style.scrollBehavior = "smooth"
+    document.documentElement.style.scrollBehavior = "smooth"
 
     this.disableScroll()
 
@@ -123,8 +123,8 @@ export default class GraphModal {
 
       this.enableScroll()
 
-      document.body.style.scrollBehavior = "auto"
-      document.documentElement.style.scrollBehavior = "auto"
+      document.body.style.scrollBehavior = "smooth"
+      document.documentElement.style.scrollBehavior = "smooth"
 
       this.options.isClose(this)
       this.isOpen = false
