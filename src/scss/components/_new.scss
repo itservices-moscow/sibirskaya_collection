@@ -24,9 +24,26 @@
     bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100;
     @include desktop {
       display: none;
     }
+  }
+  section {
+    position: relative;
+    z-index: 100;
+    background: var(--main-beige);
+    &.back {
+      position: absolute;
+      background: transparent;
+    }
+  }
+  .heading {
+    margin: 0;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 10;
+    background: var(--main-beige);
   }
 }
 .new-pizza > .back  {
@@ -57,6 +74,7 @@ section.new-header.black {
   color: var(--main-white);
   background-color: var(--color-black);
   .title {
+    margin-bottom: 12px;
     color: var(--main-white);
   }
 }

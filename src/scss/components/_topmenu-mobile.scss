@@ -108,7 +108,7 @@
   margin: auto;
   margin-top: 32px;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   transition: 0.8s;
 
   max-height: calc(100vh - 60px);
@@ -186,9 +186,11 @@
 
 .nav-mob.slide-left {
   transform: translateX(-100vw);
+  opacity: 0;
 }
 .nav-mob.slide-right {
   transform: translateX(100vw);
+  opacity: 0;
 }
 
 .topmenu-mob {

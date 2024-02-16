@@ -31,7 +31,11 @@ import { burger } from "./functions/burger"
 
 // Подключение плавной прокрутки к якорям
 import SmoothScroll from "smooth-scroll"
-const scroll = new SmoothScroll('a[href*="#"]')
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 300,
+  speedAsDuration: true,
+  easing: 'easeOutQuint'
+})
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';

@@ -52,9 +52,8 @@ section.st-head {
   &__action {
     max-width: 520px;
     width: 40%;
-    height: 200px;
     margin-left: calc(50% - 40px - 80px);
-    margin-top: calc(33.5rem - var(--header-height));
+    margin-top: calc(50vh - var(--header-height));
     position: relative;
     @include mobile {
       width: 100%;
@@ -156,7 +155,7 @@ section.st-idea {
       display: block;
       width: 421px;
       height: 421px;
-      border: 1px solid rgba(192, 179, 168, 0.5);
+      border: 1px solid rgba(192, 179, 168, 0.3);
       border-radius: 50%;
       position: absolute;
       top: 0;
