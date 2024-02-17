@@ -49,6 +49,8 @@
   max-height: 812px;
   height: 100%;
   width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
   transition: 0.6s ease-out;
   &__head {
     position: relative;
@@ -181,7 +183,7 @@
 
 .menu--active * .nav-mob {
   opacity: 1;
-  transition: 0.3s ease;
+  transition: 0.6s ease-in-out;
 }
 
 .nav-mob.slide-left {
