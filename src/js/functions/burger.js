@@ -40,7 +40,7 @@ import { enableScroll } from "../functions/enable-scroll";
     burger?.setAttribute("aria-label", "Открыть меню");
     burger.classList.remove("burger--active");
     menu.classList.remove("menu--active");
-    setTimeout(hideFix, "1000");
+    setTimeout(hideFix, "500");
     //enableScroll();
   });
 
