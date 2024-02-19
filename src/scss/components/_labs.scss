@@ -60,16 +60,18 @@ section.labs {
     line-height: normal;
     padding-top: 1px;
     margin-bottom: 32vh;
-    margin-top: 200px;
     background: var(--main-beige);
     @include desktop {
       float: left;
+      top: calc(200px + var(--sticky-offset));
+      margin-top: 200px;
     }
     @include mobile {
       font-size: 29px;
       margin-bottom: 24px;
       &.title01 {
-        padding-top: 200px;
+        padding-top: 0;
+        margin-top: 0;
       }
     }
   }
@@ -80,17 +82,22 @@ section.labs {
   &__description {
     max-width: 423px;
     padding: 72px 0 40px;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: var(--sticky-offset);
     @include mobile {
       padding-bottom: 32px;
       padding-top: 44px;
+      position: sticky;
+      top: 0;
     }
   }
   &__section {
     position: relative;
-    background: linear-gradient(to bottom, transparent, var(--main-beige) $gradient-height / 2);
+    background: linear-gradient(to bottom, transparent, var(--main-beige) calc($gradient-height / 2));
     padding-top: $gradient-height * .6;
+    @include mobile {
+      padding-top: calc(var(--header-height) / 2);
+    }
   }
   &__heading {
     @include desktop {
@@ -124,7 +131,11 @@ section.labs {
   margin-right: 38px;
   @include mobile {
     --header-height: 44px;
-    top: calc(var(--sticky-text-offset) - 32px);
+    //top: calc(var(--sticky-text-offset) - 32px);
+    position: static;
+    height: auto;
+    padding-bottom: var(--header-height);
+    width: 100%;
   }
 }
 

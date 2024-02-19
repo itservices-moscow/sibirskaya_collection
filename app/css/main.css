@@ -5190,7 +5190,7 @@ div.contact .email {
   margin: 16px 16px 0 0;
   width: 27px !important;
   height: 27px !important;
-  background-image: url("./img/map-close.svg") !important;
+  background-image: url("../img/map-close.svg") !important;
 }
 
 [class*=balloon__content] {
@@ -6627,6 +6627,7 @@ section.quality .content {
   section.quality .content {
     margin-left: 24px;
     margin-right: 58px;
+    padding-top: calc(var(--header-height) + 24px);
   }
 }
 section.quality .pagination-track {
@@ -6708,8 +6709,9 @@ section.quality .pagination {
 @media (max-width: 1279px) {
   .accordionQ {
     --header-height: 44px;
-    min-height: 80vh;
-    top: calc(var(--sticky-offset) - var(--header-height));
+    position: static;
+    height: auto;
+    padding: var(--header-height) 0;
   }
 }
 @media (min-width: 1280px) {
@@ -6929,13 +6931,14 @@ section.labs h1 {
   line-height: normal;
   padding-top: 1px;
   margin-bottom: 32vh;
-  margin-top: 200px;
   background: var(--main-beige);
 }
 @media (min-width: 1280px) {
   section.labs h1 {
     /* and (max-width: (1440px)) */
     float: left;
+    top: calc(200px + var(--sticky-offset));
+    margin-top: 200px;
   }
 }
 @media (max-width: 1279px) {
@@ -6944,26 +6947,34 @@ section.labs h1 {
     margin-bottom: 24px;
   }
   section.labs h1.title01 {
-    padding-top: 200px;
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 
 .labs__description {
   max-width: 423px;
   padding: 72px 0 40px;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: var(--sticky-offset);
 }
 @media (max-width: 1279px) {
   .labs__description {
     padding-bottom: 32px;
     padding-top: 44px;
+    position: sticky;
+    top: 0;
   }
 }
 .labs__section {
   position: relative;
   background: linear-gradient(to bottom, transparent, var(--main-beige) 100px);
   padding-top: 120px;
+}
+@media (max-width: 1279px) {
+  .labs__section {
+    padding-top: calc(var(--header-height) / 2);
+  }
 }
 .labs__heading {
   background: linear-gradient(to bottom, transparent, var(--main-beige) 200px);
@@ -7001,7 +7012,10 @@ section.labs h1 {
   .accordionL1,
   .accordionL2 {
     --header-height: 44px;
-    top: calc(var(--sticky-text-offset) - 32px);
+    position: static;
+    height: auto;
+    padding-bottom: var(--header-height);
+    width: 100%;
   }
 }
 
