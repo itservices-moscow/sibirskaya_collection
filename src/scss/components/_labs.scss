@@ -22,21 +22,14 @@ main.labs {
   top: 0;
   margin-bottom: $section-height;
   z-index: 9;
+  background: var(--main-beige);
   h1 {
     margin-bottom: 64px;
-  }
-  p {
-    position: absolute;
-    max-width: 423px;
-    margin: 32px 0 0 0;
-    padding-bottom: 40px;
-    @include mobile {
-      padding-bottom: 32px;
-    }
   }
 }
 
 section.labs {
+  position: relative;
   // display: grid;
   margin-top: -$section-height;
   // grid-template-columns: auto 760px;
@@ -67,17 +60,33 @@ section.labs {
     line-height: normal;
     padding-top: 1px;
     margin-bottom: 32vh;
+    margin-top: 200px;
+    background: var(--main-beige);
     @include desktop {
       float: left;
     }
     @include mobile {
       font-size: 29px;
+      margin-bottom: 24px;
+      &.title01 {
+        padding-top: 200px;
+      }
     }
   }
 }
 
 
 .labs {
+  &__description {
+    max-width: 423px;
+    padding: 72px 0 40px;
+    position: absolute;
+    top: 0;
+    @include mobile {
+      padding-bottom: 32px;
+      padding-top: 44px;
+    }
+  }
   &__section {
     position: relative;
     background: linear-gradient(to bottom, transparent, var(--main-beige) $gradient-height / 2);
@@ -105,9 +114,6 @@ section.labs {
 .accordionL2 {
   // --accordion-time: 0.3s;
   --header-height: 56px;
-  @include mobile {
-    --header-height: 44px;
-  }
   position: sticky;
   top: calc(var(--sticky-offset) + 32px);
   max-width: 722px;
@@ -116,15 +122,23 @@ section.labs {
   border-top: 1px solid var(--coffee-milk);
   margin-left: auto;
   margin-right: 38px;
+  @include mobile {
+    --header-height: 44px;
+    top: calc(var(--sticky-text-offset) - 32px);
+  }
 }
 
 .accordionL1 {
-  @include folding-blocks(3);
+  @include desktop {
+    @include folding-blocks(3);
+  }
 }
 
 .accordionL2 {
   z-index: 20;
-  @include folding-blocks(2);
+  @include desktop {
+    @include folding-blocks(2);
+  }
 }
 
 .accordionL1__control,

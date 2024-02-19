@@ -172,7 +172,8 @@
   </div>
 
   <script type="text/javascript">
-    // ================== ACCORDION PLUGINS LABS =================
+    // if (window.innerWidth >= 1279) {
+      // ================== ACCORDION PLUGINS LABS =================
       class GraphAccordionQ {
         constructor(selector, options) {
           let defaultOptions = {
@@ -180,7 +181,8 @@
               console.log(this)
               return this.accordion.classList.contains('is-open');
             },
-            isClose: () => { },
+            isClose: () => {
+            },
             speed: 300
           };
 
@@ -263,119 +265,120 @@
       // accordion8.open();
 
 
+      // function changeWheelSpeed(container, speedY) {
+      //   var removed = false;
+      //   var scrollY = 0;
+      //   var handleScrollReset = function () {
+      //     scrollY = container.scrollTop;
+      //   };
+      //   var handleMouseWheel = function (e) {
+      //     e.preventDefault();
+      //     scrollY += speedY * e.deltaY
+      //     if (scrollY < 0) {
+      //       scrollY = 0;
+      //     } else {
+      //       var limitY = container.scrollHeight - container.clientHeight;
+      //       if (scrollY > limitY) {
+      //         scrollY = limitY;
+      //       }
+      //     }
+      //     container.scrollTop = scrollY;
+      //   };
+      //   console.log(scrollY)
+      //   container.addEventListener('mouseup', handleScrollReset, false);
+      //   container.addEventListener('mousedown', handleScrollReset, false);
+      //   container.addEventListener('mousewheel', handleMouseWheel, false);
+      //   return function () {
+      //     if (removed) {
+      //       return;
+      //     }
+      //     container.removeEventListener('mouseup', handleScrollReset, false);
+      //     container.removeEventListener('mousedown', handleScrollReset, false);
+      //     container.removeEventListener('mousewheel', handleMouseWheel, false);
+      //     removed = true;
+      //   };
+      // }
 
-  // function changeWheelSpeed(container, speedY) {
-  //   var removed = false;
-  //   var scrollY = 0;
-  //   var handleScrollReset = function () {
-  //     scrollY = container.scrollTop;
-  //   };
-  //   var handleMouseWheel = function (e) {
-  //     e.preventDefault();
-  //     scrollY += speedY * e.deltaY
-  //     if (scrollY < 0) {
-  //       scrollY = 0;
-  //     } else {
-  //       var limitY = container.scrollHeight - container.clientHeight;
-  //       if (scrollY > limitY) {
-  //         scrollY = limitY;
-  //       }
-  //     }
-  //     container.scrollTop = scrollY;
-  //   };
-  //   console.log(scrollY)
-  //   container.addEventListener('mouseup', handleScrollReset, false);
-  //   container.addEventListener('mousedown', handleScrollReset, false);
-  //   container.addEventListener('mousewheel', handleMouseWheel, false);
-  //   return function () {
-  //     if (removed) {
-  //       return;
-  //     }
-  //     container.removeEventListener('mouseup', handleScrollReset, false);
-  //     container.removeEventListener('mousedown', handleScrollReset, false);
-  //     container.removeEventListener('mousewheel', handleMouseWheel, false);
-  //     removed = true;
-  //   };
-  // }
+      // Usage example:
+      //var element = document.querySelector('#quality01');
+      // changeWheelSpeed(element, 0.5);  // 0.5 * default_scroll_speed  // 2 times slower
 
-  // Usage example:
-  //var element = document.querySelector('#quality01');
-  // changeWheelSpeed(element, 0.5);  // 0.5 * default_scroll_speed  // 2 times slower
+      // document.querySelector('#quality01').addEventListener("scroll", scrollPointsQual);
 
- // document.querySelector('#quality01').addEventListener("scroll", scrollPointsQual);
+      function scrollPointsQual() {
+        var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+        //var scrollY = document.documentElement.scrollTop;
+        var scrollY = document.querySelector('#quality01').scrollTop;
 
-  function scrollPointsQual() {
-    var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)*100;
-    //var scrollY = document.documentElement.scrollTop;
-    var scrollY = document.querySelector('#quality01').scrollTop;
-
-    if (document.documentElement.scrollTop > 320) {
-      document.querySelector('#quality01').style.marginTop = document.documentElement.scrollTop + 'px';
-      console.log(accordion1.accordion.classList.contains('is-open'))
-    }
-    console.log(scrollY, getBlockPositionY('.accordionQ-1'))
-    //var draw = length * scrollpercent;
-    if ((scrollY > getBlockPositionY('.accordionQ-1') + 40) && accordion1.accordion.classList.contains('is-open')) {
-      accordion1.close(); }
-
-    if ((scrollY > getBlockPositionY('.accordionQ-2') + 140)  && accordion2.accordion.classList.contains('is-open')) {
-      accordion2.close();
-    }
-    if ((scrollY > getBlockPositionY('.accordionQ-3') + 140)   && accordion3.accordion.classList.contains('is-open')) {
-      accordion3.close();
-    }
-    if ((scrollY > getBlockPositionY('.accordionQ-4') + 140)   && accordion4.accordion.classList.contains('is-open')) {
-      accordion4.close();
-    }
-    if((scrollY > getBlockPositionY('.accordionQ-5') + 140) && accordion5.accordion.classList.contains('is-open')) {
-      accordion5.close();
-    }
-    if ((scrollY > getBlockPositionY('.accordionQ-6') + 140) && accordion6.accordion.classList.contains('is-open')) {
-      accordion6.close();
-    }
-    if ((scrollY > getBlockPositionY('.accordionQ-7') + 140)  && accordion7.accordion.classList.contains('is-open')) {
-      accordion7.close();
-    }
-
-    if ((scrollY > getBlockPositionY('.accordionQ-8') + 140) && accordion8.accordion.classList.contains('is-open')) {
-      accordion8.close();
-    }
-
-    // Переверните чертеж (при прокрутке вверх)
-    // triangle.style.strokeDashoffset = length - draw;
-  }
-
-  function getBlockPositionY(element) {
-    return document.querySelector(element).getBoundingClientRect().y
-  }
-
-  document.documentElement.scrollTop = 0;
-
-  const sections = document.querySelectorAll(".accordionQ");
-  const bullets = document.querySelectorAll(".pagination__bullet");
-  const offset = sections[0].offsetTop;
-  const breakpoints = Array.prototype.map.call(sections, (el) => el.offsetTop - offset);
-  let currentSection = 0;
-
-  sections.forEach((el, index) => {
-    const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
-    el.addEventListener("click", scrollToSection);
-    bullets[index].addEventListener("click", scrollToSection);
-  });
-
-  window.addEventListener("scroll", function () {
-    breakpoints.forEach((breakpoint, index) => {
-      if (window.scrollY >= breakpoint
-      && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
-        if (index !== currentSection) {
-          bullets[currentSection].classList.remove("current");
-          bullets[index].classList.add("current");
-          currentSection = index;
+        if (document.documentElement.scrollTop > 320) {
+          document.querySelector('#quality01').style.marginTop = document.documentElement.scrollTop + 'px';
+          console.log(accordion1.accordion.classList.contains('is-open'))
         }
-        return;
+        console.log(scrollY, getBlockPositionY('.accordionQ-1'))
+        //var draw = length * scrollpercent;
+        if ((scrollY > getBlockPositionY('.accordionQ-1') + 40) && accordion1.accordion.classList.contains('is-open')) {
+          accordion1.close();
+        }
+
+        if ((scrollY > getBlockPositionY('.accordionQ-2') + 140) && accordion2.accordion.classList.contains('is-open')) {
+          accordion2.close();
+        }
+        if ((scrollY > getBlockPositionY('.accordionQ-3') + 140) && accordion3.accordion.classList.contains('is-open')) {
+          accordion3.close();
+        }
+        if ((scrollY > getBlockPositionY('.accordionQ-4') + 140) && accordion4.accordion.classList.contains('is-open')) {
+          accordion4.close();
+        }
+        if ((scrollY > getBlockPositionY('.accordionQ-5') + 140) && accordion5.accordion.classList.contains('is-open')) {
+          accordion5.close();
+        }
+        if ((scrollY > getBlockPositionY('.accordionQ-6') + 140) && accordion6.accordion.classList.contains('is-open')) {
+          accordion6.close();
+        }
+        if ((scrollY > getBlockPositionY('.accordionQ-7') + 140) && accordion7.accordion.classList.contains('is-open')) {
+          accordion7.close();
+        }
+
+        if ((scrollY > getBlockPositionY('.accordionQ-8') + 140) && accordion8.accordion.classList.contains('is-open')) {
+          accordion8.close();
+        }
+
+        // Переверните чертеж (при прокрутке вверх)
+        // triangle.style.strokeDashoffset = length - draw;
       }
-    });
-  });
+
+      function getBlockPositionY(element) {
+        return document.querySelector(element).getBoundingClientRect().y
+      }
+
+      document.documentElement.scrollTop = 0;
+
+      const sections = document.querySelectorAll(".accordionQ");
+      const bullets = document.querySelectorAll(".pagination__bullet");
+      const offset = sections[0].offsetTop;
+      const breakpoints = Array.prototype.map.call(sections, (el) => el.offsetTop - offset);
+      let currentSection = 0;
+
+      sections.forEach((el, index) => {
+        const scrollToSection = () => window.scrollTo({top: breakpoints[index]});
+        el.addEventListener("click", scrollToSection);
+        bullets[index].addEventListener("click", scrollToSection);
+      });
+
+      window.addEventListener("scroll", function () {
+        breakpoints.forEach((breakpoint, index) => {
+          if (window.scrollY >= breakpoint
+            && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
+            if (index !== currentSection) {
+              bullets[currentSection].classList.remove("current");
+              bullets[index].classList.add("current");
+              currentSection = index;
+            }
+            return;
+          }
+        });
+      });
+    // }
   </script>
 </body>
 </html>

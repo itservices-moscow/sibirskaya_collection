@@ -12,6 +12,9 @@ section.quality {
   padding-bottom: calc(var(--folded-height) * 2);
 
   margin: -$section-height auto $section-height;
+  @include mobile {
+    margin-bottom: 0;
+  }
   .content {
     position: relative;
     margin-top: calc(var(--title-height) * -1);
@@ -73,8 +76,8 @@ section.quality {
       padding-top: 62px;
       padding-bottom: 62px;
       @include mobile {
-        padding-top: 98px;
-        padding-bottom: 40px;
+        padding-top: 80px;
+        padding-bottom: 8px;
       }
     }
   }
@@ -87,9 +90,6 @@ section.quality {
 .accordionQ {
   // --accordion-time: 0.3s;
   --header-height: 68px;
-  @include mobile {
-    --header-height: 44px;
-  }
   position: sticky;
   top: $sticky-offset;
   height: $section-height;
@@ -98,7 +98,14 @@ section.quality {
   margin-bottom: calc(-1 * var(--folded-height));
   padding-bottom: var(--folded-height);
   transition: transform 0.5s;
-  @include folding-blocks(8);
+  @include mobile {
+    --header-height: 44px;
+    min-height: 80vh;
+    top: calc(var(--sticky-offset) - var(--header-height));
+  }
+  @include desktop {
+    @include folding-blocks(8);
+  }
 }
 
 .accordionQ__control {

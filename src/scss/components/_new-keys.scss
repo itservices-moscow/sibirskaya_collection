@@ -9,6 +9,10 @@ section.new-keys {
   @include mobile {
     padding-top: 100px;
     padding-bottom: 100px;
+    .section__wrapper {
+      transform-origin: top center;
+      transform: scale(.75);
+    }
   }
 }
 
@@ -17,6 +21,9 @@ section.new-keys {
     > .title {
       text-align: center;
       margin: 0 0 72px;
+      @include mobile {
+        margin-bottom: 24px;
+      }
     }
   }
   &__list {
@@ -39,11 +46,18 @@ section.new-keys {
     .icon {
       height: 66px;
       margin: 0 0 32px;
+      @include mobile {
+        height: 44px;
+        margin-bottom: 8px;
+      }
     }
     .title {
       font-size: 29px;
       line-height: 36px;
       margin: 0 0 12px;
+      @include mobile {
+        margin-bottom: 0;
+      }
     }
     p {
       margin: 0;
