@@ -5196,6 +5196,7 @@ div.contact .email {
   width: 27px !important;
   height: 27px !important;
   background-image: url("../img/map-close.svg") !important;
+  opacity: 1 !important;
 }
 
 [class*=balloon__content] {
