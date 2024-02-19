@@ -5183,8 +5183,8 @@ div.contact .email {
 }
 
 [class*=balloon] {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: 0 5px 15px -7px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 5px 15px -7px rgba(0, 0, 0, 0.5) !important;
 }
 
 [class*=balloon__layout] {
