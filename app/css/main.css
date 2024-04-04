@@ -3020,6 +3020,7 @@ option {
   -ms-flex-pack: justify;
   justify-content: space-between;
   overflow: visible;
+  z-index: 100;
 }
 
 .bg-beige {
@@ -3027,14 +3028,14 @@ option {
 }
 
 #pachka-box {
-  width: 750px;
+  width: 1000px;
   height: 1000px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("..//img/sprites/doi_sprite_1000.png");
+  background-image: url("..//img/sprites/sprite_main.png");
   background-repeat: repeat-x;
-  background-size: 27000px 750px;
+  background-size: auto 100%;
 }
 @media (max-width: 1279px) {
   #pachka-box {
@@ -3049,19 +3050,19 @@ option {
 
 @-webkit-keyframes pachka {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 0;
   }
   100% {
-    background-position: -35000px 0px;
+    background-position: -36000px 0;
   }
 }
 
 @keyframes pachka {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 0;
   }
   100% {
-    background-position: -35000px 0px;
+    background-position: -36000px 0;
   }
 }
 .keys {
@@ -5204,29 +5205,40 @@ section.scrollup > div > img {
 }
 
 #sprite-box {
-  width: 1132px;
-  height: 1132px;
+  width: 1000px;
+  height: 1000px;
   display: block;
-  background-image: url("../img/brands-sk-r-pic2.png");
+  background-image: url("../img/sprites/sprite_blini.png");
   background-repeat: no-repeat;
-  -webkit-animation: sprite 2.7s steps(36) infinite;
-  animation: sprite 2.7s steps(36) infinite;
+  background-size: auto 100%;
+  -webkit-animation: sprite 3s steps(36) infinite;
+  animation: sprite 3s steps(36) infinite;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
+#sprite-box.animate {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
 .sb-center {
-  background-position: center center;
+  background-position: left center;
 }
 
 @-webkit-keyframes sprite {
+  0% {
+    background-position: 0 0;
+  }
   100% {
-    background-position: -40752px;
+    background-position: -36000px 0;
   }
 }
 
 @keyframes sprite {
+  0% {
+    background-position: 0 0;
+  }
   100% {
-    background-position: -40752px;
+    background-position: -36000px 0;
   }
 }
 .contacts h1.heading {

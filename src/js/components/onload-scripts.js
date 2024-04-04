@@ -1,8 +1,8 @@
 function rotatePachka(steps, top, bottom, scrollval) {
-  const bglast = 25250
+  // const bglast = 25250
   const height = bottom - top
   // const step = bglast / steps // шаг 1 кадра
-  const step = 750
+  const step = 1000
   const start = top
   const end = bottom
   const scrollstep = height / steps
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     if (document.querySelector(".sticky-wrapper")) {
       if (scrollPosition > 1876 && scrollPosition < 5076) {
-        rotatePachka(45, 1876, 5076, scrollPosition)
+        rotatePachka(36, 1876, 5076, scrollPosition)
       }
     }
 

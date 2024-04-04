@@ -123,20 +123,24 @@
 }
 
 #sprite-box {
-  width: 1132px;
-  height: 1132px;
+  width: 1000px;
+  height: 1000px;
   display: block;
   // background-color: yellowgreen;
   // background-image: url($rootpath + "img/sprites/kotlety_sprite.png");
-  background-image: url($rootpath + "img/brands-sk-r-pic2.png");
+  background-image: url($rootpath + "img/sprites/sprite_blini.png");
   background-repeat: no-repeat;
-  animation: sprite 2.7s steps(36) infinite;
+  background-size: auto 100%;
+  animation: sprite 3s steps(36) infinite;
   animation-play-state: paused;
+  &.animate {
+    animation-play-state: running;
+  }
   @include mobile {
   }
 }
 .sb-center {
-  background-position: center center;
+  background-position: left center;
 }
 
 .animated {
@@ -144,7 +148,10 @@
 }
 
 @keyframes sprite {
+  0% {
+    background-position: 0 0;
+  }
   100% {
-    background-position: -40752px;
+    background-position: calc(-1000px * 36) 0;
   }
 }

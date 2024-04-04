@@ -723,12 +723,15 @@
       <!-- 3д спрайт -->
       <!--   <img src="img/brands-sk-cutlet.png" alt="" /> -->
       <div class="sprite-container">
-        <div id="sprite-box" style="animation-play-state: paused" class="sb-center"></div>
+        <div id="sprite-box" class="sb-center"></div>
       </div>
     </div>
   </div>
   <div class="view360__nav">
-    <div class="view360__icon"><img src="img/svg/icon360.svg" /></div>
+    <div class="view360__icon"
+         onclick="document.querySelector('#sprite-box').classList.toggle('animate')" >
+      <img src="img/svg/icon360.svg" />
+    </div>
     <div class="view360__link">
       <span class="arr-right-on">
         <a href="#">АССОРТИМЕНТ КАТЕГОРИИ <svg width="42" height="15" class="icon" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">

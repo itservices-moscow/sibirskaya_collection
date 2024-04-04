@@ -29,20 +29,21 @@
   width: 100%;
   justify-content: space-between;
   overflow: visible;
+  z-index: 100;
 }
 .bg-beige {
   background-color: var(--main-beige);
 }
 
 #pachka-box {
-  width: 750px;
+  width: 1000px;
   height: 1000px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-image: url($rootpath + "/img/sprites/doi_sprite_1000.png");
+  background-image: url($rootpath + "/img/sprites/sprite_main.png");
   background-repeat: repeat-x;
-  background-size: 27000px 750px;
+  background-size: auto 100%;
   // animation: pachka steps(35);
   // animation-timeline: scroll();
   @include mobile {
@@ -56,10 +57,10 @@
 
 @keyframes pachka {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 0;
   }
   100% {
     //background-position: -17500px;
-    background-position: -35000px 0px;
+    background-position: calc(1000px * -36) 0;
   }
 }
