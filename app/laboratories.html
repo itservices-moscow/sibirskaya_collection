@@ -154,7 +154,7 @@
 
       <div class="nav-mob nav-mob-l1 nav-mob-brands slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-brands', '.nav-mob-l0');">
-          <img src="img/back-sm.png" />
+          <img src="img/back-sm.svg" />
           <span>продукт</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -185,7 +185,7 @@
 
       <div class="nav-mob nav-mob-l1 nav-mob-manuf slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-manuf', '.nav-mob-l0');">
-          <img src="img/back-sm.png" />
+          <img src="img/back-sm.svg" />
           <span>производство</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -198,11 +198,11 @@
         </ul>
         <div class="pic-container flex">
           <div class="piclink">
-            <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
+            <a href="creating-products.html"><img src="img/picture-20.png" alt="" class="piclink__pic" /></a>
             <a href="creating-products.html" class="piclink__link">отдел разработки</a>
           </div>
           <div class="piclink">
-            <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
+            <a href="#"><img src="img/picture-21.png" alt="" class="piclink__pic" /></a>
             <a href="#" class="piclink__link">карьера</a>
           </div>
         </div>
@@ -210,7 +210,7 @@
 
       <div class="nav-mob nav-mob-l3 nav-mob-sk slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-sk', '.nav-mob-brands');">
-          <img src="img/back-sm.png" />
+          <img src="img/back-sm.svg" />
           <span>Бренды:<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -231,7 +231,7 @@
 
       <div class="nav-mob nav-mob-l4 nav-mob-pelmeni slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-pelmeni', '.nav-mob-sk');">
-          <img src="img/back-sm.png" />
+          <img src="img/back-sm.svg" />
           <span>пельмени<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -249,7 +249,7 @@
 
       <div class="nav-mob nav-mob-l4 nav-mob-vareniki slide-right">
         <div class="nav-mob__back" onclick="closeMobMenuPanel('.nav-mob-vareniki', '.nav-mob-sk');">
-          <img src="img/back-sm.png" />
+          <img src="img/back-sm.svg" />
           <span>вареники<br />Sибирская коллекция</span>
         </div>
         <ul class="list-reset nav-mob__list">
@@ -434,11 +434,11 @@
     <div class="topmenu-container__item topmenu-container__item-manuf2"></div>
     <div class="topmenu-container__item topmenu-container__item-manuf3">
       <div class="piclink" data-onhover-id="menu-item-creating">
-        <a href="creating-products.html"><img src="img/picture-20.jpg" alt="" class="piclink__pic" /></a>
+        <a href="creating-products.html"><img src="img/picture-20.png" alt="" class="piclink__pic" /></a>
         <a href="creating-products.html" class="piclink__link">отдел разработки</a>
       </div>
       <div class="piclink" data-onhover-id="menu-item-career">
-        <a href="#"><img src="img/picture-21.jpg" alt="" class="piclink__pic" /></a>
+        <a href="#"><img src="img/picture-21.pmg" alt="" class="piclink__pic" /></a>
         <a href="#" class="piclink__link">карьера у нас</a>
       </div>
     </div>
@@ -507,12 +507,13 @@
   </div>
 </section>
 
-        <h1 class="heading">собственные лаборатории</h1>
-        <p>На производстве с 2013 года функционируют аккредитованные производственные физико‑химическая и микробиологическая лаборатории</p>
+        <h1 class="heading">собственные <br class="mobile">лаборатории</h1>
       </div>
 
       <section class="labs">
-        <h1 class="bronze">Физико-химическая</h1>
+        <p class="labs__description">На производстве с 2013 года функционируют аккредитованные производственные физико-химическая и микробиологическая лаборатории</p>
+        <h1 class="title01 bronze">Физико-химическая</h1>
+<!--         <div class="labs__content"> -->
           <div class="accordionL1 accordionL1-1">
             <div class="pagination-track" id="pagination1">
               <div class="pagination">
@@ -543,8 +544,8 @@
             </div>
             <div class="accordionL1__content" aria-hidden="true">
               <div class="container">
-                <p>Исследует более 20 показателей перед допуском сырья для производства</p>
-                <img src="img/labs-1-02-2x.jpg" width="535" />
+                <p>Исследует более 20 показателей перед допуском сырья <br> для производства</p>
+                <img src="img/labs-1-02-2x.jpg" alt="" width="535" />
               </div>
             </div>
           </div>
@@ -564,11 +565,11 @@
               </div>
             </div>
           </div>
+<!--         </div> -->
 
         <div class="labs__section">
-          <div class="labs__heading">
-            <h1 class="bronze">Микро-биологическая</h1>
-          </div>
+          <h1 class="title02 bronze">Микро-биологическая</h1>
+<!--         <div class="labs__content"> -->
 
           <div class="accordionL2 accordionL2-1">
             <div class="pagination-track" id="pagination2">
@@ -585,7 +586,7 @@
             <div class="accordionL2__content" aria-hidden="true">
               <div class="container">
                 <p>Осуществляет санитарно-микробиологический контроль на всех 8 этапах процесса производства продукции</p>
-                <img src="img/labs-2-01-2x.jpg" width="535" />
+                <img src="img/labs-2-01-2x.jpg" width="535" alt="" />
               </div>
 
             </div>
@@ -601,7 +602,7 @@
               <div class="container">
                 <p>Контроль сырья, готовой продукции, санитарно-гигиенического состояния производственных помещений, технологического
                   оборудования, инвентаря, тары, рук, санитарной одежды работающих</p>
-                <img src="img/labs-2-02-2x.jpg" width="535" />
+                <img src="img/labs-2-02-2x.jpg" width="535" alt=""/>
               </div>
             </div>
           </div>
@@ -690,166 +691,6 @@
 
   </div>
 
-  <script type="text/javascript">
-    // ================== ACCORDION PLUGINS LABS =================
-    class GraphAccordionL1 {
-      constructor(selector, options) {
-        let defaultOptions = {
-          isOpen: () => { },
-          isClose: () => { },
-          speed: 300
-        };
-        this.options = Object.assign(defaultOptions, options);
-        this.accordion = document.querySelector(selector);
-        this.control = this.accordion.querySelector('.accordionL1__control');
-        this.content = this.accordion.querySelector('.accordionL1__content');
-        this.event();
-      }
-
-      event() {
-        if (this.accordion) {
-          this.accordion.addEventListener('click', (e) => {
-            this.accordion.classList.toggle('open');
-
-            if (this.accordion.classList.contains('open')) {
-              this.open();
-            } else {
-              this.close();
-            }
-          });
-        }
-      }
-
-      open() {
-        this.accordion.style.setProperty('--accordion-time', `${this.options.speed / 1000}s`);
-        this.accordion.classList.add('is-open');
-        this.control.setAttribute('aria-expanded', true);
-        this.content.setAttribute('aria-hidden', false);
-        this.content.style.maxHeight = this.content.scrollHeight + 'px';
-        this.options.isOpen(this);
-      }
-
-      close() {
-        this.accordion.classList.remove('is-open');
-        this.control.setAttribute('aria-expanded', false);
-        this.content.setAttribute('aria-hidden', true);
-        this.content.style.maxHeight = null;
-        this.options.isClose(this);
-      }
-    }
-
-    class GraphAccordionL2 {
-      constructor(selector, options) {
-        let defaultOptions = {
-          isOpen: () => { },
-          isClose: () => { },
-          speed: 300
-        };
-        this.options = Object.assign(defaultOptions, options);
-        this.accordion = document.querySelector(selector);
-        this.control = this.accordion.querySelector('.accordionL2__control');
-        this.content = this.accordion.querySelector('.accordionL2__content');
-        this.event();
-      }
-
-      event() {
-        if (this.accordion) {
-          this.accordion.addEventListener('click', (e) => {
-            this.accordion.classList.toggle('open');
-
-            if (this.accordion.classList.contains('open')) {
-              this.open();
-            } else {
-              this.close();
-            }
-          });
-        }
-      }
-
-      open() {
-        this.accordion.style.setProperty('--accordion-time', `${this.options.speed / 1000}s`);
-        this.accordion.classList.add('is-open');
-        this.control.setAttribute('aria-expanded', true);
-        this.content.setAttribute('aria-hidden', false);
-        this.content.style.maxHeight = this.content.scrollHeight + 'px';
-        this.options.isOpen(this);
-      }
-
-      close() {
-        this.accordion.classList.remove('is-open');
-        this.control.setAttribute('aria-expanded', false);
-        this.content.setAttribute('aria-hidden', true);
-        this.content.style.maxHeight = null;
-        this.options.isClose(this);
-      }
-    }
-
-    // const accordion1 = new GraphAccordionL1('.accordionL1-1', {
-    //   speed: 500
-    // });
-    // accordion1.open();
-    //
-    // const accordion2 = new GraphAccordionL1('.accordionL1-2', {
-    //   speed: 500
-    // });
-    // accordion2.open();
-    //
-    // const accordion3 = new GraphAccordionL1('.accordionL1-3', {
-    //   speed: 500
-    // });
-    // accordion3.open();
-    //
-    //
-    //
-    // const accordion4 = new GraphAccordionL2('.accordionL2-1', {
-    //   speed: 500
-    // });
-    // accordion4.open();
-    //
-    // const accordion5 = new GraphAccordionL2('.accordionL2-2', {
-    //   speed: 500
-    // });
-    // accordion5.open();
-
-    const wrapper = document.querySelector("main.labs");
-    const stickyOffset = parseInt(getComputedStyle(wrapper).getPropertyValue("--sticky-offset"));
-    const labsP = document.querySelector(".labs__title p");
-
-    document.documentElement.scrollTop = 0;
-
-    wrapper.style.setProperty("--heading-offset", labsP.offsetTop + labsP.offsetHeight + "px");
-
-    document.querySelectorAll(".pagination").forEach((el, i) => {
-      const sectionName = `.accordionL${i + 1}`;
-      const sections = document.querySelectorAll(sectionName);
-      const bullets = el.querySelectorAll(".pagination__bullet");
-      const parentOffset = sections[0].offsetParent.offsetTop;
-      const breakpoints = Array.prototype.map.call(
-        sections,
-        (el) => parentOffset + el.offsetTop - stickyOffset
-      );
-      let currentSection = 0;
-
-      sections.forEach((el, index) => {
-        const scrollToSection = () => window.scrollTo({ top: breakpoints[index] });
-        el.querySelector(`${sectionName}__control`).addEventListener("click", scrollToSection);
-        bullets[index].addEventListener("click", scrollToSection);
-      });
-
-      window.addEventListener("scroll", function () {
-        breakpoints.forEach((breakpoint, index) => {
-          if (window.scrollY >= breakpoint
-          && (!breakpoints[index + 1] || window.scrollY < breakpoints[index + 1])) {
-            if (index != currentSection) {
-              bullets[currentSection].classList.remove("current");
-              bullets[index].classList.add("current");
-              currentSection = index;
-            }
-            return;
-          }
-        });
-      });
-    });
-  </script>
 </body>
+
 </html>

@@ -1,22 +1,27 @@
-main.quality {
-  --sticky-offset: 108px;
-  --folded-height: 68px;
-  @include mobile {
-    --folded-height: 44px;
-  }
+$sticky-offset: 260px;
+$section-height: 440px;
+
+.quality__title {
+  position: sticky;
+  top: 0;
+  margin-bottom: $section-height;
 }
 
 section.quality {
   max-width: 1100px;
-  margin: 0 auto calc(var(--folded-height) * 2);
   padding-bottom: calc(var(--folded-height) * 2);
 
+  margin: -$section-height auto $section-height;
+  @include mobile {
+    margin-bottom: 0;
+  }
   .content {
     position: relative;
     margin-top: calc(var(--title-height) * -1);
     @include mobile {
       margin-left: 24px;
       margin-right: 58px;
+      padding-top: calc(var(--header-height) + 24px);
     }
   }
 
@@ -47,6 +52,9 @@ section.quality {
       right: -40px;
     }
   }
+  .pagination {
+    top: $sticky-offset;
+  }
 }
 .quality {
   &__title {
@@ -69,8 +77,8 @@ section.quality {
       padding-top: 62px;
       padding-bottom: 62px;
       @include mobile {
-        padding-top: 98px;
-        padding-bottom: 40px;
+        padding-top: 80px;
+        padding-bottom: 8px;
       }
     }
   }
@@ -82,15 +90,26 @@ section.quality {
 
 .accordionQ {
   // --accordion-time: 0.3s;
+  --header-height: 68px;
   position: sticky;
-  top: var(--sticky-offset);
-  min-height: 540px;
+  top: $sticky-offset;
+  height: $section-height;
   background: var(--main-beige);
   border-top: 1px solid var(--coffee-milk);
   margin-bottom: calc(-1 * var(--folded-height));
   padding-bottom: var(--folded-height);
   transition: transform 0.5s;
-  @include folding-blocks(9);
+  @include mobile {
+    --header-height: 44px;
+    //min-height: 80vh;
+    //top: calc(var(--sticky-offset) - var(--header-height));
+    position: static;
+    height: auto;
+    padding: var(--header-height) 0;
+  }
+  @include desktop {
+    @include folding-blocks(8);
+  }
 }
 
 .accordionQ__control {
@@ -104,6 +123,7 @@ section.quality {
       display: none;
     }
   }
+
   @include mobile {
     flex-direction: column;
     align-items: flex-start;
@@ -154,6 +174,18 @@ section.quality {
         width: 24px;
       }
     }
+    a{
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+      span{
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1%;
+        text-transform: uppercase;
+        margin-right: 16px;
+      }
+    }
   }
 }
 
@@ -172,7 +204,7 @@ section.quality {
   flex-shrink: 0;
   font-family: "IntroDemoCondLightCAPS";
   font-size: 22px;
-  line-height: var(--folded-height);
+  line-height: var(--header-height);
   text-align: center;
   // transition: transform var(--accordion-time) ease-out;
 }

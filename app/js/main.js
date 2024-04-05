@@ -22,9 +22,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_stmodal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/stmodal */ "./src/js/components/stmodal.js");
 /* harmony import */ var _components_product_tabs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/product-tabs.js */ "./src/js/components/product-tabs.js");
 /* harmony import */ var _components_product_tabs_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_product_tabs_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_brands360__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/brands360 */ "./src/js/components/brands360.js");
-/* harmony import */ var _components_brands360__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_brands360__WEBPACK_IMPORTED_MODULE_8__);
-
 
 
 
@@ -80,7 +77,11 @@ __webpack_require__.r(__webpack_exports__);
 
 // Подключение плавной прокрутки к якорям
 
-const scroll = new (smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default())('a[href*="#"]');
+const scroll = new (smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default())('a[href*="#"]', {
+  speed: 300,
+  speedAsDuration: true,
+  easing: 'easeOutQuint'
+});
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
@@ -130,73 +131,6 @@ __webpack_require__.r(__webpack_exports__);
 // import "./vendor/dropzone.min.js"
 
 
-
-/***/ }),
-
-/***/ "./src/js/components/brands360.js":
-/*!****************************************!*\
-  !*** ./src/js/components/brands360.js ***!
-  \****************************************/
-/***/ (() => {
-
-document.addEventListener("DOMContentLoaded", event => {
-  console.log("script brands", event);
-  const brandsListItems = document?.querySelectorAll("[data-subbrand-id]");
-  const imageBox = document.querySelector("#sprite-box");
-  // const filterSelectAllGroup = document?.querySelectorAll('[data-filter-function="selectall_cb"]')
-
-  // переключение между пунктами
-  brandsListItems.forEach(element => {
-    const id = element.getAttribute("data-subbrand-id");
-    const imgtype = element.getAttribute("data-subbrand-imgtype");
-    const url = element.getAttribute("data-subbrand-url");
-    //console.log("[item:]", id, imgtype, url)
-
-    element.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelectorAll(".brandmenu__link.active").forEach(elem => {
-        //console.log("ex", elem)
-        elem.classList.remove("active");
-      });
-      e.target.classList.add("active");
-      switch (imgtype) {
-        case "image":
-          console.log("show image");
-          imageBox.classList.add("sb-center");
-          imageBox.style.backgroundImage = "url('" + url + "')"; // прописать здесь код для обычной картинки
-          break;
-        case "3d":
-          // preloader (поставить сюда fetch или нужную функцию подгрузки)
-          document.getElementById("view360").classList.toggle("loading");
-          setTimeout(function () {
-            imageBox.classList.remove("sb-center");
-            imageBox.style.backgroundImage = "url('" + url + "')"; // отобразить 3d спрайт
-            document.getElementById("view360").classList.toggle("loading");
-          }, 3000);
-          break;
-        default:
-          break;
-      }
-    });
-  });
-
-  //animationPlayState = "running"
-  const element = document.querySelector(".view360__icon");
-  element.addEventListener("click", function (e) {
-    e.preventDefault();
-    //document.querySelector("#sprite-box").classList.add("animated")
-    const state = document.querySelector("#sprite-box").style.animationPlayState;
-    document.querySelector("#sprite-box").style.animationPlayState = state === "paused" ? "running" : "paused";
-  });
-  // element.addEventListener("mouseover", function (e) {
-  //   document.querySelector("#sprite-box").style.animationPlayState = "running"
-  //   console.log("over", e)
-  // })
-  // element.addEventListener("mouseout", function (e) {
-  //   document.querySelector("#sprite-box").style.animationPlayState = "paused"
-  //   console.log("out", e)
-  // })
-});
 
 /***/ }),
 
@@ -683,7 +617,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // закрывающая скобка document onload
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   var items = document.querySelectorAll('.nav-top-l1__item');
   items.forEach(function (item, index) {
@@ -712,7 +645,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /***/ (() => {
 
 function rotatePachka(steps, top, bottom, scrollval) {
-  const bglast = 26250;
+  const bglast = 25250;
   const height = bottom - top;
   // const step = bglast / steps // шаг 1 кадра
   const step = 750;
@@ -1083,7 +1016,6 @@ __webpack_require__.r(__webpack_exports__);
       //enableScroll();
     }
   });
-
   overlay?.addEventListener("click", () => {
     burger?.setAttribute("aria-expanded", "false");
     burger?.setAttribute("aria-label", "Открыть меню");
@@ -1091,21 +1023,18 @@ __webpack_require__.r(__webpack_exports__);
     menu.classList.remove("menu--active");
     //enableScroll();
   });
-
   closeBtn?.addEventListener("click", () => {
     burger?.setAttribute("aria-expanded", "false");
     burger?.setAttribute("aria-label", "Открыть меню");
     burger.classList.remove("burger--active");
     menu.classList.remove("menu--active");
-    setTimeout(hideFix, "1000");
+    setTimeout(hideFix, "500");
     //enableScroll();
   });
-
   function hideFix() {
     menuContent.classList.add("hidden"); // fix for mobile menu width
     menuSearch.classList.add("hidden"); // fix for mobile menu width
   }
-
   menuItems?.forEach(el => {
     el.addEventListener("click", () => {
       burger?.setAttribute("aria-expanded", "false");
@@ -1578,8 +1507,8 @@ class GraphModal {
     this.modalContainer.scrollTo(0, 0);
     this.modal.style.setProperty("--transition-time", `${this.speed / 1000}s`);
     this.modal.classList.add("is-open");
-    document.body.style.scrollBehavior = "auto";
-    document.documentElement.style.scrollBehavior = "auto";
+    document.body.style.scrollBehavior = "smooth";
+    document.documentElement.style.scrollBehavior = "smooth";
     this.disableScroll();
     this.modalContainer.classList.add("graph-modal-open");
     this.modalContainer.classList.add(this.animation);
@@ -1597,8 +1526,8 @@ class GraphModal {
       this.modal.classList.remove("is-open");
       this.modalContainer.classList.remove("graph-modal-open");
       this.enableScroll();
-      document.body.style.scrollBehavior = "auto";
-      document.documentElement.style.scrollBehavior = "auto";
+      document.body.style.scrollBehavior = "smooth";
+      document.documentElement.style.scrollBehavior = "smooth";
       this.options.isClose(this);
       this.isOpen = false;
       this.focusTrap();

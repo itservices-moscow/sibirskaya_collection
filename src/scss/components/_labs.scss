@@ -2,12 +2,13 @@ $section-height: 700px;
 $gradient-height: 200px;
 
 main.labs {
-  --sticky-offset: 234px;
+  --sticky-offset: 260px;
+  --sticky-text-offset: 260px;
   max-width: 1328px;
   margin: 0 auto;
   @include mobile {
-    --mob-heading-offset: 108px;
-    --sticky-offset: 164px;
+    --sticky-offset: 500px;
+    --sticky-text-offset: 294px;
     margin-left: 24px;
     margin-right: 24px;
   }
@@ -17,31 +18,26 @@ main.labs {
 }
 
 .labs__title {
-  position: relative;
+  position: sticky;
+  top: 0;
   margin-bottom: $section-height;
-  @include desktop {
-    position: sticky;
-    top: 0;
-    z-index: 9;
-  }
+  z-index: 9;
+  background: var(--main-beige);
   h1 {
     margin-bottom: 64px;
-  }
-  p {
-    max-width: 423px;
-    margin: 32px 0 0 0;
-    padding-bottom: 40px;
-    @include desktop {
-      position: absolute;
-    }
-    @include mobile {
-      padding-bottom: 32px;
-    }
   }
 }
 
 section.labs {
+  position: relative;
+  // display: grid;
   margin-top: -$section-height;
+  // grid-template-columns: auto 760px;
+  // gap: 145px;
+  @include mobile {
+    // grid-template-columns: 100%;
+    // gap: 48px;
+  }
   //padding-top: 72px;
   .pagination-track {
     background: var(--main-beige);
@@ -64,23 +60,44 @@ section.labs {
     line-height: normal;
     padding-top: 1px;
     margin-bottom: 32vh;
+    background: var(--main-beige);
     @include desktop {
       float: left;
-      margin: 0;
+      top: calc(200px + var(--sticky-offset));
+      margin-top: 200px;
     }
     @include mobile {
-      top: var(--mob-heading-offset);
       font-size: 29px;
+      margin-bottom: 24px;
+      &.title01 {
+        padding-top: 0;
+        margin-top: 0;
+      }
     }
   }
 }
 
 
 .labs {
+  &__description {
+    max-width: 423px;
+    padding: 72px 0 40px;
+    position: fixed;
+    top: var(--sticky-offset);
+    @include mobile {
+      padding-bottom: 32px;
+      padding-top: 44px;
+      position: sticky;
+      top: 0;
+    }
+  }
   &__section {
     position: relative;
-    background: linear-gradient(to bottom, transparent, var(--main-beige) $gradient-height / 2);
+    background: linear-gradient(to bottom, transparent, var(--main-beige) calc($gradient-height / 2));
     padding-top: $gradient-height * .6;
+    @include mobile {
+      padding-top: calc(var(--header-height) / 2);
+    }
   }
   &__heading {
     @include desktop {
@@ -92,6 +109,9 @@ section.labs {
       position: sticky;
       top: var(--mob-heading-offset);
     }
+    background: linear-gradient(to bottom, transparent, var(--main-beige) $gradient-height);
+    padding-top: $gradient-height;
+    margin-bottom: 120px;
   }
 }
 
@@ -100,34 +120,45 @@ section.labs {
 .accordionL1,
 .accordionL2 {
   // --accordion-time: 0.3s;
-  --folded-height: 56px;
-  @include mobile {
-    --folded-height: 44px;
-  }
+  --header-height: 56px;
   position: sticky;
   top: calc(var(--sticky-offset) + 32px);
   max-width: 722px;
-  min-height: $section-height;
+  height: $section-height;
   background: var(--main-beige);
   border-top: 1px solid var(--coffee-milk);
   margin-left: auto;
   margin-right: 38px;
+  @include mobile {
+    --header-height: 44px;
+    //top: calc(var(--sticky-text-offset) - 32px);
+    position: static;
+    height: auto;
+    padding-bottom: var(--header-height);
+    width: 100%;
+  }
 }
 
 .accordionL1 {
-  @include folding-blocks(3);
+  @include desktop {
+    @include folding-blocks(3);
+  }
 }
 
 .accordionL2 {
-  @include folding-blocks(2);
+  z-index: 20;
+  @include desktop {
+    @include folding-blocks(2);
+  }
 }
 
 .accordionL1__control,
 .accordionL2__control {
   display: flex;
-  height: var(--folded-height);
+  height: var(--header-height);
   cursor: pointer;
   align-items: center;
+  margin-bottom: -12px;
 }
 
 .accordionL1__content,
@@ -142,7 +173,7 @@ section.labs {
   .container {
     max-width: 535px;
     p {
-      margin: 0 0 1rem;
+      margin: 24px 0 1rem;
     }
     img {
       margin-top: calc(24px - 1rem);
@@ -156,7 +187,7 @@ section.labs {
   flex-shrink: 0;
   font-family: "IntroDemoCondLightCAPS";
   font-size: 22px;
-  line-height: var(--folded-height);
+  line-height: var(--header-height);
   text-align: center;
   // transition: transform var(--accordion-time) ease-out;
 }
