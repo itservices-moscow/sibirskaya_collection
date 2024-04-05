@@ -609,10 +609,13 @@
 </svg>
 </div>
   </div>
-  <div class="view360__content">
-    <div>
-      <!-- здесь будет 3д спрайт, с другой высотой-->
-      <img src="img/brands-sksel-pic.png"   alt=""/>
+  <div class="view360__content view360__content_sk">
+    <div id="imagebox-brands">
+      <!-- 3д спрайт -->
+      <!--   <img src="img/brands-sk-cutlet.png" alt="" /> -->
+      <div class="sprite-container">
+        <div id="sprite-box" class="sb-center"></div>
+      </div>
     </div>
   </div>
   <div class="view360__nav">
@@ -634,11 +637,30 @@
 </div>
 </div>
             <div class="brands-details__menu"><ul class="list-reset brandmenu desktop">
-  <li><a class="brandmenu__link active" href="#">пельмени</a></li>
-  <!-- onclick - для демонстрации прелоада, можно стирать -->
-  <li onclick="document.getElementById('view360').classList.toggle('loading');"><a class="brandmenu__link">сырники</a>
+  <li>
+    <a
+      class="brandmenu__link active"
+      data-subbrand-id=""
+      data-subbrand-imgtype="3d"
+      data-subbrand-url="../img/sprites/sprite_box_pelm.png"
+    >Пельмени</a>
   </li>
-  <li onclick="document.getElementById('view360').classList.toggle('loading');"><a class="brandmenu__link">блины</a>
+
+  <li>
+    <a
+      class="brandmenu__link"
+      data-subbrand-id=""
+      data-subbrand-imgtype="3d"
+      data-subbrand-url="../img/sprites/sprite_box_pelm.png"
+    >Сырники</a>
+  </li>
+  <li>
+    <a
+      class="brandmenu__link"
+      data-subbrand-id=""
+      data-subbrand-imgtype="3d"
+      data-subbrand-url="../img/sprites/sprite_box_pelm.png"
+    >Блины</a>
   </li>
 
 </ul>
