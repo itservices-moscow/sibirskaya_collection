@@ -29,7 +29,9 @@
   width: 100%;
   justify-content: space-between;
   overflow: visible;
-  z-index: 100;
+  @include desktop {
+    z-index: 100;
+  }
 }
 .bg-beige {
   background-color: var(--main-beige);

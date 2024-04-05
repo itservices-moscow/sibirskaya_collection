@@ -9,21 +9,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const id = element.getAttribute("data-subbrand-id")
     const imgtype = element.getAttribute("data-subbrand-imgtype")
     const url = element.getAttribute("data-subbrand-url")
-    //console.log("[item:]", id, imgtype, url)
+    console.log("[item:]", id, imgtype, url)
 
-    element.addEventListener("click", function (e) {
-      e.preventDefault()
-      document.querySelectorAll(".brandmenu__link.active").forEach((elem) => {
-        //console.log("ex", elem)
-        elem.classList.remove("active")
-      })
-      e.target.classList.add("active")
-
+    function SetImage () {
       switch (imgtype) {
         case "image":
           console.log("show image")
           imageBox.classList.add("sb-center")
           imageBox.style.backgroundImage = "url('" + url + "')" // прописать здесь код для обычной картинки
+          imageBox.style.backgroundPosition = 'center'
+          imageBox.style.animationName = 'none'
           break
         case "3d":
           // preloader (поставить сюда fetch или нужную функцию подгрузки)
@@ -31,6 +26,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
           setTimeout(function () {
             imageBox.classList.remove("sb-center")
             imageBox.style.backgroundImage = "url('" + url + "')" // отобразить 3d спрайт
+            imageBox.style.backgroundPosition = 'left center'
+            imageBox.style.animationName = 'sprite'
             document.getElementById("view360").classList.toggle("loading")
           }, 3000)
 
@@ -38,12 +35,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
         default:
           break
       }
+    }
+    SetImage()
+
+    element?.addEventListener("click", function (e) {
+      e.preventDefault()
+      document.querySelectorAll(".brandmenu__link.active").forEach((elem) => {
+        //console.log("ex", elem)
+        elem.classList.remove("active")
+      })
+      e.target.classList.add("active")
+      SetImage()
     })
   })
 
   //animationPlayState = "running"
   const element = document.querySelector(".view360__icon")
-  element.addEventListener("click", function (e) {
+  element?.addEventListener("click", function (e) {
     e.preventDefault()
     //document.querySelector("#sprite-box").classList.add("animated")
     const state = document.querySelector("#sprite-box").style.animationPlayState
