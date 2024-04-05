@@ -128,7 +128,7 @@
   height: 1000px;
   display: block;
   // background-color: yellowgreen;
-  background-image: url($rootpath + "img/sprites/sprite_pack_red.png");
+  //background-image: url($rootpath + "/img/sprites/sprite_pack_red.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   animation: sprite 3s steps(36) infinite forwards;
