@@ -7,11 +7,12 @@ function rotatePachka(steps, top, bottom, scrollval) {
   const end = bottom
   const scrollstep = height / steps
   const arrayLength = Math.floor((end - start) / scrollstep) + 1
-  const range = [...Array(arrayLength).keys()].map((x) => x * scrollstep + start)
+  const range = [...Array(arrayLength).keys()].map((x) => x * scrollstep/2 + start*1.2)
 
   var currentstep = 0
   currentstep = range.findIndex((item) => item > scrollval)
-  var bgpos = `${step * currentstep}px 0px`
+  let bgPosVal = (step * currentstep) <= 0 ? 0 : (step * currentstep)
+  var bgpos = `${bgPosVal}px 0px`
   // console.log("[rotatefnc]", scrollstep, range, bgpos)
 
   document.querySelector("#pachka-box").style.backgroundPosition = bgpos

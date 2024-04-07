@@ -20,7 +20,7 @@
   position: -webkit-sticky;
   // border: 1px dashed orange;
   @include mobile {
-    height: 550px;
+    height: 475px;
   }
 }
 .pachka {
@@ -43,17 +43,18 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-image: url($rootpath + "/img/sprites/sprite_main.png");
+  background-image: url($rootpath + "img/sprites/sprite_main.png");
   background-repeat: repeat-x;
   background-size: auto 100%;
   // animation: pachka steps(35);
   // animation-timeline: scroll();
   @include mobile {
-    min-width: 750px;
+    min-width: 625px;
     position: relative;
     left: 50%;
     transform-origin: top center;
     transform: translateX(-50%) scale(0.6);
+    background-image: url($rootpath + "/img/sprites/sprite_main_small.png");
   }
 }
 
