@@ -77,9 +77,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let calc = scrollPosition
     if (scrollPosition > 570 && scrollPosition < 900) {
       let calc2 = scaleMapNumbers(scrollPosition)
-      document.getElementById("video-container").style.width = calc2 + "px"
-      console.log(document.getElementById("video-container").style.width)
-      document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc + "<br/>" + calc2
+      let videoContainer = document.getElementById("video-container")
+      if (videoContainer) {
+        videoContainer.style.width = calc2 + "px"
+        document.querySelector(".scrollval").innerHTML = scrollPosition + "<br/>" + calc + "<br/>" + calc2
+      }
     }
   })
 
