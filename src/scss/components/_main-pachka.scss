@@ -31,6 +31,10 @@
   overflow: visible;
   @include desktop {
     z-index: 100;
+    top: -88px;
+    @media screen and (max-height: 799px) {
+      top: -178px;
+    }
   }
 }
 .bg-beige {
@@ -38,9 +42,9 @@
 }
 
 #pachka-box {
+  display: block;
   width: 1000px;
   height: 1000px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   background-image: url($rootpath + "img/sprites/sprite_main.png");
@@ -55,6 +59,15 @@
     transform-origin: top center;
     transform: translateX(-50%) scale(0.6);
     background-image: url($rootpath + "/img/sprites/sprite_main_small.png");
+  }
+  @include desktop {
+    transform-origin: center;
+    @media screen and (max-height: 999px) {
+      transform: scale(.8);
+    }
+    @media screen and (max-height: 799px) {
+      //transform: scale(.7);
+    }
   }
 }
 
