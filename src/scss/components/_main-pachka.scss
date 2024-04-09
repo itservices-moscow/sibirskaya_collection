@@ -53,7 +53,7 @@
   // animation: pachka steps(35);
   // animation-timeline: scroll();
   @include mobile {
-    min-width: 625px;
+    min-width: 1000px;
     position: relative;
     left: 50%;
     transform-origin: top center;
