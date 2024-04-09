@@ -54,8 +54,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   element?.addEventListener("click", function (e) {
     e.preventDefault()
     //document.querySelector("#sprite-box").classList.add("animated")
-    const state = document.querySelector("#sprite-box").style.animationPlayState
-    document.querySelector("#sprite-box").style.animationPlayState = state === "paused" ? "running" : "paused"
+    document.querySelector("#sprite-box").classList.toggle('animate')
   })
   // element.addEventListener("mouseover", function (e) {
   //   document.querySelector("#sprite-box").style.animationPlayState = "running"
