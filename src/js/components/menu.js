@@ -205,12 +205,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // МЕНЮ ФУТЕРА и все аккордеоны
   accordionInit("accordion")
-
   // закрывающая скобка document onload
 })
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   var items = document.querySelectorAll('.nav-top-l1__item');

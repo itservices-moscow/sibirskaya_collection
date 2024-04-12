@@ -517,20 +517,16 @@
   <div class="brands-content__submenu">
     <div class="brands-nav flex">
       <span class="arr-left-on swiper-button-prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="46" class="icon" height="15" viewBox="0 0 26 15" fill="none">
-          <path d="M8.38462 14.5L1 7.52528M1 7.52528L8.38462 0.5M1 7.52528L25 7.52528" stroke="#886A44"
-            stroke-linecap="round" stroke-linejoin="round" pathLength="100">
-          </path>
+        <svg width="26" height="15" viewBox="0 0 26 15" class="icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.38462 14.5L1 7.52528M1 7.52528L8.38462 0.5M1 7.52528L25 7.52528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span></span>
       </span>
 
       <span class="arr-right-on swiper-button-next">
         <span></span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="15" class="icon" viewBox="0 0 26 15" fill="none">
-          <path d="M17.6154 14.5L25 7.52528M25 7.52528L17.6154 0.5M25 7.52528L1 7.52528" stroke="#886A44"
-            stroke-linecap="round" stroke-linejoin="round">
-          </path>
+        <svg width="26" height="16" viewBox="0 0 26 16" class="icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.6154 15L25 8.02528M25 8.02528L17.6154 1M25 8.02528L1 8.02528" stroke="#886A44" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </span>
     </div>
@@ -641,9 +637,9 @@
   }
 </script>
 </div>
-            <a id="details"></a>
           </div>
         </section>
+        <a id="details"></a>
         <section class="brands-details">
           <div class="container brands-details__container grid">
             <div class="brands-details__view360"><div class="view360" id="view360">
@@ -698,8 +694,6 @@
   </div>
   <div class="view360__content view360__content_sk">
     <div id="imagebox-brands">
-      <!-- 3д спрайт -->
-      <!--   <img src="img/brands-sk-cutlet.png" alt="" /> -->
       <div class="sprite-container">
         <div id="sprite-box" class="sb-center"></div>
       </div>
@@ -707,7 +701,6 @@
   </div>
   <div class="view360__nav">
     <div class="view360__icon">
-<!--         onclick="document.querySelector('#sprite-box').classList.toggle('animate')" >-->
       <img src="img/svg/icon360.svg" />
     </div>
     <div class="view360__link">
@@ -725,201 +718,123 @@
 </div>
             <div class="brands-details__menu brands-details__menu_sk">
               <!-- Длинное меню продуктов-->
-              <ul class="list-reset brandmenu desktop">
-  <li>
-    <a
-      class="brandmenu__link active"
-      data-subbrand-id="pelm1234"
-      data-subbrand-imgtype="3d"
-      data-subbrand-url="img/sprites/sprite_pack_black.png"
+              <div class="menu-container">
+  <ul class="list-reset brandmenu accordion mobile">
+    <li disabled="disabled">
+      <a
+        class="brandmenu__link active"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_pack_black.png"
       >пельмени</a
-    >
-  </li>
-  <li>
-    <a
-      class="brandmenu__link"
-      data-subbrand-id="varenik1"
-      data-subbrand-imgtype="3d"
-      data-subbrand-url="img/sprites/sprite_pack_yellow.png"
-      >вареники</a
-    >
-  </li>
-  <li>
-    <a
-      class="brandmenu__link"
-      data-subbrand-id="bliny88"
-      data-subbrand-imgtype="3d"
-      data-subbrand-url="img/sprites/sprite_blini.png"
-      >блины</a
-    >
-  </li>
-  <li>
-    <a
-      class="brandmenu__link"
-      data-subbrand-id="kotlet1"
-      data-subbrand-imgtype="3d"
-      data-subbrand-url="img/sprites/sprite_kotl.png"
-      >котлеты</a
-    >
-  </li>
-  <li>
-    <a
-      class="brandmenu__link"
-      data-subbrand-id="vegg3242432"
-      data-subbrand-imgtype="image"
-      data-subbrand-url="img/brands-sk-cutlet.png"
-      >vegan</a
-    >
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id="h4639d"
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_pizza.png">
-      пицца</a>
-  </li>
-  <!-- выше демонстрация, у остальных пунктов тоже должны быть атрибуты data- -->
-  <li><a class="brandmenu__link">халяль</a></li>
-  <li><a class="brandmenu__link">kids</a></li>
-  <li><a class="brandmenu__link">--demo--</a></li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id=""
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_pack_red.png">
-      Пельмени классические</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id=""
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_mini_hink.png">
-      Мини хинкали</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id=""
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_mini_pelm.png">
-      Мини пельмени</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id=""
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_signal_pack_purple.png">
-      Пельмени фарш на молоке Фиолетовые</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id=""
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_signal_pack_yellow.png">
-      Пельмени 4 вида мяса</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id="h4639d"
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_pizza.png">
-      пицца</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id="h4639d"
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_pizza.png">
-      пицца</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id="h4639d"
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_pizza.png">
-      пицца</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id="h4639d"
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_pizza.png">
-      пицца</a>
-  </li>
-  <li>
-    <a class="brandmenu__link"
-       data-subbrand-id="h4639d"
-       data-subbrand-imgtype="3d"
-       data-subbrand-url="img/sprites/sprite_pizza.png">
-      пицца</a>
-  </li>
-</ul>
-
-<div class="menu-container mobile">
-  <ul class="list-reset brandmenu accordion">
-    <li><a class="brandmenu__link active">котлеты</a></li>
+      >
+    </li>
   </ul>
 
-  <div class="panel">
-    <ul class="list-reset brandmenu">
-      <li>
-        <a
-          class="brandmenu__link active"
-          data-subbrand-id="pelm1234"
-          data-subbrand-imgtype="3d"
-          data-subbrand-url="img/sprites/sprite_pack_black.png"
-          >пельмени</a
-        >
-      </li>
-      <li>
-        <a
-          class="brandmenu__link"
-          data-subbrand-id="varenik1"
-          data-subbrand-imgtype="3d"
-          data-subbrand-url="img/sprites/sprite_pack_yellow.png"
-          >вареники</a
-        >
-      </li>
-      <li>
-        <a
-          class="brandmenu__link"
-          data-subbrand-id="bliny88"
-          data-subbrand-imgtype="3d"
-          data-subbrand-url="img/sprites/sprite_blini.png"
-          >блины</a
-        >
-      </li>
-      <li>
-        <a
-          class="brandmenu__link"
-          data-subbrand-id="kotlet1"
-          data-subbrand-imgtype="3d"
-          data-subbrand-url="img/sprites/sprite_kotl.png"
-          >котлеты</a
-        >
-      </li>
-      <li>
-        <a
-          class="brandmenu__link"
-          data-subbrand-id="vegg3242432"
-          data-subbrand-imgtype="image"
-          data-subbrand-url="img/brands-sk-cutlet.png"
-          >vegan</a
-        >
-      </li>
-      <li>
-        <a class="brandmenu__link"
-           data-subbrand-id="h4639d"
-           data-subbrand-imgtype="3d"
-           data-subbrand-url="img/sprites/sprite_pizza.png"
-        >пицца</a>
-      </li>
-      <!-- выше демонстрация, у остальных пунктов тоже должны быть атрибуты data- -->
-      <li><a class="brandmenu__link">халяль</a></li>
-      <li><a class="brandmenu__link">kids</a></li>
-      <li><a class="brandmenu__link">пункт</a></li>
-      <li><a class="brandmenu__link">пункт</a></li>
-    </ul>
-  </div>
+  <ul class="list-reset brandmenu panel">
+    <li>
+      <a
+        class="brandmenu__link active"
+        data-subbrand-id="pelm1234"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_pack_black.png"
+        >пельмени</a
+      >
+    </li>
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="varenik1"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_pack_yellow.png"
+        >вареники</a
+      >
+    </li>
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="bliny88"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="0.8"
+        data-subbrand-url="img/sprites/sprite_blini.png"
+        >блины</a
+      >
+    </li>
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="kotlet1"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_kotl.png"
+        >котлеты</a
+      >
+    </li>
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="vegg3242432"
+        data-subbrand-imgtype="image"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/brands-sk-cutlet.png"
+        >vegan</a
+      >
+    </li>
+    <li>
+      <a class="brandmenu__link"
+         data-subbrand-id="h4639d"
+         data-subbrand-imgtype="3d"
+         data-subbrand-scale="1.2"
+         data-subbrand-url="img/sprites/sprite_pizza.png">
+        пицца</a>
+    </li>
+    <li><a class="brandmenu__link">халяль</a></li>
+    <li><a class="brandmenu__link">kids</a></li>
+    <li><p class="brandmenu__link" disabled>--demo--</p></li>
+    <li>
+      <a class="brandmenu__link"
+         data-subbrand-id=""
+         data-subbrand-imgtype="3d"
+         data-subbrand-scale="1"
+         data-subbrand-url="img/sprites/sprite_pack_red.png">
+        Пельмени классические</a>
+    </li>
+    <li>
+      <a class="brandmenu__link"
+         data-subbrand-id=""
+         data-subbrand-imgtype="3d"
+         data-subbrand-scale="1"
+         data-subbrand-url="img/sprites/sprite_mini_hink.png">
+        Мини хинкали</a>
+    </li>
+    <li>
+      <a class="brandmenu__link"
+         data-subbrand-id=""
+         data-subbrand-imgtype="3d"
+         data-subbrand-scale="1"
+         data-subbrand-url="img/sprites/sprite_mini_pelm.png">
+        Мини пельмени</a>
+    </li>
+    <li>
+      <a class="brandmenu__link"
+         data-subbrand-id=""
+         data-subbrand-imgtype="3d"
+         data-subbrand-scale="1"
+         data-subbrand-url="img/sprites/sprite_signal_pack_purple.png">
+        Пельмени фарш на молоке Фиолетовые</a>
+    </li>
+    <li>
+      <a class="brandmenu__link"
+         data-subbrand-id=""
+         data-subbrand-imgtype="3d"
+         data-subbrand-scale="1"
+         data-subbrand-url="img/sprites/sprite_signal_pack_yellow.png">
+        Пельмени 4 вида мяса</a>
+    </li>
+  </ul>
+
 </div>
 
             </div>

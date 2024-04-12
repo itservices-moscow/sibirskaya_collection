@@ -7,10 +7,17 @@
 }
 
 .brands {
+  + #details {
+    position: relative;
+    top: -120px;
+  }
   @include mobile {
     overflow-y: hidden;
     overflow-x: visible;
     min-height: 100vh;
+    + #details {
+      top: -100px;
+    }
   }
   &__container {
     padding-top: 238px;
@@ -39,6 +46,19 @@
       opacity: 1!important;
     }
   }
+  .prodmenu {
+    @include mobile {
+      gap: 8px;
+      &__link {
+        padding: 12px;
+        min-width: 129px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  }
 }
 
 .brands-nav {
@@ -62,6 +82,9 @@
     svg{
       width: auto;
       height: auto;
+      @include mobile {
+        height: 14px;
+      }
     }
     span{
       font-size: 14px;
@@ -72,6 +95,9 @@
       color: #886A44;
       transition: .20s ease-out;
     }
+  }
+  .arr-left-on {
+    text-align: left;
   }
   .swiper-slide{
     padding: 0;
@@ -162,6 +188,7 @@
         max-width: 183px;
         font-size: 14px;
         line-height: 17px;
+        margin: 8px 0 24px;
       }
     }
 
@@ -203,7 +230,7 @@
     width: 372px;
     margin-top: 147px;
     @include mobile {
-      margin-top: 45px;
+      margin-top: 0px;
       margin-left: 156px;
       width: auto;
       display: flex;
@@ -219,7 +246,7 @@
       filter: drop-shadow(-20px 0 45px rgba(242, 243, 246, 0.17));
       transition: margin-left .20s ease-out;
       @include mobile {
-        width: 134px;
+        width: 156px;
         filter: drop-shadow(-15px -10px 35px rgba(242, 243, 246, 0.25));
       }
     }
@@ -280,7 +307,7 @@
     gap: 0;
     @include mobile {
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 0;
       grid-row-start: auto;
     }
   }

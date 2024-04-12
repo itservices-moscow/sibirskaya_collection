@@ -59,13 +59,18 @@
 .brands-details__menu_sk {
   @include mobile {
     height: auto;
-    overflow-y: auto;
+    min-height: 80px;
+    overflow: visible;
+    padding-right: 0;
   }
 }
 
 .brands-details__menu {
-  .menu-container.mobile {
+  .menu-container .mobile {
     overflow-y: clip;
+  }
+  .menu-container {
+    position: relative;
   }
   .menu-container .accordion {
     cursor: pointer;
@@ -76,14 +81,30 @@
     border: none;
     outline: none;
     transition: 0.4s;
+    padding-bottom: 0;
   }
 
   .menu-container .panel {
     font-size: 18px;
     line-height: 22px;
+    @include mobile {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      overflow-y: auto;
+      height: 0;
+      padding-bottom: 0;
+      transition: .3s ease-in-out;
+    }
   }
   .menu-container .accordion.active {
     //color: var(--main-black);
+    + .panel {
+      height: 100vw;
+      box-shadow: 0px 3px 7px 0px #0000001A, 0px 13px 13px 0px #00000017, 0px 29px 17px 0px #0000000D, 0px 51px 20px 0px #00000003, 0px 79px 22px 0px #00000000;
+    }
   }
 
   .menu-container .accordion:hover {
@@ -92,10 +113,10 @@
 
   /* Подменю брендов. Hidden by default. */
   .menu-container .panel {
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    //padding: 0;
+    //max-height: 0;
+    //overflow: hidden;
+    //transition: max-height 0.2s ease-out;
   }
 
   .menu-container .accordion .brandmenu__link:after {

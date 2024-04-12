@@ -1,15 +1,22 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  console.log("script brands", event)
   const brandsListItems = document?.querySelectorAll("[data-subbrand-id]")
+  const accordionMenuItem = document.querySelector('.accordion li')
   const imageBox = document.querySelector("#sprite-box")
-  // const filterSelectAllGroup = document?.querySelectorAll('[data-filter-function="selectall_cb"]')
+  const step = -1000
+  let count = 1
+  let animation
+
+  function Animate () {
+    count = count < 36 ? ++count : 1
+    imageBox.style.backgroundPosition = `${step * count}px 0`
+  }
 
   // переключение между пунктами
   brandsListItems.forEach((element) => {
     const id = element.getAttribute("data-subbrand-id")
     const imgtype = element.getAttribute("data-subbrand-imgtype")
     const url = element.getAttribute("data-subbrand-url")
-    console.log("[item:]", id, imgtype, url)
+    const scale = element.getAttribute("data-subbrand-scale")
 
     function SetImage () {
       switch (imgtype) {
@@ -28,6 +35,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             imageBox.style.backgroundImage = "url('" + url + "')" // отобразить 3d спрайт
             imageBox.style.backgroundPosition = 'left center'
             imageBox.style.animationName = 'sprite'
+            imageBox.style.transform = `scale(${scale})`
             document.getElementById("view360").classList.toggle("loading")
           }, 3000)
 
@@ -40,28 +48,67 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     element?.addEventListener("click", function (e) {
       e.preventDefault()
+      clearInterval(animation)
       document.querySelectorAll(".brandmenu__link.active").forEach((elem) => {
         //console.log("ex", elem)
         elem.classList.remove("active")
       })
       e.target.classList.add("active")
+      const accordionMenuChild = accordionMenuItem.querySelector('a')
+      const newChild = e.target.cloneNode(true)
+      accordionMenuItem.innerHTML = ''
+      accordionMenuItem.appendChild(newChild)
       SetImage()
+      const targetParent = e.target.parentNode
+      if (targetParent.parentNode.classList.contains('panel')) {
+        if (document.querySelector('.brandmenu.accordion').classList.contains('active')) {
+          document.querySelector('.brandmenu.accordion').click()
+        }
+      }
+      setTimeout(() => {
+        count = 1
+        animation = setInterval(Animate, 160)
+      }, 3000)
     })
   })
 
-  //animationPlayState = "running"
-  const element = document.querySelector(".view360__icon")
-  element?.addEventListener("click", function (e) {
-    e.preventDefault()
-    //document.querySelector("#sprite-box").classList.add("animated")
-    document.querySelector("#sprite-box").classList.toggle('animate')
+  setTimeout(() => {
+    animation = setInterval(Animate, 160)
+  }, 3000)
+
+
+  imageBox?.parentNode.parentNode.addEventListener('mouseenter', () => {
+    // imageBox.classList.remove('animate')
+    imageBox.parentNode.parentNode.classList.add('dragging')
+    clearInterval(animation)
   })
-  // element.addEventListener("mouseover", function (e) {
-  //   document.querySelector("#sprite-box").style.animationPlayState = "running"
-  //   console.log("over", e)
-  // })
-  // element.addEventListener("mouseout", function (e) {
-  //   document.querySelector("#sprite-box").style.animationPlayState = "paused"
-  //   console.log("out", e)
-  // })
+
+  imageBox?.parentNode.parentNode.addEventListener('mouseleave', ()=> {
+    imageBox.parentNode.parentNode.classList.remove('dragging')
+    // imageBox.classList.add('animate')
+    animation = setInterval(Animate, 160)
+  })
+
+  let x = 0
+  function onMouseMove (event) {
+    console.log(event.pageX - x)
+    if (event.pageX - x > 10) {
+      count = count < 36 ? ++count : 1
+      imageBox.style.backgroundPosition = `${step * count}px 0`
+      x = event.pageX
+    } else if (event.pageX - x < -10) {
+      count = (count < 36 && count > 0) ? --count : 35
+      imageBox.style.backgroundPosition = `${step * count}px 0`
+      x = event.pageX
+    }
+  }
+  imageBox?.parentNode.parentNode.addEventListener('mousedown', (e) => {
+    imageBox.parentNode.parentNode.classList.add('drag')
+    x = e.pageX
+    document.addEventListener('mousemove', onMouseMove);
+  })
+  imageBox?.parentNode.parentNode.addEventListener('mouseup', (e) => {
+    imageBox.parentNode.parentNode.classList.remove('drag')
+    document.removeEventListener('mousemove', onMouseMove);
+  })
 })

@@ -32,9 +32,6 @@
   @include desktop {
     z-index: 100;
     top: -88px;
-    @media screen and (max-height: 799px) {
-      top: -178px;
-    }
   }
 }
 .bg-beige {
@@ -65,8 +62,8 @@
     @media screen and (max-height: 999px) {
       transform: scale(.8);
     }
-    @media screen and (max-height: 799px) {
-      //transform: scale(.7);
+    @media screen and (max-height: 699px) {
+      transform: scale(.7);
     }
   }
 }
