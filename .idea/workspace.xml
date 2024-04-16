@@ -6,50 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c213416b-d5a8-4cdd-b1a6-851c609c511c" name="Default Changelist" comment="Commit missed files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/brands-sk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/brands-sk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/vendor.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/vendor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_blini.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_blini.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_box_nugg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_box_nugg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_box_pelm.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_box_pelm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_kotl.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_kotl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_main.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_main.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_main_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_main_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_mini_hink.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_mini_hink.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_mini_pelm.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_mini_pelm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_pack_black.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_pack_black.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_pack_red.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_pack_red.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_pack_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_pack_yellow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_pizza.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_pizza.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_signal_pack.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_signal_pack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_signal_pack_purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_signal_pack_purple.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprites/sprite_signal_pack_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprites/sprite_signal_pack_yellow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brands-sk.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/brands-sk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_blini.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_blini.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_box_nugg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_box_nugg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_box_pelm.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_box_pelm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_kotl.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_kotl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_main.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_main.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_main_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_main_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_mini_hink.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_mini_hink.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_mini_pelm.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_mini_pelm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_pack_black.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_pack_black.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_pack_red.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_pack_red.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_pack_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_pack_yellow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_pizza.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_pizza.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_signal_pack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_signal_pack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_signal_pack_purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_signal_pack_purple.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/sprites/sprite_signal_pack_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/sprites/sprite_signal_pack_yellow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/brands360.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/brands360.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/brands_prod_sk.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/brands_prod_sk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/brands_sk_360.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/brands_sk_360.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/brands_sk_menu2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/brands_sk_menu2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_brand-menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_brand-menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_brands-view360.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_brands-view360.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_brands.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_brands.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,24 +37,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "js.buildTools.gulp.gulp_package_dir": "C:/Frontend/sibirskaya_collection/node_modules/gulp",
-    "last_opened_file_path": "C:/Frontend/akvalink.app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "C:\\Frontend\\sibirskaya_collection\\node_modules\\stylelint",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;C:/Frontend/sibirskaya_collection/node_modules/gulp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Frontend/akvalink.app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;C:\\Frontend\\sibirskaya_collection\\node_modules\\stylelint&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.build">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
@@ -156,7 +114,8 @@
       <workItem from="1708007705537" duration="115000" />
       <workItem from="1708008042764" duration="63000" />
       <workItem from="1708339654629" duration="10052000" />
-      <workItem from="1712907573414" duration="15537000" />
+      <workItem from="1712907573414" duration="16557000" />
+      <workItem from="1713187479439" duration="2339000" />
     </task>
     <task id="LOCAL-00001" summary="Build app">
       <option name="closed" value="true" />
