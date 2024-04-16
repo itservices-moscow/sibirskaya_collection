@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // console.log("[scroll]", scrollPosition, document.querySelector(".sticky-wrapper").getBoundingClientRect())
 
     if (document.querySelector(".sticky-wrapper")) {
-      if (scrollPosition > 1876 && scrollPosition < 5076) {
-        rotatePachka(36, 1876, 5076, scrollPosition)
+      if (scrollPosition > 2100 && scrollPosition < 5000) {
+        rotatePachka(36, 2300, 4800, scrollPosition)
       }
     }
 
