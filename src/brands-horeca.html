@@ -12,13 +12,16 @@
             <div class="brands__left">
               <!--  @include('partials/brands_left_menu.html') -->
               <ul class="list-reset prodmenu">
-                <li><a class="prodmenu__link" href="brands-sk-selective.html">бренды</a></li>
+                <li><a class="prodmenu__link" href="brands-sk.html">бренды</a></li>
                 <li><a class="prodmenu__link" href="brands-kids.html">детское питание</a></li>
                 <li><a class="prodmenu__link active" href="brands-horeca.html">horeca</a></li>
                 <li><a class="prodmenu__link" href="brands-ctm.html">ctm</a></li>
               </ul>
             </div>
-            <div class="brands__content">@include('partials/brands_prod_horeca.html')</div>
+            <div class="brands__content">
+              <div class="brands-content__submenu"></div>
+              @include('partials/brands_prod_horeca.html')
+            </div>
             <a id="details"></a>
           </div>
         </section>
@@ -26,5 +29,11 @@
 
       @include('partials/footer.html')
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const activeLink = document.querySelector('.brands__left .prodmenu__link.active')
+        activeLink.scrollIntoView({ block: "center", inline: "start" })
+      })
+    </script>
   </body>
 </html>

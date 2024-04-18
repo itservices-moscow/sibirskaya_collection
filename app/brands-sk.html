@@ -166,10 +166,10 @@
                 >
               </li>
               <li class="nav-mob-l2__item">
-                <a href="brands-sk-selective.html" class="nav-mob-l2__link" onClick="">SK SELECTIVE</a>
+                <a href="brands-sk.html" class="nav-mob-l2__link" onClick="">SK SELECTIVE</a>
               </li>
               <li class="nav-mob-l2__item">
-                <a href="brands-sk-selective-kids.html" class="nav-mob-l2__link">SK SELECTIVE KIDS</a>
+                <a href="brands-sk.html" class="nav-mob-l2__link">SK SELECTIVE KIDS</a>
               </li>
               <li class="nav-mob-l2__item link-more">
                 <a href="brands-sk.html" class="nav-mob-l2__link">СМОТРЕТЬ ВСЕ</a>
@@ -281,12 +281,12 @@
             <a href="#" class="nav-top-l2__link" data-show-submenu="nav-top-l3-0">Sибирская коллекция</a>
           </li>
           <li class="nav-top-l2__item">
-            <a href="brands-sk-selective.html" class="nav-top-l2__link" data-show-submenu="nav-top-l3-1"
+            <a href="brands-sk.html" class="nav-top-l2__link" data-show-submenu="nav-top-l3-1"
               >SK SELECTIVE</a
             >
           </li>
           <li class="nav-top-l2__item">
-            <a href="brands-sk-selective-kids.html" class="nav-top-l2__link">SK SELECTIVE KIDS</a>
+            <a href="brands-sk.html" class="nav-top-l2__link">SK SELECTIVE KIDS</a>
           </li>
           <li class="nav-top-l2__item nav-top-l2__item-more">
             <span class="arr-right-on">
@@ -338,7 +338,7 @@
         <ul class="list-reset nav-top-l3__list">
           <li class="nav-top-l3__item">
             <!-- ссылки - для примера -->
-            <a href="#" class="nav-top-l3__link" href="brands-sk-selective.html">пельмени</a>
+            <a href="#" class="nav-top-l3__link" href="brands-sk.html">пельмени</a>
           </li>
           <li class="nav-top-l3__item">
             <a href="#" class="nav-top-l3__link">вареники</a>
@@ -506,11 +506,10 @@
         <section class="brands">
           <div class="container brands__container grid">
             <div class="brands__left"><ul class="list-reset prodmenu">
-  <li><a class="prodmenu__link active" href="#">бренды</a></li>
+  <li><a class="prodmenu__link active" href="brands-sk.html">бренды</a></li>
   <li><a class="prodmenu__link" href="brands-kids.html">детское питание</a></li>
   <li><a class="prodmenu__link" href="brands-horeca.html">horeca</a></li>
   <li><a class="prodmenu__link" href="brands-ctm.html">ctm</a></li>
-
 </ul>
 </div>
             <div class="brands__content"><div class="brands-content grid">
@@ -614,6 +613,9 @@
       },
       slideChange: function () {
         updateNavigationText(this);
+        setTimeout(() => {
+          switchMenuTab(this)
+        }, 400);
       },
     },
   });
@@ -634,6 +636,27 @@
     // Update the text content of the navigation buttons
     prevButton.textContent = prevTitle;
     nextButton.textContent = nextTitle;
+  }
+
+  function switchMenuTab(swiper) {
+    document.getElementById("view360")?.classList.add("loading")
+    const tabs = document.querySelectorAll('.menu-tabs__tab')
+    const activeIndex = document.querySelector('.swiper-slide-active')?.getAttribute('data-swiper-slide-index');
+    console.log(activeIndex, swiper.activeIndex)
+    if (tabs.length > 0) {
+      tabs.forEach((tab) => {
+        tab.classList.remove('active')
+        tab.querySelector('.brandmenu.panel .active')?.classList.remove('active')
+      })
+      tabs[activeIndex].classList.add('active')
+      const activeChild = tabs[activeIndex].querySelector('.brandmenu.panel .brandmenu__link')
+      // activeChild.classList.add('active')
+      const newChild = activeChild.cloneNode(true)
+      document.querySelector('.brandmenu.accordion li').innerHTML = ''
+      document.querySelector('.brandmenu.accordion li').appendChild(newChild)
+      // tabs[activeIndex].querySelector('.brandmenu.accordion li a').classList.add('active')
+      activeChild.click()
+    }
   }
 </script>
 </div>
@@ -717,19 +740,20 @@
 </div>
 </div>
             <div class="brands-details__menu brands-details__menu_sk">
-              <!-- Длинное меню продуктов-->
               <div class="menu-container">
-  <ul class="list-reset brandmenu accordion mobile">
-    <li disabled="disabled">
-      <a
-        class="brandmenu__link active"
-        data-subbrand-imgtype="3d"
-        data-subbrand-scale="1"
-        data-subbrand-url="img/sprites/sprite_pack_black.png"
-      >пельмени</a
-      >
-    </li>
-  </ul>
+                <ul class="list-reset brandmenu accordion mobile">
+                  <li disabled="disabled">
+                    <a
+                      class="brandmenu__link active"
+                      data-subbrand-id="pelm1234"
+                      data-subbrand-imgtype="3d"
+                      data-subbrand-scale="1"
+                      data-subbrand-url="img/sprites/sprite_pack_black.png"
+                    >пельмени</a>
+                  </li>
+                </ul>
+                <div class="menu-tabs">
+                  <div class="menu-tabs__tab active" data-tab-index="0">
 
   <ul class="list-reset brandmenu panel">
     <li>
@@ -739,8 +763,7 @@
         data-subbrand-imgtype="3d"
         data-subbrand-scale="1"
         data-subbrand-url="img/sprites/sprite_pack_black.png"
-        >пельмени</a
-      >
+      >пельмени</a>
     </li>
     <li>
       <a
@@ -835,8 +858,75 @@
     </li>
   </ul>
 
-</div>
+                  </div>
+                  <div class="menu-tabs__tab" data-tab-index="1">
+                      <ul class="list-reset brandmenu panel">
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="pelm1234"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_box_pelm.png"
+      >пельмени</a>
+    </li>
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="pelm1234"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_box_pelm.png"
+      >Сырники</a>
+    </li>
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="pelm1234"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_box_pelm.png"
+      >Блины</a>
+    </li>
 
+  </ul>
+
+                  </div>
+                  <div class="menu-tabs__tab" data-tab-index="2">
+                      <ul class="list-reset brandmenu panel">
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="pelm1234"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_box_nugg.png"
+      >пельмени</a>
+    </li>
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="pelm1234"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_box_nugg.png"
+      >Сырники</a>
+    </li>
+    <li>
+      <a
+        class="brandmenu__link"
+        data-subbrand-id="pelm1234"
+        data-subbrand-imgtype="3d"
+        data-subbrand-scale="1"
+        data-subbrand-url="img/sprites/sprite_box_nugg.png"
+      >Блины</a>
+    </li>
+
+  </ul>
+
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -865,9 +955,9 @@
           <div class="panel">
             <ul class="list-reset navf-sub">
               <li class="navf-sub__item"><a href="brands-sk.html" class="navf-sub__link">Sибирская коллекция</a></li>
-              <li class="navf-sub__item"><a href="brands-sk-selective.html" class="navf-sub__link">SK Selective</a></li>
+              <li class="navf-sub__item"><a href="brands-sk.html" class="navf-sub__link">SK Selective</a></li>
               <li class="navf-sub__item">
-                <a href="brands-sk-selective-kids.html" class="navf-sub__link">SK Selective kids</a>
+                <a href="brands-sk.html" class="navf-sub__link">SK Selective kids</a>
               </li>
             </ul>
           </div>

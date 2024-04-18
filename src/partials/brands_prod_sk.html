@@ -99,6 +99,9 @@
       },
       slideChange: function () {
         updateNavigationText(this);
+        setTimeout(() => {
+          switchMenuTab(this)
+        }, 400);
       },
     },
   });
@@ -119,5 +122,26 @@
     // Update the text content of the navigation buttons
     prevButton.textContent = prevTitle;
     nextButton.textContent = nextTitle;
+  }
+
+  function switchMenuTab(swiper) {
+    document.getElementById("view360")?.classList.add("loading")
+    const tabs = document.querySelectorAll('.menu-tabs__tab')
+    const activeIndex = document.querySelector('.swiper-slide-active')?.getAttribute('data-swiper-slide-index');
+    console.log(activeIndex, swiper.activeIndex)
+    if (tabs.length > 0) {
+      tabs.forEach((tab) => {
+        tab.classList.remove('active')
+        tab.querySelector('.brandmenu.panel .active')?.classList.remove('active')
+      })
+      tabs[activeIndex].classList.add('active')
+      const activeChild = tabs[activeIndex].querySelector('.brandmenu.panel .brandmenu__link')
+      // activeChild.classList.add('active')
+      const newChild = activeChild.cloneNode(true)
+      document.querySelector('.brandmenu.accordion li').innerHTML = ''
+      document.querySelector('.brandmenu.accordion li').appendChild(newChild)
+      // tabs[activeIndex].querySelector('.brandmenu.accordion li a').classList.add('active')
+      activeChild.click()
+    }
   }
 </script>

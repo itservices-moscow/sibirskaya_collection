@@ -30,8 +30,26 @@
   justify-content: space-between;
   overflow: visible;
   @include desktop {
-    z-index: 100;
-    top: -88px;
+    //z-index: 100;
+    top: 88px;
+    @media screen and (max-height: 1299px) {
+      top: 44px;
+    }
+    @media screen and (max-height: 1149px) {
+      top: 0px;
+    }
+    @media screen and (max-height: 999px) {
+      top: -44px;
+    }
+    @media screen and (max-height: 849px) {
+      top: -88px;
+    }
+    @media screen and (max-height: 699px) {
+      top: -132px;
+    }
+  }
+  @media screen and (min-width: 2000px) and (min-height: 1000px) {
+    top: 88px;
   }
 }
 .bg-beige {
@@ -44,7 +62,7 @@
   height: 1000px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url($rootpath + "img/sprites/sprite_main.png");
+  background-image: url($rootpath + "img/sprites/sprite_main.png"), radial-gradient(40% 50% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
   background-repeat: repeat-x;
   background-size: auto 100%;
   // animation: pachka steps(35);
@@ -55,10 +73,13 @@
     left: 50%;
     transform-origin: top center;
     transform: translateX(-50%) scale(0.6);
-    background-image: url($rootpath + "/img/sprites/sprite_main_small.png");
+    background-image: url($rootpath + "/img/sprites/sprite_main_small.png"), radial-gradient(40% 50% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
   }
   @include desktop {
     transform-origin: center;
+    @media screen and (max-height: 1299px) {
+      transform: scale(.9);
+    }
     @media screen and (max-height: 999px) {
       transform: scale(.8);
     }

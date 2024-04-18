@@ -18,6 +18,14 @@
     + #details {
       top: -100px;
     }
+    .brands-content__submenu {
+      height: 44px;
+    }
+  }
+  &__content {
+    @include mobile {
+      min-height: 80vh;
+    }
   }
   &__container {
     padding-top: 238px;
@@ -94,6 +102,9 @@
       font-weight: 300;
       color: #886A44;
       transition: .20s ease-out;
+      @include mobile {
+        max-width: 160px;
+      }
     }
   }
   .arr-left-on {
@@ -176,6 +187,9 @@
       @include mobile {
         font-size: 22px;
         line-height: 28px;
+        br {
+          display: none;
+        }
       }
     }
     p {
@@ -290,7 +304,7 @@
 
       @include mobile {
         width: 171px;
-        margin-top: -50px;
+        margin-top: 0;
         filter: drop-shadow(-15px -10px 35px rgba(242, 243, 246, 0.25));
       }
     }

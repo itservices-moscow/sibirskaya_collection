@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     if (document.querySelector(".sticky-wrapper")) {
       if (scrollPosition > 2100 && scrollPosition < 5000) {
-        rotatePachka(36, 2300, 4800, scrollPosition)
+        rotatePachka(36, 2300, 5000, scrollPosition)
       }
     }
 

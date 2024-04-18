@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   const brandsListItems = document?.querySelectorAll(".panel [data-subbrand-id]")
-  const accordionMenuItem = document.querySelector('.accordion li')
+  const accordionMenuItem = document.querySelector('.brandmenu.accordion li')
   const imageBox = document.querySelector("#sprite-box")
-  const step = -1000
+  const step = -500
   let count = 1
   let animation
 
@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         break
       case "3d":
         // preloader (поставить сюда fetch или нужную функцию подгрузки)
-        document.getElementById("view360").classList.toggle("loading")
+        document.getElementById("view360").classList.add("loading")
         setTimeout(function () {
           imageBox.classList.remove("sb-center")
           imageBox.style.backgroundImage = "url('" + url + "')" // отобразить 3d спрайт
           imageBox.style.backgroundPosition = 'left center'
           imageBox.style.animationName = 'sprite'
           imageBox.style.transform = `scale(${scale})`
-          document.getElementById("view360").classList.toggle("loading")
+          document.getElementById("view360").classList.remove("loading")
         }, 3000)
 
         break
@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         elem.classList.remove("active")
       })
       e.target.classList.add("active")
-      const accordionMenuChild = accordionMenuItem.querySelector('a')
       const newChild = e.target.cloneNode(true)
       accordionMenuItem.innerHTML = ''
       accordionMenuItem.appendChild(newChild)
@@ -79,22 +78,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // }, 3000)
 
 
-  imageBox?.parentNode.parentNode.addEventListener('mouseenter', () => {
-    // imageBox.classList.remove('animate')
-    imageBox.parentNode.parentNode.classList.add('dragging')
-    // clearInterval(animation)
-  })
-
-  imageBox?.parentNode.parentNode.addEventListener('mouseleave', ()=> {
-    imageBox.parentNode.parentNode.classList.remove('dragging')
-    // imageBox.classList.add('animate')
-    // animation = setInterval(Animate, 160)
-  })
+  // imageBox?.parentNode.parentNode.addEventListener('mouseenter', () => {
+  //   // imageBox.classList.remove('animate')
+  //   imageBox.parentNode.parentNode.classList.add('dragging')
+  //   // clearInterval(animation)
+  // })
+  //
+  // imageBox?.parentNode.parentNode.addEventListener('mouseleave', ()=> {
+  //   imageBox.parentNode.parentNode.classList.remove('dragging')
+  //   // imageBox.classList.add('animate')
+  //   // animation = setInterval(Animate, 160)
+  // })
 
   let x = 0
   function onMouseMove (event) {
     event.preventDefault()
-    console.log(event.pageX - x)
     if (event.pageX - x > 10) {
       count = count < 36 ? ++count : 1
       imageBox.style.backgroundPosition = `${step * count}px 0`
@@ -105,13 +103,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
       x = event.pageX
     }
   }
-  imageBox?.parentNode.parentNode.addEventListener('mousedown', (e) => {
+  imageBox?.parentNode.parentNode.addEventListener('pointerdown', (e) => {
     imageBox.parentNode.parentNode.classList.add('drag')
     x = e.pageX
-    document.addEventListener('mousemove', onMouseMove);
+    document.querySelector('body').classList.add('dragging')
+    document.addEventListener('pointermove', onMouseMove);
   })
-  imageBox?.parentNode.parentNode.addEventListener('mouseup', (e) => {
+  imageBox?.parentNode.parentNode.addEventListener('pointerup', (e) => {
     imageBox.parentNode.parentNode.classList.remove('drag')
-    document.removeEventListener('mousemove', onMouseMove);
+    setTimeout(() => document.querySelector('body').classList.remove('dragging'), 500)
+    document.removeEventListener('pointermove', onMouseMove);
+  })
+
+  document.addEventListener('pointermove', (event) => {
+    if (document.querySelector('body').classList.contains('dragging') || imageBox?.parentNode.parentNode.classList.contains('drag')) {
+      event.preventDefault()
+      if (!event.target.closest('.view360')) {
+        imageBox?.parentNode.parentNode.classList.remove('drag')
+        setTimeout(() => document.querySelector('body').classList.remove('dragging'), 500)
+        document.removeEventListener('pointermove', onMouseMove);
+      }
+    }
   })
 })

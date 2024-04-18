@@ -1,7 +1,30 @@
+body {
+  &.dragging {
+    cursor: grabbing;
+    * {
+      user-select: none;
+    }
+    .view360 * {
+      user-select: all;
+      #imagebox-brands {
+        //&:after {
+        //  content: '';
+        //  display: block;
+        //  width: 100vw;
+        //  height: 100vh;
+        //  position: fixed;
+        //  top: 0;
+        //  left: 0;
+        //  z-index: 9000;
+        //  //background: transparentize(red, .8);
+        //}
+      }
+    }
+  }
+}
 .view360 {
   position: relative;
   width: 100%;
-  max-width: 700px;
   height: 561px;
   max-height: 561px;
   background-color: #f2efec;
@@ -27,15 +50,20 @@
   &__content {
     position: relative;
     text-align: center;
+    max-height: 560px;
 
     @include mobile {
+      height: 458px;
       padding-top: 60px;
     }
 
     div {
-      min-width: 680px;
+      min-width: 500px;
       text-align: center;
       width: 100%;
+      max-height: 560px;
+      margin: 0 auto;
+
       &.dragging {
         cursor: grab;
       }
@@ -45,6 +73,7 @@
       @include mobile {
         min-width: calc(100vw - 48px);
         width: calc(100vw - 48px);
+        max-height: 458px;
       }
     }
 
@@ -133,12 +162,7 @@
 
 // 3D спрайт:
 .sprite-container {
-  transform-origin: top left;
-  transform: scale(0.5); //translate(-40%, -50%);
-  margin-left: 70px; // test
-  //margin-right: auto;
   @include mobile {
-    transform: scale(0.3); // translate(-40%, -50%);
     width: calc(100vw - 48px);
     margin-left: 10px;
     height: 458px;
@@ -146,8 +170,8 @@
 }
 
 #sprite-box {
-  width: 1000px;
-  height: 1000px;
+  width: 500px;
+  height: 500px;
   display: block;
   // background-color: yellowgreen;
   //background-image: url($rootpath + "/img/sprites/sprite_pack_red.png");
@@ -156,6 +180,11 @@
   //animation: sprite 4.5s steps(36) infinite forwards;
   //animation-play-state: paused;
   transform-origin: center;
+  @include mobile {
+    width: 100vw;
+    height: 100vw;
+    margin: -24px 0 0 -24px;
+  }
   &.animate {
     animation-play-state: running;
   }

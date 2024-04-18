@@ -18,8 +18,30 @@
           <div class="container brands-details__container grid">
             <div class="brands-details__view360">@include('partials/brands_sk_360.html')</div>
             <div class="brands-details__menu brands-details__menu_sk">
-              <!-- Длинное меню продуктов-->
-              @include('partials/brands_sk_menu2.html')
+              <div class="menu-container">
+                <ul class="list-reset brandmenu accordion mobile">
+                  <li disabled="disabled">
+                    <a
+                      class="brandmenu__link active"
+                      data-subbrand-id="pelm1234"
+                      data-subbrand-imgtype="3d"
+                      data-subbrand-scale="1"
+                      data-subbrand-url="img/sprites/sprite_pack_black.png"
+                    >пельмени</a>
+                  </li>
+                </ul>
+                <div class="menu-tabs">
+                  <div class="menu-tabs__tab active" data-tab-index="0">
+                    @include('partials/brands_sk_menu2.html')
+                  </div>
+                  <div class="menu-tabs__tab" data-tab-index="1">
+                    @include('partials/brands_sk_sel_menu2.html')
+                  </div>
+                  <div class="menu-tabs__tab" data-tab-index="2">
+                    @include('partials/brands_sk_sel_kids_menu2.html')
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
