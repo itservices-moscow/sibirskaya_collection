@@ -103,7 +103,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
       x = event.pageX
     }
   }
+
+  document.addEventListener('dragstart', () => false)
+
   imageBox?.parentNode.parentNode.addEventListener('pointerdown', (e) => {
+    console.log(e, e.pageX)
     imageBox.parentNode.parentNode.classList.add('drag')
     x = e.pageX
     document.querySelector('body').classList.add('dragging')

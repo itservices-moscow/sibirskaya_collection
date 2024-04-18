@@ -28,7 +28,9 @@ body {
   height: 561px;
   max-height: 561px;
   background-color: #f2efec;
-
+  * {
+    touch-action: pan-x;
+  }
   @include mobile {
     height: 458px;
   }
