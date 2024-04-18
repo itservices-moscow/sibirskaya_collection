@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const brandsListItems = document?.querySelectorAll(".panel [data-subbrand-id]")
   const accordionMenuItem = document.querySelector('.brandmenu.accordion li')
   const imageBox = document.querySelector("#sprite-box")
-  const step = window.innerWidth > 1279 ? -500 : (window.innerWidth * -1)
+  let step = window.innerWidth > 1279 ? -500 : (window.innerWidth * -1)
   let count = 1
   let animation
 
@@ -93,31 +93,33 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let x = 0
   function onMouseMove (event) {
     event.preventDefault()
-    console.log(event, event.pageX)
-    const diff = count === -500 ? 10 : 2
-    if (event.pageX - x > diff) {
+    const diff = count === -500 ? 10 : 5
+    const pageX = event.pageX ? event.pageX : event.touches[0].pageX
+    if (pageX - x > diff) {
       count = count < 36 ? ++count : 1
       imageBox.style.backgroundPosition = `${step * count}px 0`
-      x = event.pageX
-    } else if (event.pageX - x < (diff * -1)) {
+      x = pageX
+    } else if (pageX - x < (diff * -1)) {
       count = (count < 36 && count > 0) ? --count : 35
       imageBox.style.backgroundPosition = `${step * count}px 0`
-      x = event.pageX
+      x = pageX
     }
   }
 
-  imageBox?.parentNode.parentNode.addEventListener('dragstart', () => false)
+  imageBox?.parentNode.parentNode.addEventListener('pointercancel', (e) => console.log('onpointercancel'))
 
   imageBox?.parentNode.parentNode.addEventListener('pointerdown', (e) => {
     imageBox.parentNode.parentNode.classList.add('drag')
     x = e.pageX
     document.querySelector('body').classList.add('dragging')
-    document.addEventListener('pointermove', onMouseMove);
+    imageBox?.parentNode.parentNode.addEventListener('mousemove', onMouseMove);
+    imageBox?.parentNode.parentNode.addEventListener('touchmove', onMouseMove);
   })
   imageBox?.parentNode.parentNode.addEventListener('pointerup', (e) => {
     imageBox.parentNode.parentNode.classList.remove('drag')
     setTimeout(() => document.querySelector('body').classList.remove('dragging'), 500)
-    document.removeEventListener('pointermove', onMouseMove);
+    imageBox?.parentNode.parentNode.removeEventListener('mousemove', onMouseMove);
+    imageBox?.parentNode.parentNode.removeEventListener('touchmove', onMouseMove);
   })
 
   document.addEventListener('pointermove', (event) => {
@@ -126,8 +128,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
       if (!event.target.closest('.view360')) {
         imageBox?.parentNode.parentNode.classList.remove('drag')
         setTimeout(() => document.querySelector('body').classList.remove('dragging'), 500)
-        document.removeEventListener('pointermove', onMouseMove);
+        imageBox?.parentNode.parentNode.removeEventListener('pointermove', onMouseMove);
       }
     }
   })
+
+  imageBox?.parentNode.parentNode.addEventListener('dragstart', (e) => false)
+
+  window.onresize = () => {
+    step = window.innerWidth > 1279 ? -500 : (window.innerWidth * -1)
+  }
 })
