@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const brandsListItems = document?.querySelectorAll(".panel [data-subbrand-id]")
   const accordionMenuItem = document.querySelector('.brandmenu.accordion li')
   const imageBox = document.querySelector("#sprite-box")
-  const step = -500
+  const step = window.innerWidth > 1279 ? -500 : (window.innerWidth * -1)
   let count = 1
   let animation
 
@@ -93,21 +93,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let x = 0
   function onMouseMove (event) {
     event.preventDefault()
-    if (event.pageX - x > 10) {
+    console.log(event, event.pageX)
+    const diff = count === -500 ? 10 : 2
+    if (event.pageX - x > diff) {
       count = count < 36 ? ++count : 1
       imageBox.style.backgroundPosition = `${step * count}px 0`
       x = event.pageX
-    } else if (event.pageX - x < -10) {
+    } else if (event.pageX - x < (diff * -1)) {
       count = (count < 36 && count > 0) ? --count : 35
       imageBox.style.backgroundPosition = `${step * count}px 0`
       x = event.pageX
     }
   }
 
-  document.addEventListener('dragstart', () => false)
+  imageBox?.parentNode.parentNode.addEventListener('dragstart', () => false)
 
   imageBox?.parentNode.parentNode.addEventListener('pointerdown', (e) => {
-    console.log(e, e.pageX)
     imageBox.parentNode.parentNode.classList.add('drag')
     x = e.pageX
     document.querySelector('body').classList.add('dragging')

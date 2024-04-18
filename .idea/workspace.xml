@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c213416b-d5a8-4cdd-b1a6-851c609c511c" name="Default Changelist" comment="Commit missed files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/brands-sk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/brands-sk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/vendor.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/vendor.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/brands360.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/brands360.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/brands_sk_360.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/brands_sk_360.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/components/_brands-view360.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_brands-view360.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +120,7 @@
       <workItem from="1708008042764" duration="63000" />
       <workItem from="1708339654629" duration="10052000" />
       <workItem from="1712907573414" duration="16557000" />
-      <workItem from="1713187479439" duration="24427000" />
+      <workItem from="1713187479439" duration="26947000" />
     </task>
     <task id="LOCAL-00001" summary="Build app">
       <option name="closed" value="true" />

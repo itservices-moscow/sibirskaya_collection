@@ -6,7 +6,9 @@ body {
     }
     .view360 * {
       user-select: all;
-      #imagebox-brands {
+      #imagebox-brands, .sprite-container, #sprite-box {
+        position: relative;
+        z-index: 100;
         //&:after {
         //  content: '';
         //  display: block;
@@ -29,7 +31,7 @@ body {
   max-height: 561px;
   background-color: #f2efec;
   * {
-    touch-action: pan-x;
+    touch-action: manipulation;
   }
   @include mobile {
     height: 458px;
