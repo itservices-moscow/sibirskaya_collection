@@ -128,7 +128,7 @@
       <change beforePath="$PROJECT_DIR$/app/img/zap.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/zap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_brand-menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_brand-menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_brands.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_brands.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +238,7 @@
       <workItem from="1708339654629" duration="10052000" />
       <workItem from="1712907573414" duration="16557000" />
       <workItem from="1713187479439" duration="29785000" />
-      <workItem from="1713741866037" duration="10965000" />
+      <workItem from="1713741866037" duration="12901000" />
     </task>
     <task id="LOCAL-00001" summary="Build app">
       <option name="closed" value="true" />
