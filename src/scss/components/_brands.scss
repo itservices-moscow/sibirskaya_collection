@@ -10,6 +10,7 @@
   + #details {
     position: relative;
     top: -120px;
+    padding-top: -120px;
   }
   @include mobile {
     overflow-y: hidden;
