@@ -4,10 +4,10 @@
   background: transparent linear-gradient(to bottom, transparent, rgba(13, 13, 13, 0.3) 30%, rgba(13, 13, 13, 0.3) 90%, transparent);
   color: var(--light-gray);
   z-index: 10;
-  padding: 300px 55px 50px 55px;
+  padding: 0 55px 50px 55px;
 
   @include mobile {
-    padding: 300px 24px 30px 24px;
+    padding: 0 24px 30px 24px;
     background: transparent linear-gradient(to bottom, transparent, rgba(13, 13, 13, 0.8) 30%, rgba(13, 13, 13, 0.8) 90%, transparent);
   }
 

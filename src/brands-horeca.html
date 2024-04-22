@@ -19,7 +19,6 @@
               </ul>
             </div>
             <div class="brands__content">
-              <div class="brands-content__submenu"></div>
               @include('partials/brands_prod_horeca.html')
             </div>
             <a id="details"></a>
@@ -32,7 +31,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
         const activeLink = document.querySelector('.brands__left .prodmenu__link.active')
-        activeLink.scrollIntoView({ block: "center", inline: "start" })
+        activeLink.scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
       })
     </script>
   </body>

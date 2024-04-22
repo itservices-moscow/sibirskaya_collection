@@ -28,7 +28,8 @@
   margin: 0;
   width: 100%;
   justify-content: space-between;
-  overflow: visible;
+  overflow: hidden;
+  height: 1000px;
   @include desktop {
     //z-index: 100;
     top: 88px;
@@ -51,6 +52,9 @@
   @media screen and (min-width: 2000px) and (min-height: 1000px) {
     top: 88px;
   }
+  @include mobile {
+    height: 600px;
+  }
 }
 .bg-beige {
   background-color: var(--main-beige);
@@ -62,7 +66,7 @@
   height: 1000px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url($rootpath + "img/sprites/sprite_main.png"), radial-gradient(40% 50% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
+  background-image: url($rootpath + "img/sprites/sprite_main.png"), radial-gradient(45% 55% at 50% 55%, rgba(255, 255, 255, 0.12) 66%, rgba(255, 255, 255, 0.0) 100%);
   background-repeat: repeat-x;
   background-size: auto 100%;
   // animation: pachka steps(35);
@@ -70,10 +74,10 @@
   @include mobile {
     min-width: 1000px;
     position: relative;
-    left: 50%;
+    left: 50vw;
     transform-origin: top center;
-    transform: translateX(-50%) scale(0.6);
-    background-image: url($rootpath + "/img/sprites/sprite_main_small.png"), radial-gradient(40% 50% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
+    transform: translateX(-500px) scale(0.6);
+    background-image: url($rootpath + "/img/sprites/sprite_main_small.png"), radial-gradient(45% 55% at 50% 55%, rgba(255, 255, 255, 0.12) 66%, rgba(255, 255, 255, 0.0) 100%);
   }
   @include desktop {
     transform-origin: center;

@@ -20,6 +20,7 @@
     }
     .brands-content__submenu {
       height: 44px;
+      margin-bottom: 32px;
     }
   }
   &__content {
@@ -92,6 +93,7 @@
       height: auto;
       @include mobile {
         height: 14px;
+        align-self: baseline;
       }
     }
     span{
@@ -103,7 +105,8 @@
       color: #886A44;
       transition: .20s ease-out;
       @include mobile {
-        max-width: 160px;
+        max-width: 125px;
+        align-self: flex-start;
       }
     }
   }
@@ -131,9 +134,14 @@
       }
     }
   }
+  &__submenu {
+    margin-bottom: 10px;
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
   &__info {
     width: 100%;
-    margin-top: 10px;
     &_horeca {
       margin-bottom: 50px;
     }
@@ -143,9 +151,6 @@
 .brands-info {
   position: relative;
   max-width: fit-content;
-  @include mobile {
-    margin-top: 30px;
-  }
   &__bg {
     position: absolute;
     top: 0;
