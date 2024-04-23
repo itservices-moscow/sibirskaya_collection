@@ -74,6 +74,7 @@
   background-position: 0 0;
   // animation: pachka steps(35);
   // animation-timeline: scroll();
+  transition: background-position 0s;
   @include mobile {
     position: relative;
     left: 50vw;
