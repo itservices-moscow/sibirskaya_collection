@@ -70,7 +70,7 @@
   margin-right: auto;
   background-image: url($rootpath + "img/sprites/sprite_main.png"), radial-gradient(45% 55% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
   background-repeat: repeat-x;
-  background-size: auto 100%;
+  background-size: auto 1000px;
   // animation: pachka steps(35);
   // animation-timeline: scroll();
   @include mobile {
