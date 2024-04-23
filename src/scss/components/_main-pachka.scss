@@ -72,8 +72,6 @@
   background-repeat: repeat-x;
   background-size: auto 1000px;
   background-position: 0 0;
-  // animation: pachka steps(35);
-  // animation-timeline: scroll();
   transition: background-position 0s;
   @include mobile {
     position: relative;
@@ -93,15 +91,5 @@
     @media screen and (max-height: 699px) {
       transform: scale(.7);
     }
-  }
-}
-
-@keyframes pachka {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    //background-position: -17500px;
-    background-position: calc(1000px * -36) 0;
   }
 }
