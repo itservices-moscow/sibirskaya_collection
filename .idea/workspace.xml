@@ -130,7 +130,7 @@
       <change beforePath="$PROJECT_DIR$/app/img/zap.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/zap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/main.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/onload-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/onload-scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,24 +160,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;C:/Frontend/sibirskaya_collection/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Frontend/akvalink.app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;C:\\Frontend\\sibirskaya_collection\\node_modules\\stylelint&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "js.buildTools.gulp.gulp_package_dir": "C:/Frontend/sibirskaya_collection/node_modules/gulp",
+    "last_opened_file_path": "C:/Frontend/sibirskaya_collection",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "C:\\Frontend\\sibirskaya_collection\\node_modules\\stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm2023.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="npm.build">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
@@ -210,8 +210,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +240,8 @@
       <workItem from="1712907573414" duration="16557000" />
       <workItem from="1713187479439" duration="29785000" />
       <workItem from="1713741866037" duration="13695000" />
-      <workItem from="1713863391016" duration="9188000" />
+      <workItem from="1713863391016" duration="9540000" />
+      <workItem from="1714127284364" duration="181000" />
     </task>
     <task id="LOCAL-00001" summary="Build app">
       <option name="closed" value="true" />
