@@ -3,7 +3,7 @@
   //box-shadow: 0px -35px 45px 10px rgba(13, 13, 13, 0.5);
   background: transparent linear-gradient(to bottom, transparent, rgba(13, 13, 13, 0.3) 30%, rgba(13, 13, 13, 0.3) 90%, transparent);
   color: var(--light-gray);
-  z-index: 10;
+  z-index: 100;
   padding: 0 55px 50px 55px;
 
   @include mobile {

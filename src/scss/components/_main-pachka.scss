@@ -68,7 +68,7 @@
   height: 1000px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url($rootpath + "img/sprites/sprite_main.png"), radial-gradient(45% 55% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
+  background-image: url($rootpath + "img/sprites/sprite@2x.png"), radial-gradient(45% 55% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
   background-repeat: repeat-x;
   background-size: auto 1000px;
   background-position: 0 0;
@@ -78,7 +78,7 @@
     left: 50vw;
     transform-origin: top center;
     transform: translateX(-500px) scale(0.6);
-    background-image: url($rootpath + "/img/sprites/sprite_main_small.png"), radial-gradient(45% 55% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
+    background-image: url($rootpath + "/img/sprites/sprite.png"), radial-gradient(45% 55% at 50% 50%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.0) 100%);
   }
   @include desktop {
     transform-origin: center;
@@ -93,3 +93,4 @@
     }
   }
 }
+
