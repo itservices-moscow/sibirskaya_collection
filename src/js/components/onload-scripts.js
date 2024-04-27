@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // console.log("[scroll]", scrollPosition, document.querySelector(".sticky-wrapper").getBoundingClientRect())
 
-    if (document.querySelector(".highlights")) {
-      document.querySelector('.highlights').style.zIndex = 100
-    }
+    // if (document.querySelector(".highlights")) {
+    //   document.querySelector('.highlights').style.zIndex = 'auto'
+    // }
 
     if (document.querySelector(".sticky-wrapper")) {
       if (scrollPosition > 2100 && scrollPosition < 5000) {
