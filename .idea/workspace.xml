@@ -7,7 +7,7 @@
     <list default="true" id="c213416b-d5a8-4cdd-b1a6-851c609c511c" name="Default Changelist" comment="Commit missed files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/onload-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/onload-scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_main-highlights.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_main-highlights.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_main-pachka.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +121,7 @@
       <workItem from="1714127284364" duration="984000" />
       <workItem from="1714220506345" duration="106000" />
       <workItem from="1714220619959" duration="99000" />
-      <workItem from="1714221092298" duration="1008000" />
+      <workItem from="1714221092298" duration="1830000" />
     </task>
     <task id="LOCAL-00001" summary="Build app">
       <option name="closed" value="true" />
